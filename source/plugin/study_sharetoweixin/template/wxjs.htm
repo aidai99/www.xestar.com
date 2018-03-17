@@ -1,0 +1,99 @@
+<!--{block wxjs}-->
+<style>
+#favor_weixin{width:100%;height:100%;position:fixed;top:0;left:0;z-index:1000;background:url(source/plugin/study_sharetoweixin/images/favor_weixin.png) top right no-repeat rgba(0,0,0,.8);background-size:290px;display:none}
+#float_knowed{position:absolute;text-align:center;bottom:10px;left:30%;width:40%;height:30px;line-height:30px;border:1px solid #b5b5b7;border-radius:4px;color:#cecece}
+</style>
+<div id="favor_weixin" onclick="this.style.display = 'none'"><p id='float_knowed' class='abs c_txt'>&#x77E5;&#x9053;&#x4E86;</p></div>
+<img src="{$dataForWeixin['MsgImg']}" style="width:140px;height:0px;" />
+<img src="source/plugin/study_sharetoweixin/images/msgimg/{$msgimgid}.jpg" style="width:140px;height:0px;" />
+<script type="text/javascript">
+var dataForWeixin={
+   appId:"",
+   MsgImg:"$dataForWeixin['MsgImg']",
+   TLImg:"$dataForWeixin['MsgImg']",
+   url:window.location.href,
+   title:"$dataForWeixin['title']",
+   desc:"$dataForWeixin['desc']",
+   fakeid:"",
+   callback:function(){}
+};
+(function(){
+   var onBridgeReady=function(){
+   WeixinJSBridge.on('menu:share:appmessage', function(argv){
+      WeixinJSBridge.invoke('sendAppMessage',{
+         "appid":dataForWeixin.appId,
+         "img_url":dataForWeixin.MsgImg,
+         "img_width":"120",
+         "img_height":"120",
+         "link":dataForWeixin.url,
+         "desc":dataForWeixin.desc,
+         "title":dataForWeixin.title
+      }, function(res){(dataForWeixin.callback)();});
+   });
+   WeixinJSBridge.on('menu:share:timeline', function(argv){
+      (dataForWeixin.callback)();
+      WeixinJSBridge.invoke('shareTimeline',{
+         "img_url":dataForWeixin.TLImg,
+         "img_width":"120",
+         "img_height":"120",
+         "link":dataForWeixin.url,
+         "desc":dataForWeixin.desc,
+         "title":dataForWeixin.title
+      }, function(res){});
+   });
+   WeixinJSBridge.on('menu:share:weibo', function(argv){
+      WeixinJSBridge.invoke('shareWeibo',{
+         "content":dataForWeixin.title,
+         "url":dataForWeixin.url
+      }, function(res){(dataForWeixin.callback)();});
+   });
+   WeixinJSBridge.on('menu:share:facebook', function(argv){
+      (dataForWeixin.callback)();
+      WeixinJSBridge.invoke('shareFB',{
+         "img_url":dataForWeixin.TLImg,
+         "img_width":"120",
+         "img_height":"120",
+         "link":dataForWeixin.url,
+         "desc":dataForWeixin.desc,
+         "title":dataForWeixin.title
+      }, function(res){});
+   });
+};
+if(document.addEventListener){
+   document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+}else if(document.attachEvent){
+   document.attachEvent('WeixinJSBridgeReady'   , onBridgeReady);
+   document.attachEvent('onWeixinJSBridgeReady' , onBridgeReady);
+}
+})();
+
+function study_sharetoweixin_setCookie(cookieName, cookieValue, seconds){
+    if(cookieValue == '' || seconds < 0) {
+			cookieValue = '';
+			seconds = -2592000;
+		}
+		if(seconds) {
+			var expires = new Date();
+			expires.setTime(expires.getTime() + seconds * 1000);
+		}
+		
+		document.cookie = escape(cookieName) + '=' + escape(cookieValue)
+		+ (expires ? '; expires=' + expires.toGMTString() : '');
+}
+function study_sharetoweixin_getCookie(name){
+		var cookie_start = document.cookie.indexOf(name);
+		var cookie_end = document.cookie.indexOf(";", cookie_start);
+		if(cookie_start == -1) {
+			return '';
+		} else {
+			var v = document.cookie.substring(cookie_start + name.length + 1, (cookie_end > cookie_start ? cookie_end : document.cookie.length));
+			return !nounescape ? unescape(v) : v;
+		}
+}
+
+if(!study_sharetoweixin_getCookie('WD_close_favor')){
+		document.getElementById('favor_weixin').style.display = "block";
+		study_sharetoweixin_setCookie('WD_close_favor', 1314);
+}
+</script>
+<!--{/block}-->

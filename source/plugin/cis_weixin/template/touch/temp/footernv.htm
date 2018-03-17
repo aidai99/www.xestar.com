@@ -1,0 +1,13 @@
+<footer class="imui_footer b_l bo_t po_fi">
+  <!--{if $_G['setting']['cis_app_index']}-->
+  <a href="forum.php?mod=guide" class="gettab imui_icon_best tc{if $_GET['mod']=='guide'} cc{/if}" tab='guide'><span></span><br>$corelang[9]</a>
+  <a href="forum.php?forumlist=1" class="gettab imui_icon_bbs tc{if $_GET['forumlist']} cc{/if}" tab='discuz'><span></span><br>$corelang[10]</a>
+  <!--{else}-->
+  <a href="forum.php?mod=guide&view=hot" class="gettab imui_icon_index tc{if $_GET['mod']=='guide' && !$_GET['show']} cc{/if}" tab='guide'><span></span><br>$corelang[22]</a>
+  <a href="forum.php?mod=guide&show=best" class="gettab imui_icon_bbs tc{if $_GET['forumlist'] || $_GET['show']} cc{/if}" tab='best'><span></span><br>$corelang[10]</a>
+  <!--{/if}-->
+  <a href="forum.php?find=more" class="showpage imui_icon_post po_fi b_c cf" id="find" type="getpage"></a>
+  <a href="group.php?mod=index" class="gettab imui_icon_group tc{if $_G['basescript']=='group'} cc{/if}" tab='group_index'><span></span><br>$corelang[11]</a>
+  <a href="home.php?mod=follow&view=other" class="gettab imui_icon_my tc{if $mod=='follow'} cc{/if}" tab='space_follow'><span></span><br>$corelang[12]</a>
+</footer>
+<div class="imui_footer_m po_fi b_l"></div>

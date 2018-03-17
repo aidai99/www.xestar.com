@@ -1,0 +1,123 @@
+<!--{block it618_hongbao_block}-->
+<style>
+<!--{if $wap==1}-->
+#hongbaomain{background:url(source/plugin/it618_hongbao/images/hongbao_wap.png) no-repeat;padding-left:115px;position:relative; font-size:12px; padding-bottom:10px; line-height:18px; height:90px}
+#hongbaomain .hongbaobtn{position:absolute;width:110px; height:110px; cursor:pointer; top:0; left:0}
+#hongbaolist tr td{border-bottom:#e8e8e8 1px dotted; padding-bottom:3px; padding-top:4px; font-size:12px}
+.it618_code{border:#f1f1f1 1px solid; width:100%;}
+#hongbaopage{font-size:12px; padding-bottom:6px}
+
+.it618btn{display:inline-block;margin:0;text-align:center;height:.6rem;padding:0.32rem;border-radius:.06rem;color:#fff;border:0;background-color:#2bb2a3;font-size:13px;vertical-align:middle;line-height:.6rem;-moz-box-sizing:border-box;box-sizing:border-box;cursor:pointer;-webkit-user-select:none}.btn-block{display:block;width:100%}.btn-large{height:.8rem;line-height:.8rem;font-size:.4rem}.btn-larger{height:.94rem;line-height:.94rem;font-size:.4rem}.it618btn:active{background-color:#21897d}.btn-weak{border:.02rem solid #2bb2a3;padding:0 .3rem;background:0;color:#2bb2a3}.btn-weak:active{color:#fff;background:#2bb2a3}.btn-strong{background-color:#fdb338}.btn-strong:active{background-color:#fca006}.btn-warning{background-color:#fa7251}.btn-warning:active{background-color:#f94a1f}.it618btn:disabled,.it618btn.btn-disabled{background-color:#dcdcdc;color:#999}.btn-weak.btn:disabled,.btn-weak.btn-disabled{color:#999;border-color:#999;background:0}
+<!--{else}-->
+#it618_hongbao{margin-bottom:10px; }
+#it618_hongbao a{text-decoration:none;}
+#it618_hongbao tr td{vertical-align:top; font-size:12px}
+#it618_hongbao .hongbao_left{background:url(source/plugin/it618_hongbao/images/hongbao.png) no-repeat;width:160px; padding-top:140px;height:180px; padding-right:20px; position:relative}
+#it618_hongbao .hongbao_left .hongbaobtn{position:absolute;width:160px; height:160px; cursor:pointer; top:0; left:0}
+#it618_hongbao .hongbao_right{border:#e8e8e8 1px solid; padding:3px}
+#it618_hongbao .hongbao_right table tr td{border-bottom:#e8e8e8 1px dotted; padding:3px; padding-top:4px}
+#it618_hongbao .it618_code{border:#f1f1f1 1px solid; width:158px; height:60px; margin-top:3px}
+#it618_hongbao #hongbaopage{padding-top:6px;}
+<!--{/if}-->
+</style>
+
+<SCRIPT src="source/plugin/it618_hongbao/js/jquery.js" type=text/javascript></SCRIPT>
+
+<table cellpadding="0" cellspacing="0" width="100%">
+<!--{if $wap==1}-->
+<tr><td>
+<table id="hongbao_bd0" width="100%">
+<tr><td id="hongbaomain">
+</td></tr>
+</table>
+<table id="hongbao_bd1" width="100%">
+<tr><td>
+<table cellpadding="0" cellspacing="0" width="100%" id="hongbaolist">
+</table>
+</td></tr>
+<tr><td align="right" id="hongbaopage">
+</td></tr>
+</table>
+</td></tr>
+<!--{else}-->
+<tr><td>
+<table id="it618_hongbao" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="hongbao_left" id="hongbaomain"></td>
+<td class="hongbao_right">
+<table cellpadding="0" cellspacing="0" width="100%" id="hongbaolist">
+</table>
+</td>
+</tr>
+<tr><td colspan="2" align="right" id="hongbaopage"></td></tr>
+</table>
+</td></tr>
+<!--{/if}-->
+<!--{if $it618_hongbao['code']!='http://www.zheyitianshi.com'}-->
+<tr>
+<td>
+{$YMG6_COMpyright}
+</td>
+</tr>
+<!--{/if}-->
+</table>
+<script>
+function hongbaomain(){
+	IT618_HONGBAO.get("{$_G['siteurl']}plugin.php?id=it618_hongbao:ajax&wap={$wap}&it618_tid={$_GET['tid']}&formhash={FORMHASH}", {ac:"hongbaomain"},function (data, textStatus){
+	IT618_HONGBAO("#hongbaomain").html(data);
+	}, "html");
+}
+hongbaomain();
+
+function gethongbao(){
+	hongbaomain();
+	IT618_HONGBAO.get("{$_G['siteurl']}plugin.php?id=it618_hongbao:ajax&it618_tid={$_G[tid]}&formhash={FORMHASH}", {ac:"gethongbao"},function (data, textStatus){
+	var tmparr=data.split("it618_split");
+	if(tmparr[0]=="ok"){
+		alert(tmparr[1]);
+	}else if(tmparr[0]=="code0"){
+		alert(tmparr[1]);
+	}else if(tmparr[0]=="code1"){
+		alert(tmparr[1]);
+	}else{
+		alert(data);
+	}
+	
+	hongbaolist_get("{$_G['siteurl']}plugin.php?id=it618_hongbao:ajax");
+	
+	if(tmparr[0]=="code0"){
+		document.getElementById("it618_code").focus();
+		document.getElementById("it618_code").select();
+	}else{
+		hongbaomain();
+	}
+	
+	}, "html");
+}
+
+function delhongbao(it618_tid){
+	if(confirm("{$it618_hongbao_lang['t17']}")){
+		IT618_HONGBAO.get("{$_G['siteurl']}plugin.php?id=it618_hongbao:ajax&it618_tid="+it618_tid+"&formhash={FORMHASH}", {ac:"delhongbao"},function (data, textStatus){
+		var tmparr=data.split("it618_split");
+		if(tmparr[0]=="ok"){
+			alert(tmparr[1]);
+			location.reload();
+		}else{
+			alert(data);
+		}
+		}, "html");
+	}
+}
+
+function hongbaolist_get(url){
+	IT618_HONGBAO.get(url+"&ac1=thread&wap={$wap}&it618_tid={$_GET['tid']}&formhash={FORMHASH}", {ac:"hongbaolist_get"},function (data, textStatus){
+	var tmparr=data.split("it618_split");
+	IT618_HONGBAO("#hongbaolist").html(tmparr[0]);
+	IT618_HONGBAO("#hongbaopage").html(tmparr[1]);
+	}, "html");
+}
+hongbaolist_get("{$_G['siteurl']}plugin.php?id=it618_hongbao:ajax");
+
+</script>
+
+<!--{/block}-->

@@ -1,0 +1,33 @@
+<table width="100%" border="0" cellpadding="5" cellpadding="0" class="dt mtm">
+	<tr class="colplural" >
+	<th colspan="6"><h3>{lang jingcai_7ree:htm_lang_wohuode_7ree}{lang jingcai_7ree:htm_lang_chakanshouyi_7ree}<span class='y'>{lang jingcai_7ree:htm_lang_shuilv_7ree}:{$viewtax_7ree}%</span></h3></th>
+	</tr>
+	<tr>
+		<td align="center">{lang jingcai_7ree:htm_lang_bisaimingcheng_7ree}</td>
+		<td align="center"><!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}--> VS <!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}--></td>	
+		<td align="center">{lang jingcai_7ree:htm_lang_goumaichakan_7ree}{lang jingcai_7ree:htm_lang_huiyuan_7ree}</td>
+		<td align="center">{lang jingcai_7ree:htm_lang_goumaichakan_7ree}{lang jingcai_7ree:htm_lang_shijian_7ree}</td>
+		<td align="center">{lang jingcai_7ree:htm_lang_goumaichakan_7ree}{$exttitle_7ree}</td>
+	</tr>
+	<!--{if $list_7ree}-->
+	<!--{loop $list_7ree $list_value}-->
+	<tr>
+		<td align="center"><a href="{$xiangqing_url_7ree}{$list_value['race_7ree']['main_id_7ree']}">{$list_value['race_7ree']['racename_7ree']}</a></td>
+		<td align="center">{$list_value['race_7ree']['aname_7ree']} VS {$list_value['race_7ree']['bname_7ree']}</td>
+		<td align="center"><a href="home.php?mod=space&uid={$list_value['uid_7ree']}" target="_blank">{$list_value['username']}</a></td>
+		<td align="center">{$list_value['time_7ree']}</td>
+		<td align="center">{$list_value['payment_7ree']}{$exttitle_7ree}</td>
+	
+	</tr>	
+	<!--{/loop}-->
+	<!--{if $multipage}-->
+	<tr>
+	<td colspan="2"><div class="page">{$multipage}</div></td>
+	</tr>
+	<!--{/if}-->	
+	<!--{else}-->
+	<tr>
+	<td colspan="2"><div class="notice">{lang jingcai_7ree:htm_lang_zanwuxiaxian_7ree}</div></td>
+	</tr>
+	<!--{/if}-->
+</table>

@@ -1,0 +1,108 @@
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0"  class="dt mtm">
+<tr class="colplural" >
+<th colspan="7">
+<p class="y" style="padding-right:10px;">
+<!--{if $_GET['how_7ree']!=5}-->
+<span <!--{if $_GET['cycle_7ree']==2}-->style="font-weight:700;"<!--{/if}-->><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=6&how_7ree={$_GET['how_7ree']}&cycle_7ree=2">{lang jingcai_7ree:htm_lang_niantop_7ree}</a>
+</span><span class="pipe">|</span>
+<span <!--{if $_GET['cycle_7ree']==1}-->style="font-weight:700;"<!--{/if}-->><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=6&how_7ree={$_GET['how_7ree']}">{lang jingcai_7ree:htm_lang_benjitop_7ree}</a>
+</span>
+<span class="pipe">|</span>
+<span <!--{if $_GET['cycle_7ree']==3}-->style="font-weight:700;"<!--{/if}-->><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=6&how_7ree={$_GET['how_7ree']}&cycle_7ree=3">{lang jingcai_7ree:htm_lang_yuetop_7ree}</a></span>
+<span class="pipe">|</span>
+<span <!--{if $_GET['cycle_7ree']==4}-->style="font-weight:700;"<!--{/if}-->><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=6&how_7ree={$_GET['how_7ree']}&cycle_7ree=4">{lang jingcai_7ree:htm_lang_zhoutop_7ree}</a></span>
+<span class="pipe">|</span>
+<span <!--{if $_GET['cycle_7ree']==5}-->style="font-weight:700;"<!--{/if}-->><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=6&how_7ree={$_GET['how_7ree']}&cycle_7ree=5">{lang jingcai_7ree:htm_lang_yuetop2_7ree}</a></span>
+<span class="pipe">|</span>
+<span <!--{if $_GET['cycle_7ree']==6}-->style="font-weight:700;"<!--{/if}-->><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=6&how_7ree={$_GET['how_7ree']}&cycle_7ree=6">{lang jingcai_7ree:htm_lang_zhoutop2_7ree}</a></span>
+
+<span class="pipe">|</span>
+<span class="pipe">|</span>
+<!--{/if}-->
+
+		<span <!--{if !$_GET['type_7ree']}-->style="font-weight:700;"<!--{/if}-->><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=6&how_7ree=$_GET['how_7ree']&cycle_7ree=$_GET['cycle_7ree']">{lang jingcai_7ree:htm_lang_quanbusaishi_7ree}</a></span>
+<span class="pipe">|</span>
+		<!--{loop $fenlei_array2 $key_7ree $value_7ree}-->
+	        <span id="fenlei_7ree_{$key_7ree}" onmouseover="showMenu({'ctrlid':this.id})"><a href="javascript:void(0);" <!--{if $_GET['fenlei_7ree']==$value_7ree[0]}-->style="font-weight:700;"<!--{/if}-->>{$value_7ree[0]}</a></span><span class="pipe">|</span>
+		<!--{/loop}--> 
+
+
+</p>
+
+
+ 	        <!--{loop $fenlei_array2 $key_7ree $value_7ree}-->
+	        <div id="fenlei_7ree_{$key_7ree}_menu" class="p_pop" style="display:none">
+	        <!--{loop $value_7ree $key_7ree2 $value_7ree2}-->
+	        <!--{if $key_7ree2 >0}--><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=6&how_7ree=$_GET['how_7ree']&cycle_7ree=$_GET['cycle_7ree']&fenlei_7ree=<!--{eval echo urlencode($value_7ree[0]);}-->&type_7ree=<!--{eval echo urlencode($value_7ree2);}-->"<!--{if $_GET['type_7ree']==$value_7ree2}-->style="font-weight:700;"<!--{/if}-->>$value_7ree2</a><!--{/if}-->
+	        <!--{/loop}-->
+	        </div>
+	        <!--{/loop}-->
+
+
+
+
+
+<h3>{lang jingcai_7ree:htm_lang_jingcai_7ree}
+<font color="blue">
+{$_GET['type_7ree']}
+<!--{if $_GET['how_7ree']==1}-->{lang jingcai_7ree:htm_lang_rank1_7ree}
+<!--{elseif $_GET['how_7ree']==2}-->{lang jingcai_7ree:htm_lang_rank2_7ree}
+<!--{elseif $_GET['how_7ree']==3}-->{lang jingcai_7ree:htm_lang_rank3_7ree}
+<!--{elseif $_GET['how_7ree']==4}-->{lang jingcai_7ree:htm_lang_rank4_7ree}
+<!--{elseif $_GET['how_7ree']==5}-->{lang jingcai_7ree:htm_lang_rank5_7ree}
+<!--{/if}--></font>: TOP100
+</h3>
+</th>
+</tr>
+<tr><td align="middle">{lang jingcai_7ree:htm_lang_ranklist_7ree}</td><td align="middle">{lang jingcai_7ree:htm_lang_huiyuan_7ree}</td><td align="middle"><!--{if $_GET['how_7ree']==2}-->{lang jingcai_7ree:htm_lang_canyu_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_caizhong_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_changci_7ree}</td><td align="middle">
+<!--{if $_GET['how_7ree']==1}-->
+{lang jingcai_7ree:htm_lang_zongyingli_7ree}
+<!--{elseif $_GET['how_7ree']==2}-->
+{lang jingcai_7ree:htm_lang_jinglirun_7ree}
+<!--{elseif $_GET['how_7ree']==3}-->
+{lang jingcai_7ree:htm_lang_zongyingli_7ree}
+<!--{elseif $_GET['how_7ree']==4}-->
+{lang jingcai_7ree:htm_lang_mingzhonglv_7ree}
+<!--{elseif $_GET['how_7ree']==5}-->
+{lang jingcai_7ree:htm_lang_zdly_7ree}
+<!--{/if}-->
+</td>
+<!--{if $jingcai_7ree_var['gaoshou_onoff_7ree']}-->
+<td align="middle">{lang jingcai_7ree:htm_lang_guanzhu_7ree}</td>
+<td align="middle">{lang jingcai_7ree:htm_lang_caozuo_7ree}</td>
+<!--{/if}-->
+</tr>
+<!--{if $toplist_7ree}-->
+<!--{eval $key_7ree = 1}-->
+<!--{loop $toplist_7ree $key $topvalue_7ree}-->
+<tr>
+<td align="middle"><font color="red" size="4"><b><!--{eval echo $key_7ree;}--></b></font></td>
+<td align="middle"><a href="home.php?mod=space&uid=$topvalue_7ree['uid_7ree']" target="_blank">$topvalue_7ree['username_7ree']</td>
+<td align="middle"><b>{$topvalue_7ree['log_num_7ree']}</b>{lang jingcai_7ree:htm_lang_changci_7ree}</td>
+<td align="middle"><b><!--{if $_GET['how_7ree']==4}-->{$topvalue_7ree['hitrate_7ree']}</b>%<!--{elseif $_GET['how_7ree']==5}-->{$topvalue_7ree['zdly_7ree']}{lang jingcai_7ree:htm_lang_chang_7ree}<!--{else}--><b>{$topvalue_7ree['sum_reward_7ree']}</b>{$exttitle_7ree}<!--{/if}--></td>
+<!--{if $jingcai_7ree_var['gaoshou_onoff_7ree']}-->
+<td align="middle">
+<!--{if $topvalue_7ree['guanzhu_7ree']}-->
+{lang jingcai_7ree:htm_lang_yiguanzhu_7ree}
+<!--{else}-->
+	<!--{if $topvalue_7ree['uid_7ree']<>$_G['uid']}-->
+	<a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=8&uid_7ree=$topvalue_7ree['uid_7ree']&formhash={FORMHASH}" class="pn" style="padding:3px 10px 3px 10px;" title="{lang jingcai_7ree:htm_lang_guanzhutitle_7ree}">{lang jingcai_7ree:htm_lang_guanzhu_7ree}</a>
+	<!--{else}-->
+	-
+	<!--{/if}-->
+<!--{/if}-->
+</td>
+<td align="middle">
+<a href="{$jilu_url_7ree}{$topvalue_7ree['uid_7ree']}&fenlei2_7ree={$topvalue_7ree['type_7ree']}" class="pn" style="padding:3px 10px 3px 10px;" target="_blank">{lang jingcai_7ree:htm_lang_chakan_7ree}</a>
+</td>
+<!--{/if}-->
+</tr>
+<!--{eval $key_7ree++;}-->
+<!--{/loop}-->
+<!--{else}-->
+<tr>
+<td colspan="7"><div class="notice">{lang jingcai_7ree:htm_lang_wurenshangbang_7ree}</div></td>
+</tr>
+<!--{/if}-->
+</table>

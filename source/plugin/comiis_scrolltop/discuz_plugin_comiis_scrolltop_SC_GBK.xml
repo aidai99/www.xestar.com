@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2,X2.5,X3,X3.1]]></item>
+	<item id="Time"><![CDATA[2014-01-21 22:33]]></item>
+	<item id="From"><![CDATA[¿ËÃ×Éè¼Æ (http://www.zheyitianshi.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[¿ËÃ×Éè¼Æ-·µ»Ø¶¥²¿]]></item>
+			<item id="identifier"><![CDATA[comiis_scrolltop]]></item>
+			<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÕâÊÇÒ»¿îÓÅ»¯È¡´úÂÛÌ³Ä¬ÈÏ·µ»Ø¶¥²¿ÏÔÊ¾µÄÐ¡²å¼þ, ºóÌ¨Ìá¹©¶àÏîÀ¸Ä¿¼°ÑÕÉ«ÉèÖÃ, ÕæÕý×öµ½ÊÊºÏÃ¿¸öÍøÕ¾µÄÐèÇó.]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[comiis_scrolltop/]]></item>
+			<item id="copyright"><![CDATA[ÕÛÒíÌìÊ¹×ÊÔ´ÉçÇøwww.zheyitianshi.com|www.zheyitianshi.com]]></item>
+			<item id="version"><![CDATA[v1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[comiis_more]]></item>
+					<item id="menu"><![CDATA[¸ü¶à¿ËÃ×Éè¼Æ×÷Æ·]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[comiis_scrolltop]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[²å¼þÏÔÊ¾Ä£Ê½]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃ²å¼þÏÔÊ¾µÄÄ£Ê½£º
+ÎÄ×ÖÄ£Ê½, Êó±ê·Åµ½Í¼Æ¬ºó³öÏÖÎÄ×ÖÌáÊ¾;
+Í¼±êÄ£Ê½, Êó±ê·Åµ½Í¼Æ¬ºó²»½øÐÐÎÄ×Ö±ä»¯ÌáÊ¾;]]></item>
+				<item id="variable"><![CDATA[comiis_t_show]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[0 = Í¼±êÄ£Ê½
+1 = ÎÄ×ÖÄ£Ê½]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[ÓÒ²à¾àÀë]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃ²å¼þºÍÒ³ÃæÓÒ²à¾àÀëµÄ¿í¶È]]></item>
+				<item id="variable"><![CDATA[comiis_t_rp]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[20]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[µ×²¿¾àÀë]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃ²å¼þºÍÒ³Ãæµ×²¿¾àÀëµÄ¸ß¶È]]></item>
+				<item id="variable"><![CDATA[comiis_t_bp]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[70]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[Í¼±ê±³¾°É«]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÍ¼±êµÄ±³¾°ÑÕÉ«]]></item>
+				<item id="variable"><![CDATA[comiis_t_dcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#f8f8f8]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[Í¼±ê±ß¿òÉ«]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÍ¼±êµÄ±ß¿òÑÕÉ«]]></item>
+				<item id="variable"><![CDATA[comiis_t_bcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#e3e3e3]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[Í¼±ê¸ßÁÁ±³¾°É«]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÍ¼±ê¸ßÁÁµÄ±³¾°ÑÕÉ«]]></item>
+				<item id="variable"><![CDATA[comiis_t_hdcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#ff9900]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[Í¼±ê¸ßÁÁ±ß¿òÉ«]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÍ¼±ê¸ßÁÁµÄ±ß¿òÑÕÉ«]]></item>
+				<item id="variable"><![CDATA[comiis_t_hbcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#ff9900]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[Í¼±ê¸ßÁÁÎÄ×ÖÑÕÉ«]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÍ¼±ê¸ßÁÁµÄÎÄ×ÖÑÕÉ«]]></item>
+				<item id="variable"><![CDATA[comiis_t_hcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#ffffff]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[·µ»Ø¶¥²¿Ãû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ·µ»Ø¶¥²¿ÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_t_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[·µ»Ø¶¥²¿]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñ¿ªÆô ¿ìËÙ·¢Ìû]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÂÛÌ³Ê×Ò³ÊÇ·ñ¿ªÆô¿ìËÙ·¢ÌûÍ¼±ê]]></item>
+				<item id="variable"><![CDATA[comiis_t_ft]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[¿ìËÙ·¢ÌûÃû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ¿ìËÙ·¢ÌûÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_ft_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[¿ìËÙ·¢Ìû]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñ¿ªÆô ·µ»ØÖ÷Ò³]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÁÐ±íÒ³ÊÇ·ñ¿ªÆô·µ»ØÂÛÌ³Ê×Ò³¹¦ÄÜ]]></item>
+				<item id="variable"><![CDATA[comiis_t_rebbs]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[·µ»ØÖ÷Ò³Ãû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ·µ»ØÖ÷Ò³ÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_rebbs_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[·µ»ØÖ÷Ò³]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñ¿ªÆô ·­Ò³]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÁÐ±íÒ³ÊÇ·ñ¿ªÆôÉÏÏÂ·­Ò³¹¦ÄÜ]]></item>
+				<item id="variable"><![CDATA[comiis_t_lr]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[ÉÏÒ»Ò³Ãû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉÏÒ»Ò³ÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_l_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[ÉÏÒ»Ò³]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[ÏÂÒ»Ò³Ãû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÏÂÒ»Ò³ÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_r_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[ÏÂÒ»Ò³]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñ¿ªÆô ¿ìËÙ»Ø¸´]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÄÚÈÝÒ³ÊÇ·ñ¿ªÆô¿ìËÙ»Ø¸´¹¦ÄÜ]]></item>
+				<item id="variable"><![CDATA[comiis_t_hf]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[¿ìËÙ»Ø¸´Ãû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ¿ìËÙ»Ø¸´ÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_hf_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[¿ìËÙ»Ø¸´]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñ¿ªÆô ·µ»ØÁÐ±í]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÄÚÈÝÒ³ÊÇ·ñ¿ªÆô·µ»ØÁÐ±íÒ³¹¦ÄÜ]]></item>
+				<item id="variable"><![CDATA[comiis_t_lb]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[·µ»ØÁÐ±íÃû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ·µ»ØÁÐ±íÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_lb_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[·µ»ØÁÐ±í]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñ¿ªÆô ÉÏÏÂÖ÷Ìâ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÄÚÈÝÒ³ÊÇ·ñ¿ªÆôÉÏÏÂÖ÷Ìâ·­Ò³¹¦ÄÜ]]></item>
+				<item id="variable"><![CDATA[comiis_t_hl]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[38]]></item>
+				<item id="title"><![CDATA[ÉÏÒ»Ö÷ÌâÃû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉÏÒ»Ö÷ÌâÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_ht_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[ÉÏÒ»Ö÷Ìâ]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[40]]></item>
+				<item id="title"><![CDATA[ÏÂÒ»Ö÷ÌâÃû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÏÂÒ»Ö÷ÌâÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_hn_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[ÏÂÒ»Ö÷Ìâ]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[42]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñ¿ªÆô ÕÒ¿Í·þ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÊÇ·ñ¿ªÆôÕÒ¿Í·þÍ¼±ê]]></item>
+				<item id="variable"><![CDATA[comiis_t_kf]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[44]]></item>
+				<item id="title"><![CDATA[ÕÒ¿Í·þÃû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÕÒ¿Í·þÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_kf_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[ÕÒ¿Í·þ]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[46]]></item>
+				<item id="title"><![CDATA[ÕÒ¿Í·þÁ´½Ó]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÕÒ¿Í»§Í¼±êµã»÷µÄ³¬Á´½ÓµØÖ·]]></item>
+				<item id="variable"><![CDATA[comiis_t_kf_url]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[#]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[48]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñ¿ªÆô ÊÖ»ú·ÃÎÊ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÊÇ·ñ¿ªÆôÊÖ»ú·ÃÎÊÍ¼±ê]]></item>
+				<item id="variable"><![CDATA[comiis_t_mob]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[50]]></item>
+				<item id="title"><![CDATA[ÊÖ»ú·ÃÎÊÃû³Æ]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÊÖ»ú·ÃÎÊÎÄ×ÖÐÞ¸Ä]]></item>
+				<item id="variable"><![CDATA[comiis_t_mob_name]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[ÊÖ»ú·ÃÎÊ]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[52]]></item>
+				<item id="title"><![CDATA[ÊÖ»ú·ÃÎÊÁ´½Ó]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÊÖ»ú·ÃÎÊÍ¼±êµã»÷µÄ³¬Á´½ÓµØÖ·]]></item>
+				<item id="variable"><![CDATA[comiis_t_mob_url]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[#]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[54]]></item>
+				<item id="title"><![CDATA[ÊÖ»ú·ÃÎÊµ¯³öHTML]]></item>
+				<item id="description"><![CDATA[¸ü¶àÃâ·ÑDZ²å¼þ£ºwww.zheyitianshi.com    |   ÉèÖÃÊÖ»ú·ÃÎÊµ¯³öµÄÄÚÈÝÐÞ¸Ä, Ö§³ÖHTML´úÂëºÍÁªÃË¹ã¸æ;
+ÌáÊ¾: ÐÞ¸ÄÇ°ÇëÏÈ¸´ÖÆ´úÂë±¸·Ý]]></item>
+				<item id="variable"><![CDATA[comiis_t_mob_htm]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<div class="comiis_scrolltop_code">
+<DIV class="weixin_img"><img src="source/plugin/comiis_scrolltop/image/comiis_mob.jpg" width="145" height="145"></DIV>
+<P>´ò¿ªÊÖ»úÉ¨Ò»É¨</P>
+</div>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

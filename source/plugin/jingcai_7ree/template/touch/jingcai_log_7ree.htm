@@ -1,0 +1,32 @@
+        <tr class="colplural" >
+        <td style="width:25px;">{lang jingcai_7ree:htm_lang_bianhao_7ree}</td>
+        <td>{lang jingcai_7ree:htm_lang_bisaimingcheng_7ree}</td>
+        <td>{lang jingcai_7ree:htm_lang_huiyuan_7ree}</td>
+        <td style="width:50px;">{lang jingcai_7ree:htm_lang_zhichi_7ree}<br>{lang jingcai_7ree:htm_lang_jiangli_7ree} </td>
+        <td>{lang jingcai_7ree:htm_lang_jingcaiduiwu_7ree}<br>{lang jingcai_7ree:htm_lang_jingcaishijian_7ree}</td>
+        </tr>
+        <!--{loop $loglist_7ree $loglist_value}-->
+        <tr>
+        <td>$loglist_value['log_id_7ree']</td>
+        <td><a href="{$xiangqing_url_7ree}{$loglist_value['main_id_7ree']}" target="_blank">{$loglist_value['racename_7ree']}</a></td>
+        <td><a href="{$jilu_url_7ree}{$loglist_value['uid_7ree']}" target="_blank">{$loglist_value['username_7ree']}</a></td>
+        <td>{$loglist_value['myodds_7ree']}{$exttitle_7ree}<br><!--{if $loglist_value['mywin_7ree']=="d"}-->{lang jingcai_7ree:htm_lang_yifanhuan_7ree}<!--{else}-->{$loglist_value['log_reward_7ree']}{$exttitle_7ree}<!--{/if}--></td>
+
+        <td>
+		<!--{if $loglist_value['type_7ree']}-->
+			<!--{if $loglist_value['mywin_7ree']=="a"}-->{lang jingcai_7ree:htm_lang_da_7ree} $loglist_value['daxiao_7ree']
+	        <!--{elseif $loglist_value['mywin_7ree']=="b"}-->{lang jingcai_7ree:htm_lang_xiao_7ree} $loglist_value['daxiao_7ree']
+	        <!--{/if}-->
+	     <!--{else}-->           
+	        <!--{if $loglist_value['mywin_7ree']=="a"}-->{$loglist_value['aname_7ree']}
+	        <!--{elseif $loglist_value['mywin_7ree']=="b"}-->{$loglist_value['bname_7ree']}
+	        <!--{elseif $loglist_value['mywin_7ree']=="c"}--><!--{if $jingcai_7ree_var['pingju_7ree'] && $loglist_value['rangqiufang_7ree']>0}-->$jingcai_7ree_var['pingju_7ree']<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}-->
+	        <!--{elseif $loglist_value['mywin_7ree']=="d"}-->{lang jingcai_7ree:htm_lang_liupan_7ree}        
+	        <!--{/if}-->
+         <!--{/if}-->
+        <br>{$loglist_value['log_time_7ree']}</td>
+        </tr>
+        <!--{/loop}-->
+        <tr>
+        <td colspan="7">{$mymultipage_7ree}</td>
+        </tr>

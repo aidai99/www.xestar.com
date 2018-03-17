@@ -1,0 +1,50 @@
+{template common/header}
+<!--
+	(C)2006-2016 www.7ree.com
+	This is NOT a freeware, use is subject to license terms
+	Update: 2016/12/9 16:14
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_recharge/template/image/css_7ree.css?{VERHASH}'/>
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/reward_7ree/template/css/reward_7ree.css?{VERHASH}'/>
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/reward_7ree/template/touch/css/reward_7ree.css?{VERHASH}'/>
+
+
+
+<div id="ct" class="ct2_a wp cl">
+
+	<div class="mn">
+
+	<div class="bm bw0">
+	<!--正文-->
+	<div class="bm_c cl">
+
+	<!--{if !$code_7ree}-->
+		{subtemplate x7ree_recharge:home_7ree}
+	<!--{elseif $code_7ree==1}-->
+		{subtemplate x7ree_recharge:log_7ree}
+	<!--{/if}-->
+
+	<div>{$multipage}</div>
+
+	</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+
+<div class="ftnav_7ree">
+<ul>
+		      <li><a href="plugin.php?id=x7ree_recharge:x7ree_recharge"><div class="tactionbtn_7ree tbtn1_7ree">立刻充值</div></a></li>
+		      <li><a href="plugin.php?id=x7ree_recharge:x7ree_recharge&code_7ree=1"><div class="tactionbtn_7ree tbtn2_7ree">充值记录</div></a></li>
+		      <li><a href="plugin.php?id=reward_7ree:hall_7ree&code=1"><div class="tactionbtn_7ree tbtn3_7ree">悬赏大厅</div></a></li>
+</ul>
+</div>
+
+{template common/footer}

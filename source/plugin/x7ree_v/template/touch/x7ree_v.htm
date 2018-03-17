@@ -1,0 +1,41 @@
+{template common/header}
+<!--
+	(C)2006-2017 www.7ree.com
+	This is NOT a freeware, use is subject to license terms
+	Update: 2017/9/15 16:31
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+
+<link rel='stylesheet' id='common_7ree' type='text/css' href='source/plugin/x7ree_v/template/image/common_css_7ree.css?{VERHASH}'/>
+<link rel='stylesheet' id='touch_7ree' type='text/css' href='source/plugin/x7ree_v/template/image/touch_css_7ree.css?{VERHASH}'/>
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_v/template/image/css_7ree.css?{VERHASH}'/>
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_v/template/image/swiper.min.css?{VERHASH}'/>
+
+<!--{if $vars_7ree['cssfix_7ree']}-->
+<style>
+{$vars_7ree['cssfix_7ree']}
+</style>
+<!--{/if}-->
+
+<div class="box_m_7ree">
+
+	<!--{if !$code_7ree}-->
+		{template x7ree_v:x7ree_home}
+	<!--{elseif $code_7ree==1}-->
+		{template x7ree_v:x7ree_page}
+	<!--{elseif $code_7ree==2}-->
+		{template x7ree_v:x7ree_post}
+	<!--{elseif $code_7ree==3}-->
+		{template x7ree_v:x7ree_my}
+	<!--{elseif $code_7ree==4}-->
+		{template x7ree_v:x7ree_option}
+	<!--{/if}-->
+	
+</div>
+
+	{template x7ree_v:x7ree_footer}
+
+</div>
+
+{template common/footer}

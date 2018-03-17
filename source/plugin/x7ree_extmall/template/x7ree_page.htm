@@ -1,0 +1,42 @@
+<div class="pagebox_7ree">
+
+<img src="{$folder_7ree}/{$thisgoods_7ree['pic_7ree']}" class="newpic_7ree">
+
+<div>
+<form method="post" action="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=1" name="form_7ree">
+<input type="hidden" name="id_7ree" value="{$thisgoods_7ree['id_7ree']}">
+<input type="hidden" name="formhash" value="{FORMHASH}">
+<h3>{$thisgoods_7ree['name_7ree']}</h3>
+<p>商品分类：{$thisgoods_7ree['fenlei_7ree']}<span class="y">市场价：{$thisgoods_7ree['price_7ree']}元</span></p>
+
+<p>剩余库存：{$thisgoods_7ree['num_7ree']}<span class="y">兑换所需：{$thisgoods_7ree['cost_7ree']}{$exttitle_7ree}</span></p>
+
+<p>
+姓名： <input type="text" name="realname" value="{$myaddress_7ree['realname']}" class="xmdhinput_7ree">
+QQ： <input type="text" name="qq" value="{$myaddress_7ree['qq']}" class="xmdhinput_7ree">
+手机： <input type="text" name="mobile" value="{$myaddress_7ree['mobile']}" class="xmdhinput_7ree">
+</p>
+
+<p>
+支付宝账号： <input type="text" name="site" value="{$myaddress_7ree['site']}" class="yjdzinput_7ree">
+  
+地址： <input type="text" name="address" value="{$myaddress_7ree['address']}"  class="yjdzinput_7ree">
+</p>
+<!--{if $mylog_7ree}-->
+<input type="submit" name="submit_7ree" value="我已兑换，再次兑换。" class="duihuanbtn_7ree">
+<!--{else}-->
+<input type="submit" name="submit_7ree" value="立刻兑换" class="duihuanbtn_7ree">
+<!--{/if}-->
+</p>
+</form>
+</div>
+
+</div>
+<div style="clear:both;"></div>
+
+<div class="pagemsg_7ree">送货地址等资料仅仅用在为您邮寄商品之用，只需填写一次，并承诺会被严格遵守隐私条款。</div>
+
+
+<div class="pagemsg_7ree">
+{$thisgoods_7ree['detail_7ree']}
+</div>

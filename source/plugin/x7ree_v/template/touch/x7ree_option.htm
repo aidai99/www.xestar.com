@@ -1,0 +1,71 @@
+<!--{if $list_7ree}-->
+<form name="form_7ree" method="post" action="plugin.php?id=x7ree_v:x7ree_v&code_7ree=5">
+<input type="hidden" name="formhash" value="{FORMHASH}">
+<table class="listtable_7ree">
+	<tr>
+	<th><input type="checkbox" id="checkall_7ree" name="checkall_7ree" onClick="ChkAllClick('mod_7ree[]','checkall_7ree');" >{lang x7ree_v:htm_lang_quanxuan_7ree}</th>
+	<th>{lang x7ree_v:htm_lang_fenxiangshijan_7ree}</th>
+	<th>{lang x7ree_v:htm_lang_shipinmingcheng_7ree}</th>
+	<th>{lang x7ree_v:htm_lang_fenxianghuiyuan_7ree}</th>
+	<th>{lang x7ree_v:htm_lang_shenhezhuangtai_7ree}</th>
+	<th>{lang x7ree_v:htm_lang_guanlicaozuo_7ree}</th>
+	</tr>
+	<!--{loop $list_7ree $list_value}-->
+	<tr>
+	<td><input type="checkbox" name="mod_7ree[]" id="mod_7ree[]" onclick="ChkSonClick('mod_7ree[]','checkall_7ree');" value="{$list_value['id_7ree']}">{$list_value['id_7ree']}</td>
+	<td><a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=1&id_7ree={$list_value['id_7ree']}" target="_blank">{$list_value['time_7ree']}</a></td>
+	<td><a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=1&id_7ree={$list_value['id_7ree']}" target="_blank">{$list_value['name_7ree']}</a></td>
+	<td>{$list_value['user_7ree']}</td>
+	<td><!--{if $list_value['status_7ree']}-->{lang x7ree_v:htm_lang_yishenhe_7ree}<!--{else}-->{lang x7ree_v:htm_lang_weishenhe_7ree}<!--{/if}--></td>
+	<td><a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=6&id_7ree={$list_value['id_7ree']}&formhash={FORMHASH}" onclick="if(confirm('{lang x7ree_v:htm_lang_querenshanchu_7ree}')==false)return false;">[{lang x7ree_v:htm_lang_shanchu_7ree}]</a></td>
+	</tr>
+	<!--{/loop}-->
+	<tr>
+	<td colspan='6'><input type="submit" name="submit_7ree" value="{lang x7ree_v:htm_lang_piliangshehe_7ree}" class="submitbtn_7ree"></td>
+	</tr>
+</table>
+<div class="pagebottom_7ree">{$multipage}<span class="pipe">
+</form>
+
+<script type="text/javascript" language="javascript">
+
+// --列头全选框被单击---
+function ChkAllClick(sonName, cbAllId){
+    var arrSon = document.getElementsByName(sonName);
+ var cbAll = document.getElementById(cbAllId);
+ var tempState=cbAll.checked;
+ for(i=0;i<arrSon.length;i++) {
+  if(arrSon[i].checked!=tempState)
+           arrSon[i].click();
+ }
+}
+
+// --子项复选框被单击---
+function ChkSonClick(sonName, cbAllId) {
+ var arrSon = document.getElementsByName(sonName);
+ var cbAll = document.getElementById(cbAllId);
+ for(var i=0; i<arrSon.length; i++) {
+     if(!arrSon[i].checked) {
+     cbAll.checked = false;
+     return;
+     }
+ }
+ cbAll.checked = true;
+}
+
+// --反选被单击---
+function ChkOppClick(sonName){
+ var arrSon = document.getElementsByName(sonName);
+ for(i=0;i<arrSon.length;i++) {
+  arrSon[i].click();
+ }
+}
+</script>
+
+
+
+<!--{else}-->
+	<div class="notice_7ree">{lang x7ree_v:htm_lang_zhanwuxiaoshipin_7ree}</div>
+<!--{/if}-->
+
+

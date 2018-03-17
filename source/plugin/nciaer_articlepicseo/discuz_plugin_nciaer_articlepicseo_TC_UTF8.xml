@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.4]]></item>
+	<item id="Time"><![CDATA[2017-12-29 10:31]]></item>
+	<item id="From"><![CDATA[Discuz測試站 (http://www.dz.local/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[0]]></item>
+			<item id="name"><![CDATA[文章圖片優化SEO]]></item>
+			<item id="identifier"><![CDATA[nciaer_articlepicseo]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[nciaer_articlepicseo/]]></item>
+			<item id="copyright"><![CDATA[硬漢工作室（www.nciaer.com）版權所有，客服QQ︰1069971363]]></item>
+			<item id="version"><![CDATA[1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[help]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[聯系我們]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[9]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[app]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[<span style = "color: #09c;">更多精品插件</span>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[10]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="license"><![CDATA[[list]
+親愛的站長:
+非常感謝您選擇並使用本插件！希望我們的插件能為您提供更豐富的功能和更好的用戶體驗。
+在安裝使用本插件前請認真閱讀【最終用戶授權協議】
+[b]最終用戶授權協議[/b]			
+[1]未經插件作者許可，任何人不得以任何形式反編譯、修改、發布、轉讓及銷售本插件的原版及其衍生的修改版。
+[2]使用者使用本插件所發生的任何損失和責任，由插件使用人承擔，插件開發者不承擔任何責任。
+[3]您需要通過正規途徑獲取、使用本插件，我們保留追究非法獲取本插件的使用者和非法發布本插件的發布者的侵權責任。
+[4]本協議是本插件不可分割的一部分，本協議可能隨時更新，您可以隨時了解到本協議的最新版本。
+[5]您安裝使用本插件時，即視為完全理解並接受本協議的各項條款。
+[6]硬漢工作室擁有對本授權協議的最終解釋權。並保留追究一切侵權責任的權力。
+[b]聯系我們[/b]
+[1]官方網址︰http://www.nciaer.com
+[2]客服QQ: 1069971363
+[3]官方QQ群: 533033218
+[b]優惠信息[/b]
+[1]加入官方QQ群，即可獲取一張5元優惠券，滿30元即可使用。
+[/list]]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[開啟本插件]]></item>
+				<item id="description"><![CDATA[插件使用條款、意見建議請訪問 http://www.nciaer.com]]></item>
+				<item id="variable"><![CDATA[on]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[僅對蜘蛛爬取有效？]]></item>
+				<item id="description"><![CDATA[可以提高性能]]></item>
+				<item id="variable"><![CDATA[only_robot]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[圖片title規則優化SEO]]></item>
+				<item id="description"><![CDATA[支持變量列表如下︰
+{title} 文章標題
+{summary} 文章簡介
+{dateline} 發布時間
+{author} 文章作者
+{catname} 文章分類
+{bbname} 站點名稱]]></item>
+				<item id="variable"><![CDATA[title_seo]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[{title}_{catname}_{dateline}發布_{bbname}]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[圖片alt規則優化SEO]]></item>
+				<item id="description"><![CDATA[支持變量列表如下︰
+{title} 文章標題
+{summary} 文章簡介
+{dateline} 發布時間
+{author} 文章作者
+{catname} 文章分類
+{bbname} 站點名稱]]></item>
+				<item id="variable"><![CDATA[alt_seo]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[{title}_{catname}_{dateline}發布_{bbname}]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="_contact"><![CDATA[聯系硬漢工作室]]></item>
+				<item id="_contact_text"><![CDATA[
+<li>有任何疑問歡迎聯系客服QQ: 1069971363，官方QQ群: 533033218</li>
+<li>硬漢工作室應用商店地址︰<a href = "http://addon.discuz.com/?@56030.developer">http://addon.discuz.com/?@56030.developer</a></li>
+<li>硬漢工作室官方網站︰︰<a href = "http://www.nciaer.com">www.nciaer.com</a></li>]]></item>
+				<item id="_business"><![CDATA[硬漢工作室主營業務]]></item>
+				<item id="_business_text"><![CDATA[
+<li>插件定制、修復升級、二次開發</li>
+<li>網站建設、模板修復、網站搬家、維護修改、二次開發</li>
+<li>PHP開發培訓、Discuz插件開發培訓、Linux系統維護培訓</li>
+<li>Win/Linux系統維護、殺毒、LA/NMP環境搭建、數據庫優化</li>
+	]]></item>
+			</item>
+		</item>
+	</item>
+</root>

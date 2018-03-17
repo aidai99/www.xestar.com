@@ -1,0 +1,51 @@
+<!--{block return}-->
+<link rel='stylesheet' id='css_badge_7ree' type='text/css' href='source/plugin/x7ree_footnav/template/image/css_7ree.css?{VERHASH}'/>
+<style>
+
+.footnav_7ree{
+    height: <!--{if $vars_7ree['height_7ree']}-->{$vars_7ree['height_7ree']}px<!--{else}-->70px<!--{/if}-->;
+
+
+	<!--{if $vars_7ree['topbordercolor_7ree']}-->
+	border-top: 1px solid {$vars_7ree['topbordercolor_7ree']};
+	<!--{/if}-->
+	<!--{if $vars_7ree['bgcolor_7ree']}-->
+	background-color:{$vars_7ree['bgcolor_7ree']};
+	<!--{/if}-->
+	<!--{if $vars_7ree['zindex_7ree']}-->
+	z-index:{$vars_7ree['zindex_7ree']};
+	<!--{/if}-->
+}
+
+<!--{if $vars_7ree['btncolor_7ree']}-->
+.footnav_7ree a{
+	color:{$vars_7ree['btncolor_7ree']};
+}
+<!--{/if}-->
+
+.footnav_7ree li{
+	width:{$width_7ree};
+}
+
+<!--{if !$vars_7ree['compatible_7ree']}-->
+.footnav_7ree span{
+	filter: drop-shadow(0px 41px {$vars_7ree['btncolor_7ree']});
+	position: relative;
+	top: -41px;
+}
+<!--{/if}-->
+</style>
+
+<div class="footnav_7ree">
+	<ul>
+		<!--{loop $name_array $key_7ree $name_7ree}-->
+		<li>
+		<a href="{$url_array[$key_7ree]}">
+		<span style="background: url(source/plugin/x7ree_footnav/template/image/{$icon_array[$key_7ree]}) no-repeat center;background-size:100%;"></span><br>
+		{$name_7ree}
+		</a>
+		</li>
+		<!--{/loop}-->
+	</ul>
+</div>
+<!--{/block}-->

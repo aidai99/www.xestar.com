@@ -1,0 +1,21 @@
+<!--{template common/header}-->
+<div class="tm_c">
+	<h3 class="flb">
+		<em id="return_apply">&#x5206;&#x4EAB;&#x5230;&#x5FAE;&#x4FE1;&#x6559;&#x7A0B;</em>
+		<span>
+			<a href="javascript:;" class="flbc" onclick="hideWindow('study_sharetoweixin')" title="{lang close}">{lang close}</a>
+		</span>
+	</h3>
+	<div class="c">
+		<img src="source/plugin/study_sharetoweixin/images/wechat_help.png" width="800" height="328">
+		<!--{if $splugin_setting[study_help]}-->
+			<div style="padding:10px;text-align:center;background: #159BDA;color:#FFFFFF;font-size: 20px;">
+				$splugin_setting[study_help]
+			</div>
+		<!--{/if}-->
+	</div>
+	<p class="o pns" style="text-align:center;">
+		<button type="button" onclick="hideWindow('study_sharetoweixin')" class="pn pnc" value="{lang confirms}"><span>{lang confirms}</span></button>
+	</p>
+</div>
+<!--{template common/footer}-->

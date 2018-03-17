@@ -1,0 +1,6 @@
+<ul class="topnav_7ree">
+<li><a href="plugin.php?id=x7ree_v:x7ree_v" <!--{if !$fenlei}-->class="nownav_7ree"<!--{/if}-->>{lang x7ree_v:htm_lang_shouye_7ree}</a></li>
+<!--{loop $fenlei_7ree $key_7ree $fenlei_value}-->
+<li><a href="plugin.php?id=x7ree_v:x7ree_v&fenlei=<!--{eval echo $key_7ree+1;}-->" <!--{if $fenlei==$key_7ree+1}-->class="nownav_7ree"<!--{/if}-->>{$fenlei_value}</a></li>
+<!--{/loop}-->
+</ul>

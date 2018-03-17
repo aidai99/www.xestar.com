@@ -1,0 +1,35 @@
+<!--{block return}-->
+<link rel="stylesheet" type="text/css" href="./source/plugin/comiis_scrolltop/image/comiis.css" />
+<style>
+.comiis_scrolltop a.comiis_t_t {background-color:{$comiis_scrolltop['comiis_t_hdcolor']};border-color:{$comiis_scrolltop['comiis_t_hbcolor']};text-decoration:none;background-position:16px -39px;}
+.comiis_scrolltop {right:{$comiis_scrolltop['comiis_t_rp']}px;bottom:{$comiis_scrolltop['comiis_t_bp']}px;}
+.comiis_scrolltop a{border:1px solid {$comiis_scrolltop['comiis_t_bcolor']};background-color:{$comiis_scrolltop['comiis_t_dcolor']};}
+.comiis_scrolltop a:hover,.comiis_scrolltop .comiis_scrolltop_hover {background-color:{$comiis_scrolltop['comiis_t_hdcolor']};border-color:{$comiis_scrolltop['comiis_t_hbcolor']};}
+.comiis_scrolltop a em{color:{$comiis_scrolltop['comiis_t_hcolor']};}<!--{if $comiis_scrolltop['comiis_t_show']}-->
+.comiis_scrolltop a.comiis_t_t:hover,.comiis_scrolltop a.comiis_t_l:hover,.comiis_scrolltop a.comiis_t_r:hover,.comiis_scrolltop a.comiis_t_mob:hover,.comiis_scrolltop a.comiis_t_hf:hover,.comiis_scrolltop a.comiis_t_ft:hover,.comiis_scrolltop a.comiis_t_lb:hover,.comiis_scrolltop a.comiis_t_kf:hover,.comiis_scrolltop a.comiis_scrolltop_hover {background-image:none;text-indent:0px;}
+.comiis_scrolltop a:hover em,.comiis_scrolltop a.comiis_scrolltop_hover em{display:block;cursor:pointer}<!--{/if}-->
+</style>
+<div class="comiis_scrolltop" id="comiis_scrolltop"><a href="javascript:;" onclick="window.scrollTo('0','0')" class="comiis_t_t" id="comiis_gotop" title="{$comiis_scrolltop_data['comiis_t_t']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_t']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_t']['name']}</em></a><!--{if $comiis_scrolltop_index && $comiis_scrolltop['comiis_t_ft']}--><a onclick="showWindow('nav', this.href, 'get', 0)" href="forum.php?mod=misc&amp;action=nav" class="comiis_t_ft" title="{$comiis_scrolltop_data['comiis_t_ft']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_ft']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_ft']['name']}</em></a><!--{elseif $comiis_scrolltop_list}--><!--{if $comiis_scrolltop['comiis_t_rebbs']}--><a href="forum.php" class="comiis_t_lb" title="{$comiis_scrolltop_data['comiis_t_rebbs']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_rebbs']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_rebbs']['name']}</em></a><!--{/if}--><!--{if $comiis_scrolltop['comiis_t_lr']}--><!--{if $page>1}--><a href="forum.php?mod=forumdisplay&fid={$_G['fid']}&page={$comiis_scrolltop_t}" class="comiis_t_l" title="{$comiis_scrolltop_data['comiis_t_l']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_l']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_l']['name']}</em></a><!--{/if}--><!--{if $page<$_G['page_next']}--><a href="forum.php?mod=forumdisplay&fid={$_G['fid']}&page={$comiis_scrolltop_n}" class="comiis_t_r" title="{$comiis_scrolltop_data['comiis_t_r']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_r']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_r']['name']}</em></a><!--{/if}--><!--{/if}--><!--{elseif $comiis_scrolltop_view}--><!--{if $comiis_scrolltop['comiis_t_hf']}--><a href="forum.php?mod=post&action=reply&fid=$_G[fid]&tid=$_G[tid]&extra=$_GET[extra]&page=$page{if $_GET[from]}&from=$_GET[from]{/if}" onclick="showWindow('reply', this.href)" class="comiis_t_hf" title="{$comiis_scrolltop_data['comiis_t_hf']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_hf']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_hf']['name']}</em></a><!--{/if}--><!--{if $comiis_scrolltop['comiis_t_hl']}--><a href="forum.php?mod=redirect&goto=nextoldset&tid={$_G['tid']}" class="comiis_t_l" title="{$comiis_scrolltop_data['comiis_t_ht']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_ht']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_ht']['name']}</em></a><a href="forum.php?mod=redirect&goto=nextnewset&tid={$_G['tid']}" class="comiis_t_r" title="{$comiis_scrolltop_data['comiis_t_hn']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_hn']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_hn']['name']}</em></a><!--{/if}--><!--{if $comiis_scrolltop['comiis_t_lb']}--><a href="forum.php?mod=forumdisplay&fid={$_G['fid']}" class="comiis_t_lb" title="{$comiis_scrolltop_data['comiis_t_lb']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_lb']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_lb']['name']}</em></a><!--{/if}--><!--{/if}--><!--{if $comiis_scrolltop['comiis_t_kf']}--><a href="{$comiis_scrolltop['comiis_t_kf_url']}" target="_blank" class="comiis_t_kf" title="{$comiis_scrolltop_data['comiis_t_kf']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_kf']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_kf']['name']}</em></a><!--{/if}--><!--{if $comiis_scrolltop['comiis_t_mob']}--><a href="{$comiis_scrolltop['comiis_t_mob_url']}" target="_blank" class="comiis_t_mob" id="comiis_t_mob" onmouseover="showMenu({'ctrlid':this.id,'pos':'41!','ctrlclass':'comiis_scrolltop_hover','duration':2});" title="{$comiis_scrolltop_data['comiis_t_mob']['all_name']}"><em{if $comiis_scrolltop_data['comiis_t_mob']['class']} class="s"{/if}>{$comiis_scrolltop_data['comiis_t_mob']['name']}</em></a><!--{/if}--></div>
+{if $_GET['open'] == 1}$comiis_scrolltop_ver{/if}
+<!--{if $comiis_scrolltop['comiis_t_mob']}-->
+<div id="comiis_t_mob_menu" style="display: none;">{$comiis_scrolltop['comiis_t_mob_htm']}</div>
+<!--{/if}-->
+<script type="text/javascript">
+function comiis_scrolltopjbmk() {
+	var scrollHeighticsz = parseInt(document.body.getBoundingClientRect().top);
+	if (BROWSER.ie && BROWSER.ie < 7) {
+		var scrolltopxmco = $('comiis_scrolltop');
+		var viewPortHeightruio = parseInt(document.documentElement.clientHeight);
+		var shqugt = scrolltopxmco.clientHeight;
+		scrolltopxmco.style.top = viewPortHeightruio - scrollHeighticsz - shqugt - {$comiis_scrolltop['comiis_t_bp']} + 'px';
+	}
+	if (scrollHeighticsz < -100) {
+		$('comiis_gotop').style.visibility = 'visible';
+	} else {
+		$('comiis_gotop').style.visibility = 'hidden';
+	}
+}
+_attachEvent(window, 'scroll', function () { comiis_scrolltopjbmk(); });
+comiis_scrolltopjbmk();
+</script>
+<!--{/block}-->

@@ -1,0 +1,122 @@
+<script type="text/javascript">  
+  
+    var addTimer = function () {  
+        var list = [],  
+            interval;  
+  
+        return function (id, time) {  
+            if (!interval)  
+                interval = setInterval(go, 1000);  
+            list.push({ ele: document.getElementById(id), time: time });  
+        }  
+  
+        function go() {  
+            for (var i = 0; i < list.length; i++) {  
+                list[i].ele.innerHTML = getTimerString(list[i].time ? list[i].time -= 1 : 0);  
+                if (!list[i].time)  
+                    list.splice(i--, 1);  
+            }  
+        }  
+  
+        function getTimerString(time) {  
+            var not0 = !!time,  
+                d = Math.floor(time / 86400),  
+                h = Math.floor((time %= 86400) / 3600),  
+                m = Math.floor((time %= 3600) / 60),  
+                s = time % 60;  
+            //if(not0){
+            if(time>=0){
+                if(d>0){
+				return d + "天" + h + "小时" + m + "分" + s + "秒";
+                }else{
+				if(h>0){
+						return  h + "小时" + m + "分" + s + "秒";
+				}else{
+						return  m + "分" + s + "秒";
+				}
+                }
+            }else{
+            	return "已结束";
+            }
+        }  
+    } ();  
+
+	function jclistonoff_7ree(id_7ree){
+	/*
+		jcliststyle_7ree = document.getElementById('rclist_'+id_7ree);
+		if(jcliststyle_7ree.style.display=='none'){
+			jcliststyle_7ree.style.display='';
+		}else{
+			jcliststyle_7ree.style.display='none';
+		}
+	*/
+	}
+
+</script>
+
+
+        <tr ><th colspan="6">
+        <p class="y" style="padding-right:10px;">
+	        <!--{loop $fenlei_array2 $key_7ree $value_7ree}-->
+	        <span id="fenlei_7ree_{$key_7ree}" onmouseover="showMenu({'ctrlid':this.id})"><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&finish_7ree={$_GET['finish_7ree']}&fenlei1_7ree=<!--{eval echo urlencode($value_7ree[0]);}#{saishi_7ree}"  <!--{if $_GET['fenlei1_7ree']==$value_7ree[0]}-->style="font-weight:700;"<!--{/if}-->>{$value_7ree[0]}</a></span><span class="pipe">|</span>
+	        <!--{/loop}--> 
+	        <span <!--{if !$_GET['fenlei1_7ree'] && !$_GET['fenlei2_7ree']}-->style="font-weight:700;"<!--{/if}-->><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&finish_7ree={$_GET['finish_7ree']}#{saishi_7ree}">{lang jingcai_7ree:htm_lang_quanbusaishi_7ree}</a>
+        </p> 
+        <h3 id="saishi_7ree">{$navtitle}</h3>
+        
+ 	        <!--{loop $fenlei_array2 $key_7ree $value_7ree}-->
+	        <div id="fenlei_7ree_{$key_7ree}_menu" class="p_pop" style="display:none">
+	        <!--{loop $value_7ree $key_7ree2 $value_7ree2}-->
+	        <!--{if $key_7ree2 >0}--><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&finish_7ree={$_GET['finish_7ree']}&fenlei1_7ree=<!--{eval echo urlencode($value_7ree[0]);}-->&fenlei2_7ree=<!--{eval echo urlencode($value_7ree2);}-->#{saishi_7ree}"<!--{if $_GET['fenlei1_7ree']==$value_7ree[0] && $_GET['fenlei2_7ree']==$value_7ree2}-->style="font-weight:700;"<!--{/if}-->>$value_7ree2</a><!--{/if}-->
+	        <!--{/loop}-->
+	        </div>
+	        <!--{/loop}--> 
+        </th></tr>
+        
+        
+        
+      <tr><td colspan="6">
+      	<!--{loop $racelist_7ree $jingcailist_value}-->
+      	<table width="100%" class="njclist_7ree">
+	      	<tr onclick="jclistonoff_7ree($jingcailist_value['scid_7ree']);" style="cursor:pointer;">
+	      		<td colspan="3" class="tdleft_7ree"><img src="./source/plugin/jingcai_7ree/teamlogo_7ree/{$jingcailist_value['fenlei1_7ree']}.png"> {$jingcailist_value['scname_7ree']}</td>
+	      		<td colspan="3" class="tdright_7ree">{$jingcailist_value['time_7ree']}</td>
+	      	</tr>
+	      	<tr onclick="jclistonoff_7ree($jingcailist_value['scid_7ree']);" style="cursor:pointer;">
+	      		<td><!--{if $_GET['finish_7ree']}-->已结束<!--{else}-->竞猜中<!--{/if}--></td>
+	      		<td><img src="$jingcailist_value['alogo_7ree']" class="logo_7ree"></td>
+	      		<td class="title_7ree t1_7ree"><h4>{$jingcailist_value['aname_7ree']}</h4>{$jingcailist_value['arate_7ree']}</td>
+	      		<td class="title_7ree t2_7ree"><h4>{$jingcailist_value['bname_7ree']}</h4>{$jingcailist_value['brate_7ree']}</td>
+	      		<td><img src="$jingcailist_value['blogo_7ree']" class="logo_7ree"></td>
+	      		<td></td>
+	      	</tr>
+
+		      	<!--{loop $jingcailist_value['game_7ree'] $jcarray_value}-->
+		      	<tr>
+		      		<td><!--{if $_GET['finish_7ree']}-->已结束<!--{else}-->竞猜中<!--{/if}--></td>
+		      		<td><a href="javascript:void(0);" onclick="showWindow('jccard_7ree_{$jcarray_value[main_id_7ree]}', 'plugin.php?id=jingcai_7ree:jccard_7ree&optype_7ree=1&mid_7ree={$jcarray_value[main_id_7ree]}&team=1','get',0,{'cover':'1'});" >{$jcarray_value['aname_7ree']}{$jcarray_value['aodds_7ree']}</a></td>
+		      		<td colspan="2">{$jcarray_value['racename_7ree']}</td>
+		      		<td><a href="javascript:void(0);" onclick="showWindow('jccard_7ree_{$jcarray_value[main_id_7ree]}', 'plugin.php?id=jingcai_7ree:jccard_7ree&optype_7ree=1&mid_7ree={$jcarray_value[main_id_7ree]}&team=2','get',0,{'cover':'1'});" >{$jcarray_value['bname_7ree']}{$jcarray_value['bodds_7ree']}</a></td>
+		      		<td><span class="y" id="clock_7ree_{$jcarray_value['main_id_7ree']}">{$jcarray_value['time_7ree']}</span></td>
+		      	</tr>
+		      	<script type="text/javascript">
+		      	addTimer("clock_7ree_"+{$jcarray_value['main_id_7ree']}, $jcarray_value['clock_7ree']);
+		      	</script>
+		      	<!--{/loop}-->
+
+
+
+
+      	</table>
+      	<!--{/loop}-->
+      </td></tr>
+      
+      
+        
+        
+        
+        <!--{if $multipage}-->
+        <tr>
+        <td colspan="6">$multipage</td>
+        </tr>
+        <!--{/if}-->

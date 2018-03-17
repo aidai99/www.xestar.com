@@ -1,0 +1,62 @@
+{template common/header}
+<!--
+	(C)2006-2016 www.7ree.com
+	This is NOT a freeware, use is subject to license terms
+	Update: 2017/9/8 17:52
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+
+
+<link rel='stylesheet' id='css_badge_7ree' type='text/css' href='source/plugin/x7ree_cash/template/image/css_7ree.css?{VERHASH}'/>
+<link rel='stylesheet' id='css_badge_7ree' type='text/css' href='source/plugin/x7ree_cash/template/image/css_touch_7ree.css?{VERHASH}'/>
+
+<style>
+.dtable_7ree{
+	width:100%;
+}
+.dtable_7ree td{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px dashed #CDCDCD;
+	text-align:center;
+}
+</style>
+
+
+
+<div id="ct" class="ct2_a wp cl">
+
+	<div class="mn">
+
+	<div class="bm bw0">
+	<!--正文-->
+	<div class="bm_c cl">
+
+	<!--{if !$code_7ree}-->
+		{subtemplate x7ree_cash:x7ree_apply}
+	<!--{elseif $code_7ree==2}-->
+		{subtemplate x7ree_cash:x7ree_my}
+	<!--{/if}-->
+
+
+	</div>
+
+
+	</div>
+
+</div>
+
+
+
+
+		<div class="ftnav_7ree">
+<ul>
+		      <li><a href="plugin.php?id=x7ree_cash:x7ree_cash"><div class="tactionbtn_7ree tbtn1_7ree">我要提现</div></a></li>
+		      <li><a href="plugin.php?id=x7ree_cash:x7ree_cash&code_7ree=2"><div class="tactionbtn_7ree tbtn2_7ree">进度查询</div></a></li>
+		      <li><a href="{$vars_7ree['btn3_url_7ree']}"><div class="tactionbtn_7ree tbtn3_7ree">{$vars_7ree['btn3_txt_7ree']}</div></a></li>
+</ul>
+</div>
+
+
+{template common/footer}

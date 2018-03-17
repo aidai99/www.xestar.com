@@ -1,0 +1,81 @@
+<?php
+/*
+	[www.7ree.com] (C)2007-2017 7ree.com.
+	This is NOT a freeware, use is subject to license terms
+	Update: 2017/9/15 17:38
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+*/
+
+
+if(!defined('IN_DISCUZ')) {
+	exit('Access Denied');
+}
+
+function analysis_7ree($url_7ree){
+		global $_G;
+		$return_7ree = '';
+		$vars_7ree = $_G['cache']['plugin']['x7ree_v'];
+		$from_7ree =  str_replace("\n","|||",$vars_7ree['from_7ree']);
+		$from_array =  explode('|||', $from_7ree);
+		foreach($from_array as $from_value){
+				$from_array2 = explode(':',trim($from_value));
+				$from_add_7ree[$from_array2[0]]=$from_array2[1];
+		}
+		if(strstr($url_7ree,'youku.com')){
+				str_replace("==","",$url_7ree);
+				preg_match("#id_(.*?).html#",$url_7ree,$url_7ree);
+				if(!$url_7ree[1]) showmessage('x7ree_v:php_lang_err_badurl_7ree');
+				$return_7ree = 'http://player.youku.com/embed/'.$url_7ree[1].'==';
+				if($from_add_7ree['youku.com']){
+					$return_7ree = $return_7ree . $from_add_7ree['youku.com'];
+				}
+		}elseif(strstr($url_7ree,'qiyi.com')){
+				if(!$url_7ree) showmessage('x7ree_v:php_lang_err_badurl_7ree');
+				$return_7ree = $url_7ree;
+				if($from_add_7ree['iqiyi.com']){
+					$return_7ree = $return_7ree . $from_add_7ree['iqiyi.com'];
+				}
+		}elseif(strstr($url_7ree,'qq.com')){
+				preg_match("#https://v.qq.com/x/(.*?)/(.*?).html#",$url_7ree,$url2_7ree);
+				if(!$url2_7ree[2]) showmessage('x7ree_v:php_lang_err_badurl_7ree');
+				$return_7ree = 'https://v.qq.com/iframe/player.html?vid='.$url2_7ree[2].'&tiny=0&auto=0';
+				$return_7ree = $url_7ree;
+				if($from_add_7ree['qq.com']){
+					$return_7ree = $return_7ree . $from_add_7ree['qq.com'];
+				}
+		}elseif(strstr($url_7ree,'sohu.com')){
+				if(!$url_7ree) showmessage('x7ree_v:php_lang_err_badurl_7ree');
+				$return_7ree = $url_7ree;
+				$return_7ree = $url_7ree;
+				if($from_add_7ree['sohu.com']){
+					$return_7ree = $return_7ree . $from_add_7ree['sohu.com'];
+				}
+		}elseif(strstr($url_7ree,'ifeng.com')){
+				if(!$url_7ree) showmessage('x7ree_v:php_lang_err_badurl_7ree');
+				$return_7ree = $url_7ree;
+				$return_7ree = $url_7ree;
+				if($from_add_7ree['ifeng.com']){
+					$return_7ree = $return_7ree . $from_add_7ree['ifeng.com'];
+				}
+		}elseif(strstr($url_7ree,'56.com')){
+				if(!$url_7ree) showmessage('x7ree_v:php_lang_err_badurl_7ree');
+				$return_7ree = $url_7ree;
+				$return_7ree = $url_7ree;
+				if($from_add_7ree['56.com']){
+					$return_7ree = $return_7ree . $from_add_7ree['56.com'];
+				}
+		}elseif(strstr($url_7ree,'tv.ttbaodao.com')){//定制升级tv.ttbaodao.com
+				if(!$url_7ree) showmessage('x7ree_v:php_lang_err_badurl_7ree');
+				$return_7ree = $url_7ree;
+		}elseif(strstr($url_7ree,'.mp4')){//直接解析播放远程mp4
+				if(!$url_7ree) showmessage('x7ree_v:php_lang_err_badurl_7ree');
+				$return_7ree = $url_7ree;
+		}else{
+				showmessage('x7ree_v:php_lang_err_badurl_7ree');
+		}
+		return $return_7ree;
+
+}
+
+?>

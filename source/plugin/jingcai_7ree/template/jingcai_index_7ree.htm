@@ -1,0 +1,112 @@
+{subtemplate common/header}
+<!--
+	ID: jingcai_7ree
+	[www.7ree.com] (C)2007-2017 7ree.com.
+	This is NOT a freeware, use is subject to license terms
+	Update: 2017/12/25 18:29
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+
+<link rel="stylesheet" type="text/css" href="data/cache/style_1_forum_viewthread.css?{VERHASH}">
+<link rel="stylesheet" type="text/css" href="source/plugin/jingcai_7ree/template/image/css_7ree.css?{VERHASH}">
+<style type="text/css"> 
+.titlebg_7ree{
+		color:{$jingcai_7ree_var['titlecolor_7ree']};
+}
+
+</style> 
+
+
+<div id="pt" class="bm cl">
+<div class="z">
+<a href="./" class="nvhm">{$_G['setting']['bbname']}</a><em>&rsaquo;</em><a href="{$_G['siteurl']}">{$_G['setting']['bbname']}</a><em>&rsaquo;</em><a href="{$dating_url_7ree}">{$navtitle}</a>
+</div> 
+</div>
+
+
+
+
+<div id="ct" class="wp cl n">
+<div class="mn">
+				<ul class="tb cl">
+            <li <!--{if !$_GET['ac_7ree'] && !$_GET['finish_7ree']}--> class="a"<!--{/if}--> ><a href="{$dating_url_7ree}"><span>{lang jingcai_7ree:htm_lang_jingcaidating_7ree}</span></a></li>
+            <li <!--{if !$_GET['ac_7ree'] && $_GET['finish_7ree']==1}--> class="a"<!--{/if}--> ><a href="{$wangqiurl_7ree}"><span>{lang jingcai_7ree:htm_lang_wangqijingcai_7ree}</span></a></li>
+            <li <!--{if in_array($_GET['ac_7ree'],array('1','7','16','17'))}--> class="a"<!--{/if}--> id="wodejingcai_7ree" onmouseover="showMenu(this.id)"><a href="javascript:void(0);" title="{lang jingcai_7ree:htm_lang_lingqujiangli_7ree}"><span class="showmenu">{lang jingcai_7ree:htm_lang_gerenzhongxin_7ree}</span></a></li>
+            <li <!--{if in_array($_GET['ac_7ree'],array('5','6'))}--> class="a"<!--{/if}--> id="ranklist_7ree" onmouseover="showMenu(this.id)"><a href="javascript:void(0);"><span class="showmenu">{lang jingcai_7ree:htm_lang_ranklist_7ree}</span></a></li>
+            <!--{if $jingcai_7ree_var['fid_7ree']}-->
+            <li><a href="forum.php?mod=forumdisplay&fid={$jingcai_7ree_var['fid_7ree']}" target="_blank"><span>{lang jingcai_7ree:htm_lang_luntan_7ree}</span></a></li>
+            <!--{/if}-->
+            <!--{if $_G['adminid']==1 || $isadmins_7ree}-->
+            <li <!--{if $_GET['ac_7ree'] == '2'}--> class="a"<!--{/if}--> ><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2"><span>{lang jingcai_7ree:htm_lang_admincp_7ree}</span></a></li>
+            <!--{/if}-->
+				</ul>
+				
+			<ul id="wodejingcai_7ree_menu" class="p_pop" style="width:75px;display:none;">
+				<li><a href="{$wdjc_url_7ree}" title="{lang jingcai_7ree:htm_lang_lingqujiangli_7ree}" <!--{if $_GET['ac_7ree'] == '1'}--> class="li_now_7ree"<!--{/if}-->><span>{lang jingcai_7ree:htm_lang_wodejingcai_7ree}</span></a></li>
+				<!--{if $jingcai_7ree_var['gaoshou_onoff_7ree']}-->
+	            <li><a href="{$wdgz_url_7ree}" <!--{if $_GET['ac_7ree'] == '7'}--> class="li_now_7ree"<!--{/if}-->><span>{lang jingcai_7ree:htm_lang_wodeguanzhu_7ree}</span></a></li>
+	            <!--{/if}-->
+	            <!--{if $jingcai_7ree_var['fencheng_onoff_7ree']}-->
+	            <li><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=16" <!--{if $_GET['ac_7ree'] == '16'}--> class="li_now_7ree"<!--{/if}-->><span>{lang jingcai_7ree:htm_lang_wodetuiguang_7ree}</span></a></li>
+	            <li><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=17" <!--{if $_GET['ac_7ree'] == '17'}--> class="li_now_7ree"<!--{/if}-->><span>{lang jingcai_7ree:htm_lang_wodefencheng_7ree}</span></a></li>
+	            <!--{/if}-->
+	            <li><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=18" <!--{if $_GET['ac_7ree'] == '18'}--> class="li_now_7ree"<!--{/if}-->><span>{lang jingcai_7ree:htm_lang_chakanshouyi_7ree}</span></a></li>
+			</ul>
+				
+				
+			<ul id="ranklist_7ree_menu" class="p_pop" style="width:100px;display:none;">
+	            <!--{if $jingcai_7ree_var['newrank_7ree']}-->
+	            <li><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=5" <!--{if $_GET['ac_7ree'] == '5'}--> class="li_now_7ree"<!--{/if}--> ><span>{lang jingcai_7ree:htm_lang_zuixinjingcai_7ree}</span></a></li>
+	            <!--{/if}-->
+	            <!--{if $jingcai_7ree_var['allrank_7ree']}-->
+	            <li><a href="{$zyl_url_7ree}" <!--{if $_GET['ac_7ree'] == '6' && $_GET['how_7ree']==1}--> class="li_now_7ree"<!--{/if}--> ><span>{lang jingcai_7ree:htm_lang_rank1_7ree}</span></a></li> 
+	            <!--{/if}-->
+	            <!--{if $jingcai_7ree_var['cutrank_7ree']}-->
+	            <li><a href="$jyl_url_7ree" <!--{if $_GET['ac_7ree'] == '6' && $_GET['how_7ree']==2}--> class="li_now_7ree"<!--{/if}--> ><span>{lang jingcai_7ree:htm_lang_rank2_7ree}</span></a></li> 
+	            <!--{/if}-->
+	            <!--{if $jingcai_7ree_var['winrank_7ree']}-->
+	            <li><a href="{$cangci_url_7ree}" <!--{if $_GET['ac_7ree'] == '6' && $_GET['how_7ree']==3}--> class="li_now_7ree"<!--{/if}--> ><span>{lang jingcai_7ree:htm_lang_rank3_7ree}</span></a></li> 
+	            <!--{/if}-->
+	            <!--{if $jingcai_7ree_var['hitrank_7ree']}-->
+	            <li><a href="{$mingzhong_url_7ree}" <!--{if $_GET['ac_7ree'] == '6' && $_GET['how_7ree']==4}--> class="li_now_7ree"<!--{/if}--> ><span>{lang jingcai_7ree:htm_lang_rank4_7ree}</span></a></li> 
+	            <!--{/if}-->
+	            <!--{if $jingcai_7ree_var['lyrank_7ree']}-->
+	            <li><a href="{$liansheng_url_7ree}" <!--{if $_GET['ac_7ree'] == '6' && $_GET['how_7ree']==5}--> class="li_now_7ree"<!--{/if}--> ><span>{lang jingcai_7ree:htm_lang_rank5_7ree}</span></a></li> 
+	            <!--{/if}-->
+			</ul>	
+				
+			<div class="datalist_7ree">
+			<!--{if $_GET['ac_7ree'] == ""}-->
+			{template jingcai_7ree:jingcai_main_7ree}
+			<!--{elseif $_GET['ac_7ree'] == "1"}-->
+			{template jingcai_7ree:jingcai_reward_7ree}
+			<!--{elseif $_GET['ac_7ree'] == "2"}-->
+			{template jingcai_7ree:jingcai_admin_7ree}
+			<!--{elseif $_GET['ac_7ree'] == "5"}-->
+			{template jingcai_7ree:jingcai_rank_7ree}
+			<!--{elseif $_GET['ac_7ree'] == "6"}-->
+			{template jingcai_7ree:jingcai_top_7ree}
+			<!--{elseif $_GET['ac_7ree'] == "7"}-->
+			{template jingcai_7ree:jingcai_guanzhu_7ree}
+			<!--{elseif $_GET['ac_7ree'] == "10"}-->
+			{template jingcai_7ree:jingcai_viewlist_7ree}
+			<!--{elseif $_GET['ac_7ree'] == "14"}-->
+			{template jingcai_7ree:jingcai_gaoshou_7ree}
+			<!--{elseif $_GET['ac_7ree'] == "16"}-->
+			{template jingcai_7ree:jingcai_tuiguang_7ree}
+			<!--{elseif $_GET['ac_7ree'] == "17"}-->
+			{template jingcai_7ree:jingcai_fencheng_7ree}
+			<!--{elseif $_GET['ac_7ree'] == "18"}-->
+			{template jingcai_7ree:jingcai_vewpaylist_7ree}
+			<!--{/if}-->
+	    	</div>
+				
+
+    </div>
+</div>	
+
+
+
+
+{subtemplate common/footer}

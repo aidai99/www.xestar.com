@@ -1,0 +1,5 @@
+<!--{loop $avatars $k $avatar}-->
+	<!--{if $avatar['status']}-->
+	<input type="radio" value= "{$avatar['name']}" id= "a_{$k}" name="avatar" style="display:none"> <img id="b_{$k}" src="source/plugin/defaultavatar/avatar/{$avatar['name']}" onclick="avatarSelect(this.id)"> 
+	<!--{/if}-->
+<!--{/loop}-->

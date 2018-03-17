@@ -1,0 +1,78 @@
+<form method="post" action="plugin.php?id=x7ree_cash:x7ree_cash&code_7ree=1">
+<input type="hidden" name="formhash" value="{FORMHASH}">
+<table class="dtable_7ree" style="margin-top:20px;">
+<tr>
+<td colspan="2" style="height:30px;line-height:30px;font-size:20px;"><h3>提现申请</h3></td>
+</tr>
+<tr>
+<td style="width:30%;">
+提现积分数量
+</td>
+<td>
+<input type="text" name="ext_7ree" id="ext_7ree" onkeyup="result_7ree(this.value);">
+<br>我现在共有{$membercount_7ree}{$exttitle_7ree}
+</td>
+</tr>
+
+<tr>
+<td style="width:30%;">
+预计到账金额
+</td>
+<td style="width:590px;height:30px;overflow:hidden;">
+<input type="text" name="cash_7ree" id="cash_7ree" READONLY>
+<br>提现率为：{$vars_7ree['rate_7ree']}%
+</td>
+</tr>
+
+<tr>
+<td style="width:30%;">
+收款账户类型
+</td>
+<td>
+<input type="radio" name="type_7ree" id="type_7ree" value="1">微信<span class="pipe">|</span>
+<input type="radio" name="type_7ree" id="type_7ree" value="2">支付宝
+</td>
+</tr>
+<tr>
+<td style="width:30%;">
+收款账户名
+</td>
+<td>
+<input type="text" name="account_7ree" id="account_7ree"> <span style="color:red;font-weight:700;">*</span>
+</td>
+</tr>
+
+<tr>
+<td style="width:30%;">
+联系手机电话
+</td>
+<td>
+<input type="text" name="tel_7ree" id="tel_7ree"> <span style="color:red;font-weight:700;">*</span>
+</td>
+</tr>
+
+
+<tr>
+<td colspan="2">
+<button type="submit" name="submit_7ree" value="TRUE" style="padding:5px 20px;"><strong>确认提交提现申请</strong></button>
+</td>
+</tr>
+
+</table>
+</form>
+
+
+
+<script langue="javascript">
+	function result_7ree(ext_7ree){
+		var format_7ree = /^\+?[1-9][0-9]*$/;
+		if(format_7ree.test(ext_7ree)){
+		 	ext_7ree = document.getElementById('ext_7ree').value * ($vars_7ree[rate_7ree]/100);
+		 	document.getElementById('cash_7ree').value = ext_7ree.toFixed(2);
+	   }else{
+	   	    document.getElementById('ext_7ree').value = '';
+	    	document.getElementById('cash_7ree').value = '0';
+	    	showPrompt(null, null, "<span>请输入整数积分<span>", 1500);
+	   }
+	}
+</script>

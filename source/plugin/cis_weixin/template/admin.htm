@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}" />
+<title>$cislang[24] - 1-dz.com</title>
+<link rel="stylesheet" type="text/css" href="source/plugin/cis_weixin/template/style/admin.css" />
+<script type="text/javascript">var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}', VERHASH = '{VERHASH}', charset = '{CHARSET}', discuz_uid = '$_G[uid]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]', DYNAMICURL = '$_G[dynamicurl]';</script>
+<script type="text/javascript" src="{$_G[setting][jspath]}common.js?{VERHASH}"></script>
+<script language="javascript">
+  function checkAll(e, itemName){
+		var aa = document.getElementsByName(itemName);
+		for (var i=0; i<aa.length; i++){
+		 aa[i].checked = e.checked;
+		}
+	}
+</script>
+</head>
+
+<body>
+<div id="append_parent"></div><div id="ajaxwaitid"></div>
+<div class="header">
+  <div class="wp">
+    <h2>$cislang[24]</h2>
+    <ul>
+      <li {if !$_GET['item']}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin">$cislang[25]</a></li>
+      <li {if $_GET['item']=='mobile'}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin&item=mobile">$cislang[27]</a></li>
+      <li {if $_GET['item']=='immwa'}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin&item=immwa">$cislang[172]</a></li>
+    </ul>
+  </div>
+</div>
+<div class="wp">
+  {if $showmessage}
+  <!--{eval include template('cis_weixin:showmessage');}-->
+  {else}
+  {if $_GET['item']=='mobile'}
+  <!--{eval include template('cis_weixin:mobile');}-->
+  {elseif $_GET['item']=='immwa'}
+  <!--{eval include template('cis_weixin:immwa');}-->
+  {else}
+  <!--{eval include template('cis_weixin:authorization ');}-->
+  {/if}
+  {/if}
+</div>
+<div class="footer">
+  <div class="wp">
+  <p>Powered by Immwa! 1.0 &copy; 2015, Mmwa Inc. &1-dz.com</p>
+  </div>
+</div>
+<!--{eval updatesession();}-->
+</body>
+</html>

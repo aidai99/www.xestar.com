@@ -1,0 +1,201 @@
+<div class="pt">
+  <ul>
+    <li {if !$_GET['action']}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin&item=mobile">$cislang[47]</a></li>
+    <li class="pipe">|</li>
+    <li {if $_GET['action']=='touch'}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin&item=mobile&action=touch">$cislang[48]</a></li>
+    <li class="pipe">|</li>
+    <li {if $_GET['action']=='style'}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin&item=mobile&action=style">$cislang[49]</a></li>
+  </ul>
+  $cislang[50]<span>Mobile</span>
+</div>
+<div class="main">
+{if $_GET['action']=='style'}
+<ul class="nvs cl">
+  <li {if !$_GET['do']}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin&item=mobile&action=style">$cislang[51]</a></li>
+  <li {if $_GET['do']=='add'}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin&item=mobile&action=style&do=add">$cislang[52]</a></li>
+</ul>
+{if in_array( $_GET['do'],array('add','edit'))}
+<form action="" method="post" class="formstyle">
+  <input type="hidden" name="postsubmit" value="true" />
+  <input type="hidden" name="formhash" value="{FORMHASH}" />
+  <h4 class="title">$cislang[53]<em>*</em></h4>
+  <p class="p"><input type="text" name="name" value="$style['name']" class="input"></p>
+  <h4 class="title">$cislang[54]</h4>
+  <p class="p"><input type="text" name="b1" value="$style['var']['b1']" class="input input_d"><span class="c" style="background:$style['var']['b1']"></span></p>
+  <h4 class="title">$cislang[55]</h4>
+  <p class="p"><input type="text" name="b2" value="$style['var']['b2']" class="input input_d"><span class="c" style="background:$style['var']['b2']"></span></p>
+  <h4 class="title">$cislang[56]</h4>
+  <p class="p"><input type="text" name="b3" value="$style['var']['b3']" class="input input_d"><span class="c" style="background:$style['var']['b3']"></span></p>
+  <h4 class="title">$cislang[57]</h4>
+  <p class="p"><input type="text" name="b4" value="$style['var']['b4']" class="input input_d"><span class="c" style="background:$style['var']['b4']"></span></p>
+  <h4 class="title">$cislang[58]</h4>
+  <p class="p"><input type="text" name="b5" value="$style['var']['b5']" class="input input_d"><span class="c" style="background:$style['var']['b5']"></span></p>
+  <h4 class="title">$cislang[59]</h4>
+  <p class="p"><input type="text" name="b6" value="$style['var']['b6']" class="input input_d"><span class="c" style="background:$style['var']['b6']"></span></p>
+  <h4 class="title">$cislang[60]</h4>
+  <p class="p"><input type="text" name="b7" value="$style['var']['b7']" class="input input_d"><span class="c" style="background:$style['var']['b7']"></span></p>
+  <h4 class="title">$cislang[61]</h4>
+  <p class="p"><input type="text" name="b8" value="$style['var']['b8']" class="input input_d"><span class="c" style="background:$style['var']['b8']"></span></p>
+  <hr/>
+  <h4 class="title">$cislang[62]</h4>
+  <p class="p"><input type="text" name="b9" value="$style['var']['b9']" class="input input_d"><span class="c" style="background:$style['var']['b9']"></span></p>
+  <h4 class="title">$cislang[63]</h4>
+  <p class="p"><input type="text" name="b10" value="$style['var']['b10']" class="input input_d"><span class="c" style="background:$style['var']['b10']"></span></p>
+  <h4 class="title">$cislang[64]</h4>
+  <p class="p"><input type="text" name="b11" value="$style['var']['b11']" class="input input_d"><span class="c" style="background:$style['var']['b11']"></span></p>
+  <h4 class="title">$cislang[65]</h4>
+  <p class="p"><input type="text" name="b12" value="$style['var']['b12']" class="input input_d"><span class="c" style="background:$style['var']['b12']"></span></p>
+  <hr/>
+  <h4 class="title">$cislang[66]</h4>
+  <p class="p"><input type="text" name="b13" value="$style['var']['b13']" class="input input_d"><span class="c" style="background:$style['var']['b13']"></span></p>
+  <h4 class="title">$cislang[67]</h4>
+  <p class="p"><input type="text" name="b14" value="$style['var']['b14']" class="input input_d"><span class="c" style="background:$style['var']['b14']"></span></p>
+  <h4 class="title">$cislang[68]</h4>
+  <p class="p"><input type="text" name="b15" value="$style['var']['b15']" class="input input_d"><span class="c" style="background:$style['var']['b15']"></span></p>
+  <h4 class="title">$cislang[69]</h4>
+  <p class="p"><input type="text" name="b16" value="$style['var']['b16']" class="input input_d"><span class="c" style="background:$style['var']['b16']"></span></p>
+  <h4 class="title">$cislang[70]</h4>
+  <p class="p"><input type="text" name="b17" value="$style['var']['b17']" class="input input_d"><span class="c" style="background:$style['var']['b17']"></span></p>
+
+
+  <hr/>
+  <h4 class="title">$cislang[73]</h4>
+  <p class="p"><input type="text" name="o1" value="$style['var']['o1']" class="input input_d"><span class="c" style="background:$style['var']['o1']"></span></p>
+  <h4 class="title">$cislang[74]</h4>
+  <p class="p"><input type="text" name="o2" value="$style['var']['o2']" class="input input_d"><span class="c" style="background:$style['var']['o2']"></span></p>
+  <h4 class="title">$cislang[75]</h4>
+  <p class="p"><input type="text" name="o3" value="$style['var']['o3']" class="input input_d"><span class="c" style="background:$style['var']['o3']"></span></p>
+  <h4 class="title">$cislang[78]</h4>
+  <p class="p"><input type="text" name="o6" value="$style['var']['o6']" class="input input_d"><span class="c" style="background:$style['var']['o6']"></span></p>
+  <h4 class="title">$cislang[81]</h4>
+  <p class="p"><input type="text" name="o9" value="$style['var']['o9']" class="input input_d"><span class="c" style="background:$style['var']['o9']"></span></p>
+  <h4 class="title">$cislang[82]</h4>
+  <p class="p"><input type="text" name="o10" value="$style['var']['o10']" class="input input_d"><span class="c" style="background:$style['var']['o10']"></span></p>
+  <h4 class="title">$cislang[83]</h4>
+  <p class="p"><input type="text" name="o11" value="$style['var']['o11']" class="input input_d"><span class="c" style="background:$style['var']['o11']"></span></p>
+  <hr/>
+  <h4 class="title">$cislang[84]</h4>
+  <p class="p"><input type="text" name="c1" value="$style['var']['c1']" class="input input_d"><span class="c" style="background:$style['var']['c1']"></span></p>
+  <h4 class="title">$cislang[85]</h4>
+  <p class="p"><input type="text" name="c2" value="$style['var']['c2']" class="input input_d"><span class="c" style="background:$style['var']['c2']"></span></p>
+  <h4 class="title">$cislang[86]</h4>
+  <p class="p"><input type="text" name="c3" value="$style['var']['c3']" class="input input_d"><span class="c" style="background:$style['var']['c3']"></span></p>
+  <h4 class="title">$cislang[87]</h4>
+  <p class="p"><input type="text" name="c4" value="$style['var']['c4']" class="input input_d"><span class="c" style="background:$style['var']['c4']"></span></p>
+  <h4 class="title">$cislang[88]</h4>
+  <p class="p"><input type="text" name="c5" value="$style['var']['c5']" class="input input_d"><span class="c" style="background:$style['var']['c5']"></span></p>
+  <h4 class="title">$cislang[89]</h4>
+  <p class="p"><input type="text" name="c6" value="$style['var']['c6']" class="input input_d"><span class="c" style="background:$style['var']['c6']"></span></p>
+  <h4 class="title">$cislang[90]</h4>
+  <p class="p"><input type="text" name="c7" value="$style['var']['c7']" class="input input_d"><span class="c" style="background:$style['var']['c7']"></span></p>
+  <h4 class="title">$cislang[91]</h4>
+  <p class="p"><input type="text" name="c8" value="$style['var']['c8']" class="input input_d"><span class="c" style="background:$style['var']['c8']"></span></p>
+  <h4 class="title">$cislang[92]</h4>
+  <p class="p"><input type="text" name="c9" value="$style['var']['c9']" class="input input_d"><span class="c" style="background:$style['var']['c9']"></span></p>
+  <h4 class="title">$cislang[93]</h4>
+  <p class="p"><input type="text" name="c10" value="$style['var']['c10']" class="input input_d"><span class="c" style="background:$style['var']['c10']"></span></p>
+  <h4 class="title">$cislang[94]</h4>
+  <p class="p"><input type="text" name="c11" value="$style['var']['c11']" class="input input_d"><span class="c" style="background:$style['var']['c11']"></span></p>
+  <h4 class="title">$cislang[95]</h4>
+  <p class="p"><input type="text" name="c12" value="$style['var']['c12']" class="input input_d"><span class="c" style="background:$style['var']['c12']"></span></p>
+  <h4 class="title">$cislang[96]</h4>
+  <p class="p"><input type="text" name="c13" value="$style['var']['c13']" class="input input_d"><span class="c" style="background:$style['var']['c13']"></span></p>
+  <p class="btn"><button type="submit" class="button">Submit</button></p>
+</form>
+{else}
+<form action="" method="post">
+<input type="hidden" name="postsubmit" value="true" />
+<input type="hidden" name="formhash" value="{FORMHASH}" />
+<table cellpadding="0" cellspacing="0" class="tablelist">
+  <thead>
+    <tr>
+      <td class="list">$cislang[102]</td>
+      <td class="name">$cislang[103]</td>
+      <td class="ckeck">$cislang[104]</td>
+      <td class="radio">$cislang[105]</td>
+      <td class="manage">$cislang[40]</td>
+    </tr>
+  </thead>
+  {loop $styles $style}
+  <tbody>
+    <tr>
+      <td class="list"><input type="hidden" name="sid[]" value="$style['sid']"/><input type="text" name="list[]" value="$style['list']"/></td>
+      <td class="name">$style['name']</td>
+      <td class="ckeck"><label><input type="checkbox" name="canuse[]" value="1" {if $style['canuse']}checked="checked"{/if} />$cislang[107]</label></td>
+      <td class="radio"><label><input type="radio" name="default" value="$style['sid']" {if $style['default']}checked="checked"{/if}/>$cislang[105]</label></td>
+      <td class="manage"><a href="plugin.php?id=cis_weixin&mod=admin&item=mobile&action=style&do=edit&sid=$style['sid']">$cislang[41]</a><a href="plugin.php?id=cis_weixin&mod=admin&item=mobile&action=style&do=delete&sid=$style['sid']">$cislang[42]</a></td>
+    </tr>
+  </tbody>
+  {/loop}
+  <tfoot>
+    <tr>
+      <td colspan="5">
+        <button type="submit" class="button">$cislang[111]</button>
+      </td>
+    </tr>
+  </tfoot>
+</table>
+
+</form>
+{/if}
+{elseif $_GET['action']=='touch'}
+
+<form action="" method="post" class="formstyle">
+  <input type="hidden" name="postsubmit" value="true" />
+  <input type="hidden" name="formhash" value="{FORMHASH}" />
+  <h4 class="title">$cislang[177]</h4>
+  <p class="p">
+  <select name="userurl">
+    <option value="1" {if $_G['setting']['userurl']=='1'}selected="selected"{/if}>$cislang[178]</option>
+    <option value="2" {if $_G['setting']['userurl']=='2'}selected="selected"{/if}>$cislang[179]</option>
+  </select>
+  </p>
+  <h4 class="title">$cislang[115]</h4>
+  <p class="p">
+  <select name="liststyle">
+    <option value="1" {if $_G['setting']['liststyle']=='1'}selected="selected"{/if}>$cislang[116]</option>
+    <option value="2" {if $_G['setting']['liststyle']=='2'}selected="selected"{/if}>$cislang[184]</option>
+    <option value="3" {if $_G['setting']['liststyle']=='3'}selected="selected"{/if}>$cislang[117]</option>
+  </select>
+  </p>
+  <h4 class="title">$cislang[174]</h4>
+  <p class="p"><label><input type="radio" name="needpic" value="1" {if $_G['setting']['needpic']=='1'}checked="checked"{/if} />$cislang[175]</label><label><input type="radio" name="needpic" value="0" {if !$_G['setting']['needpic']}checked="checked"{/if}/>$cislang[176]</label></p>
+  <h4 class="title">$cislang[180]<span>$cislang[181]</span></h4>
+  <p class="p">
+  <select name="indexvar" onchange="shownofids(this.value)">
+    <option value="1" {if $_G['setting']['indexvar']=='1' || !$_G['setting']['indexvar']}selected="selected"{/if}>$cislang[182]</option>
+    <option value="2" {if $_G['setting']['indexvar']=='2'}selected="selected"{/if}>$cislang[183]</option>
+  </select>
+  </p>
+  <div id="nofids" {if $_G['setting']['indexvar']=='2'} style="display:none"{/if}>
+  <h4 class="title">$cislang[118]<span>$cislang[119]</span></h4>
+  <p class="p"><input type="text" name="nofids" value="$_G['setting']['nofids']" class="input" ></p>
+  </div>
+  <p class="btn"><button type="submit" class="button">Submit</button></p>
+</form>
+<script language="javascript">
+	function shownofids(value){
+		if(value=='1'){
+			document.getElementById('nofids').style.display='';
+		}else{
+			document.getElementById('nofids').style.display='none';
+		}
+	}
+</script>
+
+
+{else}
+<form action="" method="post" class="formstyle">
+  <input type="hidden" name="postsubmit" value="true" />
+  <input type="hidden" name="formhash" value="{FORMHASH}" />
+  <h4 class="title">$cislang[125]<span>$cislang[126]</span></h4>
+  <p class="p"><label><input type="radio" name="mobilelogin" value="1" {if $_G['setting']['mobilelogin']}checked="checked"{/if}>$cislang[127]</label><label><input type="radio" name="mobilelogin" value="0" {if !$_G['setting']['mobilelogin']}checked="checked"{/if}>$cislang[128]</label></p>
+  <h4 class="title">$cislang[129]<span>$cislang[130]</span></h4>
+  <p class="p"><label><input type="radio" name="logintype" value="2" {if $_G['setting']['logintype']=='2'}checked="checked"{/if}>$cislang[131]</label><label><input type="radio" name="logintype" value="3" {if $_G['setting']['logintype']=='3'}checked="checked"{/if}>$cislang[132]</label></p>
+  <h4 class="title">$cislang[133]<em>*</em><span>$cislang[134]</span></h4>
+  <p class="p"><input type="text" name="loginkey" value="$_G['setting']['loginkey']" class="input" disabled="disabled"></p>
+  <p class="btn"><button type="submit" class="button">Submit</button></p>
+</form>
+
+{/if}
+</div>

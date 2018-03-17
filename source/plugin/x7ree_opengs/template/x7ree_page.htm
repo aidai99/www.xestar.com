@@ -1,0 +1,101 @@
+<div class="tbmu cl pagetitle_7ree">
+<h3>
+<!--{if $this_7ree['mid_7ree']}-->
+<a class="y" href="plugin.php?id=jingcai_7ree:jingcai_7ree&sp_7ree=more&main_id_7ree={$this_7ree['mid_7ree']}">>>{lang x7ree_opengs:htm_lang_canyujingdian_7ree}</a>
+<!--{else}-->
+<a class="y" href="plugin.php?id=x7ree_opengs:x7ree_opengs">>>{lang x7ree_opengs:htm_lang_fanhuishouye_7ree}</a>
+<!--{/if}-->
+
+
+{$this_7ree['name_7ree']}
+</h3>
+
+</div>
+
+<div class="pagebox_7ree">
+	<div class="topdiv_7ree">
+		<div class="pageimg_7ree">
+			<img src="{$folder_7ree}/{$this_7ree['pic_7ree']}" border="0" onerror="javascript:this.src='source/plugin/x7ree_opengs/template/image/noimage_7ree.gif'"/>
+		</div>
+		<div class="pageinfo_7ree">
+			<p>{$this_7ree['detail_7ree']}</p>
+		</div>
+	</div>
+	
+		<table>
+			<tr>
+				<td><span>{lang x7ree_opengs:htm_lang_jiezhi_7ree}<br><b>{$this_7ree['time_7ree']}</b></span></td>
+				<td><span>{lang x7ree_opengs:htm_lang_leijicanyu_7ree}<br><b>{$tongji_7ree['allcount_7ree']}{lang x7ree_opengs:htm_lang_renci_7ree}</span></td>
+				<td><span class="tdnoborder_7ree">{lang x7ree_opengs:htm_lang_gongzhichi_7ree}<br><b>{$tongji_7ree['allext_7ree']}{$exttitle_7ree}</b></span></td>
+			</tr>
+		</table>
+		
+	<!--{if $this_7ree['oid_7ree']}-->
+		<p class="noticetip_7ree">{lang x7ree_opengs:htm_lang_jingcaijieguo_7ree}: {$this_7ree['option_7ree']['option_7ree']} <span>[{lang x7ree_opengs:htm_lang_peilv_7ree}: {$this_7ree['option_7ree']['odds_7ree']}]</span></p>
+	<!--{/if}-->
+		
+		
+	<!--{if $ing_7ree && (!$myoption_7ree || $vars_7ree['duoci_7ree']) && !$this_7ree['oid_7ree']}-->
+		<form method="post" action="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=12" name="postform_7ree">
+			<input type="hidden" name="formhash" value="{FORMHASH}">
+			<input type="hidden" name="id_7ree" value="{$this_7ree['id_7ree']}">
+	<!--{/if}-->
+			<ul>
+					<!--{loop $list_7ree $key_7ree $list_value}-->
+						<li id="li_7ree_{$key_7ree}" class="checkbg1_7ree" onclick="check_7ree('$key_7ree')">
+						<!--{if $ing_7ree && (!$myoption_7ree || $vars_7ree['duoci_7ree']) && !$this_7ree['oid_7ree']}-->
+						<input <!--{if $vars_7ree['duoxuan_7ree']}-->type="checkbox" name='option_7ree[]'<!--{else}-->type="radio" name='option_7ree'<!--{/if}--> value="{$list_value['id_7ree']}" id="option_7ree_{$key_7ree}">
+						<!--{/if}-->
+						{lang x7ree_opengs:htm_lang_jieguo_7ree}<!--{eval echo($key_7ree+1);}-->: {$list_value['option_7ree']}<span>{lang x7ree_opengs:htm_lang_peilv_7ree}: {$list_value['odds_7ree']}</span>
+						</li>
+					<!--{/loop}-->
+			</ul>
+	<!--{if $ing_7ree && !$this_7ree['oid_7ree']}-->
+		<!--{if $myoption_7ree && !$vars_7ree['duoci_7ree']}-->
+			<p class="noticetip_7ree">{lang x7ree_opengs:htm_lang_woyijingcai_7ree}: {$myoption_7ree['option_7ree']['option_7ree']} <span>[{lang x7ree_opengs:htm_lang_peilv_7ree}: {$myoption_7ree['option_7ree']['odds_7ree']}]</span></p>
+		<!--{else}-->
+			<p class="zhichibtn_7ree"><span>{lang x7ree_opengs:htm_lang_woyaozhichi_7ree}<input type="text" name="ext_7ree" value="">{$exttitle_7ree}</span><button name="submit_7ree" value="TRUE">{lang x7ree_opengs:htm_lang_tijiaojingcai_7ree}</button>
+			<i class="detailtips_7ree">{lang x7ree_opengs:htm_lang_zhichi_7ree}{$exttitle_7ree}{lang x7ree_opengs:htm_lang_zhichitip1_7ree}{$vars_7ree['extmax_7ree']}{$exttitle_7ree}, {lang x7ree_opengs:htm_lang_zhichitip2_7ree}{$vars_7ree['extmin_7ree']}{$exttitle_7ree}.</i>
+			</p>
+			<div style="clear:both;"></div>
+		</form>
+	<!--{/if}-->
+
+	<!--{else}-->
+		<p class="noticetip_7ree">{lang x7ree_opengs:htm_lang_yijieshu_7ree}</p>
+	<!--{/if}-->
+	
+
+</div>
+
+<script type="text/javascript">
+		<!--{if $vars_7ree['duoxuan_7ree']}-->
+		function check_7ree(id_7ree){
+				var li_id_7ree = 'li_7ree_'+id_7ree;
+				var optionid_7ree = 'option_7ree_'+id_7ree;
+
+				if(document.getElementById(li_id_7ree).className=="checkbg1_7ree"){
+					document.getElementById(li_id_7ree).className="checkbg2_7ree";
+					document.getElementById(optionid_7ree).checked = true;
+				}else{
+					document.getElementById(li_id_7ree).className="checkbg1_7ree";
+					document.getElementById(optionid_7ree).checked = false;
+				}
+
+		}
+		<!--{else}-->
+		function check_7ree(id_7ree){
+			var id_7ree;
+			for(var j=0;j<$option_count_7ree;j++){
+					if(id_7ree==j){
+							document.getElementById('li_7ree_'+j).className="checkbg2_7ree";
+					}else{
+							document.getElementById('li_7ree_'+j).className="checkbg1_7ree";
+					}
+			}
+			var optionid_7ree = 'option_7ree_'+id_7ree;
+			document.getElementById(optionid_7ree).checked = true;
+		}
+		<!--{/if}-->
+
+</script>

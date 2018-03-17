@@ -1,0 +1,107 @@
+.rechargebox_7ree{
+
+}
+
+.rechargebox_7ree td{
+	height:50px;
+	line-height:50px;
+	font-size:12px;
+}
+
+.rechargebox_7ree td strong{
+	color:#FF0000;
+}
+
+.rechargeinput_7ree{
+	width:250px;
+	height:30px;
+	line-height:30px;
+	font-size:14px;
+	text-align:center;
+	border:1px solid #333333;
+	background-color:#666666;
+}
+
+.dfbox_7ree{
+	display:inline-block;
+	width:100px;
+	height:40px;
+	line-height:40px;
+	border:2px solid #cfcfcf;
+	text-align:center;
+	margin-right:20px;
+	font-size:14px;
+	cursor:pointer;
+}
+
+.checked_7ree{
+	border:2px solid green;
+	background-color:#000000;
+	color:green;
+	font-weight:700;
+}
+
+.paynote1_7ree{
+	display:block;
+	width:90%;
+	height:50px;
+	line-height:50px;
+	font-size:18px;
+	font-weight:normal;
+	border:2px solid #66D020;
+	background-color:#9AD122;
+	text-align:center;
+	margin:20px auto;
+	border-radius: 15px;
+}
+
+.paynote2_7ree{
+	display:block;
+	width:90%;
+	height:50px;
+	line-height:50px;
+	font-size:18px;
+	font-weight:normal;
+	border:2px solid #66D020;
+	background-color:#9AD122;
+	text-align:center;
+	margin:20px auto;
+	border-radius: 15px;
+}
+
+.payinfo_7ree{
+	display:block;
+	width:90%;
+	height:50px;
+	line-height:50px;
+	font-size:18px;
+	font-weight:normal;
+	border:2px solid #333333;
+	background-color:#666666;
+	text-align:center;
+	margin:20px auto;
+	border-radius: 15px;
+}
+
+
+.paybtn_7ree{
+	width:90%;
+	height:50px; 
+	border-radius: 15px;
+	background-color:#FE6714; 
+	border:0px #FE6714 solid; 
+	cursor: pointer;
+	color:white;
+	font-size:16px;
+	margin-top:50px;
+}
+
+.pnc{
+	padding:0 40px;
+}
+
+.cl li{
+	height:26px;
+	line-height:26px;
+	font-size:12px;
+}

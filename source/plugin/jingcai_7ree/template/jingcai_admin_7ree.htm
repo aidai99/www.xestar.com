@@ -1,0 +1,170 @@
+<script type="text/javascript" src="static/js/calendar.js"></script>
+<script type="text/javascript" language="javascript">
+	function submitcheck_7ree(formobj_7ree){
+		var format_7ree = /^[0-9]+([.]{1}[0-9]{1,3})?$/;
+		var rerurn_7ree = true;
+        var jstips_7ree = "{lang jingcai_7ree:htm_lang_jstip_error_7ree}";
+	 	    
+		
+		if(formobj_7ree.racename_7ree.value=='') {
+			jstips_7ree += "{lang jingcai_7ree:htm_lang_bisaimingcheng_7ree}, ";
+			rerurn_7ree = false;	
+		}
+		if(formobj_7ree.reward_7ree.value=='') {
+			jstips_7ree += "{lang jingcai_7ree:htm_lang_zuidizhichi_7ree}, ";
+			rerurn_7ree = false;	
+		}
+		if(formobj_7ree.time_7ree.value=='') {
+			jstips_7ree += "{lang jingcai_7ree:htm_lang_bisaishijian_7ree}, ";
+			rerurn_7ree = false;	
+		}		
+		if(formobj_7ree.aname_7ree.value=='') {
+			jstips_7ree += "{lang jingcai_7ree:htm_lang_zhuduimingcheng_7ree}, ";
+			rerurn_7ree = false;	
+		}	
+		if(formobj_7ree.bname_7ree.value=='') {
+			jstips_7ree += "{lang jingcai_7ree:htm_lang_keduimingcheng_7ree}, ";
+			rerurn_7ree = false;	
+		}	
+		if(formobj_7ree.aodds_7ree.value=='' || !format_7ree.test(formobj_7ree.aodds_7ree.value)) {
+			jstips_7ree += "{lang jingcai_7ree:htm_lang_zhuduipeilv_7ree}, ";
+			rerurn_7ree = false;	
+		}			
+		if(formobj_7ree.bodds_7ree.value=='' || !format_7ree.test(formobj_7ree.bodds_7ree.value)) {
+			jstips_7ree += "{lang jingcai_7ree:htm_lang_keduilv_7ree}, ";
+			rerurn_7ree = false;	
+		}	
+		if(formobj_7ree.codds_7ree.value!='' && !format_7ree.test(formobj_7ree.codds_7ree.value)) {
+			jstips_7ree += "{lang jingcai_7ree:htm_lang_pingjulv_7ree}, ";
+			rerurn_7ree = false;	
+		}			
+		
+		if(!rerurn_7ree){
+ 			showPrompt(null, null, "<span>"+jstips_7ree+"</span>", 5000);
+ 		}else{ 		
+			formobj_7ree.racemessage_7ree.value = wysiwyg ? html2bbcode(getEditorContents()) : formobj_7ree.racemessage_7ree.value;
+ 		}
+		return rerurn_7ree;
+	}
+	
+	function showfenlei2_7ree(id_7ree){
+		$('yijitips_7ree').style.display="none";
+		var t = document.getElementById(id_7ree);
+
+		if(t.options[t.selectedIndex].value){
+		
+		    for(var i = 1; i < t.options.length; i++) {
+			$('fenlei_select_7ree_'+t.options[i].value).style.display = "none";
+			} 
+   			$('fenlei_select_7ree_'+t.options[t.selectedIndex].value).style.display = "";
+   		}
+	}
+	
+	function ajaxgetinfo_7ree(target_7ree){
+	
+		if(target_7ree=='race'){
+			if($('racename_7ree').value){
+				ajaxget('plugin.php?id=jingcai_7ree:ajaxgetinfo_7ree&target_7ree=race&name_7ree='+$('racename_7ree').value,'getracemsg_7ree');
+			}else{
+				alert('{lang jingcai_7ree:htm_lang_duqu_race_error_7ree}');
+				$('racename_7ree').focus();
+			}
+		}else if(target_7ree=='ateam'){
+			if($('aname_7ree').value){
+				ajaxget('plugin.php?id=jingcai_7ree:ajaxgetinfo_7ree&target_7ree=ateam&name_7ree='+$('aname_7ree').value,'ateammsg_7ree');
+			}else{
+				alert('{lang jingcai_7ree:htm_lang_duqu_team_error_7ree}');
+				$('aname_7ree').focus();
+			}
+		}else if(target_7ree=='bteam'){
+			if($('bname_7ree').value){
+				ajaxget('plugin.php?id=jingcai_7ree:ajaxgetinfo_7ree&target_7ree=bteam&name_7ree='+$('bname_7ree').value,'bteammsg_7ree');
+			}else{
+				alert('{lang jingcai_7ree:htm_lang_duqu_team_error_7ree}');
+				$('bname_7ree').focus();
+			}
+		}
+	
+	}
+
+// --列头全选框被单击---
+function ChkAllClick(sonName, cbAllId){
+    var arrSon = document.getElementsByName(sonName);
+ var cbAll = document.getElementById(cbAllId);
+ var tempState=cbAll.checked;
+ for(i=0;i<arrSon.length;i++) {
+  if(arrSon[i].checked!=tempState)
+           arrSon[i].click();
+ }
+}
+
+// --子项复选框被单击---
+function ChkSonClick(sonName, cbAllId) {
+ var arrSon = document.getElementsByName(sonName);
+ var cbAll = document.getElementById(cbAllId);
+ for(var i=0; i<arrSon.length; i++) {
+     if(!arrSon[i].checked) {
+     cbAll.checked = false;
+     return;
+     }
+ }
+ cbAll.checked = true;
+}
+
+// --反选被单击---
+function ChkOppClick(sonName){
+ var arrSon = document.getElementsByName(sonName);
+ for(i=0;i<arrSon.length;i++) {
+  arrSon[i].click();
+ }
+}
+</script>
+
+
+		<table width="100%" border="0" cellpadding="5" cellpadding="0" class="dt mtm">
+
+
+        <tr class="colplural">
+        <th colspan="7">
+        <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=add1" class="adminbtn_7ree <!--{if $_GET['sp_7ree']== 'add1'}-->b_7ree<!--{/if}-->">新增赛程</a>
+        <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=op1" class="adminbtn_7ree <!--{if $_GET['sp_7ree']== 'op1'}-->b_7ree<!--{/if}-->">管理赛程</a>
+        <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=add" class="adminbtn_7ree <!--{if $_GET['sp_7ree']== 'add'}-->b_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_tianjiasaishi_7ree}</a>
+        <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=op" class="adminbtn_7ree <!--{if $_GET['sp_7ree']== 'op'}-->b_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_guanlisaishi_7ree}</a>
+        <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=log" class="adminbtn_7ree <!--{if $_GET['sp_7ree']== 'log'}-->b_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_jingcairizhi_7ree}</a> 
+        <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=tj" class="adminbtn_7ree <!--{if $_GET['sp_7ree']== 'tj'}-->b_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_shujutongji_7ree}</a> 
+        <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=sj" class="adminbtn_7ree <!--{if $_GET['sp_7ree']== 'sj'}-->b_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_shoujichupin_7ree}</a>
+        <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=diy" class="adminbtn_7ree <!--{if $_GET['sp_7ree']== 'diy'}-->b_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_diykuozhan_7ree}</a> 
+         <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=wjt" class="adminbtn_7ree <!--{if $_GET['sp_7ree']== 'wjt'}-->b_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_duanyuming_7ree}</a>
+        <!--{if $_G['adminid']==1}-->                       
+        <a href="admin.php?action=plugins" class="adminbtn_7ree" target="_blank">{lang jingcai_7ree:htm_lang_houtaiguanli_7ree}</a>
+        <!--{/if}--> 
+        </th>
+        </tr>
+        <!--{if !$_GET['sp_7ree']}-->
+        <tr>
+	        <td colspan="6">
+	        	<div class="notice">{lang jingcai_7ree:htm_lang_admintips_7ree}</div>
+	        </td>
+        </tr>
+        <!--{elseif $_GET['sp_7ree'] == "add1" || $_GET['sp_7ree'] == "edit1"}-->
+            {template jingcai_7ree:jingcai_newedit1_7ree}
+        <!--{elseif $_GET['sp_7ree'] == "add" || $_GET['sp_7ree'] == "edit"}-->
+            {template jingcai_7ree:jingcai_newedit_7ree}
+        <!--{elseif $_GET['sp_7ree'] == "op" }-->
+            {template jingcai_7ree:jingcai_guanli_7ree}
+        <!--{elseif $_GET['sp_7ree'] == "op1" }-->
+            {template jingcai_7ree:jingcai_guanli1_7ree}
+         <!--{elseif $_GET['sp_7ree'] == "log" }-->
+            {template jingcai_7ree:jingcai_log_7ree}
+         <!--{elseif $_GET['sp_7ree'] == "tj" }-->
+			{template jingcai_7ree:jingcai_tongji_7ree}
+         <!--{elseif $_GET['sp_7ree'] == "zd" }-->
+			{template jingcai_7ree:jingcai_zidong_7ree}
+         <!--{elseif $_GET['sp_7ree'] == "sj" }-->
+			{template jingcai_7ree:jingcai_shouji_7ree}	
+         <!--{elseif $_GET['sp_7ree'] == "diy" }-->
+			{template jingcai_7ree:jingcai_diykuozhan_7ree}	
+         <!--{elseif $_GET['sp_7ree'] == "wjt" }-->
+			{template jingcai_7ree:jingcai_weijingtai_7ree}
+        <!--{/if}-->
+        </table>

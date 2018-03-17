@@ -1,0 +1,78 @@
+{template common/header}
+<!--
+	(C)2006-2016 www.7ree.com
+	This is NOT a freeware, use is subject to license terms
+	Update: 2017/7/31 19:12
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_opengs/template/image/common_css_7ree.css?{VERHASH}'/>
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_opengs/template/image/css_7ree.css?{VERHASH}'/>
+
+<div id="pt" class="bm cl">
+	<div class="z">
+	<a href="./" class="nvhm">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="forum.php">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="plugin.php?id=x7ree_opengs:x7ree_opengs">{$navtitle}</a> <em>&rsaquo;</em>
+	<!--{if $id_7ree}-->{$this_7ree['name_7ree']}<!--{/if}-->
+	</div>
+</div>
+
+
+<div id="ct" class="ct2_a wp cl">
+
+	<div class="mn">
+
+	<div class="bm bw0">
+	<!--ÕýÎÄ-->
+	<div class="bm_c cl">
+
+	<!--{if !$code_7ree}-->
+		{template x7ree_opengs:x7ree_home}
+	<!--{elseif $code_7ree==1}-->
+		{template x7ree_opengs:x7ree_page}
+	<!--{elseif $code_7ree==2}-->
+		{template x7ree_opengs:x7ree_my}
+	<!--{elseif $code_7ree==3}-->
+		{template x7ree_opengs:x7ree_rank}
+	<!--{elseif  in_array($code_7ree,array('4','5','6','7'))}-->
+		{template x7ree_opengs:x7ree_option}
+	<!--{/if}-->
+
+
+
+	</div>
+
+
+	</div>
+
+</div>
+
+
+<!-- ×ó²à±ßÀ¸ -->
+
+<div class="appl">
+
+	<div class="tbn">
+	<h2 class="mt bbda">{$navtitle}</h2>
+	<ul>
+	  <li <!--{if !$code_7ree && !$finish_7ree}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_opengs:x7ree_opengs&fenlei_7ree=<!--{eval echo urlencode($fenlei_get);}-->">{lang x7ree_opengs:htm_lang_dating_7ree}</a></li>
+	  <li <!--{if !$code_7ree && $finish_7ree}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_opengs:x7ree_opengs&finish_7ree=1&fenlei_7ree=<!--{eval echo urlencode($fenlei_get);}-->">{lang x7ree_opengs:htm_lang_wangqi_7ree}</a></li>
+	  <!--{if $code_7ree==1}--><li class="a"><a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=1&id_7ree={$id_7ree}">{lang x7ree_opengs:htm_lang_xiangqing_7ree}</a></li><!--{/if}-->
+	  <li <!--{if $code_7ree==2}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=2">{lang x7ree_opengs:htm_lang_wode_7ree}</a></li>
+		<!--
+	  <li <!--{if $code_7ree==3}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=3">{lang x7ree_opengs:htm_lang_paihang_7ree}</a></li>
+		-->
+	  <!--{if $_G['adminid']==1}-->
+	  <li <!--{if in_array($code_7ree,array('4','5','6','7'))}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=4">{lang x7ree_opengs:htm_lang_qiantai_7ree}</a></li>
+	  <!--{/if}-->
+
+	 </ul>
+
+	 
+
+
+	</div>
+
+</div>
+
+{template common/footer}

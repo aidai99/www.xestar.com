@@ -1,0 +1,92 @@
+<form id="payform_7ree" method="post" action="plugin.php?id=x7ree_recharge:x7ree_recharge">
+<input type="hidden" name="formhash" value="{FORMHASH}">
+
+
+<table class="rechargebox_7ree" style="margin-top:10px;width:100%;">
+
+<tr>
+<td colspan="2" style="height:30px;line-height:30px;font-size:20px;text-align:center;"><h3>积分充值</h3></td>
+</tr>
+
+
+<tr>
+<td style="width:100px;">我现在共有</td>
+<td>{$membercount_7ree}{$exttitle_7ree}</td>
+</tr>
+<tr>
+<td>请选择：</td>
+<td>
+<!--{loop $default_7ree $key $default_value}-->
+<span class="dfbox_7ree <!--{if !$key}-->checked_7ree<!--{/if}-->" id="dfbox_{$default_value}" onclick="select_7ree(this.id);">{$default_value}{$exttitle_7ree}</span>
+<!--{/loop}-->
+</td>
+</tr>
+<tr>
+<td>充值数量：</td>
+<td><input type="text" name="ext_7ree" id="ext_7ree" onkeyup="result_7ree(this.value);" class="rechargeinput_7ree">{$exttitle_7ree}<br>每充值100积分需{$vars_7ree['rate_7ree']}元。 <span style="color:red;font-weight:700;">*</span>
+</td>
+</tr>
+<!--
+<tr>
+<td>付款方式</td>
+<td>
+<input type="radio" name="type_7ree" id="type_7ree" value="1">微信<span class="pipe">|</span>
+<input type="radio" name="type_7ree" id="type_7ree" value="2">支付宝
+</td>
+</tr>
+-->
+<tr>
+<td>支付金额：</td>
+<td><input type="text" name="cost_7ree" id="cost_7ree" class="rechargeinput_7ree">元
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<button type="submit" name="submit_7ree" class="pn pnc" value="TRUE"><strong>确认提交</strong></button>
+</td>
+</tr>
+</table>
+
+
+</form>
+
+
+
+<script type="text/javascript">
+	function result_7ree(ext_7ree){
+		var format_7ree = /^\+?[1-9][0-9]*$/;
+		if(format_7ree.test(ext_7ree)){
+		 	document.getElementById('ext_7ree').value=ext_7ree;
+			cost_7ree = $rate_7ree*ext_7ree;
+			cost2_7ree = cost_7ree.toFixed(2);
+			document.getElementById('cost_7ree').value=cost2_7ree;
+			document.getElementById('payform_7ree').action='plugin.php?id=x7ree_recharge:x7ree_recharge&ext_7ree='+ext_7ree;
+	   }else{
+	   	    document.getElementById('ext_7ree').value = '';
+	    	document.getElementById('cost_7ree').value = '0';
+	    	showPrompt(null, null, "<span>请输入整数积分<span>", 1500);
+	   }
+	}
+	window.onload=select_7ree('dfbox_100');
+	function select_7ree(id_7ree){
+		var id_7ree;
+		var dfbox_id = new Array();
+		<!--{loop $default_7ree $key $default_value}-->
+			dfbox_id[{$key}] = "dfbox_{$default_value}";
+		<!--{/loop}-->
+		for(var i=0;i<dfbox_id.length;i++){
+			document.getElementById(dfbox_id[i]).className="dfbox_7ree";
+		}
+		
+		document.getElementById(id_7ree).className="dfbox_7ree checked_7ree";
+		arr=id_7ree.split('_'); 
+		ext_7ree = parseInt(arr['1']);
+		document.getElementById('ext_7ree').value=ext_7ree;
+		cost_7ree = $rate_7ree*ext_7ree;
+		cost2_7ree = cost_7ree.toFixed(2);
+		document.getElementById('cost_7ree').value=cost2_7ree;
+		document.getElementById('payform_7ree').action='plugin.php?id=x7ree_recharge:x7ree_recharge&ext_7ree='+ext_7ree;
+	}
+
+</script>

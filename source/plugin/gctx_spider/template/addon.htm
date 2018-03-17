@@ -1,0 +1,72 @@
+<form id="searchform" action="admin.php?{$actionurl}" autocomplete="off" method="post" name="searchform">
+    <input type="hidden" value="{FORMHASH}" name="formhash">
+    <table class="tb tb2 ">
+        <tr>
+            <th class="partition" colspan="15">{lang gctx_spider:operation}</th>
+        </tr>
+        <tr class="hover">
+            <td width="80">{lang gctx_spider:spidername}</td>
+            <td width="80">
+                <select name="spiderkey">
+                    <!--{loop $spidername_ary $v_key $v_value}-->
+                    <option value="{$v_key}" <!--{if $spiderkey == $v_key}-->selected<!--{/if}-->>{$v_value}</option>
+                    <!--{/loop}-->
+                </select>
+            </td>
+            <td width="60">{lang gctx_spider:pagesize}</td>
+            <td>
+                <select name="perpage">
+                    <option value="10" <!--{if $perpage == 10}-->selected<!--{/if}-->>10</option>
+                    <option value="20" <!--{if $perpage == 20}-->selected<!--{/if}-->>20</option>
+                    <option value="50" <!--{if $perpage == 50}-->selected<!--{/if}-->>50</option>
+                    <option value="100" <!--{if $perpage == 100}-->selected<!--{/if}-->>100</option>
+                </select>
+                <input type="submit" value="{lang gctx_spider:searchname}" class="btn">
+                <a href="admin.php?{$actionurl}&truncate=1" onclick="truncate()" class="btn">{lang gctx_spider:truncate}</a>
+            </td>
+        </tr>
+    </table>
+</form>
+<form id="complistform" action="admin.php?{$nayuan_admin_url}{$pmod}" autocomplete="off" method="post" name="complistform">
+    <input type="hidden" value="{FORMHASH}" name="formhash">
+    <table class="tb tb2 nobdb">
+        <tr><th class="partition" colspan="15">{lang gctx_spider:spider_t_title}</th></tr>
+        <tr class="header">
+            <th>ID</th>
+            <th>{lang gctx_spider:spidername}</th>
+            <th>{lang gctx_spider:ipname}</th>
+            <th>{lang gctx_spider:spidertime}</th>
+            <th>{lang gctx_spider:spidertitle}</th>
+            <th>{lang gctx_spider:spiderurl}</th>
+        </tr>
+        <!--{if $count}-->
+        <!--{loop $pagelist $key $v_item}-->
+        <tr class="hover">
+            <td><!--{eval echo $i+$pagenum}--></td>
+            <td>{$spidername_ary_t[$v_item[spidername]]}</td>
+            <td>{$v_item[ip]}</td>
+            <td>{date($v_item[addtime])}</td>
+            <td><a href="{$v_item[url]}" target="_blank">{$v_item[title]}</a></td>
+            <td><a href="{$v_item[url]}" target="_blank">{$v_item[url]}</a></td>
+        </tr>
+        <!--{eval $i++;}-->
+        <!--{/loop}-->
+        <!--{else}-->
+        <tr class="hover">
+            <td colspan="15">{lang gctx_spider:empty}</td>
+        </tr>
+        <!--{/if}-->
+        <tr>
+            <td colspan="15">
+                <div class="cuspages right">{$pagemulti}</div>
+            </td>
+        </tr>
+    </table>
+</form>
+<script type="text/javascript">
+    function truncate(){
+        if(!confirm("{lang gctx_spider:truncatemsg}")){
+            return false;
+        }
+    }
+</script>

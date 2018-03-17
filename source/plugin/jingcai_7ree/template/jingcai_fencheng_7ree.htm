@@ -1,0 +1,44 @@
+<table width="100%" border="0" cellpadding="5" cellpadding="0" class="dt mtm">
+	<tr class="colplural" >
+	<th ><h3>{lang jingcai_7ree:htm_lang_tuiguangshuoming_7ree}</h3></th>
+	</tr>
+	<td >
+	<p>{$jingcai_7ree_var['tuiguangnotice_7ree']}</p>
+	</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellpadding="0" class="dt mtm">
+	<tr class="colplural" >
+	<th colspan="6"><h3>{lang jingcai_7ree:htm_lang_wodefencheng_7ree}</h3></th>
+	</tr>
+	<tr>
+	<td align="center">{lang jingcai_7ree:htm_lang_huiyuan_7ree}</td>
+      <td align="center">{lang jingcai_7ree:htm_lang_jingcaishijian_7ree}</td>
+	<td align="center">{lang jingcai_7ree:htm_lang_bisaimingcheng_7ree}</td>
+	<td align="center"><!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}--> VS <!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}--></td>	
+	<td align="center">{lang jingcai_7ree:htm_lang_zhichi_7ree}{$exttitle_7ree}</td>
+	<td align="center">{lang jingcai_7ree:htm_lang_wodefencheng_7ree}</td>	
+	</tr>
+	<!--{if $fenchenglist_7ree}-->
+	<!--{loop $fenchenglist_7ree $fenchenglist_value}-->
+	<tr>
+	<td align="center"><a href="home.php?mod=space&uid={$fenchenglist_value['uid_7ree']}" target="_blank">{$fenchenglist_value['username']}</a></td>
+	<td align="center">{$fenchenglist_value['time_7ree']}</td>
+	<td align="center"><a href="{$xiangqing_url_7ree}{$fenchenglist_value['main_id_7ree']}">{$fenchenglist_value['racename_7ree']}</a></td>
+	<td align="center">{$fenchenglist_value['aname_7ree']} VS {$fenchenglist_value['bname_7ree']}</td>
+	<td align="center">{$fenchenglist_value['odds_7ree']}{$exttitle_7ree}</td>	
+	<td align="center"><b>{$fenchenglist_value['fencheng_7ree']}</b>{$exttitle_7ree}</td>	
+	
+	</tr>	
+	<!--{/loop}-->
+	<!--{if $multipage}-->
+	<tr>
+	<td colspan="6"><div class="page">{$multipage}</div></td>
+	</tr>
+	<!--{/if}-->	
+	<!--{else}-->
+	<tr>
+	<td colspan="6"><div class="notice">{lang jingcai_7ree:htm_lang_zanwuxiaxian_7ree}</div></td>
+	</tr>
+	<!--{/if}-->
+</table>

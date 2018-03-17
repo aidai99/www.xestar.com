@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+	<item id="Time"><![CDATA[2016-07-15 11:00]]></item>
+	<item id="From"><![CDATA[®ü°Ò¤u§@«Ç (http://www.hymanwu.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[¡i®ü°Ò¡j©«¤l¥DÃD¤ÀÃþ±m¦â¬ü¤Æ]]></item>
+			<item id="identifier"><![CDATA[hwh_colortype]]></item>
+			<item id="description"><![CDATA[±N©«¤l¦Cªí¼ÐÃD«eªº[¥DÃD¤ÀÃþ]Ãþ§O«eºóÅÜ¦¨±m¦â,§ó¿ô¥Ø,§ó®e©öÃÑ§O«×§ó°ª!]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[hwh_colortype/]]></item>
+			<item id="copyright"><![CDATA[H.W.H]]></item>
+			<item id="version"><![CDATA[1.2]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hwh_colortype]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="param"><![CDATA[a=setting]]></item>
+					<item id="menu"><![CDATA[ª©¶ô°t¸m]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="param"><![CDATA[a=store]]></item>
+					<item id="menu"><![CDATA[<font color="#FF80FF">§ó</font><font color="#D556FF">¦h</font><font color="#AB2CFF">®ü</font><font color="#A002FF">°Ò</font><font color="#A000FF">À³</font><font color="#A000FF">¥Î</font>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[ÃC¦â´£¨ú]]></item>
+				<item id="description"><![CDATA[¸Ó³]¸m¥u¬°¤F¤è«K´£¨úÃC¦â,¶ñ¤£¶ñ¼g³£¨SÃö¨t!]]></item>
+				<item id="variable"><![CDATA[pickcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[¶}±Ò¥þ§½]]></item>
+				<item id="description"><![CDATA[¶}±Ò«h©Ò¦³ªºª©¶ôªº«eºóÃC¦â«ö¥þ§½°t¸mªº¨Ó¥Í¦¨,§_«h®Ú¾Ú[ª©¶ô°t¸m]¦Uª©¶ô°t¸m¨Ó¥Í¦¨]]></item>
+				<item id="variable"><![CDATA[global]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[ÃC¦â°t¸m]]></item>
+				<item id="description"><![CDATA[®æ¦¡¬°:
+					#CC33FF,#F00,#FFCC33,#CC6666...
+					¥H¦¹Ãþ±À,«ö¥DÃD¤ÀÃþªº¶¶§Ç¿é¥X]]></item>
+				<item id="variable"><![CDATA[global_code]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[#FF0000,#FF6C00,#FFD800,#4EF40D,#31BCD5,#001AFF,#9900FF]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="license"><![CDATA[  [*][size=4][color=blue]¥»´¡¥óª©ÅvÂkÄÝ´¡¥ó§@ªÌ[color=red][b]H.W.H[/b][/color]©Ò¦³¡C
+[*]¥¼¸g´¡¥ó§@ªÌ®Ñ­±³\¥iªº±¡ªp¤U,¥ô¦ó¤H¤£±o¥H¥ô¦ó§Î¦¡¹ï¥»²£«~¶i¦æ¤Ï½sÄ¶¡B­×§ï¡BÂàÅý¡B¾P°â¥H¤Î¦b¥ô¦ó¦a¤èµo¥¬/Âàµo­ìª©¥H¤Î¨ä­l¥Íªº­×§ïª©!
+[*][b]´¡¥ó§@ªÌ:[/b][url=http://wpa.qq.com/msgrd?v=3&uin=304916488&site=qq&menu=yes]H.W.H (ÂIÀ»¦¹³B¥iµo°eQQ®ø®§)[/url]
+[*][b]ª©Åv«H®§:[/b][color=red][b]®ü°Ò¤u§@«Ç[/b][/color]
+[*][b]´¡¥ó©xºô:[/b][url]http://www.hymanwu.com/[/url]
+[*][b]§@«~Â²¤¶:[/b]±N©«¤l¦Cªí¼ÐÃD«eªº[¥DÃD¤ÀÃþ]Ãþ§O«eºóÅÜ¦¨±m¦â,§ó¿ô¥Ø,§ó®e©öÃÑ§O«×§ó°ª!
+[*][b]µo¥¬¦a§}:[/b][url]http://addon.discuz.com/?@19547.developer[/url]
+[*]·PÁÂ±z¨Ï¥Î§Ú­Ìªº´¡¥ó,§Æ±æ±z¯à°÷µ¹§Ú­Ì´£¨Ñ§ó¦nªº·N¨£!
+]]></item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

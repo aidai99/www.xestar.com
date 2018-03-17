@@ -1,0 +1,27 @@
+<div>
+<ul class="mob_fenlei_7ree">
+<li <!--{if !$fenlei_7ree}-->class="mobli_now"<!--{/if}-->><a href="plugin.php?id=x7ree_extmall:x7ree_extmall">全部商品</a></li>
+<!--{loop $fenlei_array $key_7ree $fenlei_value}-->
+<li <!--{if $fenlei_7ree && $fenlei_7ree==$key_7ree+1}-->class="mobli_now"<!--{/if}-->><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&fenlei_7ree=<!--{eval echo($key_7ree+1);}-->">{$fenlei_value}</a></li>
+<!--{/loop}-->
+</ul>
+
+<!--{if $list_7ree}-->
+
+	<!--{loop $list_7ree $list_value}-->
+	<div class="goodsboxm_7ree">
+	<a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=1&id_7ree={$list_value['id_7ree']}"><img src="{$folder_7ree}/{$list_value['pic_7ree']}" class="newpicm_7ree"></a>
+	<h3>{$list_value['name_7ree']}</h3>
+	<p>库存：{$list_value['num_7ree']}</p>
+	<p>兑换：{$list_value['cost_7ree']}{$exttitle_7ree}</span></p>
+	<p><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=1&id_7ree={$list_value['id_7ree']}"><span class="jinruduihuanm_7ree">兑换详情</span></a></p>
+	</div>
+	<!--{/loop}-->
+
+	<div>{$multipage}</div>
+<!--{else}-->
+	<div class="notice">抱歉，暂无可兑换的商品。</div>
+<!--{/if}-->
+</div>
+
+	<div>{$multipage}</div>

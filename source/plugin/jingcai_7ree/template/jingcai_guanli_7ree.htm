@@ -1,0 +1,52 @@
+<form method="post" action="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=js" name="jiesuan_forum_7ree">
+        <input type="hidden" name="formhash" value="{FORMHASH}">
+        <tr ><td colspan="6"><h3>{lang jingcai_7ree:htm_lang_guanlisaishi_7ree}</h3></td></tr>
+        <tr class="colplural" >
+        <td>{lang jingcai_7ree:htm_lang_jiesuan2_7ree}<input type="checkbox" id="checkall_7ree" name="checkall_7ree" onClick="ChkAllClick('mod_7ree[]','checkall_7ree');" ></td><td>{lang jingcai_7ree:htm_lang_bisaimingcheng_7ree}</td><td>{lang jingcai_7ree:htm_lang_bisaishijian_7ree}</td><td>{lang jingcai_7ree:htm_lang_zhudui_7ree} VS {lang jingcai_7ree:htm_lang_kedui_7ree}</td><td>{lang jingcai_7ree:htm_lang_bisaijieguo_7ree}</td><td>{lang jingcai_7ree:htm_lang_caozuo_7ree}<input type="checkbox" id="checkall2_7ree" name="checkall2_7ree" onClick="ChkAllClick('mod2_7ree[]','checkall2_7ree');" </td>
+        </tr>
+        <!--{loop $racelist_7ree $racelist_value}-->
+        <tr>
+                <td title="<!--{if $racelist_value['jiesuan_7ree']}-->{lang jingcai_7ree:htm_lang_kejiesuan_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_wuxujiesuan_7ree}<!--{/if}-->">{$racelist_value['main_id_7ree']}<!--{if $racelist_value['jiesuan_7ree']}--><input type="checkbox" name="mod_7ree[]" id="mod_7ree[]" onclick="ChkSonClick('mod_7ree[]','checkall_7ree');" value="{$racelist_value['main_id_7ree']}"><!--{/if}--></td>
+                <td>
+                <!--{if $racelist_value[fengpan_7ree]}--><span style="color:red;">[已封盘]</span><!--{/if}-->
+                <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&sp_7ree=more&main_id_7ree={$racelist_value['main_id_7ree']}" target="_blank">[{$racelist_value['scname_7ree']}]{$racelist_value['racename_7ree']}</a>
+                </td>
+                <td>{$racelist_value['time_7ree']}</td>
+                <td>{$racelist_value['aname_7ree']} VS {$racelist_value['bname_7ree']}</td>
+                <td><!--{if $racelist_value['win_7ree'] == "a"}-->
+                	{$racelist_value['aname_7ree']}
+                	<!--{elseif $racelist_value['win_7ree'] == "b"}-->
+                	{$racelist_value['bname_7ree']}
+                	<!--{elseif $racelist_value['win_7ree'] == "c"}-->
+                	{lang jingcai_7ree:htm_lang_pingju_7ree}
+                	<!--{elseif $racelist_value['win_7ree'] == "d"}-->
+                	{lang jingcai_7ree:htm_lang_liupan_7ree}
+                	<!--{else}-->
+                	{lang jingcai_7ree:htm_lang_weijiexiao_7ree}
+                	<!--{/if}-->
+                </td>
+                <td>
+                [<a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=edit&main_id_7ree={$racelist_value['main_id_7ree']}">{lang jingcai_7ree:htm_lang_bianji_7ree}</a>] 
+		[<a onclick="showDialog('{lang jingcai_7ree:htm_lang_shanchutip1_7ree}<b>{$racelist_value[racename_7ree]}</b>{lang jingcai_7ree:htm_lang_shanchutip2_7ree}', 'confirm', '{lang jingcai_7ree:htm_lang_shanchuqueren_7ree}', function () { window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=del&main_id_7ree=$racelist_value[main_id_7ree]&formhash={FORMHASH}'; })" href="javascript:;">{lang jingcai_7ree:htm_lang_shanchu_7ree}</a>]
+			
+			<!--{if $racelist_value[fengpan_7ree]}-->
+			[<a onclick="showDialog('您要确认解封赛事：<b>{$racelist_value[racename_7ree]}</b>吗', 'confirm', '确认封盘', function () { window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=jiefeng&main_id_7ree=$racelist_value[main_id_7ree]&formhash={FORMHASH}'; })" href="javascript:;">解封</a>]
+			<!--{else}-->
+			[<a onclick="showDialog('您要确认封盘赛事：<b>{$racelist_value[racename_7ree]}</b>吗', 'confirm', '确认封盘', function () { window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=fengpan&main_id_7ree=$racelist_value[main_id_7ree]&formhash={FORMHASH}'; })" href="javascript:;">封盘</a>]
+			<!--{/if}-->
+
+			
+			<input type="checkbox" name="mod2_7ree[]" id="mod2_7ree[]" onclick="ChkSonClick('mod2_7ree[]','checkall2_7ree');" value="{$racelist_value['main_id_7ree']}">
+                 </td>
+        </tr>
+        <!--{/loop}-->
+        <tr>
+        <td colspan="5">
+        <input type="submit" name="submit_7ree" title="{lang jingcai_7ree:htm_lang_jiesuantip_7ree}" class="z pn pnc" style="display:inline-block; height:24px;width:100px;margin-bottom:5px;text-align:center;" value="{lang jingcai_7ree:htm_lang_jiesuan_7ree}">
+        {$mymultipage_7ree}
+        </td>
+        <td>
+        <input type="submit" name="submit2_7ree" title="{lang jingcai_7ree:htm_lang_jiesuantip_7ree}" class="y pn pnc" style="display:inline-block; height:24px;width:100px;margin-bottom:5px;text-align:center;" value="{lang jingcai_7ree:htm_lang_piliangshan_7ree}">
+        </td>
+        </tr>
+</form>

@@ -1,0 +1,140 @@
+
+<!--{template common/header}-->
+<!--{eval $tab='sp_profile';}-->
+<div class="bodyarea">
+  <div class="wrap">
+    <div class="headerarea">
+      <header class="imui_header b_c cf po_fi flex_box">
+        <div class="imui_hl">$backico</div>
+        <div class="imui_hm tc flex">
+        $tmplang[312]
+        </div>
+        <div class="imui_hr">
+          <a href="javascript:openside()" class="imui_icon_side"></a>
+        </div>
+      </header>
+         
+    </div>
+
+    <div class="mainarea">
+      <div class="body_main body_0" id="$tab">
+        <!--{template home/spacecp_profile_nav}-->
+        <!--{if $validate}-->
+        <form action="member.php?mod=regverify" method="post" autocomplete="off">
+          <input type="hidden" value="{FORMHASH}" name="formhash" />
+        </form>
+        <!--{else}-->
+          <!--{if $operation == 'password'}-->
+          <form action="home.php?mod=spacecp&ac=profile" method="post" autocomplete="off">
+            <input type="hidden" value="{FORMHASH}" name="formhash" />
+            <input type="hidden" name="passwordsubmit" value="true" />    
+            <div class="imui_blocks b_f size_16">
+              <!--{if !$_G['setting']['connect']['allow'] || !$conisregister}-->
+              <div class="imui_block">
+                <div class="imui_block_hd cg">{lang old_password}</div>
+                <div class="imui_block_bd flex"><input type="password" name="oldpassword" id="oldpassword" class="imui_input"/></div>
+                <div class="imui_block_ft"></div>
+              </div>
+              <!--{/if}-->
+              <div class="imui_block">
+                <div class="imui_block_hd cg">{lang new_password}</div>
+                <div class="imui_block_bd flex"><input type="password" name="newpassword" id="newpassword" class="imui_input"/></div>
+                <div class="imui_block_ft"></div>
+              </div>
+              <div class="imui_block">
+                <div class="imui_block_hd cg">{lang new_password_confirm}</div>
+                <div class="imui_block_bd flex"><input type="password" name="newpassword2" id="newpassword2"class="imui_input"/></div>
+                <div class="imui_block_ft"></div>
+              </div>
+              <div class="imui_block">
+                <div class="imui_block_hd cg">Email</div>
+                <div class="imui_block_bd flex"><input type="text" name="emailnew" id="emailnew" value="$space[email]" class="imui_input"/></div>
+                <div class="imui_block_ft"></div>
+              </div>
+            </div>
+            <!--{if $_G['member']['freeze'] == 2}-->
+            <div class="imui_blocks_title cg">{lang freeze_reason}</div>
+            <div class="imui_blocks b_f size_16">
+              <div class="imui_block">
+                <div class="imui_block_bd flex"><textarea name="freezereson" class="imui_textarea autoheight" rows="3">$space[freezereson]</textarea></div>
+              </div>
+            </div>
+            <!--{/if}-->
+            <div class="imui_blocks b_f size_16">
+              <div class="imui_block imui_block_select">
+                <div class="imui_block_bd flex">
+                  <select id="questionidnew" name="questionidnew" class="imui_select">
+                    <option value="" selected>{lang memcp_profile_security_keep}</option>
+                    <option value="0">{lang security_question_0}</option>
+                    <option value="1">{lang security_question_1}</option>
+                    <option value="2">{lang security_question_2}</option>
+                    <option value="3">{lang security_question_3}</option>
+                    <option value="4">{lang security_question_4}</option>
+                    <option value="5">{lang security_question_5}</option>
+                    <option value="6">{lang security_question_6}</option>
+                    <option value="7">{lang security_question_7}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="imui_block">
+                <div class="imui_block_hd cg">{lang security_answer}</div>
+                <div class="imui_block_bd flex"><input type="text" name="answernew" id="answernew" class="imui_input" /></div>
+                <div class="imui_block_ft"></div>
+              </div>
+            </div>
+            <div class="p15"><button type="submit" name="pwdsubmit" value="true" class="imui_btn b_c cf">{lang save}</button></div>
+          </form>
+          <!--{else}-->
+          <iframe id="frame_profile" name="frame_profile" style="display: none"></iframe>
+          <form action="home.php?mod=spacecp&ac=profile&op=$operation" id="profileform"  method="post" enctype="multipart/form-data" autocomplete="off" target="frame_profile" >
+            <input type="hidden" name="profilesubmit" value="true" />
+            <input type="hidden" name="profilesubmitbtn" value="true" />
+            <!--{eval include immwa_mod('userprofile');}-->
+            <input type="hidden" value="{FORMHASH}" name="formhash" />
+            <!--{if $_GET[vid]}-->
+            <input type="hidden" value="$_GET[vid]" name="vid" />
+            <!--{/if}-->
+            <div class="imui_blocks b_f size_16">
+            <!--{loop $settings $key $value}-->
+            <!--{eval $field=immwa_app_profile_setting($value, $space[$key],$field['block']);}-->
+            $field['html']
+            <!--{if $vid}-->
+            <input type="hidden" name="privacy[$key]" value="3" />
+            <!--{else}-->
+            <input type="hidden" name="privacy[$key]" value="$privacy[$key]" />
+            <!--{/if}-->
+            <!--{/loop}-->
+            <!--{if !$field['block']}--></div><!--{/if}-->
+            <!--{if $allowcstatus && in_array('customstatus', $allowitems)}-->
+            <!--{/if}-->
+            <!--{if $operation == 'plugin'}-->
+            <!--{eval include(template($_GET['id']));}-->
+            <!--{/if}-->
+            <div class="p15"><button id="postsubmit" class="imui_btn b_c cf" type="submit">{lang save}</button></div>
+          </form>
+          <!--{/if}-->
+        <!--{/if}-->
+      </div>    
+    </div>
+    <div class="footerarea"></div>
+  </div>
+</div>
+<div id="modscript">
+  <!--{template js/topcat}-->
+  <!--{template js/profilefield}-->
+  <script language="javascript" id="script_spacecpfrofile">
+  
+    function show_success(message){
+      popup.open('$tmplang[313]', 'alert');
+    }
+    function show_error(fieldid, extrainfo){
+      $('#'+fieldid).addClass('px_error');
+      $('#'+fieldid).val('');
+      $('#'+fieldid).attr("placeholder",'$tmplang[314]');
+    }
+		<!--{if !$_GET['getpage']}-->
+		evalscripts.push('script_spacecpfrofile');
+		<!--{/if}-->
+  </script>        
+</div>
+<!--{template common/footer}-->

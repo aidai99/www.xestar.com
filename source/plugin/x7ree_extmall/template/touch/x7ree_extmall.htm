@@ -1,0 +1,47 @@
+{template common/header}
+<!--
+	(C)2006-2016 www.7ree.com
+	This is NOT a freeware, use is subject to license terms
+	Update: 2017/6/12 18:39
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+
+
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_extmall/template/image/css_7ree.css?{VERHASH}'/>
+
+
+{template x7ree_extmall:x7ree_header}
+
+<div id="ct" class="ct2_a wp cl">
+
+	<div class="mn">
+
+	<div class="bm bw0">
+	<!--ÕýÎÄ-->
+	<div class="bm_c cl">
+
+
+	<!--{if !$code_7ree}-->
+		{template x7ree_extmall:x7ree_home}
+	<!--{elseif $code_7ree==1}-->
+		{template x7ree_extmall:x7ree_page}
+	<!--{elseif $code_7ree==2}-->
+		{template x7ree_extmall:x7ree_my}
+	<!--{elseif  in_array($code_7ree,array('3','4','7'))}-->
+		{template x7ree_extmall:x7ree_option}
+	<!--{/if}-->
+
+
+	</div>
+
+
+	</div>
+
+</div>
+
+{template x7ree_extmall:x7ree_footer}
+
+
+
+{template common/footer}

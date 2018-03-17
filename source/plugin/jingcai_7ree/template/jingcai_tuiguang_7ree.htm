@@ -1,0 +1,46 @@
+<table width="100%" border="0" cellpadding="5" cellpadding="0" class="dt mtm">
+	<tr class="colplural" >
+	<th ><h3>{lang jingcai_7ree:htm_lang_tuiguangshuoming_7ree}</h3></th>
+	</tr>
+	<td >
+	<p>{$jingcai_7ree_var['tuiguangnotice_7ree']}</p>
+	</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellpadding="0" class="dt mtm">
+	<tr class="colplural" >
+	<th><h3>{lang jingcai_7ree:htm_lang_wodelianjie_7ree}</h3></th>
+	</tr>
+	<td>
+	<input type="text" id="tuiguangurl_7ree" value="{$_G['setting']['siteurl']}member.php?mod=register&fromuid={$_G['uid']}" class="" style="font-size:16px;width:600px;" onclick="setCopy($('tuiguangurl_7ree').value);">
+	<button style="font-size:16px;width:100px;" onclick="setCopy($('tuiguangurl_7ree').value);">{lang jingcai_7ree:htm_lang_fuzhilianjie_7ree}</button>
+	</td>
+	</tr>
+</table>
+<table width="100%" border="0" cellpadding="5" cellpadding="0" class="dt mtm">
+	<tr class="colplural" >
+	<th colspan="6"><h3>{lang jingcai_7ree:htm_lang_wodexiaxian_7ree}</h3></th>
+	</tr>
+	<tr>
+	<td align="center">{lang jingcai_7ree:htm_lang_huiyuan_7ree}</td>
+	<td align="center">{lang jingcai_7ree:htm_lang_tuiguangshijian_7ree}</td>
+	</tr>
+	<!--{if $xiaxianlist_7ree}-->
+	<!--{loop $xiaxianlist_7ree $xiaxianlist_value}-->
+	<tr>
+	<td align="center"><a href="home.php?mod=space&uid={$xiaxianlist_value['uid_7ree']}" target="_blank">{$xiaxianlist_value['username']}</a></td>
+	<td align="center">{$xiaxianlist_value['time_7ree']}</td>
+	</tr>	
+	<!--{/loop}-->
+	<!--{if $multipage}-->
+	<tr>
+	<td colspan="6"><div class="page">{$multipage}</div></td>
+	</tr>
+	<!--{/if}-->	
+	<!--{else}-->
+	<tr>
+	<td colspan="6"><div class="notice">{lang jingcai_7ree:htm_lang_zanwuxiaxian_7ree}</div></td>
+	</tr>
+	<!--{/if}-->
+	</tr>
+</table>

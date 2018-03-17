@@ -1,0 +1,34 @@
+<table width="100%" border="0" cellpadding="5" cellspacing="0"  class="dt mtm">
+<tr class="colplural" >
+<th colspan="4">
+<span class="y">{lang jingcai_7ree:htm_lang_wodeguanzhutip_7ree}</span>
+<h3>{lang jingcai_7ree:htm_lang_wodeguanzhu_7ree}</h3>
+</th>
+</tr>
+<tr>
+<td align="middle">{lang jingcai_7ree:htm_lang_guanzhuhuiyuan_7ree}</td>
+<td align="middle">{lang jingcai_7ree:htm_lang_canyuchangci_7ree}</td>
+<td align="middle">{lang jingcai_7ree:htm_lang_chakan_7ree}</td>
+<td align="middle">{lang jingcai_7ree:htm_lang_caozuo_7ree}</td>
+</tr>
+<!--{if $myguanzhulist_7ree}-->
+	<!--{loop $myguanzhulist_7ree $myguanzhulist_value}-->
+	<tr>
+	<td align="middle"><a href="home.php?mod=space&uid=$myguanzhulist_value['touid_7ree']" target="_blank">$myguanzhulist_value['toname_7ree']</a></td>
+	<td align="middle">$myguanzhulist_value['count_7ree']</td>
+	<td align="middle"><a href="{$jilu_url_7ree}{$myguanzhulist_value['touid_7ree']}" class="pn" style="padding:3px 10px 3px 10px;" target="_blank">{lang jingcai_7ree:htm_lang_chakan_7ree}</a>
+</td>
+	<td align="middle"><a onclick="showDialog('{lang jingcai_7ree:htm_lang_quxiaotip1_7ree}<b>{$myguanzhulist_value[toname_7ree]}</b>{lang jingcai_7ree:htm_lang_quxiaotip2_7ree}', 'confirm', '{lang jingcai_7ree:htm_lang_quxiaoqueren_7ree}', function () { window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=9&uid_7ree=$myguanzhulist_value[touid_7ree]&formhash={FORMHASH}'; })" href="javascript:;" class="pn" style="padding:3px 10px 3px 10px;">{lang jingcai_7ree:htm_lang_quxiaoguanzhu_7ree}</a></td>
+	</tr>
+	<!--{/loop}-->
+<!--{else}-->
+	<tr>
+	<td colspan="3">
+	<div class="notice">{lang jingcai_7ree:htm_lang_wuguanzhu_7ree}</div>
+	</td>
+	</tr>
+<!--{/if}-->
+
+
+
+</table>

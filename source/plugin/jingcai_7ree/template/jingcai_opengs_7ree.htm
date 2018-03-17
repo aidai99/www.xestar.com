@@ -1,0 +1,36 @@
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="opengstable_7ree">
+	<tr class="colplural" >
+	    <th colspan="2" align="center">
+	    <h3>{lang jingcai_7ree:htm_lang_opengs_7ree}</h3>
+	    </th>
+	</tr>
+	<!--{loop $opengslist_7ree $list_value}-->
+	<tr>
+		<td align="center"><a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=1&id_7ree={$list_value['id_7ree']}"><h4>{$list_value['name_7ree']}</h4></a></td>
+		<td align="center">{lang x7ree_opengs:htm_lang_jiezhishijian_7ree}{$list_value['time_7ree']}</td>
+	</tr>
+	<tr>
+		<td align="center" colspan="2">
+		<!--{loop $list_value['option_7ree'] $option_value}-->
+		<!--{if !$list_value['myoid_7ree']}-->
+		<a href="javascript:void(0);"  onclick="showDialog('{lang jingcai_7ree:htm_lang_querenjingcai_7ree}<strong>{$option_value['option_7ree']}</strong>{lang jingcai_7ree:htm_lang_ma_7ree}<br>{lang jingcai_7ree:htm_lang_woyaozhichi_7ree}<strong>'+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value+'{$exttitle_7ree}</strong><br>{$option_value['option_7ree']}{lang jingcai_7ree:htm_lang_peilv_7ree}: <strong>{$option_value['odds_7ree']}{lang jingcai_7ree:htm_lang_bei_7ree}</strong>', 'confirm', '{lang jingcai_7ree:htm_lang_zhichi_7ree}{$list_value['name_7ree']}', function () { window.location.href='plugin.php?id=x7ree_opengs:x7ree_opengs&&code_7ree=12&id_7ree=$list_value[id_7ree]&option_7ree=$option_value[id_7ree]&from_7ree=jc&formhash={FORMHASH}&ext_7ree='+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value; })">
+		<!--{/if}-->
+		<span <!--{if $list_value['myoid_7ree']==$option_value['id_7ree']}-->title="{lang jingcai_7ree:htm_lang_woyijingcai_7ree}{$option_value['option_7ree']}"<!--{/if}-->>
+		<h5>{$option_value['option_7ree']}</h5>
+		<i>
+		<!--{if $list_value['myoid_7ree']==$option_value['id_7ree']}-->
+		{lang jingcai_7ree:htm_lang_woyijingcai_7ree}
+		<!--{else}-->
+		{$option_value['odds_7ree']}{lang jingcai_7ree:htm_lang_bei_7ree}
+		<!--{/if}-->
+		</i>
+		</span>
+		<!--{if !$list_value['myoid_7ree']}-->
+		</a>
+		<!--{/if}-->
+		<!--{/loop}-->
+		
+		</td>
+	</tr>
+	<!--{/loop}-->
+</table>

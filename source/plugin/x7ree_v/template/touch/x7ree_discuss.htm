@@ -1,0 +1,33 @@
+<div class="discussbox_7ree">
+	<h3><b>{lang x7ree_v:htm_lang_pinglunqu_7ree}</b></h3>
+	<div class="discuzpost_7ree">
+		<form method="post" action="plugin.php?id=x7ree_v:x7ree_v&code_7ree=7" name="vpost_7ree">
+		<input type="hidden" name="id_7ree" value="{$v_7ree['id_7ree']}">
+		<input type="hidden" name="formhash" value="{FORMHASH}">
+		<textarea name='message_7ree' placeholder='{lang x7ree_v:htm_lang_pingluntips_7ree}'>
+		</textarea>
+		<input type="submit" class="discussubmit_7ree" name="submit_7ree" value="{lang x7ree_v:htm_lang_fabiaopinglun2_7ree}">
+		</form>
+	</div>
+	<div class="clear_7ree"></div>
+	<h3><b>{lang x7ree_v:htm_lang_quanbupinglun_7ree}</b><i>{lang x7ree_v:htm_lang_gong_7ree}{$v_7ree['discuss_7ree']}{lang x7ree_v:htm_lang_tiaopinglun_7ree}</i></h3>
+	<div class="discuzlist_7ree">
+		<!--{if $discuzlist_7ree}-->
+			<table>
+			<!--{loop $discuzlist_7ree $list_value}-->
+				<tr>
+					<td class="dzavatd_7ree"><a href="home.php?mod=space&uid={$list_value['uid_7ree']}" target="_blank">{$list_value['avatar_7ree']}</a></td>
+					<td class="dzmsgtd_7ree">
+						<h4>{$list_value['user_7ree']}</h4>
+						<p class="dzmsgtime_7ree">{$list_value['time_7ree']}</p>
+						<p>{$list_value['message_7ree']}</p>
+					</td>
+				</tr>
+			<!--{/loop}-->
+			</table>
+			<div>{$multipage}</div>
+		<!--{else}-->
+		<div class="zanwupinglun_7ree">{lang x7ree_v:htm_lang_zanwupinglun_7ree}</div>
+		<!--{/if}-->
+	</div>
+</div>

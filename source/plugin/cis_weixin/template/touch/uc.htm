@@ -1,0 +1,41 @@
+<!--{template common/header}-->
+$headerhtml['cis_weixin']
+<script language="javascript">
+
+function checkthis(id){
+	
+	var list=document.getElementById('styles');
+	var contents=list.childNodes;
+	for(i=0; i<contents.length; i++) {
+	  contents[i].className='';
+	}
+	document.getElementById('l'+id).className='a';
+	document.getElementById(id).checked = "checked";
+}
+
+</script>
+<form action="" method="post">
+  <input type="hidden" name="postsubmit" value="true" />
+  <input type="hidden" name="formhash" value="{FORMHASH}" />
+  <div class="post_form">
+    <p class="sel">
+      <select name="logintype" class="fsel">
+        <option value="0" {if !$userseting['logintype']}selected{/if}>$cislang[129]</option>
+        <option value="2" {if $userseting['logintype']=='2'}selected{/if}>$cislang[131]</option>
+        <option value="3" {if $userseting['logintype']=='3'}selected{/if}>$cislang[132]</option>
+      </select>
+    </p>
+    <p class="about">$cislang[151]</p>
+    <ul class="styles cl" id="styles">
+      {loop $styles $style}
+      <li id="ls{$style[sid]}" {if $userseting['style']==$style['sid']}class="a"{/if}><div class="w"><div class="n" style="background:$style[var][b1]"><input type="radio" name="style" value="$style[sid]" id="s{$style[sid]}" {if $userseting['style']==$style['sid']}checked="checked"{/if} /><a href="javascript:;" style="background:$style[var][b1]" onclick="checkthis('s{$style[sid]}')"><img src="{IMGDIR}/blank.png" /></a></div></div></li>
+      {/loop}
+    </ul>
+  </div>
+  <div class="post_btn">
+  <button id="postsubmit" class="btn_pn btn_pn_blue" ><span>&#x4e;</span></button>
+  </div>
+</form>
+$footerhtml['cis_weixin']
+<!--{template common/nv_footer}-->
+<!--{template common/footer}-->

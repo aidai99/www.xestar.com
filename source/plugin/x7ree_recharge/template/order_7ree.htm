@@ -1,0 +1,92 @@
+<!--{if $type_7ree==1}-->
+<script type="text/javascript">
+var wechat_checkST = null, wechat_checkCount = 0;
+function wechat_checkstart() {
+	wechat_checkST = setTimeout(function () {wechat_check()}, 4000);
+}
+function wechat_check() {
+	var x = new Ajax();
+	var sta = httpGet('http://wenledao.com/plugin.php?id=x7ree_recharge:checkorder_7ree&out_trade_no=$oid_7ree');
+	if(sta == 'SUCCESS') {
+			clearTimeout(wechat_checkST);
+			location.href = "$jsurl_7ree";
+	} else {
+			wechat_checkstart();
+			wechat_checkCount++;
+			if(wechat_checkCount >= 40) {
+				location.href = SITEURL+'plugin.php?id=x7ree_recharge:x7ree_recharge';
+			}
+	}
+
+}
+wechat_checkstart();
+
+
+
+
+function httpGet(theUrl){
+		var xmlHttp = new XMLHttpRequest();
+		xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+		xmlHttp.send( null );
+		return xmlHttp.responseText;
+}
+
+
+</script>
+
+	<div align="center">
+			<p><img alt="微信扫描二维码" src="http://qr.liantu.com/api.php?text={$url3_7ree}" style="width:150px;height:150px;"/></p>
+			<p>微信扫描上面二维码，以确认支付。</p>
+	</div>
+
+<h2 class="paynote1_7ree">充值积分{$ext_7ree}{$exttitle_7ree}</h2>
+<h2 class="paynote2_7ree">需支付{$cost_7ree}元</h2>
+<!--{elseif $type_7ree==3}-->
+
+	<form name="payform" method="post" action="plugin.php?id=x7ree_recharge:x7ree_recharge&code_7ree=3" >
+	<input type="hidden" name="formhash" value="{FORMHASH}">
+	<input type="hidden" name="oid_7ree" value="{$oid_7ree}">
+	<input type="hidden" name="type_7ree" value="{$type_7ree}">
+	<input type="hidden" name="ext_7ree" value="{$ext_7ree}">
+	<input type="hidden" name="cost_7ree" value="{$cost_7ree}">
+	<table class="rechargebox_7ree">
+		<tr>
+		<td>收款信息：</td>
+		<td>
+		{$vars_7ree['yhznotice_7ree']}
+		</td>
+		</tr>
+		<tr>
+		<td>付款银行：</td>
+		<td><input type="text" name="bank_7ree" id="bank_7ree" class="rechargeinput_7ree"></td>
+		</tr>
+		<tr>
+		<td>付款户名：</td>
+		<td><input type="text" name="account_7ree" id="account_7ree" class="rechargeinput_7ree"></td>
+		</tr>
+		<tr>
+		<td>付款卡号：</td>
+		<td><input type="text" name="cardnum_7ree" id="cardnum_7ree" class="rechargeinput_7ree"></td>
+		</tr>
+		<tr>
+		<td>校验码：</td>
+		<td><strong>{$paycode_7ree} </strong>，请务必在转账备注中填写正确的验证码，以便核查。</td>
+		</tr>
+		<tr>
+		<td>付款金额：</td>
+		<td>充值积分<strong>{$ext_7ree}</strong>{$exttitle_7ree}，需支付<strong>{$cost_7ree}</strong>元</td>
+		</tr>
+		<tr>
+		<td></td>
+		<td>
+		<button type="submit" name="submit_7ree" class="pn pnc" value="TRUE"><b>已完成银行转账，确认提交转账信息。</b></button>
+		</td>
+		</tr>
+	</table>
+	</form>
+	
+
+
+
+<!--{/if}-->
+

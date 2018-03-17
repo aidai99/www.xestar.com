@@ -1,0 +1,42 @@
+<!--{template common/header}-->
+
+<!--{if $_GET['target_7ree']=='race'}-->
+
+	<!--{if $racemessage_7ree}-->
+		{lang jingcai_7ree:htm_lang_yidu_7ree}
+		<script type="text/javascript" language="javascript">
+		$('racemessage_7ree').value="{$racemessage_7ree}";
+		</script>
+	<!--{else}-->
+		{lang jingcai_7ree:htm_lang_zhanwu_7ree}
+	<!--{/if}-->
+
+<!--{elseif $_GET['target_7ree']=='ateam'}-->
+
+	<!--{if $teaminfo_7ree}-->
+		{lang jingcai_7ree:htm_lang_yidu_7ree}
+		<script type="text/javascript" language="javascript">
+		$('alogo_7ree').value="{$logo_7ree}";
+		$('amessage_7ree').value="{$message_7ree}";
+		</script>
+	<!--{else}-->
+		{lang jingcai_7ree:htm_lang_zhanwu_7ree}
+	<!--{/if}-->
+
+
+<!--{elseif $_GET['target_7ree']=='bteam'}-->
+
+	<!--{if $teaminfo_7ree}-->
+		{lang jingcai_7ree:htm_lang_yidu_7ree}
+		<script type="text/javascript" language="javascript">
+		$('blogo_7ree').value="{$logo_7ree}";
+		$('bmessage_7ree').value="{$message_7ree}";
+		</script>
+	<!--{else}-->
+		{lang jingcai_7ree:htm_lang_zhanwu_7ree}
+	<!--{/if}-->
+
+
+<!--{/if}-->
+
+<!--{template common/footer}-->

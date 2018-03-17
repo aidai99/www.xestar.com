@@ -1,0 +1,3 @@
+https://xestar.com/plugin.php?id=k_misign:misc&operation=magics
+https://xestar.com/plugin.php?id=k_misign:misc&operation=leval
+https://xestar.com/plugin.php?id=k_misign:misc&operation=rewardrule

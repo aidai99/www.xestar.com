@@ -1,0 +1,17 @@
+	<ul>
+	<!--{loop $list_7ree $list_value}-->
+<li class='mt bbda' style="font-size:12px;color:<!--{if $list_value['status_7ree']==1}-->green<!--{elseif $list_value['status_7ree']==2}-->red<!--{/if}-->;">
+<dt class="z" style="margin-right:20px;width:600px;">
+{$list_value['time_7ree']} 提现{$list_value['ext_7ree']}{$exttitle_7ree}到<!--{if $list_value['type_7ree']==1}-->微信<!--{elseif $list_value['type_7ree']==2}-->支付宝<!--{/if}-->"{$list_value['account_7ree']}"，预计可到账现金{$list_value['cash_7ree']}元
+</dt>
+<dl style="width:50px;height:30px;overflow:hidden;">
+<!--{if !$list_value['status_7ree']}-->审核中<!--{elseif $list_value['status_7ree']==1}-->提现成功<!--{elseif $list_value['status_7ree']==2}-->被驳回<!--{/if}-->
+</dl>
+</li>
+	<!--{/loop}-->
+
+	</ul>
+	
+<div>
+{$multipage}
+</div>

@@ -1,0 +1,31 @@
+<table class="dtable_7ree">
+<tr>
+	<td>兑换时间</td>
+	<td>会员<br>姓名</td>
+	<td>兑换积分<br>商品名称</td>
+	<td>手机<br>QQ</td>
+	<td>邮寄地址<br>支付宝</td>
+</tr>
+<!--{if $list_7ree}-->
+	<!--{loop $list_7ree $list_value}-->
+<tr>
+	<td>{$list_value['time_7ree']}</td>
+	<td>{$list_value['user_7ree']}<br>{$list_value['address_7ree']['realname']}</td>
+	<td>{$list_value['cost_7ree']}{$exttitle_7ree}<br>{$list_value['name_7ree']}</td>
+	<td>{$list_value['address_7ree']['mobile']}<br>{$list_value['address_7ree']['qq']}</td>
+	<td>
+	<span class="tdaddress_7ree" title="{$list_value['address_7ree']['address']}">{$list_value['address_7ree']['address']}</span><br>
+	<span class="tdaddress_7ree" title="{$list_value['address_7ree']['site']}"><a href="{$list_value['address_7ree']['site']}" target="_blank">{$list_value['address_7ree']['site']}</a></span>
+	</td>
+</tr>
+<!--{/loop}-->
+<!--{else}-->
+<tr>
+<td colspan="6"><div class="notice">抱歉，暂无会员兑换积分商品。</div></td>
+</tr>
+<!--{/if}-->
+</table>
+	
+<div>
+{$multipage}
+</div>

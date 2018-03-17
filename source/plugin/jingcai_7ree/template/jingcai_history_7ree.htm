@@ -1,0 +1,35 @@
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="dt mtm">
+	<tr class="colplural" >
+	    <th colspan="6">
+	    <h3>{lang jingcai_7ree:htm_lang_lishijingcai_7ree}</h3>
+	    </th>
+	</tr>
+	<tr>
+		<td align="center">{lang jingcai_7ree:htm_lang_bisaimingcheng_7ree}</td>
+		<td align="center"><!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}--> VS <!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}--></td>
+		<td align="center">{lang jingcai_7ree:htm_lang_bisaijieguo_7ree}</td>
+		<td align="center">{lang jingcai_7ree:htm_lang_jingcaishijian_7ree}</td>
+		<td align="center">{lang jingcai_7ree:htm_lang_jingcaixiangqing_7ree}</td>
+	</tr>
+<!--{loop $lishijingcailist_7ree $lishijingcailist_value}-->
+	<tr>
+		<td align="center">{$lishijingcailist_value['racename_7ree']}</td>
+		<td align="center">{$lishijingcailist_value['aname_7ree']} VS {$lishijingcailist_value['bname_7ree']}</td>
+		<td align="center">
+		<!--{if $lishijingcailist_value['win_7ree'] == "a"}-->
+            {$lishijingcailist_value['aname_7ree']}
+        <!--{elseif $lishijingcailist_value['win_7ree'] == "b"}-->
+        	{$lishijingcailist_value['bname_7ree']}
+        <!--{elseif $lishijingcailist_value['win_7ree'] == "c"}-->
+        	{lang jingcai_7ree:htm_lang_pingju_7ree}
+        <!--{elseif $lishijingcailist_value['win_7ree'] == "d"}-->
+        	{lang jingcai_7ree:htm_lang_liupan_7ree}
+        <!--{else}-->
+         	{lang jingcai_7ree:htm_lang_weijiexiao_7ree}
+        <!--{/if}-->
+        </td>
+		<td align="center">{$lishijingcailist_value['time_7ree']}</td>
+		<td align="center"><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&sp_7ree=more&main_id_7ree={$lishijingcailist_value['main_id_7ree']}" target="_blank">{lang jingcai_7ree:htm_lang_jingcaixiangqing_7ree}</a></td>
+	</tr>
+<!--{/if}-->
+</table>

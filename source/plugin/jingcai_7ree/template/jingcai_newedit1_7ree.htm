@@ -1,0 +1,151 @@
+<style>
+	#{$editorid}_bold, #{$editorid1}_bold,#{$editorid2}_bold{
+		background-position:0 0;
+	}
+	#{$editorid}_italic, #{$editorid1}_italic, #{$editorid2}_italic{
+		background-position: -20px 0;
+	}
+	#{$editorid}_underline{
+		background-position: -40px 0;
+	}
+	#{$editorid}_forecolor{
+		background-position: -60px 0;
+	}
+	#{$editorid}_url{
+		background-position: -40px -20px;
+	}
+	#{$editorid}_unlink{
+		background-position: -60px -20px;
+	}
+	#{$editorid}_inserthorizontalrule{
+		background-position: -20px -60px;
+	}
+	#{$editorid}_tbl{
+		background-position: -160px -20px;
+	}
+	#{$editorid}_removeformat{
+		background-position: -60px -40px;
+	}
+	#{$editorid}_justifyleft{
+		background-position: -80px -20px;
+	}
+	#{$editorid}_justifycenter{
+		background-position: -240px -40px;
+	}
+	#{$editorid}_justifyright{
+		background-position: -260px -40px;
+	}
+	#{$editorid}_autotypeset{
+		background-position: -220px -40px;
+	}
+	#{$editorid}_insertorderedlist{
+		background-position: -100px -20px;
+	}
+	#{$editorid}_insertunorderedlist{
+		background-position: 0 -60px;
+	}
+	#{$editorid}_sml{
+		background-position: -3px -80px;
+	}
+	#{$editorid}_image{
+		background-position: -43px -80px;
+	}
+	#{$editorid}_code{
+		background-position: -120px -20px;
+	}
+	#{$editorid}_quote{
+		background-position: -140px -20px;
+	}
+	#{$editorid}_{
+		background-position: ;
+	}
+	#{$editorid}_{
+		background-position: ;
+	}			
+</style>
+
+
+        <form method="post" action="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=19" name="jingcai_add_form_7ree" >
+        <input type="hidden" name="formhash" value="{FORMHASH}">
+        <input type="hidden" name="scid_7ree" value="$race_7ree['scid_7ree']">
+        <tr class="colplural" >
+        <td colspan=2><h3><!--{if $race_7ree['scid_7ree']}-->{lang jingcai_7ree:htm_lang_bianji_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_xinzeng_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_saichengxinxi_7ree}</h3></td>
+
+         <tr>
+        <td>{lang jingcai_7ree:htm_lang_saichengmingcheng_7ree}: <input type="text" class="px" id="racename_7ree" name="scname_7ree" value="{$race_7ree['scname_7ree']}" style="width:320px;"> <font color="red">*</font></td>
+                <td>
+        		<!--{if $_GET['sp_7ree'] == "add1"}--> 
+		        {lang jingcai_7ree:htm_lang_saishifenlei_7ree}: 
+		        <select name="fenlei1_7ree" id="fenlei1_7ree" onchange="showfenlei2_7ree(this.id)">
+		        	<option value="{$value_7ree[0]}">{lang jingcai_7ree:htm_lang_yijifenlei_7ree}</option>
+		        <!--{loop  $fenlei_array2 $key_7ree $value_7ree}-->
+		        	<option value="{$value_7ree[0]}">{$value_7ree[0]}</option>
+		         <!--{/loop}-->       
+		        </select>
+		        <span class="pipe">|</span>
+		         <span style="margin-left:20px;">{lang jingcai_7ree:htm_lang_erjifenlei_7ree}:</span> 
+		            <span id="yijitips_7ree">{lang jingcai_7ree:htm_lang_yijijifenleitip_7ree}</span> 
+		           	<!--{loop $fenlei_array2 $key_7ree $value_7ree}-->
+			        <select id="fenlei_select_7ree_{$value_7ree[0]}" name="fenlei2_7ree_{$value_7ree[0]}" style="margin-left:10px;display:none;" onchange="$('fenlei2_7ree').value=this.value;">
+			        <option value="">{lang jingcai_7ree:htm_lang_qingxuanze_7ree}</option>
+			        <!--{loop $value_7ree $key_7ree2 $value_7ree2}-->
+			        <!--{if $key_7ree2 >0}--><option value="{$value_7ree2}">{$value_7ree2}</option><!--{/if}-->
+			        <!--{/loop}-->
+			        </select>
+			        <!--{/loop}-->
+			        <input type='hidden' id="fenlei2_7ree" name="fenlei2_7ree" value="">
+
+		<!--{elseif $_GET['sp_7ree'] == "edit1"}--> 
+
+		        {lang jingcai_7ree:htm_lang_saishifenlei_7ree}: 
+
+		        <input type='text' id="fenlei1_7ree" name="fenlei1_7ree" value="<!--{if $race_7ree[fenlei1_7ree]}-->{$race_7ree[fenlei1_7ree]}<!--{else}-->{lang jingcai_7ree:htm_lang_weixuanze1_7ree}<!--{/if}-->" style="text-align:center;border:none;width:50px;background-color:#333333;color:#FFFFFF;">
+			    <input type='text' id="fenlei2_7ree" name="fenlei2_7ree" value="<!--{if $race_7ree[fenlei2_7ree]}-->{$race_7ree[fenlei2_7ree]}<!--{else}-->{lang jingcai_7ree:htm_lang_weixuanze2_7ree}<!--{/if}-->" style="text-align:center;border:none;width:50px;background-color:#333333;color:#FFFFFF;">
+		        <span style="margin-left:5px;">{lang jingcai_7ree:htm_lang_chongxinxuanze_7ree}:</span>
+		        <select name="fenlei1_7ree_select" id="fenlei1_7ree_select" onchange="$('fenlei1_7ree').value=this.value;showfenlei2_7ree(this.id);">
+		        	<option value="{$value_7ree[0]}">{lang jingcai_7ree:htm_lang_yijifenlei_7ree}</option>
+		        <!--{loop  $fenlei_array2 $key_7ree $value_7ree}-->
+		        	<option value="{$value_7ree[0]}">$value_7ree[0]</option>
+		         <!--{/loop}-->       
+		        </select>
+		        <span class="pipe">|</span>
+		         <span style="margin-left:5px;">{lang jingcai_7ree:htm_lang_erjifenlei_7ree}:</span> 
+		            <span id="yijitips_7ree">{lang jingcai_7ree:htm_lang_yijijifenleitip_7ree}</span> 
+		           	<!--{loop $fenlei_array2 $key_7ree $value_7ree}-->
+			        <select id="fenlei_select_7ree_{$value_7ree[0]}" name="fenlei2_7ree_{$value_7ree[0]}" style="margin-left:5px;display:none;" onchange="$('fenlei2_7ree').value=this.value;">
+			        <option value="">{lang jingcai_7ree:htm_lang_qingxuanze_7ree}</option>
+			        <!--{loop $value_7ree $key_7ree2 $value_7ree2}-->
+			        <!--{if $key_7ree2 >0}--><option value="{$value_7ree2}">{$value_7ree2}</option><!--{/if}-->
+			        <!--{/loop}-->
+			        </select>
+			        <!--{/loop}-->
+		<!--{/if}--> 
+        </td>
+        </tr>
+         <tr>
+        <td width="50%">赛程开始时间: <input type="text" class="px" name="time_7ree"  onclick="showcalendar(event, this, true)" onfocus="showcalendar(event, this, true);if(this.value=='0000-00-00')this.value=''" value="{$race_7ree['time_7ree']}" readonly style="width:320px;"/></td>
+        <td>赛程结束时间: <input type="text" class="px" name="time2_7ree"  onclick="showcalendar(event, this, true)" onfocus="showcalendar(event, this, true);if(this.value=='0000-00-00')this.value=''" value="{$race_7ree['time2_7ree']}" readonly style="width:320px;"/> </td>
+        </tr>
+        <tr>
+        <td><!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_mingcheng_7ree}: <input type="text" class="px" id="aname_7ree" name="aname_7ree" value="{$race_7ree['aname_7ree']}" style="width:320px;"> <font color="red">*</font></td>
+        <td><!--{if $jingcai_7ree_var['btitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_mingcheng_7ree}: <input type="text" class="px" id="bname_7ree" name="bname_7ree" value="{$race_7ree['bname_7ree']}" style="width:320px;"> <font color="red">*</font></td>
+        </tr>
+        
+        <tr>
+        <td><!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_logo_7ree}: <input type="text" class="px" id="alogo_7ree" name="alogo_7ree" value="{$race_7ree['alogo_7ree']}" style="width:320px;"><p style="margin-left:60px;">{lang jingcai_7ree:htm_lang_logotips_7ree}({lang jingcai_7ree:htm_lang_zuijiachicun_7ree}: {$width_7ree}*{$height_7ree}px)</p></td>
+        <td><!--{if $jingcai_7ree_var['btitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_logo_7ree}: <input type="text" class="px" id="blogo_7ree" name="blogo_7ree" value="{$race_7ree['blogo_7ree']}" style="width:320px;"><p style="margin-left:60px;">{lang jingcai_7ree:htm_lang_logotips_7ree}({lang jingcai_7ree:htm_lang_zuijiachicun_7ree}: {$width_7ree}*{$height_7ree}px)</p></td>
+        </tr>
+        <tr>
+        <td><!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_shenglv_7ree}: <input type="text" class="px" id="arate_7ree" name="arate_7ree" value="{$race_7ree['arate_7ree']}" style="width:320px;"></td>
+        <td><!--{if $jingcai_7ree_var['btitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_shenglv_7ree}: <input type="text" class="px" id="brate_7ree" name="brate_7ree" value="{$race_7ree['brate_7ree']}" style="width:320px;"></td>
+        </tr>
+  
+
+
+
+
+        <tr class="colplural" >
+        <td colspan="2"><input type="submit" name="add_submit_7ree" value="{lang jingcai_7ree:htm_lang_querentijiao1_7ree}" class="pn" style="padding:5px;height:30px;"></td>
+        </tr>
+        </form>
+        

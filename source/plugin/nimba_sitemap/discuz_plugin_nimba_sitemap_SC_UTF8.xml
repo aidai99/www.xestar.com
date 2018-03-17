@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0]]></item>
+	<item id="Time"><![CDATA[2018-01-03 21:43]]></item>
+	<item id="From"><![CDATA[人工智能实验室 (http://www.ailab.cn/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[网站地图]]></item>
+			<item id="identifier"><![CDATA[nimba_sitemap]]></item>
+			<item id="description"><![CDATA[网站地图 for Discuz! 人工智能实验室 出品（Made By Nimba, Team From AiLab.CN ）功能：实现将网站内容生成.xml格式网站地图，可提交给搜索引擎，助力网站优化！]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[nimba_sitemap/]]></item>
+			<item id="copyright"><![CDATA[人工智能实验室]]></item>
+			<item id="version"><![CDATA[v5.0.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[update]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[手动生成]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[addon]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[应用推荐]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[99]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[-4]]></item>
+				<item id="title"><![CDATA[网站域名]]></item>
+				<item id="description"><![CDATA[请填写您的域名，不要填“http://”和结尾的“/”]]></item>
+				<item id="variable"><![CDATA[mysite]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[www.abc.com]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[-3]]></item>
+				<item id="title"><![CDATA[网站已开启https]]></item>
+				<item id="description"><![CDATA[如果网站已开启https请选择“是”，未开启则选择“否”]]></item>
+				<item id="variable"><![CDATA[https]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[-2]]></item>
+				<item id="title"><![CDATA[开启自动]]></item>
+				<item id="description"><![CDATA[如果网址数量庞大不建议开启自动，此种情况只需每日手动更新一次即可！]]></item>
+				<item id="variable"><![CDATA[auto]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[-1]]></item>
+				<item id="title"><![CDATA[开启分卷]]></item>
+				<item id="description"><![CDATA[网址数目过多的情况下，开启则可生成多个地图文件(仅面商业版支持)]]></item>
+				<item id="variable"><![CDATA[open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[分卷网址数目]]></item>
+				<item id="description"><![CDATA[在网址过多你的情况下我们将生成多个xml地图文件，注意，搜索引擎规定：每个Sitemap文件最多可包含50,000个网址，并且应小于10MB(仅面商业版支持)]]></item>
+				<item id="variable"><![CDATA[num]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[最大卷数]]></item>
+				<item id="description"><![CDATA[限制最多生成几卷地图，留空或填0即为不限制(仅面商业版支持)]]></item>
+				<item id="variable"><![CDATA[maxmaps]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[网址类型]]></item>
+				<item id="description"><![CDATA[(按住 CTRL 多选)设置要显示的网址类型]]></item>
+				<item id="variable"><![CDATA[urls]]></item>
+				<item id="type"><![CDATA[selects]]></item>
+				<item id="extra"><![CDATA[1=论坛帖子
+2=论坛版块
+3=门户文章]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+					<item id="1"><![CDATA[2]]></item>
+					<item id="2"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[论坛主题优先级]]></item>
+				<item id="description"><![CDATA[此类网页的优先级。有效值范围从 0.0 到 1.0，参考：http://www.baidu.com/search/sitemap_help.html#05]]></item>
+				<item id="variable"><![CDATA[rank1]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0.8]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[论坛版块优先级]]></item>
+				<item id="description"><![CDATA[此类网页的优先级。有效值范围从 0.0 到 1.0，参考：http://www.baidu.com/search/sitemap_help.html#05]]></item>
+				<item id="variable"><![CDATA[rank2]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0.7]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[门户文章优先级]]></item>
+				<item id="description"><![CDATA[此类网页的优先级。有效值范围从 0.0 到 1.0，参考：http://www.baidu.com/search/sitemap_help.html#05]]></item>
+				<item id="variable"><![CDATA[rank3]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0.6]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[论坛主题更新频率]]></item>
+				<item id="description"><![CDATA[参考：http://www.baidu.com/search/sitemap_help.html#05 下同]]></item>
+				<item id="variable"><![CDATA[change1]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[1=总是
+2=小时
+3=每天
+4=每周
+5=每月
+6=每年
+7=从不]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[论坛版块更新频率]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[change2]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=总是
+2=小时
+3=每天
+4=每周
+5=每月
+6=每年
+7=从不]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[门户文章更新频率]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[change3]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[1=总是
+2=小时
+3=每天
+4=每周
+5=每月
+6=每年
+7=从不]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[门户文章是否开启html生成]]></item>
+				<item id="description"><![CDATA[您网站是否开启了门户文章html生成，开启了选择“是”，未开启则选择“否”
+[*]注意此功能目前只开放给商业版，其他版本设置无效！]]></item>
+				<item id="variable"><![CDATA[htmlmade]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[地图名称]]></item>
+				<item id="description"><![CDATA[.xml格式，默认使用sitemap.xml,在和其他程序不产生冲突的情况下，不建议修改]]></item>
+				<item id="variable"><![CDATA[filename]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[sitemap.xml]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[网站目录]]></item>
+				<item id="description"><![CDATA[如果帖子地址http://www.abc.com/thread-30-1-1.html就输入/；帖子地址是http://www.abc.com/bbs/thread-30-1-1.html就输入/bbs/，其他情况类推]]></item>
+				<item id="variable"><![CDATA[web_root]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[/]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[更新周期]]></item>
+				<item id="description"><![CDATA[单位：秒，开启自动模式后此参数有效，建议小型网站设置为3600，即1小时更新一次；数据量较大的网站设置为86400，即24小时更新一次，太大的网站建议关闭自动更新]]></item>
+				<item id="variable"><![CDATA[cycle]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[86400]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[屏蔽版块]]></item>
+				<item id="description"><![CDATA[添加不需要在地图中显示的版块]]></item>
+				<item id="variable"><![CDATA[ban]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[添加地图链接到页脚]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[link]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="appname"><![CDATA[网站地图]]></item>
+				<item id="tips"><![CDATA[网站地图生成提示]]></item>
+				<item id="going_6"><![CDATA[感谢使用本插件，正在为您生成网站地图，请稍后……]]></item>
+				<item id="page_doing"><![CDATA[当前正在生成第<font color="{color}">{page}</font>卷地图，请稍后……系统将继续自行……<a href="{adminurl}?action=plugins&operation=config&do={pluginid}&identifier=nimba_sitemap&pmod=do&page={nextpage}">如未跳转请点击进入下一步</a>]]></item>
+				<item id="page_result_index"><![CDATA[<strong>地图索引地址：</strong>{index}]]></item>
+				<item id="page_result"><![CDATA[<strong>生成提示：</strong>[{page_time}]您的网站地图已更新,地图地址：{xmls}]]></item>
+				<item id="page_help_title"><![CDATA[使用方法]]></item>
+				<item id="page_help_list"><![CDATA[<ul id="tipslis">
+<li>1、在百度站长工具中提交Sitemap(<font color="green">百度站长平台->链接提交->Sitemap</font>)，参考：<a href="http://zhanzhang.baidu.com/wiki/93#05" target="_blank">http://zhanzhang.baidu.com/wiki/93#05</a></li>
+<li>2、在robots.txt中添加sitemap标记：Sitemap:{robots}&nbsp;&nbsp;&nbsp;[<a href="source/plugin/nimba_sitemap/static/robots.jpg" target="_blank">示例</a>]</li>
+<li>3、如果您对.xml格式地图不了解或不知道怎么用，请参考：<a href="http://help.baidu.com/question?prod_en=master&class=477" target="_blank">http://help.baidu.com/question?prod_en=master&class=477</a></li>
+</ul>]]></item>
+				<item id="page_dev"><![CDATA[<strong>生成提示：</strong>[{page_time}]您的网站地图已更新,地图地址：{xmls}<br>
+	<strong>您本次生成的地图中包括</strong><br>
+	帖子：{urlsum_0}<br>
+	版块：{urlsum_1}<br>
+	文章：{urlsum_2}<br>]]></item>
+				<item id="page_help_dev_title"><![CDATA[特别说明]]></item>
+				<item id="page_help_dev_list"><![CDATA[<ul id="tipslis">
+<li>您当前使用的是非商业版，该版本<font color="red">仅仅支持10000条帖子</font>的网址，不能生成多卷地图，不能自定义网址数目……</li>	
+<li>如果您对网站地图有更高要求，请支持<strong>商业版</strong>，安装地址：<a href="http://addon.discuz.com/?@nimba_sitemap.plugin">http://addon.discuz.com/?@nimba_sitemap.plugin</a></li>	
+</ul>]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="appname"><![CDATA[网站地图]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]本插件版权归属插件作者所有.
+[*]未经插件作者许可,任何人不得以任何形式在任何地方发布/转发原版以及其衍生的修改版.
+[*][b]插件作者:[/b]土著人宁巴 Team from [url=http://www.ailab.cn/]人工智能实验室[/url]
+[*][b]功能简介:[/b]本插件用于为Discuz论坛生成XML格式地图,方便搜索引擎抓取！
+[*][b]技术支持:[/b][url=http://www.ailab.cn/]人工智能实验室[/url]
+[*]如有任何关于使用上的疑问,请至discuz站长社区[url]http://dz.open.ailab.cn/[/url]提出.
+[*][color=Red]请您在安装前认真阅读插件的详细说明[/color]，地址：[url]http://addon.discuz.com/?@nimba_sitemap.plugin[/url].
+[*][color=Red]如果您愿意资助我们,请至[url]http://www.ailab.cn/zanzhu.html[/url]对我们进行赞助.[/color]
+[*]最后,感谢您使用我们的插件,也希望您能够给我们提供更好的意见([url=http://www.ailab.cn/]请点击这里进入人工智能实验室[/url]).
+[/list]]]></item>		
+	</item>
+</root>

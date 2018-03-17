@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+	<item id="Time"><![CDATA[2017-08-29 16:58]]></item>
+	<item id="From"><![CDATA[高仿手表-高仿包包-高仿奢侈品-58奢侈品 (http://localhost:82/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[0]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[睿智自動回帖頂帖商業版]]></item>
+			<item id="identifier"><![CDATA[bang_ireply_vip]]></item>
+			<item id="description"><![CDATA[可以在計劃任務中設置多個任務,有助于更真實的顯示效果.使回復時間的變動效果顯著.新站必備工具。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[bang_ireply_vip/]]></item>
+			<item id="copyright"><![CDATA[BangChao]]></item>
+			<item id="version"><![CDATA[vip1.5.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[ireply]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2,X2.5,X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[啟用插件]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[switch]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[回復內容列表]]></item>
+				<item id="description"><![CDATA[每行一條回復內容，系統隨機選擇一條回復]]></item>
+				<item id="variable"><![CDATA[list_post]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[很不錯
+樓主是超人
+好帖就是要頂
+頂頂多好
+真心頂
+難得一見的好帖
+說的非常好
+很好哦
+不錯不錯
+LZ真是人才]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[回帖間隔時間]]></item>
+				<item id="description"><![CDATA[設置自動回帖的頻率,建議設置為5~30分鐘,數值過小會增加服務器壓力]]></item>
+				<item id="variable"><![CDATA[irjg]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[回帖開始時間]]></item>
+				<item id="description"><![CDATA[限制每天回帖開始時間，必須和回帖結束時間一起設置才有效，留空則不限制]]></item>
+				<item id="variable"><![CDATA[time_min]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[9]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[回帖結束時間]]></item>
+				<item id="description"><![CDATA[限制每天回帖結束時間，必須和回帖結束時間一起設置才有效，留空則不限制]]></item>
+				<item id="variable"><![CDATA[time_max]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[23]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[單個主帖最大回帖數]]></item>
+				<item id="description"><![CDATA[如果帖子的回帖已經達到或超過本數字，則不再自動回帖，0或留空則不限制]]></item>
+				<item id="variable"><![CDATA[i_post_max]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[9999]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[參與自動回帖的論版塊]]></item>
+				<item id="description"><![CDATA[全不選或空則全部回復]]></item>
+				<item id="variable"><![CDATA[i_forums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+				</item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[回復指定天數內的主帖子]]></item>
+				<item id="description"><![CDATA[當前日期開始算，超過了這麼我天的則不自動回復，0或留空則不限制]]></item>
+				<item id="variable"><![CDATA[in_date]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[只回復多少天前的帖子]]></item>
+				<item id="description"><![CDATA[只回復多少天前的帖子，0或留空為不限制]]></item>
+				<item id="variable"><![CDATA[iq_data]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[回復最小主題條數]]></item>
+				<item id="description"><![CDATA[一次參與回復最小主題條數，在最小和最大值之間隨機選擇]]></item>
+				<item id="variable"><![CDATA[it_min]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[回復最大主題條數]]></item>
+				<item id="description"><![CDATA[一次參與回復最大主題條數，在最小和最大值之間隨機選擇]]></item>
+				<item id="variable"><![CDATA[it_max]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[單次回復最小數值]]></item>
+				<item id="description"><![CDATA[每一次回復一條主題的最小數值]]></item>
+				<item id="variable"><![CDATA[ir_min]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[單次回復最大數值]]></item>
+				<item id="description"><![CDATA[單條主題單次回復最大數值，]]></item>
+				<item id="variable"><![CDATA[ir_max]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[9]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[參與回帖的用戶組]]></item>
+				<item id="description"><![CDATA[如果只希望指定的會員參與回復，則新建個用戶級，把指定的用戶加到這個組，然後把這個組設置成參與回復就可]]></item>
+				<item id="variable"><![CDATA[iu_groups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[9]]></item>
+					<item id="1"><![CDATA[10]]></item>
+					<item id="2"><![CDATA[11]]></item>
+					<item id="3"><![CDATA[12]]></item>
+					<item id="4"><![CDATA[13]]></item>
+					<item id="5"><![CDATA[14]]></item>
+					<item id="6"><![CDATA[15]]></item>
+				</item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[回帖時間變動範圍]]></item>
+				<item id="description"><![CDATA[單位為毫秒，每一帖回復的間隔值，不是這個數，而是0到這個數的隨機值]]></item>
+				<item id="variable"><![CDATA[ir_time]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[3600]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[回復時間與論壇帖子同步]]></item>
+				<item id="description"><![CDATA[不同步，則回復時間為在指定範圍內的隨機，有可能後發的帖子的時間比之前發的還要早]]></item>
+				<item id="variable"><![CDATA[en_timeorder]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[優先回帖順序]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[i_orderby]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 隨機抽取
+2 = 新主題優先
+3 = 回帖少優先
+4 = 瀏覽少優先]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[獲得擴展積分類型]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[extctype]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[回帖獲得積分]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[extcnum]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[點擊數最大值]]></item>
+				<item id="description"><![CDATA[實際增加值為最小值至最大值之間的隨機值]]></item>
+				<item id="variable"><![CDATA[click_max]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[16]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[點擊數增加最小值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[click_min]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[是否關閉UBB代碼]]></item>
+				<item id="description"><![CDATA[默認不關閉
+關閉後，不對UBB代碼進行html轉義，即不會顯示相應的文字效果，而直接顯示這類型代碼]]></item>
+				<item id="variable"><![CDATA[r_ubboff]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[指定回帖用戶]]></item>
+				<item id="description"><![CDATA[指定參與回帖的用戶ＵＩＤ，設置本項後，則根據用戶組回帖設置失效，只有本項的用戶才參與回帖，每個用戶ＵＩＤ以小寫的逗號","分隔,請對dz不熟的用戶不要設置本項，否則程序可能會報錯]]></item>
+				<item id="variable"><![CDATA[user_id]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[指定回帖主題]]></item>
+				<item id="description"><![CDATA[指定參與回帖的主題ＴＩＤ，設置本項後，則根據版塊回帖設置失效，只有本項的主題才參與回帖，每個主題ＴＩＤ以小寫的逗號","分隔,請對dz不熟的主題不要設置本項，否則程序可能會報錯]]></item>
+				<item id="variable"><![CDATA[tid_id]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+	</item>
+</root>

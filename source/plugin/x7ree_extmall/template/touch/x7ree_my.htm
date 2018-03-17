@@ -1,0 +1,33 @@
+<table class="dtable_7ree">
+<tr>
+	<td>商品名称</td>
+	<td>兑换积分</td>
+	<td>兑换时间</td>
+	<td>操作</td>
+</tr>
+<!--{if $list_7ree}-->
+	<!--{loop $list_7ree $list_value}-->
+<tr>
+	<td>{$list_value['name_7ree']}</td>
+	<td>{$list_value['cost_7ree']}{$exttitle_7ree}</td>
+	<td>{$list_value['time_7ree']}</td>
+	<td>
+		<!--{if $list_value['status_7ree']==1}--><span style='color:gray'>已申请退货</span>
+		<!--{elseif $list_value['status_7ree']==2}--><span style='color:green'>已成功退货</span>
+		<!--{elseif $list_value['status_7ree']==3}--><span style='color:red'>退货被驳回</span>
+		<!--{else}-->
+		[<a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=10&id_7ree={$list_value['id_7ree']}" onclick="if(confirm('您确认要申请退货吗?\n退货后我们会联系您确认后续事宜')==false)return false;">申请退货</a>]
+		<!--{/if}-->
+	</td>
+</tr>
+<!--{/loop}-->
+<!--{else}-->
+<tr>
+<td colspan="5"><div class="notice">抱歉，您暂未获得积分兑换的商品。</div></td>
+</tr>
+<!--{/if}-->
+</table>
+	
+<div>
+{$multipage}
+</div>

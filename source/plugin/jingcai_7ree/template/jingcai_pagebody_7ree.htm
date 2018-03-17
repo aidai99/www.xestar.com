@@ -1,0 +1,121 @@
+        <!--{if (!$mywin_7ree || (!$mywin2_7ree && $race_7ree['daxiao_7ree']) || $jingcai_7ree_var['duplicate_7ree']) && $race_7ree['open_7ree']}-->
+         <tr>
+         	<td colspan="5" align="middle">
+       			<p style="padding:5px;">
+        		<h3 style="font-size:14px;">{lang jingcai_7ree:htm_lang_woyaozhichi_7ree}: <input type="text" class="px myodds_7ree" name="myodds_7ree" value="$race_7ree['reward_7ree']"><span style="color:red;">{$exttitle_7ree}</span></h3>
+        		{lang jingcai_7ree:htm_lang_zuidizhichi_7ree}: {$race_7ree['reward_7ree']}{$exttitle_7ree}<span class="pipe">|</span>{lang jingcai_7ree:htm_lang_zuigaozhichi_7ree}: {$cost_7ree}{$exttitle_7ree}
+        		<span class="pipe">|</span>{lang jingcai_7ree:htm_lang_jifenbeishu_7ree}: 
+				<!--{if $jingcai_7ree_var['beishu_7ree']}-->{lang jingcai_7ree:htm_lang_jingcaibeshu1_7ree}{$jingcai_7ree_var['beishu_7ree']}{lang jingcai_7ree:htm_lang_jingcaibeshu2_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_buxianzhi_7ree}<!--{/if}-->
+        		<!--{if $jingcai_7ree_var['shouxufei_7ree']}--><span class="pipe">|</span>{lang jingcai_7ree:htm_lang_shouxufei_7ree}: {$jingcai_7ree_var['shouxufei_7ree']}%<!--{/if}-->
+        		<span class="pipe">|</span>{lang jingcai_7ree:htm_lang_wogongyou_7ree}{$myext_7ree}{$exttitle_7ree}
+        		</p>
+        	</td>
+        </tr>
+        <!--{/if}-->
+        <!--{if (!$mywin2_7ree || $jingcai_7ree_var['duplicate_7ree']) && $race_7ree['daxiao_7ree'] && $race_7ree['open_7ree']}-->
+        <tr>
+        	<td align="middle" valign="top"><button name="da" class="pn" onclick="showDialog('{lang jingcai_7ree:htm_lang_caidapeilv_7ree}:<strong>{$race_7ree['daodds_7ree']}{lang jingcai_7ree:htm_lang_bei_7ree}</strong><br>{lang jingcai_7ree:htm_lang_woyaozhichi_7ree}<strong>'+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value+'{$exttitle_7ree}</strong><!--{if $jingcai_7ree_var[shouxufei_7ree]}--><br>{lang jingcai_7ree:htm_lang_shouxufei_7ree}: <strong>{$jingcai_7ree_var[shouxufei_7ree]}%</strong><!--{/if}-->', 'confirm', '{lang jingcai_7ree:htm_lang_querenjingcai_7ree}{lang jingcai_7ree:htm_lang_da_7ree}{$race_7ree[daxiao_7ree]}{lang jingcai_7ree:htm_lang_ma_7ree}', function () { window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=4&daxiao_7ree=1&win_7ree=a&main_id_7ree=$race_7ree[main_id_7ree]&tid_7ree=$race_7ree[tid_7ree]&formhash={FORMHASH}&myodds_7ree='+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value; })"><strong>{lang jingcai_7ree:htm_lang_da_7ree}{$race_7ree[daxiao_7ree]}/{$race_7ree['daodds_7ree']}{lang jingcai_7ree:htm_lang_bei_7ree}</strong></button></td>
+        	<td align="middle" valign="top"><strong>{lang jingcai_7ree:htm_lang_daxiao_7ree}</strong></td>
+        	<td align="middle" valign="top"><button name="xiao" class="pn" onclick="showDialog('{lang jingcai_7ree:htm_lang_caixiaopeilv_7ree}:<strong>{$race_7ree['xiaoodds_7ree']}{lang jingcai_7ree:htm_lang_bei_7ree}</strong><br>{lang jingcai_7ree:htm_lang_woyaozhichi_7ree}<strong>'+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value+'{$exttitle_7ree}</strong><!--{if $jingcai_7ree_var[shouxufei_7ree]}--><br>{lang jingcai_7ree:htm_lang_shouxufei_7ree}: <strong>{$jingcai_7ree_var[shouxufei_7ree]}%</strong><!--{/if}-->', 'confirm', '{lang jingcai_7ree:htm_lang_querenjingcai_7ree}{lang jingcai_7ree:htm_lang_xiao_7ree}{$race_7ree['daxiao_7ree']}{lang jingcai_7ree:htm_lang_ma_7ree}', function () { window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=4&daxiao_7ree=1&win_7ree=b&main_id_7ree=$race_7ree[main_id_7ree]&tid_7ree=$race_7ree[tid_7ree]&formhash={FORMHASH}&myodds_7ree='+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value; })"><strong>{lang jingcai_7ree:htm_lang_xiao_7ree}{$race_7ree[daxiao_7ree]}/{$race_7ree['xiaoodds_7ree']}{lang jingcai_7ree:htm_lang_bei_7ree}</strong></button></td>
+        </tr>
+        <!--{/if}-->
+        <tr>
+        
+        <td align="middle" valign="top" width="40%">
+        <!--{if (!$mywin_7ree || $jingcai_7ree_var['duplicate_7ree']) && $race_7ree['open_7ree']}-->
+        <p class="tbmu" style="height:35px;line-height:35px;">
+        <button name="ateam" class="pn" onclick="showDialog('{lang jingcai_7ree:htm_lang_querenjingcai_7ree}<strong>{$race_7ree[aname_7ree]}</strong>{lang jingcai_7ree:htm_lang_huosheng_7ree}{lang jingcai_7ree:htm_lang_ma_7ree}<br>{lang jingcai_7ree:htm_lang_woyaozhichi_7ree}<strong>'+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value+'{$exttitle_7ree}</strong><br>{$race_7ree[aname_7ree]}{lang jingcai_7ree:htm_lang_peilv_7ree}: <strong>{$race_7ree[aodds_7ree]}{lang jingcai_7ree:htm_lang_bei_7ree}</strong><!--{if $jingcai_7ree_var[shouxufei_7ree]}--><br>{lang jingcai_7ree:htm_lang_shouxufei_7ree}: <strong>{$jingcai_7ree_var[shouxufei_7ree]}%</strong><!--{/if}-->', 'confirm', '{lang jingcai_7ree:htm_lang_zhichi_7ree}{lang jingcai_7ree:htm_lang_qiuduiqueren_7ree}', function () { window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=4&win_7ree=a&main_id_7ree=$race_7ree[main_id_7ree]&tid_7ree=$race_7ree[tid_7ree]&formhash={FORMHASH}&myodds_7ree='+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value; })"><strong>{lang jingcai_7ree:htm_lang_zhichi_7ree}$race_7ree['aname_7ree']</strong></button></p>
+        <!--{/if}-->
+        <p class="tbmu">
+        <!--{if $race_7ree['alogo_7ree']}-->
+        <img src="{$race_7ree['alogo_7ree']}" border="0" width="{$width_7ree}" height="{$height_7ree}" onerror="this.src='./source/plugin/jingcai_7ree/template/image/A_7ree.gif'" >
+        <!--{else}-->
+         <img src="./source/plugin/jingcai_7ree/template/image/A_7ree.gif" border="0" width="{$width_7ree}" height="{$height_7ree}">       
+        <!--{/if}-->                
+        </p>
+
+        <p <!--{if $race_7ree['amessage_7ree']}-->class="tbmu"<!--{/if}--> >
+        <font size="3px"><strong>{$race_7ree['aname_7ree']}</strong></font><br>
+        <!--{if $jingcai_7ree_var['shownum_7ree']}-->
+        <!--{if $anum_7ree['num_7ree']}-->{$anum_7ree['num_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zanwu_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_renzhichi_7ree}
+        <!--{/if}-->
+        <!--{if $jingcai_7ree_var['shownum_7ree'] && $jingcai_7ree_var['showext_7ree'] && $anum_7ree['num_7ree']}--><span class="pipe">|</span><!--{/if}-->
+        <!--{if $jingcai_7ree_var['showext_7ree']}--><!--{if $anum_7ree['odds_7ree']}-->{$anum_7ree['odds_7ree']}{$exttitle_7ree}<!--{/if}--><!--{/if}-->
+        </p>
+        <!--{if $race_7ree['amessage_7ree']}-->
+        <p style="padding:10px;">{$race_7ree['amessage_7ree']}</p>
+        <!--{/if}--> 
+        </td>
+        
+        <td align="middle" valign="top" width="20%" >
+
+        <!--{if (!$mywin_7ree || $jingcai_7ree_var['duplicate_7ree']) && $race_7ree['open_7ree'] && $race_7ree['codds_7ree']}-->
+        <p class="tbmu" style="height:35px;line-height:35px;">
+        <button name="ateam" class="pn vm" style="width: 100px;" onclick="showDialog('{lang jingcai_7ree:htm_lang_querenjingcai_7ree}<strong><!--{if $jingcai_7ree_var[pingju_7ree] && $race_7ree[rangqiufang_7ree]>0}-->$jingcai_7ree_var[pingju_7ree]<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}--></strong>{lang jingcai_7ree:htm_lang_ma_7ree}<br>{lang jingcai_7ree:htm_lang_woyaozhichi_7ree}<strong>'+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value+'{$exttitle_7ree}</strong><br><!--{if $jingcai_7ree_var[pingju_7ree] && $race_7ree[rangqiufang_7ree]>0}-->$jingcai_7ree_var[pingju_7ree]<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_peilv_7ree}: <strong>{$race_7ree[codds_7ree]}{lang jingcai_7ree:htm_lang_bei_7ree}</strong><!--{if $jingcai_7ree_var[shouxufei_7ree]}--><br>{lang jingcai_7ree:htm_lang_shouxufei_7ree}: <strong>{$jingcai_7ree_var[shouxufei_7ree]}%</strong><!--{/if}-->', 'confirm', '{lang jingcai_7ree:htm_lang_zhichi_7ree}{lang jingcai_7ree:htm_lang_qiuduiqueren_7ree}', function () { window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=4&win_7ree=c&main_id_7ree=$race_7ree[main_id_7ree]&tid_7ree=$race_7ree[tid_7ree]&formhash={FORMHASH}&myodds_7ree='+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value; })"><strong>{lang jingcai_7ree:htm_lang_zhichi_7ree}<!--{if $jingcai_7ree_var['pingju_7ree'] && $race_7ree['rangqiufang_7ree']>0}-->$jingcai_7ree_var['pingju_7ree']<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}--></strong></button>
+        </p>
+        <!--{/if}-->
+        <p >
+        <strong>{lang jingcai_7ree:htm_lang_jieguo_7ree}</strong>
+        </p>        
+       <!--{if $race_7ree['fenlei1_7ree'] || $race_7ree['fenlei2_7ree']}--> 
+        <p class="tbmu" style="height:35px;">
+        $race_7ree['fenlei1_7ree']<br>
+        $race_7ree['fenlei2_7ree']
+        </p>
+        <!--{/if}-->        
+        <p class="tbmu" style="height:35px;">
+        {lang jingcai_7ree:htm_lang_bisaishijian_7ree}<br><strong>$race_7ree['time_7ree']</strong>
+        </p>
+        <!--{if $race_7ree['add_7ree']}-->
+        <p class="tbmu" style="height:35px;">
+        {lang jingcai_7ree:htm_lang_bisaididian_7ree}<br><strong>$race_7ree['add_7ree']</strong> 
+        </p>
+        <!--{/if}-->
+                         
+        <p <!--{if $race_7ree['codds_7ree']}-->class="tbmu"<!--{/if}--> style="padding:20px 0 20px 0;">
+        <img src="./source/plugin/jingcai_7ree/template/image/vs_big_7ree.gif">
+        </p> 
+        
+        <!--{if $race_7ree['codds_7ree']}-->      
+        <p style="padding-top:20px;">
+        <font size="3px"><strong><!--{if $jingcai_7ree_var['pingju_7ree'] && $race_7ree['rangqiufang_7ree']>0}-->$jingcai_7ree_var['pingju_7ree']<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}--></strong></font><br>
+        <!--{if $jingcai_7ree_var['shownum_7ree']}-->
+        <!--{if $cnum_7ree['num_7ree']}-->{$cnum_7ree['num_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zanwu_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_renzhichi_7ree}
+        <!--{/if}-->
+        <!--{if $jingcai_7ree_var['shownum_7ree'] && $jingcai_7ree_var['showext_7ree'] && $cnum_7ree['num_7ree']}--><span class="pipe">|</span><!--{/if}-->
+        <!--{if $jingcai_7ree_var['showext_7ree']}-->
+        <!--{if $cnum_7ree['odds_7ree']}-->{$cnum_7ree['odds_7ree']}{$exttitle_7ree}<!--{/if}-->
+        </p>
+        <!--{/if}-->
+        <!--{/if}-->
+        
+        </div>
+        </td>
+        
+        
+        
+        <td align="middle" valign="top" width="40%">
+        <!--{if (!$mywin_7ree || $jingcai_7ree_var['duplicate_7ree']) && $race_7ree['open_7ree']}-->
+        <p class="tbmu" style="height:35px;line-height:35px;">
+        <button name="bteam" class="pn" onclick="showDialog('{lang jingcai_7ree:htm_lang_querenjingcai_7ree}<strong>{$race_7ree[bname_7ree]}</strong>{lang jingcai_7ree:htm_lang_huosheng_7ree}{lang jingcai_7ree:htm_lang_ma_7ree}<br>{lang jingcai_7ree:htm_lang_woyaozhichi_7ree}<strong>'+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value+'{$exttitle_7ree}</strong><br>{$race_7ree[bname_7ree]}{lang jingcai_7ree:htm_lang_peilv_7ree}: <strong>{$race_7ree[bodds_7ree]}{lang jingcai_7ree:htm_lang_bei_7ree}</strong><!--{if $jingcai_7ree_var[shouxufei_7ree]}--><br>{lang jingcai_7ree:htm_lang_shouxufei_7ree}: <strong>{$jingcai_7ree_var[shouxufei_7ree]}%</strong><!--{/if}-->', 'confirm', '{lang jingcai_7ree:htm_lang_zhichi_7ree}{lang jingcai_7ree:htm_lang_qiuduiqueren_7ree}', function () { window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=4&win_7ree=b&main_id_7ree=$race_7ree[main_id_7ree]&tid_7ree=$race_7ree[tid_7ree]&formhash={FORMHASH}&myodds_7ree='+document.getElementsByName(&quot;myodds_7ree&quot;)[0].value;})"><strong>{lang jingcai_7ree:htm_lang_zhichi_7ree}$race_7ree['bname_7ree']</strong></button></p>
+        <!--{/if}-->
+        <p class="tbmu">
+        <!--{if $race_7ree['blogo_7ree']}-->        
+        <img src="{$race_7ree['blogo_7ree']}" border="0" width="{$width_7ree}" height="{$height_7ree}"  onerror="this.src='./source/plugin/jingcai_7ree/template/image/B_7ree.gif'" >
+        <!--{else}-->
+         <img src="./source/plugin/jingcai_7ree/template/image/B_7ree.gif" border="0" width="{$width_7ree}" height="{$height_7ree}">       
+        <!--{/if}-->                
+        </p>
+        <p <!--{if $race_7ree['bmessage_7ree']}-->class="tbmu"<!--{/if}--> >
+        <font size="3px"><strong>{$race_7ree['bname_7ree']}</strong></font><br>
+		<!--{if $jingcai_7ree_var['shownum_7ree']}-->
+			<!--{if $bnum_7ree['num_7ree']}-->{$bnum_7ree['num_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zanwu_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_renzhichi_7ree}
+		<!--{/if}-->
+		<!--{if $jingcai_7ree_var['shownum_7ree'] && $jingcai_7ree_var['showext_7ree'] && $bnum_7ree['num_7ree']}--><span class="pipe">|</span>
+		<!--{if $bnum_7ree['odds_7ree']}-->{$bnum_7ree['odds_7ree']}{$exttitle_7ree}<!--{/if}-->
+		<!--{/if}-->
+        </p>
+        <!--{if $race_7ree['bmessage_7ree']}-->
+        <p style="padding:10px;">{$race_7ree['bmessage_7ree']}</p>
+        <!--{/if}--> 
+        </td></tr>

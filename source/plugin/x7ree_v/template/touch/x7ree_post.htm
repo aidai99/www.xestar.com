@@ -1,0 +1,55 @@
+{template x7ree_v:x7ree_mynav}
+
+
+<form enctype="multipart/form-data" method="post" action="plugin.php?id=x7ree_v:x7ree_v&code_7ree=2" name="vpost_7ree">
+<!--{if $id_7ree}-->
+<input type="hidden" name="id_7ree" value="{$id_7ree}">
+<!--{/if}-->
+<input type="hidden" name="formhash" value="{FORMHASH}">
+<table class="inputtable_7ree">
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_v:htm_lang_shipinmingcheng_7ree}</td>
+	<td class="inputtd_7ree"><input type="text" name="name_7ree" value="{$v_7ree['name_7ree']}"></td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_v:htm_lang_goumaijifen_7ree}</td>
+	<td class="inputtd_7ree">
+	<input type="text" name="cost_7ree" value="{$v_7ree['cost_7ree']}">
+	<br>{$exttitle_7ree}, {lang x7ree_v:htm_lang_goumaijifentip_7ree}
+	</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_v:htm_lang_shipinfenlei_7ree}</td>
+	<td class="inputtd_7ree">
+		<select name="fenlei_7ree" value="{$v_7ree['name_7ree']}">
+			<!--{loop $fenlei_7ree $fenlei_value}-->
+			<option value="{$fenlei_value}" <!--{if $fenlei_value==$v_7ree['fenlei_7ree']}-->SELECTED<!--{/if}-->>{$fenlei_value}</option>
+			<!--{/loop}-->
+		</select>
+		</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_v:htm_lang_shipindizhi_7ree}</td>
+	<td class="inputtd_7ree"><input type="text" name="url_7ree" value="{$v_7ree['url_7ree']}"> {lang x7ree_v:htm_lang_dizhitips_7ree}</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_v:htm_lang_fengmiantupian_7ree}</td>
+	<td class="inputtd_7ree" style="height:auto;">
+	<input type="file" name="pic_7ree">
+	<!--{if $v_7ree['pic_7ree']}-->
+	<br>
+	<img src="{$folder_7ree}/{$v_7ree['pic_7ree']}" class="newpic_7ree" style="width:98%;">
+	<!--{/if}-->
+	</td>
+</tr>
+
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_v:htm_lang_shipinjieshao_7ree}</td>
+	<td class="texttd_7ree"><textarea name="detail_7ree">{$v_7ree['detail_7ree']}</textarea></td>
+</tr>
+<tr>
+	<td></td>
+	<td class="inputtd_7ree"><input type="submit" name="submit_7ree" value="{lang x7ree_v:htm_lang_tijiao_7ree}" class="submitbtn_7ree"></td>
+</tr>
+</table>
+</form>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+	<item id="Time"><![CDATA[2016-08-30 09:37]]></item>
+	<item id="From"><![CDATA[ÈË¹¤ÖÇÄÜÊµÑéÊÒ (http://www.ailab.cn/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[×¢²áÑ¡ÔñÍ·Ïñ]]></item>
+			<item id="identifier"><![CDATA[defaultavatar]]></item>
+			<item id="description"><![CDATA[×¢²áÑ¡ÔñÍ·Ïñ for Discuz! ×÷Õß ÍÁÖøÈËÄþ°Í ÈË¹¤ÖÇÄÜÊµÑéÊÒ ³öÆ·£¨Made By Nimba, Team From AiLab.cn £© ¹¦ÄÜ½éÉÜ£º±¾²å¼þ¿ÉÊµÏÖÔÚÓÃ»§×¢²áÊ±Ñ¡ÔñÒ»¸ö³õÊ¼Í·Ïñ£¬±ÜÃâÁËÂÛÌ³Àï´óÁ¿ÓÃ»§ÎÞÍ·ÏñÏÔÊ¾Ä¬ÈÏÍ·ÏñµÄÇé¿ö£¡
+¹¦ÄÜÌØµã£º
+1¡¢¿ÉÔÚºóÌ¨Ìí¼ÓºÍ¹ÜÀí´ýÑ¡Í·Ïñ¿â(ÉÌÒµ°æÓÃ»§)£»
+2¡¢ÉèÖÃÁË´óÁ¿Í¼Æ¬µÄÓÃ»§£¬¿É¿ªÆôÌåÑéÄ£Ê½£¬¼´Ã¿´Î´ÓÆôÓÃµÄÍ·Ïñ¿âÖÐÉ¸Ñ¡Ò»¶¨ÊýÁ¿Í¼Æ¬¹©ÓÃ»§Ñ¡Ôñ£¬±ÜÃâ´óÁ¿ÓÃ»§Ê¹ÓÃÏàÍ¬Í·ÏñµÄÇé¿ö£»
+3¡¢Éú³ÉµÄÍ·ÏñºÍÓÃ»§×Ô¼ºÉÏ´«µÄÍ·ÏñÃ»ÓÐÈÎºÎÇø±ð£¨Ð¶ÔØ²å¼þÒ³²»»á¶ª]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[defaultavatar/]]></item>
+			<item id="copyright"><![CDATA[ÈË¹¤ÖÇÄÜÊµÑéÊÒ]]></item>
+			<item id="version"><![CDATA[v2.0.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[upload]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[Í·Ïñ¿â¹ÜÀí]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[fastupload]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[ÅúÁ¿ÉÏ´«]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[addon]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[Ó¦ÓÃÖÐÐÄ]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[99]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[¿ªÆôÌåÑéÄ£Ê½]]></item>
+				<item id="description"><![CDATA[¿ªÆôÌåÑéÄ£Ê½ºó£¬ÓÃ»§×¢²áÊ±£¬ÏÂÃæÍ·ÏñÑ¡ÔñÁÐ±í½«´ÓÄúµÄÍ·Ïñ¿âÖÐËæ»úÑ¡ÔñÒ»¶¨ÊýÁ¿µÄÍ¼Æ¬¹©ÓÃ»§Ñ¡Ôñ£¬½¨Òé¿ªÆô£¡]]></item>
+				<item id="variable"><![CDATA[rand]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[Ëæ»úÊýÁ¿]]></item>
+				<item id="description"><![CDATA[ÌåÑéÄ£Ê½ÏÂÃ¿´ÎËæ»úÈ¡³öµÄÍ·ÏñÊýÁ¿£¬½¨Òé¸ù¾Ý×Ô¼ºµÄÍ·Ïñ¿â×ÜÊÇºÍÄ£°åÕ¹Ê¾Ð§¹ûÉèÖÃºÏÊÊÖµ£»]]></item>
+				<item id="variable"><![CDATA[randnum]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="appname"><![CDATA[×¢²áÑ¡ÔñÍ·Ïñ]]></item>
+				<item id="error_1"><![CDATA[ÎÄ¼þ¸ñÊ½´íÎó£¬ÉÏ´«ÏÞÖÆÎª.jpg¸ñÊ½£¡]]></item>
+				<item id="error_2"><![CDATA[ÉÏ´«Ê§°Ü£¬ÇëÖØÊÔ£¡]]></item>
+				<item id="ok"><![CDATA[¹§Ï²Äú²Ù×÷³É¹¦£¡]]></item>
+				<item id="title"><![CDATA[ÔÚÏßÍ¼±êÉÏ´«]]></item>
+				<item id="avatar_new_now"><![CDATA[µ±Ç°Í¼±ê:]]></item>
+				<item id="avatar_new"><![CDATA[Ñ¡ÔñÍ¼Æ¬]]></item>
+				<item id="avatar_new_tips"><![CDATA[ÉÏ´«ÏÞÖÆÎª.jpg¸ñÊ½£¡½¨ÒéÍ¼Æ¬¸ß¶ÈÎª200pxÕý·½ÐÎ]]></item>
+				<item id="avatar_new_tips_error"><![CDATA[Äúµ±Ç°Ê¹ÓÃµÄÊÇ·ÇÉÌÒµ°æ±¾£¬²»Ìá¹©×ÔÖúÔö¼ÓÍ·Ïñ¿â¹¦ÄÜ£¡]]></item>
+				<item id="content"><![CDATA[Ò³ÃæÀàÐÍ]]></item>
+				<item id="istid"><![CDATA[Ìû×ÓÒ³]]></item>
+				<item id="isfid"><![CDATA[°å¿éÒ³]]></item>
+				<item id="other"><![CDATA[ÆäËû]]></item>
+				<item id="status_1"><![CDATA[PCÐÎÊ½Ò³Ãæ]]></item>
+				<item id="status_0"><![CDATA[ÊÖ»ú¶ËÒ³Ãæ]]></item>
+				<item id="key"><![CDATA[É¾³ý]]></item>
+				<item id="pic"><![CDATA[Í·Ïñ]]></item>
+				<item id="dateline"><![CDATA[ÉÏ´«Ê±¼ä]]></item>
+				<item id="status"><![CDATA[ÆôÓÃ]]></item>
+				<item id="del"><![CDATA[É¾?]]></item>
+				<item id="submit"><![CDATA[Ìá½»]]></item>
+				<item id="config_title"><![CDATA[´ýÑ¡Í·ÏñÁÐ±í]]></item>
+				<item id="avatar_new_title"><![CDATA[ÉÏ´«ÐÂÍ·Ïñ]]></item>
+				<item id="error_tip"><![CDATA[ÇëÑ¡ÔñÍ·ÏñÔÙÌá½»£¡]]></item>
+				<item id="newselect"><![CDATA[»»Ò»Åú£¿]]></item>
+				<item id="fastupload"><![CDATA[ÅúÁ¿ÉÏ´«Í·Ïñ]]></item>
+				<item id="tip_1"><![CDATA[1¡¢ÅúÁ¿ÉÏ´«Í·Ïñ¹¦ÄÜ£¬ÇëÏÈ½«ÄúÒªÊ¹ÓÃµÄÍ·ÏñÍ¼Æ¬ÉÏ´«ÖÁ<font color="blue">source/plugin/defaultavatar/fastupload/</font>Ä¿Â¼ÏÂ!]]></item>
+				<item id="tip_2"><![CDATA[2¡¢ÇëÄúÉÏ´«Í·Ïñºóµã»÷ÏÂÃæµÄ¡°<strong>¸üÐÂÍ·Ïñ¿â</strong>¡±!]]></item>
+				<item id="tip_3"><![CDATA[3¡¢ÉÏ´«µÄÍ¼Æ¬ÏÞ¶¨Îªjpg¸ñÊ½£¬ÆäËû¸ñÊ½²å¼þ½«×Ô¶¯¹ýÂË²»ÓÃ!]]></item>
+				<item id="tip_4"><![CDATA[4¡¢·ÇÉÌÒµ°æ±¾ÎÞ·¨Ê¹ÓÃÅúÁ¿Ìí¼ÓÍ·Ïñ¹¦ÄÜ£¬ÈçÄú¾õµÃ´Ë²å¼þ¶ÔÍøÕ¾ÓÐ°ïÖú£¬ÇëÖ§³ÖÎÒÃÇµÄÉÌÒµ°æ£¬Ð»Ð»!]]></item>
+				<item id="update_error"><![CDATA[·ÇÉÌÒµ°æ±¾ÎÞ·¨Ê¹ÓÃÅúÁ¿Ìí¼ÓÍ·Ïñ¹¦ÄÜ£¬ÈçÄú¾õµÃ´Ë²å¼þ¶ÔÍøÕ¾ÓÐ°ïÖú£¬ÇëÖ§³ÖÎÒÃÇµÄÉÌÒµ°æ£¬Ð»Ð»!]]></item>
+				<item id="update"><![CDATA[¸üÐÂÍ·Ïñ¿â]]></item>
+				<item id="update_ok"><![CDATA[Í·Ïñ¿â¸üÐÂ³É¹¦!]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="appname"><![CDATA[×¢²áÑ¡ÔñÍ·Ïñ]]></item>
+				<item id="selecttip"><![CDATA[Ñ¡ÔñÍ·Ïñ:]]></item>
+				<item id="newselect"><![CDATA[»»Ò»Åú£¿]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[[list]		
+[*]±¾²å¼þ°æÈ¨¹éÊô²å¼þ×÷ÕßËùÓÐ.
+[*]Î´¾­²å¼þ×÷ÕßÐí¿É,ÈÎºÎÈË²»µÃÒÔÈÎºÎÐÎÊ½ÔÚÈÎºÎµØ·½·¢²¼/×ª·¢Ô­°æÒÔ¼°ÆäÑÜÉúµÄÐÞ¸Ä°æ.
+[*][b]²å¼þ×÷Õß:[/b]ÍÁÖøÈËÄþ°Í Team from [url=http://www.ailab.cn/]ÈË¹¤ÖÇÄÜÊµÑéÊÒ[/url]
+[*][b]¹¦ÄÜ¼ò½é:[/b]±¾²å¼þ¿ÉÊµÏÖÔÚÓÃ»§×¢²áÊ±Ñ¡ÔñÒ»¸ö³õÊ¼Í·Ïñ£¬±ÜÃâÁËÂÛÌ³Àï´óÁ¿ÓÃ»§ÎÞÍ·ÏñÏÔÊ¾Ä¬ÈÏÍ·ÏñµÄÇé¿ö£¡
+[*][b]¼¼ÊõÖ§³Ö:[/b][url=http://www.ailab.cn/]ÈË¹¤ÖÇÄÜÊµÑéÊÒ[/url]
+[*]ÈçÓÐÈÎºÎ¹ØÓÚÊ¹ÓÃÉÏµÄÒÉÎÊ,ÇëÖÁÕ¾³¤ÉçÇø[url]http://dz.open.ailab.cn/[/url]Ìá³ö.
+[*][color=Red]ÇëÄúÔÚ°²×°Ç°ÈÏÕæÔÄ¶Á²å¼þµÄÏêÏ¸ËµÃ÷[/color]£¬µØÖ·£º[url]http://addon.discuz.com/?@defaultavatar.plugin[/url].
+[*][color=Red]Èç¹ûÄúÔ¸Òâ×ÊÖúÎÒÃÇ,ÇëÖÁ[url]http://me.alipay.com/lih062624[/url]¶ÔÎÒÃÇ½øÐÐÔÞÖú.[/color]
+[*]×îºó,¸ÐÐ»ÄúÊ¹ÓÃÎÒÃÇµÄ²å¼þ,Ò²Ï£ÍûÄúÄÜ¹»¸øÎÒÃÇÌá¹©¸üºÃµÄÒâ¼û([url=http://www.ailab.cn/]Çëµã»÷ÕâÀï½øÈëÈË¹¤ÖÇÄÜÊµÑéÊÒ[/url]).
+[/list]]]></item>		
+	</item>
+</root>

@@ -1,0 +1,54 @@
+<!--{template common/header}-->
+<style type="text/css">
+.ajax { width: 85%; height: auto; background-color: #FFF; border-radius: 2px; color: #555; text-align: left; font: 14px/1.6 'Microsoft YaHei', Hei, arial, sans-serif; margin: auto; }
+.ajax .money ul { padding: 10px; overflow: hidden; }
+.ajax .money li { float: left; width: 50%; line-height: 28px; }
+.ajax .money label { display: block; }
+.ajax .money label b { color: #F26C4F; font-weight: normal; }
+.ajax .altw .mbm { overflow: hidden; vertical-align: middle; line-height: 35px; height: 35px; border-bottom: 1px solid #EBEBEB; padding: 10px; }
+.ajax .altw .avatar { float: left; margin-right: 10px; line-height: 15px; }
+.ajax .altw .avatar img { height: 35px; width: 35px; border-radius: 100%; display: inline-block; }
+.pns { border-radius: 0px 0px 3px 3px; overflow: hidden; border-top-width: 1px; border-top-style: solid; border-top-color: #EBEBEB; }
+.pnc { width: 50%; float: left; text-align: center; border: none; font-size: 16px; height: 44px; line-height: 44px; border-radius: 0 0 2px 2px; cursor: pointer; color: #777; background-color: #FFF; border-left-width: 1px; border-left-style: solid; border-left-color: #EBEBEB; margin-left: -1px;}
+.tal.altw textarea { font: 14px/1.5 'Microsoft YaHei', Hei, arial, sans-serif; outline: none; vertical-align: middle; width: 100%; border: 0px none #FFF; cursor: text; font-size: 14px; border-radius: 0px; }
+.desc, .time { color: #999; }
+.flex { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+.flexbox { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
+
+</style>
+
+<div class="ajax reward">
+  <form action="plugin.php?id=reward:misc&act=reward&tid=$_GET[tid]" method="post" autocomplete="off" id="AjaxForm" name="AjaxForm">
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="handlekey" value="{$_GET[handlekey]}">
+    <input type="hidden" name="dreferer" value="$dreferer">
+    <input type="hidden" name="submit" value="true">
+    <div class="tal c altw">
+      <div class="mbm"> <a href="home.php?mod=space&uid=$thread[authorid]&do=profile" class="avatar">{avatar($thread[authorid],small)}</a> {lang reward:RewardMoney}: </div>
+      <div class="money">
+        <ul>
+          <!--{loop $reward['money'] $val}-->
+          <li>
+            <label for="money_$val">
+              <input id="money_$val" name="money" type="radio" value="$val" />
+              <b>$val</b> $extcredits[title]</label>
+          </li>
+          <!--{/loop}-->
+        </ul>
+      </div>
+      <p style="padding:10px;border-top-width: 1px; border-top-style: solid; border-top-color: #EBEBEB;">
+        <textarea name="message"  placeholder="{lang reward:Message}"></textarea>
+      </p>
+      <p style="padding:10px;border-top-width: 1px; border-top-style: solid; border-top-color: #EBEBEB;" class="flexbox"> <span class="name desc">{lang reward:NotifyAuthor}</span> <span class="html flex tar" style="text-align:right;">
+        <label style="display: block;">
+          <input name="notify" type="checkbox" value="1" />
+        </label>
+        </span> </p>
+    </div>
+    <div id="submit_span" class="o pns">
+      <button type="submit" name="submit" id="submit_btn" value="true" class="pn pnc formdialog">{lang reward:Determine}</button>
+      <a class="pnc" href="javascript:;" onclick="popup.close();">{lang close}</a> </div>
+  </form>
+</div>
+
+<!--{template common/footer}-->

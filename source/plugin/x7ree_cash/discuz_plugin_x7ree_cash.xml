@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2017-08-19 15:16]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[[ÆâÈð]»ý·ÖÌáÏÖ]]></item>
+			<item id="identifier"><![CDATA[x7ree_cash]]></item>
+			<item id="description"><![CDATA[ÆâÈð×¨ÎªdiscuzÉè¼ÆµÄÓÃ»§»ý·ÖÌáÏÖÒµÎñÏµÍ³Ó¦ÓÃ£¬¿É°ó¶¨ÈÎÒâ»ý·Ö×Ö¶Î£¬¿É×Ô¶¨ÒåÊÖÐø·Ñ£¬Ö§³ÖPC¶Ë¡¢ÊÖ»ú¶ËÍ¬²½½ø¶È¡£]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[x7ree_cash/]]></item>
+			<item id="copyright"><![CDATA[ÆâÈð  www.7ree.com]]></item>
+			<item id="version"><![CDATA[v1.2]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[x7ree_cash]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[»ý·ÖÌáÏÖ]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[5]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[more_7ree]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[[ÆâÈð¸ü¶à²úÆ·Óë·þÎñ]]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[ÊÇ·ñÍ¬ÒâÆâÈðÓÃ»§Ð­Òé]]></item>
+				<item id="description"><![CDATA[Í¬ÒâÐ­ÒéÄÚÈÝ·½¿ÉÕý³£Ê¹ÓÃ¸Ã²å¼þ
+Ð­ÒéµØÖ·£ºhttp://addon.discuz.com/?@7.developer.doc/agreement_7ree_html]]></item>
+				<item id="variable"><![CDATA[agreement_7ree]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[Ç°Ì¨¹ÜÀíÓÃ»§×é]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[caiwugids_7ree]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[ÌáÏÖµÄ»ý·Ö×Ö¶Î]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ext_7ree]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[»ý·ÖÌáÏÖ¶Ò»»±ÈÂÊ]]></item>
+				<item id="description"><![CDATA[µ¥Î»£º%
+ºÃ±È100»ý·Ö¿ÉÒÔ¶Ò»»1ÔªÏÖ½ð£¬Ôò¶Ò»»±ÈÂÊÎª1%]]></item>
+				<item id="variable"><![CDATA[rate_7ree]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[Ã¿ÈÕ×î¶àÌáÏÖ´ÎÊý]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[maxnum_7ree]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[Ã¿ÈÕ×î´ó¶î¶È]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[maxext_7ree]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[ÔÊÐíÌáÏÖÓÃµÄ»§×é]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[group_7ree]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[11]]></item>
+					<item id="1"><![CDATA[12]]></item>
+					<item id="2"><![CDATA[13]]></item>
+					<item id="3"><![CDATA[14]]></item>
+					<item id="4"><![CDATA[15]]></item>
+					<item id="5"><![CDATA[1]]></item>
+					<item id="6"><![CDATA[2]]></item>
+					<item id="7"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[ÊÖ»úµ¼º½°´Å¥3ÎÄ×Ö]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[btn3_txt_7ree]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[ÐüÉÍ´óÌü]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[ÊÖ»úµ¼º½°´Å¥3Á´½Ó]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[btn3_url_7ree]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[plugin.php?id=reward_7ree:hall_7ree&code=1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

@@ -1,0 +1,56 @@
+<form enctype="multipart/form-data" method="post" action="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=5" name="form_7ree">
+<!--{if $id_7ree}-->
+<input type="hidden" name="id_7ree" value="{$id_7ree}">
+<!--{/if}-->
+<input type="hidden" name="formhash" value="{FORMHASH}">
+<table class="dtable_7ree">
+<tr>
+	<td class="tdtitle_7ree">商品名称</td>
+	<td class="inputtd_7ree"><input type="text" name="name_7ree" value="{$thisgoods_7ree['name_7ree']}"></td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">商品分类</td>
+	<td class="inputtd_7ree">
+	<select name="fenlei_7ree">
+		<!--{loop $fenlei_array $key_7ree $fenlei_value}-->
+		<option <!--{if $thisgoods_7ree['fenlei_7ree']==$fenlei_value}-->SELECTED<!--{/if}-->>{$fenlei_value}</option>
+		<!--{/loop}-->
+	</select>
+	</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">市场价格</td>
+	<td class="inputtd_7ree"><input type="text" name="price_7ree" value="{$thisgoods_7ree['price_7ree']}"> 元</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">兑换积分</td>
+	<td class="inputtd_7ree"><input type="text" name="cost_7ree" value="{$thisgoods_7ree['cost_7ree']}"> {$exttitle_7ree}</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">商品图片</td>
+	<td class="inputtd_7ree" style="height:auto;">
+	<input type="file" name="pic_7ree">
+	<!--{if $thisgoods_7ree['pic_7ree']}-->
+	<br>
+	<img src="{$folder_7ree}/{$thisgoods_7ree['pic_7ree']}" class="newpic_7ree">
+	<!--{/if}-->
+	</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">库存数量</td>
+	<td class="inputtd_7ree"><input type="text" name="num_7ree" value="{$thisgoods_7ree['num_7ree']}"></td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">商品介绍</td>
+	<td class="texttd_7ree"><textarea name="detail_7ree">{$thisgoods_7ree['detail_7ree']}</textarea></td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">置顶排序</td>
+	<td class="inputtd_7ree"><input type="text" name="displayorder_7ree" value="{$thisgoods_7ree['displayorder_7ree']}"> 数字越大排名越靠前，最大排序数字127</td>
+</tr>
+<tr>
+	<td></td>
+	<td class="inputtd_7ree"><input type="submit" name="submit_7ree" value="提交"></td>
+</tr>
+</table>
+</form>

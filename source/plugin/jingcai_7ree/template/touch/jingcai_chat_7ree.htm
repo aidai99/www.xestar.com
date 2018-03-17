@@ -1,0 +1,24 @@
+
+	<!--{if $reply_7ree}-->
+		<div class="chatbox_7ree">
+		<ul>
+		<!--{loop $reply_7ree $reply_value}-->
+		<li>
+		<span>[{$reply_value['dateline']}]</span> <a href="http://localhost:777/x3/home.php?mod=space&uid={$reply_value['authorid']}" target="_blank">{$reply_value['author']}</a>: {$reply_value['message']}
+		</li>
+		<!--{/loop}-->
+		</ul>
+		</div>
+	<!--{else}-->
+		<div class="jcnotice_7ree">{lang jingcai_7ree:htm_lang_zhanwutaolun_7ree}</div>
+	<!--{/if}-->
+<div class="postbox_7ree">
+	<form action="plugin.php?id=jingcai_7ree:post_7ree" method="post" name="postform_7ree">
+	<input type="hidden" name="formhash" value="{FORMHASH}">
+	<input type="hidden" name="main_id_7ree" value="{$race_7ree['main_id_7ree']}">
+	<input type="hidden" name="tid" value="{$race_7ree['tid_7ree']}">
+<input type="text" name="message_7ree" placeholder="{lang jingcai_7ree:htm_lang_shuruhuifu_7ree}">
+<button type="submit" value="TRUE" name="submit_7ree">{lang jingcai_7ree:htm_lang_canyutaolun_7ree}</button>
+	</form>
+<a href="forum.php?mod=viewthread&tid={$race_7ree['tid_7ree']}" target="_blank" >[{lang jingcai_7ree:htm_lang_jinrutiezi_7ree}]</a>
+</div>

@@ -1,0 +1,63 @@
+{template common/header}
+<!--
+	(C)2006-2016 www.7ree.com
+	This is NOT a freeware, use is subject to license terms
+	Update: 2016/12/9 16:14
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_recharge/template/image/css_7ree.css?{VERHASH}'/>
+
+<div id="pt" class="bm cl">
+	<div class="z">
+	<a href="./" class="nvhm">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="forum.php">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="plugin.php?id=x7ree_recharge:x7ree_recharge">{$navtitle}</a> <em>&rsaquo;</em>
+	</div>
+</div>
+
+<div id="ct" class="ct2_a wp cl">
+
+	<div class="mn">
+
+	<div class="bm bw0">
+	<!--正文-->
+	<div class="bm_c cl">
+
+	<!--{if !$code_7ree}-->
+		{subtemplate x7ree_recharge:home_7ree}
+	<!--{elseif $code_7ree==1}-->
+		{subtemplate x7ree_recharge:log_7ree}
+	<!--{elseif $code_7ree==4}-->
+		{subtemplate x7ree_recharge:mang_7ree}
+	<!--{/if}-->
+
+	<div>{$multipage}</div>
+
+	</div>
+
+
+	</div>
+
+</div>
+
+
+<!-- 左侧边栏 -->
+
+<div class="appl">
+
+	<div class="tbn">
+	<h2 class="mt bbda">{$navtitle}</h2>
+	<ul>
+	  <li <!--{if !$code_7ree}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_recharge:x7ree_recharge">立刻充值</a></li>
+	  <li <!--{if $code_7ree==1}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_recharge:x7ree_recharge&code_7ree=1">充值记录</a></li>
+	  <!--{if $_G['adminid']==1}-->
+	  <li <!--{if $code_7ree==4}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_recharge:x7ree_recharge&code_7ree=4">充值管理</a></li>
+	  <!--{/if}-->
+	 </ul>
+
+
+
+	</div>
+
+</div>
+
+{template common/footer}

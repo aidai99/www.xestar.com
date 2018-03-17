@@ -1,0 +1,48 @@
+<div id="searchbar_7ree" class="msearchbar_7ree" style="display:none;">
+	<form name="form_7ree" action="plugin.php?id=x7ree_v:x7ree_v" method="post">
+	<input type='text' name="searchkey_7ree" class="msearchtext_7ree" placeholder="{lang x7ree_v:htm_lang_sousuotips_7ree}" value="{$searchkey_7ree}">
+	<input type='submit' class='msearchbtn_7ree' value=''>
+	</form>
+</div>
+
+
+<div class="topmnav_7ree" <!--{if $vars_7ree['zindex_7ree']}-->style="z-index:{$vars_7ree['zindex_7ree']};"<!--{/if}-->>
+
+
+<!---->
+
+	<div onclick="opensearch_7ree();" id="msearchbtn_7ree" class="msearchbtn_7ree"></div>
+	<div id="swiper_7ree" class="swiper-container">
+	      <div class="swiper-wrapper">
+				<div class="swiper-slide"><a href="plugin.php?id=x7ree_v:x7ree_v" <!--{if !$fenlei}-->class="nownav_7ree"<!--{/if}-->>{lang x7ree_v:htm_lang_shouye_7ree}</a></div>
+				<!--{loop $fenlei_7ree $key_7ree $fenlei_value}-->
+				<div class="swiper-slide" style="width:72px !important;"><a href="plugin.php?id=x7ree_v:x7ree_v&fenlei=<!--{eval echo $key_7ree+1;}-->" <!--{if $fenlei==$key_7ree+1}-->class="nownav_7ree"<!--{/if}-->>{$fenlei_value}</a></div>
+				<!--{/loop}-->
+	      </div>
+	</div>
+
+</div>
+	
+<div class="clear_7ree"></div>
+<div class="posdiv_7ree"></div>
+
+<script type="text/javascript" src="./source/plugin/x7ree_v/template/image/swiper.min.js"></script>
+<script type="text/javascript">
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 4,
+        paginationClickable: true,
+        freeMode: true
+    });
+
+<!--{if $searchkey_7ree}-->
+	opensearch_7ree();
+<!--{/if}-->
+
+function opensearch_7ree(){
+	document.getElementById("searchbar_7ree").style.display='block';
+	document.getElementById("swiper_7ree").style.display='none';
+	document.getElementById("msearchbtn_7ree").style.display='none';
+}
+
+</script>

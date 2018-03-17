@@ -1,0 +1,40 @@
+
+<!--·ÖÀàµ¼º½-->
+	<div class='cattable_7ree'>
+			<div>
+				<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&finish_7ree={$finish_7ree}" <!--{if !$fenlei_get}-->class='now_7ree'<!--{/if}-->>{lang x7ree_opengs:htm_lang_quanbu_7ree}</a>
+			</div>
+			<!--{loop $fenlei_7ree $fenlei_value}-->
+			<div>
+				<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&finish_7ree={$finish_7ree}&fenlei_7ree=<!--{eval echo urlencode($fenlei_value);}-->" <!--{if $fenlei_value==$fenlei_get}-->class='now_7ree'<!--{/if}-->>{$fenlei_value}</a>
+			</div>
+			<!--{/loop}-->
+	</div>
+
+<div class="datingnav_7ree">
+<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&fenlei_7ree=<!--{eval echo urlencode($fenlei_get);}-->" class="datingnav1_box_7ree <!--{if !$finish_7ree}-->dtnav_now_7ree<!--{/if}-->">{lang x7ree_opengs:htm_lang_dangqian_7ree}</a>
+
+<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&finish_7ree=1&fenlei_7ree=<!--{eval echo urlencode($fenlei_get);}-->" class="datingnav2_box_7ree <!--{if $finish_7ree}-->dtnav_now_7ree<!--{/if}-->">{lang x7ree_opengs:htm_lang_wangqi_7ree}</a>
+
+</div>
+
+<!--{if $list_7ree}-->
+	<!--{loop $list_7ree $list_value}-->
+	<div class="mlistbox_7ree">
+		<h3>{$list_value['name_7ree']}</h3>
+		<div class="mlistimg_7ree">
+			<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=1&id_7ree={$list_value['id_7ree']}">
+			<img src="{$folder_7ree}/{$list_value['pic_7ree']}" border="0" onerror="javascript:this.src='source/plugin/x7ree_opengs/template/image/noimage_7ree.gif'">
+			</a>
+		</div>
+		<div class="mlistinfo_7ree">
+			<p>{$list_value['detail_7ree']}</p>
+			<p>{lang x7ree_opengs:htm_lang_jiezhishijian_7ree}{$list_value['time_7ree']}</p>
+			<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=1&id_7ree={$list_value['id_7ree']}">{lang x7ree_opengs:htm_lang_canyuhuodong_7ree}</a>
+		</div>
+	</div>
+	<!--{/loop}-->
+	{$multipage}
+<!--{else}-->
+	<div class="noticetip_7ree">{lang x7ree_opengs:htm_lang_zhanwujngcai_7ree}</div>
+<!--{/if}-->

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+	<item id="Time"><![CDATA[2016-08-30 09:37]]></item>
+	<item id="From"><![CDATA[人工智能實驗室 (http://www.ailab.cn/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[注冊選擇頭像]]></item>
+			<item id="identifier"><![CDATA[defaultavatar]]></item>
+			<item id="description"><![CDATA[注冊選擇頭像 for Discuz! 作者 土著人寧巴 人工智能實驗室 出品（Made By Nimba, Team From AiLab.cn ） 功能介紹︰本插件可實現在用戶注冊時選擇一個初始頭像，避免了論壇里大量用戶無頭像顯示默認頭像的情況！
+功能特點︰
+1、可在後台添加和管理待選頭像庫(商業版用戶)；
+2、設置了大量圖片的用戶，可開啟體驗模式，即每次從啟用的頭像庫中篩選一定數量圖片供用戶選擇，避免大量用戶使用相同頭像的情況；
+3、生成的頭像和用戶自己上傳的頭像沒有任何區別（卸載插件頁不會丟]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[defaultavatar/]]></item>
+			<item id="copyright"><![CDATA[人工智能實驗室]]></item>
+			<item id="version"><![CDATA[v2.0.1]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[upload]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[頭像庫管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[fastupload]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[批量上傳]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[addon]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[應用中心]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[99]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[開啟體驗模式]]></item>
+				<item id="description"><![CDATA[開啟體驗模式後，用戶注冊時，下面頭像選擇列表將從您的頭像庫中隨機選擇一定數量的圖片供用戶選擇，建議開啟！]]></item>
+				<item id="variable"><![CDATA[rand]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[隨機數量]]></item>
+				<item id="description"><![CDATA[體驗模式下每次隨機取出的頭像數量，建議根據自己的頭像庫總是和模板展示效果設置合適值；]]></item>
+				<item id="variable"><![CDATA[randnum]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="appname"><![CDATA[注冊選擇頭像]]></item>
+				<item id="error_1"><![CDATA[文件格式錯誤，上傳限制為.jpg格式！]]></item>
+				<item id="error_2"><![CDATA[上傳失敗，請重試！]]></item>
+				<item id="ok"><![CDATA[恭喜您操作成功\！]]></item>
+				<item id="title"><![CDATA[在線圖標上傳]]></item>
+				<item id="avatar_new_now"><![CDATA[當前圖標:]]></item>
+				<item id="avatar_new"><![CDATA[選擇圖片]]></item>
+				<item id="avatar_new_tips"><![CDATA[上傳限制為.jpg格式！建議圖片高度為200px正方形]]></item>
+				<item id="avatar_new_tips_error"><![CDATA[您當前使用的是非商業版本，不提供自助增加頭像庫功\能！]]></item>
+				<item id="content"><![CDATA[頁面類型]]></item>
+				<item id="istid"><![CDATA[帖子頁]]></item>
+				<item id="isfid"><![CDATA[板塊頁]]></item>
+				<item id="other"><![CDATA[其他]]></item>
+				<item id="status_1"><![CDATA[PC形式頁面]]></item>
+				<item id="status_0"><![CDATA[手機端頁面]]></item>
+				<item id="key"><![CDATA[刪除]]></item>
+				<item id="pic"><![CDATA[頭像]]></item>
+				<item id="dateline"><![CDATA[上傳時間]]></item>
+				<item id="status"><![CDATA[啟用]]></item>
+				<item id="del"><![CDATA[刪?]]></item>
+				<item id="submit"><![CDATA[提交]]></item>
+				<item id="config_title"><![CDATA[待選頭像列表]]></item>
+				<item id="avatar_new_title"><![CDATA[上傳新頭像]]></item>
+				<item id="error_tip"><![CDATA[請選擇頭像再提交！]]></item>
+				<item id="newselect"><![CDATA[換一批？]]></item>
+				<item id="fastupload"><![CDATA[批量上傳頭像]]></item>
+				<item id="tip_1"><![CDATA[1、批量上傳頭像功\能，請先將您要使用的頭像圖片上傳至<font color="blue">source/plugin/defaultavatar/fastupload/</font>目錄下!]]></item>
+				<item id="tip_2"><![CDATA[2、請您上傳頭像後點擊下面的“<strong>更新頭像庫</strong>”!]]></item>
+				<item id="tip_3"><![CDATA[3、上傳的圖片限定為jpg格式，其他格式插件將自動過濾不用!]]></item>
+				<item id="tip_4"><![CDATA[4、非商業版本無法使用批量添加頭像功\能，如您覺得此插件對網站有幫助，請支持我們的商業版，謝謝!]]></item>
+				<item id="update_error"><![CDATA[非商業版本無法使用批量添加頭像功\能，如您覺得此插件對網站有幫助，請支持我們的商業版，謝謝!]]></item>
+				<item id="update"><![CDATA[更新頭像庫]]></item>
+				<item id="update_ok"><![CDATA[頭像庫更新成功\!]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="appname"><![CDATA[注冊選擇頭像]]></item>
+				<item id="selecttip"><![CDATA[選擇頭像:]]></item>
+				<item id="newselect"><![CDATA[換一批？]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[[list]		
+[*]本插件版權歸屬插件作者所有.
+[*]未經插件作者許可,任何人不得以任何形式在任何地方發布/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]土著人寧巴 Team from [url=http://www.ailab.cn/]人工智能實驗室[/url]
+[*][b]功能簡介:[/b]本插件可實現在用戶注冊時選擇一個初始頭像，避免了論壇里大量用戶無頭像顯示默認頭像的情況！
+[*][b]技術支持:[/b][url=http://www.ailab.cn/]人工智能實驗室[/url]
+[*]如有任何關于使用上的疑問,請至站長社區[url]http://dz.open.ailab.cn/[/url]提出.
+[*][color=Red]請您在安裝前認真閱讀插件的詳細說明[/color]，地址︰[url]http://addon.discuz.com/?@defaultavatar.plugin[/url].
+[*][color=Red]如果您願意資助我們,請至[url]http://me.alipay.com/lih062624[/url]對我們進行贊助.[/color]
+[*]最後,感謝您使用我們的插件,也希望您能夠給我們提供更好的意見([url=http://www.ailab.cn/]請點擊這里進入人工智能實驗室[/url]).
+[/list]]]></item>
+	</item>
+</root>

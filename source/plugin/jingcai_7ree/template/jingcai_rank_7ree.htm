@@ -1,0 +1,72 @@
+<table width="100%" border="0" cellpadding="5" cellspacing="0"  class="dt mtm">
+<tr class="colplural" >
+<th colspan="7"><h3>{lang jingcai_7ree:htm_lang_zuixinjingcai_7ree}</h3></th>
+</tr>
+<!--{if $loglist_7ree}-->
+
+        <tr class="colplural" >
+        <td align="center">{lang jingcai_7ree:htm_lang_bisaimingcheng_7ree}</td>
+        <td align="center">{lang jingcai_7ree:htm_lang_huiyuan_7ree}</td>
+        <td align="center">{lang jingcai_7ree:htm_lang_zhichi_7ree}{$exttitle_7ree}<span class="pipe">|</span>{lang jingcai_7ree:htm_lang_jiangli_7ree}{$exttitle_7ree}</td><td align="center">{lang jingcai_7ree:htm_lang_jingcaishijian_7ree}</td>
+        <td align="center">{lang jingcai_7ree:htm_lang_wanfa_7ree}</td>
+        <td align="center">{lang jingcai_7ree:htm_lang_jingcaiduiwu_7ree}</td>
+        <td align="center">{lang jingcai_7ree:htm_lang_huoshengduiwu_7ree}</td>
+        </tr>
+        <!--{loop $loglist_7ree $loglist_value}-->
+        <tr>
+        <td align="center"><a href="{$xiangqing_url_7ree}{$loglist_value['main_id_7ree']}" target="_blank">$loglist_value['racename_7ree']</a></td>
+        <td align="center">
+        <a href="home.php?mod=space&uid={$loglist_value['uid_7ree']}" target="_blank">{$loglist_value['username_7ree']}</a>
+        <!--{if $jingcai_7ree_var['gaoshou_onoff_7ree']}-->
+        <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=10&uid_7ree={$loglist_value['uid_7ree']}&fenlei2_7ree=$loglist_value['fenlei2_7ree']" title="{lang jingcai_7ree:htm_lang_jingcaixiangqing_7ree}" target="_blank"><img src="./source/plugin/jingcai_7ree/template/image/gs_7ree.gif" align="absmiddle" class="y"></a>
+        <!--{/if}-->
+        </td>
+        <td align="center">{$loglist_value['myodds_7ree']}{$exttitle_7ree}<span class="pipe">|</span>
+        <!--{if $loglist_value['mywin_7ree']=="d"}-->{lang jingcai_7ree:htm_lang_yifanhuan_7ree}<!--{else}-->{$loglist_value['log_reward_7ree']}{$exttitle_7ree}<!--{/if}-->
+        </td>
+        <td align="center">{$loglist_value['log_time_7ree']}</td>
+        <td align="center"><!--{if $loglist_value['type_7ree']}-->{lang jingcai_7ree:htm_lang_daxiao_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_jieguo_7ree}<!--{/if}--></td>
+        <td align="center">
+        <!--{if $loglist_value['win_7ree']}-->
+			<!--{if $loglist_value['type_7ree']}-->
+				<!--{if $loglist_value['mywin_7ree']=="a"}-->{lang jingcai_7ree:htm_lang_da_7ree} $loglist_value['daxiao_7ree']
+		        <!--{elseif $loglist_value['mywin_7ree']=="b"}-->{lang jingcai_7ree:htm_lang_xiao_7ree} $loglist_value['daxiao_7ree']
+		        <!--{/if}-->
+		     <!--{else}-->           
+		        <!--{if $loglist_value['mywin_7ree']=="a"}-->{$loglist_value['aname_7ree']}
+		        <!--{elseif $loglist_value['mywin_7ree']=="b"}-->{$loglist_value['bname_7ree']}
+		        <!--{elseif $loglist_value['mywin_7ree']=="c"}-->{lang jingcai_7ree:htm_lang_pingju_7ree}
+		        <!--{elseif $loglist_value['mywin_7ree']=="d"}-->{lang jingcai_7ree:htm_lang_liupan_7ree}
+		        <!--{/if}-->
+	         <!--{/if}-->
+         <!--{else}-->
+         -
+         <!--{/if}-->
+        </td>
+		<td align="center">
+		<!--{if $loglist_value['ltype_7ree']}-->
+			<!--{if $loglist_value['daxiaowin_7ree']=="a"}-->{lang jingcai_7ree:htm_lang_da_7ree} $loglist_value['daxiao_7ree']
+			<!--{elseif $loglist_value['daxiaowin_7ree']=="b"}-->{lang jingcai_7ree:htm_lang_xiao_7ree} $loglist_value['daxiao_7ree']
+			<!--{else}-->{lang jingcai_7ree:htm_lang_weijiexiao_7ree}
+			<!--{/if}-->
+		<!--{else}-->
+			<!--{if $loglist_value['win_7ree']=="a"}-->{$loglist_value['aname_7ree']}
+			<!--{elseif $loglist_value['win_7ree']=="b"}-->{$loglist_value['bname_7ree']}
+			<!--{elseif $loglist_value['win_7ree']=="c"}-->{lang jingcai_7ree:htm_lang_pingju_7ree}
+			<!--{elseif $loglist_value['win_7ree']=="d"}-->{lang jingcai_7ree:htm_lang_liupan_7ree}
+			<!--{else}-->{lang jingcai_7ree:htm_lang_weijiexiao_7ree}
+			<!--{/if}-->
+		<!--{/if}-->
+		</td>        
+        </tr>
+        <!--{/loop}-->
+        <tr>
+        <td colspan="7">$multipage</td>
+        </tr>
+
+<!--{else}-->
+<tr>
+<td colspan="7"><div class="notice">{lang jingcai_7ree:htm_lang_wurenshangbang_7ree}</div></td>
+</tr>
+<!--{/if}-->
+</table>

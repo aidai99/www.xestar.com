@@ -1,0 +1,13 @@
+<?php
+$html = '<style>
+			.rewardlist {height: 68px; overflow: hidden;}
+            .rewarddesc {color: #999; margin:10px 0 0 0;}
+			.rewardlist a { -moz-border-radius:100%;-webkit-border-radius:100%;border-radius:100%;background: none !important; padding:0px !important; height: 48px; width: 48px;margin: 5px;overflow: hidden !important;}
+			.rewardlist a img {vertical-align: top; margin:0px !important;}
+			.rewardlist a dl {height: 48px; line-height: 16px;  width:100%; color:#FFF; font-size: 13px; background-color: #666; display: none;}
+			.rewardlist a dl p {padding-top: 8px;}
+			.rewardlist a:hover dl { display: block; }
+			</style>
+			<a href="plugin.php?id=reward:misc&act=reward&tid='.$_GET['tid'].'" class="reward" id="k_favorite" onclick="showWindow(this.id, this.href, \'get\', 0);" title="'.strip_tags(lang('plugin/reward','RewardNumber',array('num'=>$count))).'"><i><img src="source/plugin/reward/static/images/reward.png">'.lang('plugin/reward','reward').'<span id="favoritenumber">'.lang('plugin/reward','RewardNumber',array('num'=>$count)).'</span></i></a>
+			'.($item ? '<div class="rewarddesc">'.lang('plugin/reward','RewardNumber2',array('num'=>$count)).'</div><div class="rewardlist">'.$item.'</div>' : '');
+?>

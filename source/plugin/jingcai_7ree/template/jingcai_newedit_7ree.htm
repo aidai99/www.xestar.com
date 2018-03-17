@@ -1,0 +1,377 @@
+<style>
+	#{$editorid}_bold, #{$editorid1}_bold,#{$editorid2}_bold{
+		background-position:0 0;
+	}
+	#{$editorid}_italic, #{$editorid1}_italic, #{$editorid2}_italic{
+		background-position: -20px 0;
+	}
+	#{$editorid}_underline{
+		background-position: -40px 0;
+	}
+	#{$editorid}_forecolor{
+		background-position: -60px 0;
+	}
+	#{$editorid}_url{
+		background-position: -40px -20px;
+	}
+	#{$editorid}_unlink{
+		background-position: -60px -20px;
+	}
+	#{$editorid}_inserthorizontalrule{
+		background-position: -20px -60px;
+	}
+	#{$editorid}_tbl{
+		background-position: -160px -20px;
+	}
+	#{$editorid}_removeformat{
+		background-position: -60px -40px;
+	}
+	#{$editorid}_justifyleft{
+		background-position: -80px -20px;
+	}
+	#{$editorid}_justifycenter{
+		background-position: -240px -40px;
+	}
+	#{$editorid}_justifyright{
+		background-position: -260px -40px;
+	}
+	#{$editorid}_autotypeset{
+		background-position: -220px -40px;
+	}
+	#{$editorid}_insertorderedlist{
+		background-position: -100px -20px;
+	}
+	#{$editorid}_insertunorderedlist{
+		background-position: 0 -60px;
+	}
+	#{$editorid}_sml{
+		background-position: -3px -80px;
+	}
+	#{$editorid}_image{
+		background-position: -43px -80px;
+	}
+	#{$editorid}_code{
+		background-position: -120px -20px;
+	}
+	#{$editorid}_quote{
+		background-position: -140px -20px;
+	}
+	#{$editorid}_{
+		background-position: ;
+	}
+	#{$editorid}_{
+		background-position: ;
+	}			
+</style>
+
+
+        <form method="post" action="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=3" name="jingcai_add_form_7ree" onsubmit="return submitcheck_7ree(this);">
+        <input type="hidden" name="formhash" value="{FORMHASH}">
+        <input type="hidden" name="main_id_7ree" value="$race_7ree['main_id_7ree']">
+        <tr class="colplural" >
+        <td colspan="2"><h3><!--{if $race_7ree['main_id_7ree']}-->{lang jingcai_7ree:htm_lang_bianji_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_xinzeng_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_saishixinxi_7ree}</h3></td>
+         <tr>
+        <tr class="colplural" >
+        <td width="50%">{lang jingcai_7ree:htm_lang_saichengmingcheng_7ree}:
+        <select name="scid_7ree">
+        	<option value=''>可选择近一个月或者未结束的赛程</option>
+		<!--{loop $racelist_7ree $racelist_value}-->
+		<option value="{$racelist_value['scid_7ree']}" <!--{if $racelist_value['scid_7ree']==$race_7ree['scid_7ree'] && $race_7ree['main_id_7ree']}-->SELECTED<!--{/if}-->>{$racelist_value['scname_7ree']}</option>
+		<!--{/loop}-->
+        </select>
+         </td>
+        <td width="50%">
+
+        </td>
+         <tr>
+        <td width="50%">{lang jingcai_7ree:htm_lang_bisaimingcheng_7ree}: <input type="text" class="px" id="racename_7ree" name="racename_7ree" value="{$race_7ree['racename_7ree']}" style="width:320px;"> <font color="red">*</font><span id="getracemsg_7ree"><a href="javascript:;" title="{lang jingcai_7ree:htm_lang_raceduqutip_7ree}" onclick="ajaxgetinfo_7ree('race')">{lang jingcai_7ree:htm_lang_duqu_7ree}</a></span></td>
+        <td width="50%">{lang jingcai_7ree:htm_lang_zuidizhichi_7ree}: <input type="text" class="px" name="reward_7ree" value="{$race_7ree['reward_7ree']}" style="width:320px;"><font color="red">*</font>({$exttitle_7ree})</td>
+        </tr>
+         <tr>
+        <td>{lang jingcai_7ree:htm_lang_bisaididian_7ree}: <input type="text" class="px" name="add_7ree" value="{$race_7ree['add_7ree']}" style="width:320px;"></td>
+        <td>{lang jingcai_7ree:htm_lang_bisaishijian_7ree}: <input type="text" class="px" name="time_7ree"  onclick="showcalendar(event, this, true)" onfocus="showcalendar(event, this, true);if(this.value=='0000-00-00')this.value=''" value="{$race_7ree['time_7ree']}" readonly style="width:320px;"/> </td>
+        </tr>
+        <tr>
+        <td><!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_mingcheng_7ree}: <input type="text" class="px" id="aname_7ree" name="aname_7ree" value="{$race_7ree['aname_7ree']}" style="width:320px;"> <font color="red">*</font><span id="ateammsg_7ree"><a href="javascript:;" title="{lang jingcai_7ree:htm_lang_teamduqutip_7ree}" onclick="ajaxgetinfo_7ree('ateam')">{lang jingcai_7ree:htm_lang_duqu_7ree}</a></span></td>
+        <td><!--{if $jingcai_7ree_var['btitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_mingcheng_7ree}: <input type="text" class="px" id="bname_7ree" name="bname_7ree" value="{$race_7ree['bname_7ree']}" style="width:320px;"> <font color="red">*</font><span id="bteammsg_7ree"><a href="javascript:;" title="{lang jingcai_7ree:htm_lang_teamduqutip_7ree}" onclick="ajaxgetinfo_7ree('bteam')">{lang jingcai_7ree:htm_lang_duqu_7ree}</a></span></td>
+        </tr>
+        <tr>
+        <td><!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_logo_7ree}: <input type="text" class="px" id="alogo_7ree" name="alogo_7ree" value="{$race_7ree['alogo_7ree']}" style="width:320px;"><p style="margin-left:60px;">{lang jingcai_7ree:htm_lang_logotips_7ree}({lang jingcai_7ree:htm_lang_zuijiachicun_7ree}: {$width_7ree}*{$height_7ree}px)</p></td>
+        <td><!--{if $jingcai_7ree_var['btitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_logo_7ree}: <input type="text" class="px" id="blogo_7ree" name="blogo_7ree" value="{$race_7ree['blogo_7ree']}" style="width:320px;"><p style="margin-left:60px;">{lang jingcai_7ree:htm_lang_logotips_7ree}({lang jingcai_7ree:htm_lang_zuijiachicun_7ree}: {$width_7ree}*{$height_7ree}px)</p></td>
+        </tr>
+        <tr>
+        <td><!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_jianjie_7ree}: <textarea id="amessage_7ree" name="amessage_7ree" class="pt" style="width:320px;height:80px">{$race_7ree['amessage_7ree']}</textarea></td>
+        <td><!--{if $jingcai_7ree_var['btitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_jianjie_7ree}: <textarea id="bmessage_7ree" name="bmessage_7ree" class="pt" style="width:320px;height:80px">{$race_7ree['bmessage_7ree']}</textarea></td>
+        </tr>
+        <tr>
+  
+        <tr>
+        <td colspan="2">
+		<!--{if $_GET['sp_7ree'] == "add"}-->              
+		        {lang jingcai_7ree:htm_lang_saishifenlei_7ree}: 
+		        <select name="fenlei1_7ree" id="fenlei1_7ree" onchange="showfenlei2_7ree(this.id)">
+		        	<option value="{$value_7ree[0]}">{lang jingcai_7ree:htm_lang_yijifenlei_7ree}</option>
+		        <!--{loop  $fenlei_array2 $key_7ree $value_7ree}-->
+		        	<option value="{$value_7ree[0]}">{$value_7ree[0]}</option>
+		         <!--{/loop}-->       
+		        </select>
+		        <span class="pipe">|</span>
+		         <span style="margin-left:20px;">{lang jingcai_7ree:htm_lang_erjifenlei_7ree}:</span> 
+		            <span id="yijitips_7ree">{lang jingcai_7ree:htm_lang_yijijifenleitip_7ree}</span> 
+		           	<!--{loop $fenlei_array2 $key_7ree $value_7ree}-->
+			        <select id="fenlei_select_7ree_{$value_7ree[0]}" name="fenlei2_7ree_{$value_7ree[0]}" style="margin-left:10px;display:none;" onchange="$('fenlei2_7ree').value=this.value;">
+			        <option value="">{lang jingcai_7ree:htm_lang_qingxuanze_7ree}</option>
+			        <!--{loop $value_7ree $key_7ree2 $value_7ree2}-->
+			        <!--{if $key_7ree2 >0}--><option value="{$value_7ree2}">{$value_7ree2}</option><!--{/if}-->
+			        <!--{/loop}-->
+			        </select>
+			        <!--{/loop}-->
+			        <input type='hidden' id="fenlei2_7ree" name="fenlei2_7ree" value="">
+
+		<!--{elseif $_GET['sp_7ree'] == "edit"}--> 
+
+		        {lang jingcai_7ree:htm_lang_saishifenlei_7ree}: 
+
+		        <input type='text' id="fenlei1_7ree" name="fenlei1_7ree" value="<!--{if $race_7ree[fenlei1_7ree]}-->{$race_7ree[fenlei1_7ree]}<!--{else}-->{lang jingcai_7ree:htm_lang_weixuanze1_7ree}<!--{/if}-->" style="text-align:center;border:none;width:60px;background-color:#666666;">
+			    <input type='text' id="fenlei2_7ree" name="fenlei2_7ree" value="<!--{if $race_7ree[fenlei2_7ree]}-->{$race_7ree[fenlei2_7ree]}<!--{else}-->{lang jingcai_7ree:htm_lang_weixuanze2_7ree}<!--{/if}-->" style="text-align:center;border:none;width:60px;background-color:#666666;">
+		        <span style="margin-left:5px;">{lang jingcai_7ree:htm_lang_chongxinxuanze_7ree}:</span>
+		        <select name="fenlei1_7ree_select" id="fenlei1_7ree_select" onchange="$('fenlei1_7ree').value=this.value;showfenlei2_7ree(this.id);">
+		        	<option value="{$value_7ree[0]}">{lang jingcai_7ree:htm_lang_yijifenlei_7ree}</option>
+		        <!--{loop  $fenlei_array2 $key_7ree $value_7ree}-->
+		        	<option value="{$value_7ree[0]}">$value_7ree[0]</option>
+		         <!--{/loop}-->       
+		        </select>
+		        <span class="pipe">|</span>
+		         <span style="margin-left:5px;">{lang jingcai_7ree:htm_lang_erjifenlei_7ree}:</span> 
+		            <span id="yijitips_7ree">{lang jingcai_7ree:htm_lang_yijijifenleitip_7ree}</span> 
+		           	<!--{loop $fenlei_array2 $key_7ree $value_7ree}-->
+			        <select id="fenlei_select_7ree_{$value_7ree[0]}" name="fenlei2_7ree_{$value_7ree[0]}" style="margin-left:5px;display:none;" onchange="$('fenlei2_7ree').value=this.value;">
+			        <option value="">{lang jingcai_7ree:htm_lang_qingxuanze_7ree}</option>
+			        <!--{loop $value_7ree $key_7ree2 $value_7ree2}-->
+			        <!--{if $key_7ree2 >0}--><option value="{$value_7ree2}">{$value_7ree2}</option><!--{/if}-->
+			        <!--{/loop}-->
+			        </select>
+			        <!--{/loop}-->
+		<!--{/if}--> 
+
+        </td>
+
+
+        </tr>
+           
+      
+        <td colspan="2">
+        {lang jingcai_7ree:htm_lang_peilvshezhi_7ree}: <!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_peilv_7ree}: <input type="text" class="px" name="aodds_7ree" value="{$race_7ree['aodds_7ree']}" style="width:50px"> {lang jingcai_7ree:htm_lang_bei_7ree}<span class="pipe">|</span>
+        <!--{if $jingcai_7ree_var['btitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_peilv_7ree}:<input type="text" class="px" name="bodds_7ree" value="{$race_7ree['bodds_7ree']}" style="width:50px"> {lang jingcai_7ree:htm_lang_bei_7ree}<span class="pipe">|</span>
+        {lang jingcai_7ree:htm_lang_pingjulv_7ree}: <input type="text" class="px" name="codds_7ree" value="{$race_7ree['codds_7ree']}" style="width:50px"> {lang jingcai_7ree:htm_lang_bei_7ree}
+        <font color="red">*</font>{lang jingcai_7ree:htm_lang_peilvtips_7ree}
+        </td>
+        </tr>
+        <tr>
+        <td colspan="2">
+        {lang jingcai_7ree:htm_lang_odd_dynamic_7ree}:         
+        <select name="odd_dynamic_7ree" id="odd_dynamic_7ree">
+        	<option value="0"  <!--{if $race_7ree['odd_dynamic_7ree']==0}-->selected<!--{/if}-->>{lang jingcai_7ree:htm_lang_dynamic_off_7ree}</option>
+        	<option value="1"  <!--{if $race_7ree['odd_dynamic_7ree']==1}-->selected<!--{/if}-->>{lang jingcai_7ree:htm_lang_dynamic_on_7ree}</option>
+        </select>
+        <span class="pipe">|</span>{lang jingcai_7ree:htm_lang_odd_tips_7ree}
+        </td>
+        </tr> 
+        <tr>
+        <td>
+        {lang jingcai_7ree:htm_lang_odd_ratio_7ree}: <input type="text" class="px" name="odd_ratio_7ree" value="{$race_7ree['odd_ratio_7ree']}" style="width:80px"> {lang jingcai_7ree:htm_lang_odd_peilvtips2_7ree}<br>
+        {lang jingcai_7ree:htm_lang_max_odd_7ree}: <input type="text" class="px" name="max_odd_7ree" value="{$race_7ree['max_odd_7ree']}" style="width:80px"> {lang jingcai_7ree:htm_lang_odd_peilvtips2_7ree}<br>
+        {lang jingcai_7ree:htm_lang_min_odd_7ree}: <input type="text" class="px" name="min_odd_7ree" value="{$race_7ree['min_odd_7ree']}" style="width:80px"> {lang jingcai_7ree:htm_lang_odd_peilvtips2_7ree}
+        </td>
+        <td>
+        {lang jingcai_7ree:htm_lang_aodd_gongshi_7ree}: (A+B+C)*r/A
+        <br>{lang jingcai_7ree:htm_lang_bodd_gongshi_7ree}: (A+B+C)*r/B
+        <br>{lang jingcai_7ree:htm_lang_codd_gongshi_7ree}: (A+B+C)*r/C
+        </td>
+        </tr>
+      <!--
+        <tr>
+        <td>
+	        {lang jingcai_7ree:htm_lang_rangqiufang_7ree}: 
+	         <select name="rangqiufang_7ree" id="rangqiufang_7ree">
+	        	<option value="0" <!--{if !$race_7ree['rangqiufang_7ree']}-->selected<!--{/if}-->>{lang jingcai_7ree:htm_lang_rangqiuguanbi_7ree}</option>
+	        	<option value="1" <!--{if $race_7ree['rangqiufang_7ree']==1}-->selected<!--{/if}-->><!--{if $jingcai_7ree_var['atitle_7ree']}-->{$jingcai_7ree_var['atitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_zhudui_7ree}<!--{/if}--></option>
+	        	<option value="2" <!--{if $race_7ree['rangqiufang_7ree']==2}-->selected<!--{/if}-->><!--{if $jingcai_7ree_var['btitle_7ree']}-->{$jingcai_7ree_var['btitle_7ree']}<!--{else}-->{lang jingcai_7ree:htm_lang_kedui_7ree}<!--{/if}--></option>
+	        </select>
+        </td>
+        <td>
+	        {lang jingcai_7ree:htm_lang_rangqiuxingshi_7ree}: 
+	         <select name="rangqiuway_7ree" id="rangqiuway_7ree">
+	        	<!--{loop $rangqiu_7ree $rangqiu_value}-->
+	        	<option value="$rangqiu_value"  <!--{if $race_7ree['rangqiuway_7ree']==$rangqiu_value}-->selected<!--{/if}-->>$rangqiu_value</option>
+	        	<!--{/loop}-->
+	        </select>
+        </td>
+        </tr> 
+
+        <tr>
+        	<td>{lang jingcai_7ree:htm_lang_caidaxiao_7ree}: <input type="text" class="px" name="daxiao_7ree" value="{$race_7ree['daxiao_7ree']}" style="width:80px">{lang jingcai_7ree:htm_lang_caidaxiaotip_7ree}</td>
+        	<td>
+        	{lang jingcai_7ree:htm_lang_caidapeilv_7ree}: <input type="text" class="px" name="daodds_7ree" value="{$race_7ree['daodds_7ree']}" style="width:50px">{lang jingcai_7ree:htm_lang_bei_7ree}<span class="pipe">|</span>
+        	{lang jingcai_7ree:htm_lang_caixiaopeilv_7ree}: <input type="text" class="px" name="xiaoodds_7ree" value="{$race_7ree['xiaoodds_7ree']}" style="width:50px">{lang jingcai_7ree:htm_lang_bei_7ree}
+        	</td>
+        </tr>
+        <tr>
+        <td colspan="2">
+        {lang jingcai_7ree:htm_lang_saishijianjie_7ree}
+        </td>
+        </tr>
+        -->
+        <tr>
+        <td colspan="2">
+<div class="edt" id="{$editorid}_body">
+	<div id="{$editorid}_controls" class="bar">
+
+		<div class="y">
+
+			<div class="z">
+
+				<label id="{$editorid}_switcher" class="bar_swch ptn"><input id="{$editorid}_switchercheck" type="checkbox" class="pc" name="checkbox" value="0" {if !$editor[editormode]}checked="checked"{/if} onclick="switchEditor(this.checked?0:1)" />{lang jingcai_7ree:htm_lang_chunwenben_7ree}</label>
+			</div>
+		</div>
+		<div id="{$editorid}_button" class="btn cl">
+			<div class="b2r nbl nbr" id="{$editorid}_adv_s2">
+				<a id="{$editorid}_fontname" class="dp" title="{lang e_fontname}"><span id="{$editorid}_font">{lang e_font}</span></a>
+				<a id="{$editorid}_fontsize" class="dp" title="{lang e_fontsize}"><span id="{$editorid}_size">{lang e_size}</span></a>
+				<br id="{$editorid}_adv_1" />
+				<a id="{$editorid}_bold" title="{lang e_bold}">B</a>
+				<a id="{$editorid}_italic" title="{lang e_italic}">I</a>
+				<a id="{$editorid}_underline" title="{lang e_underline}">U</a>
+				<a id="{$editorid}_forecolor" title="{lang e_forecolor}">Color</a>
+				<a id="{$editorid}_url" title="{lang e_url}">Url</a>
+				<span id="{$editorid}_adv_8">
+				<a id="{$editorid}_unlink" title="{lang e_unlink}">Unlink</a>
+				<a id="{$editorid}_inserthorizontalrule" title="{lang e_hr_title}">Hr</a>
+				</span>
+			</div>
+			<div class="b2r nbl" id="{$editorid}_adv_2">
+				<p id="{$editorid}_adv_3">
+					<a id="{$editorid}_tbl" title="{lang e_table}">Table</a>
+				</p>
+				<p>
+					<a id="{$editorid}_removeformat" title="{lang e_removeformat}">Removeformat</a>
+				</p>
+			</div>
+			<div class="b2r">
+				<p>
+					<a id="{$editorid}_justifyleft" title="{lang e_left}">Left</a>
+					<a id="{$editorid}_justifycenter" title="{lang e_center}">Center</a>
+					<a id="{$editorid}_justifyright" title="{lang e_right}">Right</a>
+				</p>
+				<p id="{$editorid}_adv_4">
+					<a id="{$editorid}_autotypeset" title="{lang e_autotypeset}">Autotypeset</a>
+					<a id="{$editorid}_insertorderedlist" title="{lang e_orderedlist}">Orderedlist</a>
+					<a id="{$editorid}_insertunorderedlist" title="{lang e_unorderedlist}">Unorderedlist</a>
+				</p>
+			</div>
+			<div class="b1r" id="{$editorid}_adv_s1">
+				<a id="{$editorid}_sml" title="{lang e_smilies_title}">{lang e_smilies}</a>
+				<div id="{$editorid}_imagen" style="display:none">!</div>
+				<a id="{$editorid}_image" title="{lang e_image_title}">{lang e_image}</a>
+			</div>
+			<div class="b2r" id="{$editorid}_adv_6">
+				<p>
+					<a id="{$editorid}_code" title="{lang e_code_title}">{lang e_code}</a>
+				</p>
+				<p>
+					<a id="{$editorid}_quote" title="{lang e_quote_title}">{lang e_quote}</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="area">
+		<textarea name="$editor[textarea]" id="{$editorid}_textarea" class="pt" tabindex="1" rows="15">{$race_7ree['racemessage_7ree']}</textarea>
+	</div>
+	<!--{subtemplate common/editor}-->
+</div>
+
+<div id="{$editorid}_menus" class="editorrow" style="overflow: hidden; margin-top: -5px; height: 0; border: none; background: transparent;">
+	<!--{subtemplate common/editor_menu}-->
+</div>
+
+<div class="p_pof uploadfile" id="{$editorid}_image_menu" style="display: none" unselectable="on">
+	<div class="p_opt popupfix" unselectable="on" id="{$editorid}_www">
+		<table cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<th width="74%">{lang e_img_inserturl}</th>
+				<th width="13%">{lang e_img_width}</th>
+				<th width="13%">{lang e_img_height}</th>
+			</tr>
+			<tr>
+				<td><input type="text" id="{$editorid}_image_param_1" onchange="loadimgsize(this.value)" style="width: 95%;" value="" class="px" autocomplete="off" /></td>
+				<td><input id="{$editorid}_image_param_2" size="1" value="" class="px p_fre" autocomplete="off" /></td>
+				<td><input id="{$editorid}_image_param_3" size="1" value="" class="px p_fre" autocomplete="off" /></td>
+			</tr>
+			<tr>
+				<td colspan="3" class="pns mtn">
+					<button type="button" class="pn pnc" id="{$editorid}_image_submit"><strong>{lang submit}</strong></button>
+					<button type="button" class="pn" onclick="hideMenu();"><em>{lang cancel}</em></button>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<input type="hidden" name="wysiwyg" id="{$editorid}_mode" value="$editormode" />
+        </td>
+        </tr>        
+        
+        
+        
+        
+        <!--{if $_GET['sp_7ree'] == "edit"}-->
+         
+        <tr>
+        <td>{lang jingcai_7ree:htm_lang_bisaijieguo_7ree}: 
+        <input type="radio" name="win_7ree" value="" <!--{if !$race_7ree['win_7ree']}-->checked<!--{/if}--> >{lang jingcai_7ree:htm_lang_weijiexiao_7ree}<span class="pipe">|</span> 
+        <input type="radio" name="win_7ree" value="a" <!--{if $race_7ree['win_7ree']=="a"}-->checked<!--{/if}--> >{$race_7ree['aname_7ree']}{lang jingcai_7ree:htm_lang_huosheng_7ree}<span class="pipe">|</span>
+        <input type="radio" name="win_7ree" value="b" <!--{if $race_7ree['win_7ree']=="b"}-->checked<!--{/if}--> >{$race_7ree['bname_7ree']}{lang jingcai_7ree:htm_lang_huosheng_7ree}<span class="pipe">|</span>
+        <input type="radio" name="win_7ree" value="c" <!--{if $race_7ree['win_7ree']=="c"}-->checked<!--{/if}--> ><!--{if $jingcai_7ree_var['pingju_7ree'] && $race_7ree['rangqiufang_7ree']>0}-->$jingcai_7ree_var['pingju_7ree']<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}--><span class="pipe">|</span>
+        <input type="radio" name="win_7ree" value="d" <!--{if $race_7ree['win_7ree']=="d"}-->checked<!--{/if}--> >{lang jingcai_7ree:htm_lang_liupan_7ree}
+        <!--{if $race_7ree['rangqiufang_7ree']}-->
+        	<span class="pipe">|</span>
+        	{lang jingcai_7ree:htm_lang_rangqiutip_7ree}:
+        	<!--{if $race_7ree['rangqiufang_7ree']==1}-->{$race_7ree['aname_7ree']}
+        	<!--{elseif $race_7ree['rangqiufang_7ree']==2}-->{$race_7ree['bname_7ree']}
+        	<!--{/if}-->
+        	{lang jingcai_7ree:htm_lang_rang_7ree}<strong>{$race_7ree['rangqiuway_7ree']}</strong>	
+        <!--{/if}-->        
+        </td>
+        <td>{lang jingcai_7ree:htm_lang_jieguotip_7ree}
+        </td>
+        </tr>
+        <!--
+        <tr>
+        <td>{lang jingcai_7ree:htm_lang_bifen_7ree}: 
+        {$race_7ree['aname_7ree']}{lang jingcai_7ree:htm_lang_defen_7ree}: <input type="text" class="px" name="ashot_7ree" value="{$race_7ree['ashot_7ree']}" style="width:80px"><span class="pipe">|</span>
+        {$race_7ree['bname_7ree']}{lang jingcai_7ree:htm_lang_defen_7ree}: <input type="text" class="px" name="bshot_7ree" value="{$race_7ree['bshot_7ree']}" style="width:80px">
+        </td>
+        <td>{lang jingcai_7ree:htm_lang_daxiaojieguo_7ree}: 
+        <input type="radio" name="daxiaowin_7ree" value="" <!--{if !$race_7ree['daxiaowin_7ree']}-->checked<!--{/if}--> >{lang jingcai_7ree:htm_lang_weijiexiao_7ree} <span class="pipe">|</span>
+        <input type="radio" name="daxiaowin_7ree" value="a" <!--{if $race_7ree['daxiaowin_7ree']=="a"}-->checked<!--{/if}--> >{lang jingcai_7ree:htm_lang_da_7ree} <span class="pipe">|</span>
+        <input type="radio" name="daxiaowin_7ree" value="b" <!--{if $race_7ree['daxiaowin_7ree']=="b"}-->checked<!--{/if}--> >{lang jingcai_7ree:htm_lang_xiao_7ree}<span class="pipe">|</span>
+        <input type="radio" name="daxiaowin_7ree" value="c" <!--{if $race_7ree['daxiaowin_7ree']=="c"}-->checked<!--{/if}--> ><!--{if $jingcai_7ree_var['pingju_7ree']}-->$jingcai_7ree_var['pingju_7ree']<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}-->
+        </td>
+        </tr>
+        -->
+        <!--{/if}-->
+        <tr class="colplural" >
+        <td colspan="2"><input type="submit" name="add_submit_7ree" value="{lang jingcai_7ree:htm_lang_querentijiao_7ree}" class="pn" style="padding:5px;height:30px;"></td>
+        </tr>
+        </form>
+        
+<script type="text/javascript">
+	if(wysiwyg) {
+		newEditor(1, bbcode2html(textobj.value));
+	} else {
+		newEditor(0, textobj.value);
+	}
+	
+
+</script>

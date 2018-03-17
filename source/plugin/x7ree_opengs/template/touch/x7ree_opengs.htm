@@ -1,0 +1,63 @@
+{template common/header}
+<!--
+	(C)2006-2017 www.7ree.com
+	This is NOT a freeware, use is subject to license terms
+	Update: 2017/9/16 20:22
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_opengs/template/image/common_css_7ree.css?{VERHASH}'/>
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_opengs/template/image/css_7ree.css?{VERHASH}'/>
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_opengs/template/touch/image/touch_css_7ree.css?{VERHASH}'/>
+
+<!-- 顶部导航 -->
+<div class="headernav_7ree">
+<h3>
+	<!--{if !$code_7ree && !$finish_7ree}-->
+		{lang x7ree_opengs:htm_lang_dating_7ree}
+	<!--{elseif !$code_7ree && $finish_7ree}-->
+		{lang x7ree_opengs:htm_lang_wangqi_7ree}
+	<!--{elseif $code_7ree==1}-->
+		<a href="javascript:history.back();" class="backicon_7ree"></a>
+		{$this_7ree['name_7ree']}
+	<!--{elseif $code_7ree==2}-->
+		{lang x7ree_opengs:htm_lang_wode_7ree}
+	<!--{elseif $code_7ree==3}-->
+		{lang x7ree_opengs:htm_lang_paihang_7ree}
+	<!--{elseif  in_array($code_7ree,array('4','5','6','7'))}-->
+		{lang x7ree_opengs:htm_lang_qiantai_7ree}
+	<!--{/if}-->
+</h3>
+</div>
+<div class="toppos_7ree"></div>
+
+
+
+<div class="bm_c cl">
+
+	<!--{if !$code_7ree}-->
+		{template x7ree_opengs:x7ree_home}
+	<!--{elseif $code_7ree==1}-->
+		{template x7ree_opengs:x7ree_page}
+	<!--{elseif $code_7ree==2}-->
+		{template x7ree_opengs:x7ree_my}
+	<!--{elseif $code_7ree==3}-->
+		{template x7ree_opengs:x7ree_rank}
+	<!--{elseif  in_array($code_7ree,array('4','5','6','7'))}-->
+		{template x7ree_opengs:x7ree_option}
+	<!--{/if}-->
+
+</div>
+
+
+
+
+
+<!-- 底部导航 -->
+{template x7ree_opengs:x7ree_footer}
+
+
+
+
+{template common/footer}

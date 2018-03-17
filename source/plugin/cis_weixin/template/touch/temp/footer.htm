@@ -1,0 +1,34 @@
+<!--{if !$_GET['getpage']}-->
+<!--{eval include template('cis_weixin:temp/sidenv');}-->
+<script language="javascript">
+	addToHomescreen({
+		detectHomescreen: true,
+		startDelay: 5,
+		displayPace: 10,
+		maxDisplayCount: 10,
+	});
+	var bodyheight=document.documentElement.clientHeight;
+	$('body,.mainarea').css('height',bodyheight + 'px');
+</script>
+<!--{hook/global_cisfooter_mobile}-->
+<!--{hook/global_footer_mobile}-->
+<div id="dark" style="display:none;"></div>
+<div id="light" style="display:none;"></div>
+<div id="loading" style="display:none;"></div>
+<div id="windowarea"></div>
+<!--{if in_array($cis_weixin['bro'],$uas)}-->
+<a href="javascript:history.back(-1)" class="desk_ico back"></a>
+<a href="javascript:openside()" class="desk_ico showside"></a>
+<a href="javascript:showheader()" class="desk_ico showheader"></a>
+<!--{/if}-->
+<a name="bot" id="bot"></a>
+</body>
+</html>
+<!--{eval updatesession();}-->
+<!--{if defined('IN_MOBILE')}-->
+	<!--{eval output();}-->
+<!--{else}-->
+	<!--{eval output_preview();}-->
+<!--{/if}-->
+<!--{/if}-->
+

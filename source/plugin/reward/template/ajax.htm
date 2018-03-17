@@ -1,0 +1,58 @@
+<!--{template common/header_ajax}-->
+<script>
+function succeedhandle_k_favorite(url, msg, value){
+	hideWindow('k_favorite');
+	showDialog(value.msg, 'notice', null, null, 0, null, null, null, null);
+	if(url){
+		setTimeout(function () {
+			window.location.href = url; 
+		}, 2000);
+	}
+}
+function errorhandle_k_favorite(msg, value){
+	hideWindow('k_favorite');
+	showDialog(value.msg, 'notice', null, null, 0, null, null, null, null);
+}
+</script>
+<h3 class="flb"> <em id="return_{$_GET[handlekey]}">{lang reward:reward}</em> <span> <a href="javascript:;" class="flbc" onclick="hideWindow('{$_GET[handlekey]}');" title="{lang close}">{lang close}</a> </span> </h3>
+<div class="ajax">
+  <form action="plugin.php?id=reward:misc&act=reward&tid=$_GET[tid]" method="post" autocomplete="off" id="AjaxForm" name="AjaxForm" onsubmit="ajaxpost(this.id,'submit_span','submit_span',null,'submit_btn');" fwin="{$_GET[handlekey]}">
+    <input type="hidden" name="formhash" value="{FORMHASH}" />
+    <input type="hidden" name="handlekey" value="{$_GET[handlekey]}">
+    <input type="hidden" name="dreferer" value="$dreferer">
+    <div class="user">
+      <h3>$thread[subject]</h3>
+      <dl class="avt">
+        {avatar($thread[authorid],small)}
+      </dl>
+      <p class="author">$thread[author]</p>
+    </div>
+    <div class="money">
+      <p>{lang reward:RewardMoney}</p>
+      <dl>
+        <!--{loop $reward['money'] $val}-->
+        <label for="money_$val">
+        <input id="money_$val" name="money" type="radio" value="$val" />
+        <p>$extcredits[title] <b>$val</b> $extcredits[unit]</p>
+        </label>
+        <!--{/loop}-->
+      </dl>
+    </div>
+    <div id="submit_span">
+      <input type="submit" name="submit" id="submit_btn" class="pn pnc" value=" {lang reward:Determine} "/>
+    </div>
+  </form>
+</div>
+<style type="text/css">
+.ajax { width: 380px; height: auto; }
+.ajax .user { text-align: center; }
+.ajax .user h3 { line-height: 25px; margin-bottom: 10px; }
+.ajax .user .author { line-height: 30px; }
+.ajax .user .avt img { -moz-border-radius: 80px; -webkit-border-radius: 80px; border-radius: 80px; width: 80px; height: 80px; }
+#submit_span { text-align: center; padding: 15px; }
+.ajax .money { text-align: center; }
+.ajax .money dl { width: 300px; margin: auto; }
+.ajax .money label { border: 1px solid #39F; width: 75px; text-align: center; display: inline-block; margin: 5px; padding-top: 10px; padding-bottom: 10px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.ajax .money label b { color: #F00; }
+</style>
+<!--{template common/footer_ajax}-->

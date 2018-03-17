@@ -1,0 +1,75 @@
+<form method="post" action="plugin.php?id=x7ree_cash:x7ree_cash&code_7ree=1">
+<input type="hidden" name="formhash" value="{FORMHASH}">
+<ul>
+<li class='mt bbda'>
+<dt class="z" style="margin-right:20px;width:150px;">
+提现积分数量
+</dt>
+<dl style="width:590px;height:30px;overflow:hidden;">
+<input type="text" name="ext_7ree" id="ext_7ree" onkeyup="result_7ree(this.value);" class="input_7ree">，我现在共有{$membercount_7ree}{$exttitle_7ree}。
+</dl>
+</li>
+
+<li class='mt bbda'>
+<dt class="z" style="margin-right:20px;width:150px;">
+预计到账金额
+</dt>
+<dl style="width:590px;height:30px;overflow:hidden;">
+<input type="text" name="cash_7ree" id="cash_7ree" READONLY class="input_7ree"> 提现率为：{$vars_7ree['rate_7ree']}%
+</dl>
+</li>
+
+<li class='mt bbda'>
+<dt class="z" style="margin-right:20px;width:150px;">
+收款账户类型
+</dt>
+<dl style="width:590px;height:30px;overflow:hidden;">
+<label><input type="radio" name="type_7ree" id="type_7ree" value="1">微信</label><span class="pipe">|</span>
+<label><input type="radio" name="type_7ree" id="type_7ree" value="2">支付宝</label>
+</dl>
+</li>
+<li class='mt bbda'>
+<dt class="z" style="margin-right:20px;width:150px;">
+收款账户名
+</dt>
+<dl style="width:590px;height:30px;overflow:hidden;">
+<input type="text" name="account_7ree" id="account_7ree" class="input_7ree"> <span style="color:red;font-weight:700;">*</span>
+</dl>
+</li>
+
+<li class='mt bbda'>
+<dt class="z" style="margin-right:20px;width:150px;">
+联系手机电话
+</dt>
+<dl style="width:590px;height:30px;overflow:hidden;">
+<input type="text" name="tel_7ree" id="tel_7ree" class="input_7ree"> <span style="color:red;font-weight:700;">*</span>
+</dl>
+</li>
+
+
+<li class='mt bbda'>
+<dt class="z" style="margin-right:20px;width:150px;"> √
+</dt>
+<dl style="width:590px;height:30px;overflow:hidden;">
+<button type="submit" name="submit_7ree" class="pn pnc" value="TRUE"><strong>确认提交提现申请</strong></button>
+</dl>
+</li>
+
+</ul>
+</form>
+
+
+
+<script langue="javascript">
+	function result_7ree(ext_7ree){
+		var format_7ree = /^\+?[1-9][0-9]*$/;
+		if(format_7ree.test(ext_7ree)){
+		 	ext_7ree = document.getElementById('ext_7ree').value * ($vars_7ree[rate_7ree]/100);
+		 	document.getElementById('cash_7ree').value = ext_7ree.toFixed(2);
+	   }else{
+	   	    document.getElementById('ext_7ree').value = '';
+	    	document.getElementById('cash_7ree').value = '0';
+	    	showPrompt(null, null, "<span>请输入整数积分<span>", 1500);
+	   }
+	}
+</script>

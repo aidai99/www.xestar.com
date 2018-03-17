@@ -1,0 +1,31 @@
+<table class="dtable_7ree">
+<tr>
+	<td>商品ID</td>
+	<td>商品名称</td>
+	<td>兑换积分</td>
+	<td>库存数量</td>
+	<td>管理操作</td>
+</tr>
+<!--{if $list_7ree}-->
+	<!--{loop $list_7ree $list_value}-->
+<tr>
+	<td>{$list_value['id_7ree']}</td>
+	<td><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=1&id_7ree={$list_value['id_7ree']}" target="_blank">{$list_value['name_7ree']}</a></td>
+	<td>{$list_value['cost_7ree']}{$exttitle_7ree}</td>
+	<td>{$list_value['num_7ree']}</td>
+	<td>
+	【<a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=4&id_7ree={$list_value['id_7ree']}">编辑</a>】
+	【<a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=6&id_7ree={$list_value['id_7ree']}&formhash={FORMHASH}" onclick="if(confirm('您确认删除?')==false)return false;">删除</a>】
+	</td>
+</tr>
+<!--{/loop}-->
+<!--{else}-->
+<tr>
+<td colspan="5"><div class="notice">暂无商品，请先添加。</div></td>
+</tr>
+<!--{/if}-->
+</table>
+	
+<div>
+{$multipage}
+</div>

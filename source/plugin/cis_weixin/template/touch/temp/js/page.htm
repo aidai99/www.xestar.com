@@ -1,0 +1,45 @@
+<script language="javascript" id="script_page" reload="1">
+
+	$('.body_main').ready(function() {
+		var prevpage = $('div.pg .prev').prop('href');
+		var nextpage = $('div.pg .nxt').prop('href');
+		var lastpage = $('div.pg label span').text().replace(/[^\d]/g, '') || 0;
+		var curpage = $('div.pg input').val() || 1;
+
+		if(!lastpage) {
+			prevpage = $('div.pg .pgb a').prop('href');
+		}
+
+		var prevpagehref = nextpagehref = '';
+		if(prevpage == undefined) {
+			prevpagehref = 'javascript:;" class="grey';
+		} else {
+			prevpagehref = prevpage;
+		}
+		if(nextpage == undefined) {
+			nextpagehref = 'javascript:;" class="grey';
+		} else {
+			nextpagehref = nextpage;
+		}
+
+		var selector = '';
+		if(lastpage) {
+			selector += '<a id="select_a" class="page_a bo b_l">';
+			selector += '<select id="dumppage" class="page_select">';
+			for(var i=1; i<=lastpage; i++) {
+				selector += '<option value="'+i+'" '+ (i == curpage ? 'selected' : '') +'>第'+i+'页</option>';
+			}
+			selector += '</select>';
+			selector += '<span>第'+curpage+'页</span>';
+		}
+
+		$('div.pg').removeClass('pg').addClass('page').html('<a href="'+ prevpagehref +'" class="prev">上一页</a>'+ selector +'<a href="'+ nextpagehref +'" class="next">下一页</a>');
+		$('#dumppage').on('change', function() {
+			var href = (prevpage || nextpage);
+			window.location.href = href.replace(/page=\d+/, 'page=' + $(this).val());
+		});
+	});
+	<!--{if !$_GET['getpage']}-->
+	evalscripts.push('script_page');
+	<!--{/if}-->
+</script>

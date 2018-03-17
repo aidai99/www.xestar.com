@@ -1,0 +1,44 @@
+<script type="text/javascript" src="static/js/calendar.js"></script>
+<script type="text/javascript" language="javascript">
+// --子项复选框被单击---
+function ChkSonClick(sonName, cbAllId) {
+ var arrSon = document.getElementsByName(sonName);
+ var cbAll = document.getElementById(cbAllId);
+ for(var i=0; i<arrSon.length; i++) {
+     if(!arrSon[i].checked) {
+     cbAll.checked = false;
+     return;
+     }
+ }
+ cbAll.checked = true;
+}
+
+// --反选被单击---
+function ChkOppClick(sonName){
+ var arrSon = document.getElementsByName(sonName);
+ for(i=0;i<arrSon.length;i++) {
+  arrSon[i].click();
+ }
+}
+</script>
+
+<div class="adminnav_7ree">
+<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=5" <!--{if $code_7ree==5 && !$id_7ree}-->class="adminnow_7ree"<!--{/if}-->>{lang x7ree_opengs:htm_lang_xinzengjingcai_7ree}</a> <span class="pipe">|</span>
+<!--{if $id_7ree}-->
+<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=5&id_7ree={$id_7ree}" class="adminnow_7ree">{lang x7ree_opengs:htm_lang_bianjijingcai_7ree}</a> <span class="pipe">|</span>
+<!--{/if}-->
+<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=6" <!--{if $code_7ree==6}-->class="adminnow_7ree"<!--{/if}-->>{lang x7ree_opengs:htm_lang_guanlijingcai_7ree}</a> <span class="pipe">|</span>
+<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=7" <!--{if $code_7ree==7}-->class="adminnow_7ree"<!--{/if}-->>{lang x7ree_opengs:htm_lang_guanlirizhi_7ree}</a>
+</div>
+
+
+
+	<!--{if $code_7ree==4}-->
+		{template x7ree_opengs:x7ree_adminhome}
+	<!--{elseif $code_7ree==5}-->
+		{template x7ree_opengs:x7ree_post}
+	<!--{elseif $code_7ree==6}-->
+		{template x7ree_opengs:x7ree_mang}
+	<!--{elseif $code_7ree==7}-->
+		{template x7ree_opengs:x7ree_log}
+	<!--{/if}-->

@@ -1,0 +1,42 @@
+<div class="zhanwei_7ree"></div>
+<div class="ftnav_7ree">
+<div class="footnav_7ree">
+	<ul>
+            <li><a href="{$dating_url_7ree}" class="dating_7ree <!--{if !$_GET['ac_7ree'] && !$_GET['finish_7ree']}-->now_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_jingcaidating_7ree}</a></li>
+            <li><a href="{$wangqiurl_7ree}" class="wangqi_7ree <!--{if !$_GET['ac_7ree'] && $_GET['finish_7ree']}-->now_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_wangqijingcai_7ree}</a></li>
+            <li><a href="{$wdjc_url_7ree}" class="wode_7ree <!--{if $_GET['ac_7ree']==1}-->now_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_wodejingcai_7ree}</a></li>
+            <li><a href="javascript:void(0);" onclick='navmenu_7ree();' class="paihang_7ree <!--{if $_GET['ac_7ree']==6}-->now_7ree<!--{/if}-->">{lang jingcai_7ree:htm_lang_ranklist_7ree}</a></li>
+            <li><a href="https://www.xestar.com/forum.php?mod=guide&mobile=2" class="luntan_7ree">ÉçÇøµÇÂ¼</a></li>
+			
+	</ul>
+</div>
+</div>
+<div class="ftnav_menu_7ree" id="ftnav_menu_7ree" style="display:none;">
+	<ul>
+            <!--{if $jingcai_7ree_var['newrank_7ree']}-->
+            <li <!--{if $_GET['ac_7ree'] == '5'}-->class="now_7ree"<!--{/if}--> ><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=5"><span>{lang jingcai_7ree:htm_lang_zuixinjingcai_7ree}</span></a></li> 
+            <!--{/if}-->
+            <!--{if $jingcai_7ree_var['allrank_7ree']}-->
+            <li <!--{if $_GET['ac_7ree'] == '6' && $_GET['how_7ree']==1}-->class="now_7ree"<!--{/if}--> ><a href="{$zyl_url_7ree}">{lang jingcai_7ree:htm_lang_rank1_7ree}</a></li> 
+            <!--{/if}-->
+            <!--{if $jingcai_7ree_var['cutrank_7ree']}-->
+            <li <!--{if $_GET['ac_7ree'] == '6' && $_GET['how_7ree']==2}-->class="now_7ree"<!--{/if}--> ><a href="{$jyl_url_7ree}">{lang jingcai_7ree:htm_lang_rank2_7ree}</a></li> 
+            <!--{/if}-->
+            <!--{if $jingcai_7ree_var['winrank_7ree']}-->
+            <li <!--{if $_GET['ac_7ree'] == '6' && $_GET['how_7ree']==3}-->class="now_7ree"<!--{/if}--> ><a href="{$cangci_url_7ree}">{lang jingcai_7ree:htm_lang_rank3_7ree}</a></li> 
+            <!--{/if}-->
+            <!--{if $jingcai_7ree_var['hitrank_7ree']}-->
+            <li <!--{if $_GET['ac_7ree'] == '6' && $_GET['how_7ree']==4}-->class="now_7ree"<!--{/if}--> ><a href="{$mingzhong_url_7ree}">{lang jingcai_7ree:htm_lang_rank4_7ree}</a></li> 
+            <!--{/if}-->
+	</ul>
+</div>
+
+<script type="text/javascript">
+function navmenu_7ree(){
+		if(document.getElementById('ftnav_menu_7ree').style.display!="block"){
+				document.getElementById('ftnav_menu_7ree').style.display="block";
+		}else{
+				document.getElementById('ftnav_menu_7ree').style.display="none";
+		}
+}
+</script>

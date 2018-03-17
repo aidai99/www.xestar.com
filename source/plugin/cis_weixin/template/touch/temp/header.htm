@@ -1,0 +1,58 @@
+<!--{if !$IMCORE}-->
+<!--{eval require './source/plugin/cis_weixin/function.php';}-->
+<!--{/if}-->
+<!--{eval $cis_weixin['bro']=cis_get_bro();}-->
+<!--{eval $uas=array('q','weixin');}-->
+<!--{if $_G['setting']['cis_app_ua']}-->
+<!--{eval $appua=explode(',',$_G['setting']['cis_app_ua']);}-->
+<!--{eval $uas = array_merge($uas, $appua);}-->
+<!--{/if}-->
+
+<!--{eval $logo='source/plugin/cis_weixin/core/ui/logo.png';}-->
+<!--{eval $backico=$_SERVER['HTTP_REFERER']?'<a href="javascript:history.back(-1)" class="imui_icon_back"></a>':'<a href="forum.php?mod=guide" class="imui_icon_back"></a>';}-->
+<!--{eval $lang=CHARSET=='gbk'?'gbk':'utf8';}-->
+<!--{eval require "source/plugin/cis_weixin/core/lang/$lang.php";}-->
+<!--{eval define('IMS', 'template/'.$_G['style']['tplname'].'/touch/style');}-->
+<!--{eval define('TES', './template/'.$_G['style']['tplname'].'/');}-->
+<!--{if !$_GET['getpage'] && !$_GET[inajax]}-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="600" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0,minimal-ui">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="$_G['setting']['sitename']">
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="full-screen" content="yes">
+<meta name="browsermode" content="application"/>
+<meta name="x5-fullscreen" content="true" />
+<meta name="x5-page-mode" content="app" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="source/plugin/cis_weixin/core/ui/ico72.png">
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="source/plugin/cis_weixin/core/ui/ico144.png">
+<link rel="apple-touch-icon-precomposed" href="source/plugin/cis_weixin/core/ui/ico.png" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="keywords" content="{if !empty($metakeywords)}{echo dhtmlspecialchars($metakeywords)}{/if}" />
+<meta name="description" content="{if !empty($metadescription)}{echo dhtmlspecialchars($metadescription)} {/if},$_G['setting']['bbname']" />
+<!--{if $_G[basescript]=='portal' && CURMODULE=='list'}-->
+<base href="{$_G['siteurl']}" />
+<!--{/if}-->
+<title><!--{if !empty($navtitle)}-->$navtitle<!--{else}-->$_G['setting']['bbname']<!--{/if}--></title>
+<link rel="stylesheet" href="source/plugin/cis_weixin/core/ui/animation.css" type="text/css" media="all">
+<link rel="stylesheet" href="source/plugin/cis_weixin/core/ui/ui.css" type="text/css" media="all">
+<link rel="stylesheet" href="source/plugin/cis_weixin/core/ui/reset.css" type="text/css" media="all">
+<script src="source/plugin/cis_weixin/core/js/jquery-1.8.3.min.js?{VERHASH}"></script>
+<script src="source/plugin/cis_weixin/core/js/addtohomescreen.js"></script>
+<script type="text/javascript">var STYLEID = '{STYLEID}', STATICURL = '{STATICURL}', IMGDIR = '{IMGDIR}',BRO = '$cis_weixin[bro]', VERHASH = '{VERHASH}', charset = '{CHARSET}', UC_API = '$_G[setting][ucenterurl]', cookiepre = '{$_G[config][cookie][cookiepre]}', cookiedomain = '{$_G[config][cookie][cookiedomain]}', cookiepath = '{$_G[config][cookie][cookiepath]}', showusercard = '{$_G[setting][showusercard]}', attackevasive = '{$_G[config][security][attackevasive]}', disallowfloat = '{$_G[setting][disallowfloat]}', creditnotice = '<!--{if $_G['setting']['creditnotice']}-->$_G['setting']['creditnames']<!--{/if}-->', defaultstyle = '$_G[style][defaultextstyle]', REPORTURL = '$_G[currenturl_encode]', SITEURL = '$_G[siteurl]', JSPATH = '$_G[setting][jspath]';</script>
+<script src="source/plugin/cis_weixin/core/js/common.js?{VERHASH}" charset="{CHARSET}"></script>
+<!--{if !$_G['cache']['plugin']['cis_weixin']['closespa']}-->
+<script src="source/plugin/cis_weixin/core/js/spa.js?{VERHASH}" charset="{CHARSET}"></script>
+<!--{/if}-->
+<script src="source/plugin/cis_weixin/core/js/slider.js?{VERHASH}" type="text/javascript"></script>
+
+</head>
+<body {if in_array($cis_weixin['bro'],$uas)}id="noheader"{/if} touchstart>
+<div id="site_title"><div class="title_name"><!--{if !empty($navtitle)}-->$navtitle<!--{/if}--><!--{if empty($nobbname)}--> - $_G['setting']['bbname']<!--{/if}--></div></div>
+<!--{else}-->
+<!--{if !$_GET[inajax] && !$_GET[spa]}--><div id="site_title"><div class="title_name"><!--{if !empty($navtitle)}-->$navtitle<!--{/if}--><!--{if empty($nobbname)}--> - $_G['setting']['bbname']<!--{/if}--></div></div><!--{/if}-->
+<!--{/if}-->

@@ -1,0 +1,27 @@
+<!--{if $list_7ree}-->
+<table class="listtable_7ree">
+		<tr>
+			<th>ID</th>
+			<th>{lang x7ree_opengs:htm_lang_mingcheng_7ree}</th>
+			<th>{lang x7ree_opengs:htm_lang_huiyuan_7ree}</th>
+			<th>{lang x7ree_opengs:htm_lang_shijian_7ree}</th>
+			<th>{lang x7ree_opengs:htm_lang_xuanxiang_7ree}</th>
+			<th>{lang x7ree_opengs:htm_lang_zhichi_7ree}{$exttitle_7ree}</th>
+			<th>{lang x7ree_opengs:htm_lang_jiangli_7ree}{$exttitle_7ree}</th>
+		</tr>
+	<!--{loop $list_7ree $list_value}-->
+		<tr>
+			<td>{$list_value['id_7ree']}</td>
+			<td><a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=1&id_7ree={$list_value['rid_7ree']}" target="_blank">{$list_value['name_7ree']}</a></td>
+			<td><a href="home.php?mod=space&uid={$list_value['uid_7ree']}" target="_blank">{$list_value['user_7ree']}</a></td>
+			<td>{$list_value['time_7ree']}</td>
+			<td>{$list_value['option_7ree']}</td>
+			<td>{$list_value['ext_7ree']}</td>
+			<td>{$list_value['reward_7ree']}</td>
+		</tr>
+	<!--{/loop}-->
+</table>
+<div>{$multipage}</div>
+<!--{else}-->
+<div class="noticetip_7ree">{lang x7ree_opengs:htm_lang_nolog_7ree}</div>
+<!--{/if}-->

@@ -1,0 +1,99 @@
+<table width="100%" border="0" cellpadding="5" cellspacing="0"  class="dt mtm">
+		<tr class="colplural" >
+		<th colspan="7">{template jingcai_7ree:jingai_mynav_7ree}</th>
+		</tr>
+
+        <tr class="colplural" >
+        <th style="text-align:center;width:90px;">{lang jingcai_7ree:htm_lang_bisaimingcheng_7ree}<br>{lang jingcai_7ree:htm_lang_jingcaishijian_7ree}</th>
+        <th style="text-align:center;width:70px;">{lang jingcai_7ree:htm_lang_jingcaiduiwu_7ree}<br>{lang jingcai_7ree:htm_lang_huoshengduiwu_7ree}</th>
+        <th style="text-align:center;width:60px;">{lang jingcai_7ree:htm_lang_zhichi_7ree}{$exttitle_7ree}<br>{lang jingcai_7ree:htm_lang_yidejiangli_7ree} </th>
+        </tr>
+        <!--{if $loglist_7ree}-->
+        <!--{loop $loglist_7ree $loglist_value}-->
+        <tr>
+        <td style="text-align:center;"><a href="{$xiangqing_url_7ree}{$loglist_value['main_id_7ree']}" target="_blank">$loglist_value['racename_7ree']</a><br>$loglist_value['log_time_7ree']</td>
+        <td style="text-align:center;">
+       		<!--{if $loglist_value['type_7ree']}-->
+				<!--{if $loglist_value['mywin_7ree']=="a"}-->{lang jingcai_7ree:htm_lang_da_7ree} $loglist_value['daxiao_7ree']
+		        <!--{elseif $loglist_value['mywin_7ree']=="b"}-->{lang jingcai_7ree:htm_lang_xiao_7ree} $loglist_value['daxiao_7ree']
+		        <!--{/if}-->
+	     	<!--{else}-->
+		        <!--{if $loglist_value['mywin_7ree']=="a"}-->{$loglist_value['aname_7ree']}
+		        <!--{elseif $loglist_value['mywin_7ree']=="b"}-->{$loglist_value['bname_7ree']}
+		        <!--{elseif $loglist_value['mywin_7ree']=="c"}--><!--{if $jingcai_7ree_var['pingju_7ree'] && $loglist_value['rangqiufang_7ree']>0}-->$jingcai_7ree_var['pingju_7ree']<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}-->
+		        <!--{elseif $loglist_value['mywin_7ree']=="d"}-->{lang jingcai_7ree:htm_lang_liupan_7ree}
+		        <!--{/if}-->
+         	<!--{/if}-->
+        <br>
+        <!--{if $loglist_value['type_7ree']}--> 
+				<!--{if $loglist_value['mywin_7ree'] == $loglist_value['daxiaowin_7ree'] && $loglist_value['win_7ree']<>"d"}-->
+				 <span class="opbtn_7ree"><!--{if !$loglist_value['log_reward_7ree']}-->
+				<a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=1&op_7ree=get&log_id_7ree=$loglist_value['log_id_7ree']&formhash={FORMHASH}"><font color='red'>{lang jingcai_7ree:htm_lang_likelingqu_7ree}</font></a><!--{else}--><font color='green'>{lang jingcai_7ree:htm_lang_yijinglingqu_7ree}</font><!--{/if}--></span>
+				<!--{elseif $loglist_value['win_7ree'] == "d"}-->
+					<!--{if $loglist_value['mywin_7ree'] == "d"}-->
+					<font color="gray">{lang jingcai_7ree:htm_lang_yifanhuan_7ree}{$loglist_value['myodds_7ree']}{$exttitle_7ree}</font>
+					<!--{else}--><span class="opbtn_7ree">
+					<a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=1&op_7ree=quit&log_id_7ree=$loglist_value['log_id_7ree']&formhash={FORMHASH}"><font color='darkorange'>{lang jingcai_7ree:htm_lang_fanhuan_7ree}{$exttitle_7ree}</font></a></span>
+					<!--{/if}-->
+				<!--{else}-->
+					<span style="padding:4px 12px 4px 12px;color:gray;">
+					<!--{if $loglist_value[win_7ree]}-->
+					{lang jingcai_7ree:htm_lang_weicaidui_7ree}
+					<!--{else}-->
+					{lang jingcai_7ree:htm_lang_weijiexiao_7ree}
+					<!--{/if}-->
+				    </span>
+				<!--{/if}--> 
+        <!--{else}-->
+				<!--{if $loglist_value['mywin_7ree'] == $loglist_value['win_7ree'] && $loglist_value['win_7ree']<>"d"}-->
+				        <span class="opbtn_7ree"><!--{if !$loglist_value['log_reward_7ree']}-->
+				<a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=1&op_7ree=get&log_id_7ree=$loglist_value['log_id_7ree']&formhash={FORMHASH}"><font color='red'>{lang jingcai_7ree:htm_lang_likelingqu_7ree}</font></a><!--{else}--><font color='green'>{lang jingcai_7ree:htm_lang_yijinglingqu_7ree}</font><!--{/if}--></span>
+				<!--{elseif $loglist_value['win_7ree'] == "d"}-->
+					<!--{if $loglist_value['mywin_7ree'] == "d"}-->
+					<font color="gray">{lang jingcai_7ree:htm_lang_yifanhuan_7ree}{$loglist_value['myodds_7ree']}{$exttitle_7ree}</font>
+					<!--{else}--><span class="opbtn_7ree">
+					<a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=1&op_7ree=quit&log_id_7ree=$loglist_value['log_id_7ree']&formhash={FORMHASH}"><font color='darkorange'>{lang jingcai_7ree:htm_lang_fanhuan_7ree}{$exttitle_7ree}</font></a></span>
+					<!--{/if}-->
+				<!--{else}-->
+					<span style="padding:4px 12px 4px 12px;color:gray;">
+					<!--{if $loglist_value[win_7ree]}-->
+					{lang jingcai_7ree:htm_lang_weicaidui_7ree}
+					<!--{else}-->
+					{lang jingcai_7ree:htm_lang_weijiexiao_7ree}
+					<!--{/if}-->
+				    </span>
+				<!--{/if}-->        
+        <!--{/if}--> 
+
+        </td>        
+        <td style="text-align:center;">{$loglist_value['myodds_7ree']}{$exttitle_7ree}<br> {$loglist_value['log_reward_7ree']}{$exttitle_7ree} ({$loglist_value['teamodds_7ree']}{lang jingcai_7ree:htm_lang_bei_7ree})
+        </td>
+        </tr>
+        <!--{/loop}-->
+        <tr>
+        <td colspan="7">$multipage</td>
+        </tr>
+        <tr>
+        <td colspan="7">
+        <!--{if $viewextname_7ree && $jingcai_7ree_var['qingkongcost_7ree'] && $jingcai_7ree_var['qingkongday_7ree']}-->
+        <a onclick="goto_7ree('{lang jingcai_7ree:htm_lang_qingkongmsg11_7ree}{$jingcai_7ree_var[qingkongday_7ree]}{lang jingcai_7ree:htm_lang_qingkongmsg12_7ree}\n{lang jingcai_7ree:htm_lang_qingkongmsg2_7ree}\n{lang jingcai_7ree:htm_lang_qingkongmsg3_7ree}{$jingcai_7ree_var[qingkongcost_7ree]}{$viewexttitle_7ree}','plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=11')" href="javascript:;" class="opbtn_7ree"  title="{lang jingcai_7ree:htm_lang_qingkongmsg1_7ree}">{lang jingcai_7ree:htm_lang_qingkong1_7ree}{$jingcai_7ree_var['qingkongday_7ree']}{lang jingcai_7ree:htm_lang_qingkong2_7ree}</a></td>
+        <!--{/if}-->
+        </tr>        
+        
+        <!--{else}-->
+        <tr>
+        <td colspan="7">
+        <div class="notice">{lang jingcai_7ree:htm_lang_weicanyu_7ree}</div>
+        <div class="notice"><a href="plugin.php?id=jingcai_7ree:jingcai_7ree">{lang jingcai_7ree:htm_lang_canyuhuodong_7ree}</a></div></td>
+        </tr> 
+        <!--{/if}-->
+</table>
+
+<script type="text/javascript">
+function goto_7ree(msg_7ree,url_7ree){
+	if(confirm(msg_7ree)){
+		window.location = url_7ree; 
+ 		return true;
+	}else return false;
+}
+</script>

@@ -1,0 +1,39 @@
+
+<table width="100%" border="0" cellpadding="5" cellpadding="0" class="dt mtm">
+<!--{if !$_GET['sp_7ree']}-->
+	<!--{if $jingcai_7ree_var['ad_img_7ree'] && !$_GET['finish_7ree'] && !$_GET['page']}-->
+		<tr class="colplural" >
+		<td colspan="8" align="center" style="margin:5px;height:368px;background-image: url({$jingcai_7ree_var['ad_img_7ree']});background-repeat:no-repeat;background-position:center;">
+			<a <!--{if $jingcai_7ree_var['ad_url_7ree']}-->href="{$jingcai_7ree_var['ad_url_7ree']}" target="_blank"<!--{else}-->href="javascript:;"<!--{/if}--> style="display:block;width:820px;height:350px;float:left;">
+			</a>
+			<!--{if $jingcai_7ree_var['touchon_7ree']}-->
+			<img src="./source/plugin/jingcai_7ree/topad_img_7ree/dianxingjingcai_erweima.png" style='float:right;margin-right:13px;width:90px;height:90px'/>
+			<!--{/if}-->
+		</td>
+		</tr>
+		<tr>
+	<!--{/if}-->
+	<!--{if $notice_7ree}-->
+	<tr class="colplural" >
+	<th colspan="8"><h3>{lang jingcai_7ree:htm_lang_gonggao_7ree}</h3></th>
+	</tr>
+	<tr>
+	<td colspan="8">
+	<p>{$notice_7ree}</p>
+	</td>
+	</tr>
+	<!--{/if}-->
+<!--{/if}-->
+
+
+<!--{if !$_GET['sp_7ree']}-->
+<!--{if $jingcai_7ree_var['dating_7ree']}-->
+	{template jingcai_7ree:jingcai_dating_7ree}
+<!--{else}-->
+	{template jingcai_7ree:jingcai_dating2_7ree}
+<!--{/if}-->
+	
+<!--{elseif $_GET['sp_7ree'] == "more"}-->
+	{template jingcai_7ree:jingcai_page_7ree}
+<!--{/if}-->
+</table>

@@ -1,0 +1,15 @@
+#postlist .vwthd{position:relative;overflow:visible;padding-right:115px !important;display:block;z-index:99;}
+.qrcode4_snvbt,.kmn19vbt{position:relative;overflow:visible;padding-right:55px;}
+.kmfz{height:38px;line-height:38px;}
+.qrcode4_viewtop{overflow:visible;}
+.qrcode4{position:absolute;top:0px;right:0px;}
+.qrcode4 .qrcode4_img{width:45px;height:38px;background:url(qrcode4.png) no-repeat;}
+.ie6 .qrcode4 .qrcode4_img{width:45px;height:38px;background:url(qrcode4.gif) no-repeat;}
+#qrcode4_menu{z-index:301;border:#CCC 1px solid;padding:15px 10px;position:absolute;width:190px;background:#fafafa;height:222px;top:-1px;right:-1px;cursor:pointer;}
+.qrcode4_viewtop #qrcode4_menu{top:0px;right:0px;}
+#qrcode4_menu p{text-align:center;}
+#qrcode4_menu p img{width:168px;height:168px;}
+#qrcode4_menu li{text-align:center;line-height:26px;height:26px;}
+#qrcode4_menu .qrcode4_txt1{font:500 16px/38px "Microsoft Yahei";COLOR:#333;}
+#qrcode4_menu .qrcode4_txt2{font:500 16px/38px "Microsoft Yahei";}
+#qrcode4_menu .qrcode4_txt2 a{color:#bebebe;}

@@ -1,0 +1,161 @@
+<!--{if $_GET['ac']=='it618'}-->
+<table class="win-form1 link0" style="margin-top:10px" width="100%">
+	<tr><td colspan="2" style="background-color:#f9f9f9; padding:6px 3px"><img src="source/plugin/it618_hongbao/images/logo.png" height="18" style="vertical-align:middle; margin-top:-3px" /> <input type="radio" name="hongbaopost" id="hongbaopost1" value="1" style="vertical-align:middle; margin-top:-3px;margin-right:3px" onchange="hongbaocheck()"/><label for="hongbaopost1" id="label1">{$it618_hongbao_lang['t20']}</label> <input type="radio" name="hongbaopost" id="hongbaopost2" value="2" checked="checked" style="vertical-align:middle; margin-top:-3px;margin-right:3px" onchange="hongbaocheck()"/><label for="hongbaopost2" id="label2">{$it618_hongbao_lang['t21']}</label></td></tr>
+    <tbody id="hongbaotb" style="display:none">
+    {$it618_hongbao_str}
+    <tr><td style="text-align:right; width:68px; vertical-align:top">{$it618_hongbao_lang['t15']}</td><td><input type="text" class="txt" id="it618_timecount" name="it618_timecount" style="width:80px;color:blue;font-weight:bold; height:14px" value="{$it618_timecount}" /> {$it618_hongbao_lang['t16']} <!--{if $it618_hongbao_main['it618_state']>0}--><font color=#999>{$it618_hongbao_lang['t18']}{$it618_time}</font> {$it618_hongbao_lang['t19']}<font color=red>{$timecount}</font>{$it618_hongbao_lang['t16']}<!--{/if}--> <input type="checkbox" id="it618_isbm" name="it618_isbm" value="1" style="vertical-align:middle" {$it618_isbm_checked}> <label for="it618_isbm">{$it618_hongbao_lang['s55']}</label></td></tr>
+    <tr><td style="text-align:right; width:68px; vertical-align:top">{$it618_hongbao_lang['t1']}</td><td><input type="text" class="txt" id="it618_code" name="it618_code" onkeyup="getstrlenspan(this.value)" style="height:14px; width:<!--{if $wap!=1}-->430px<!--{else}-->100%<!--{/if}-->" value="{$it618_hongbao_main['it618_code']}" /></td></tr>
+    <tr><td colspan="2" style="color:#999;">{$it618_hongbao_lang['t2']}</td></tr>
+    <!--{if $_GET['ac']!='it618'}-->
+    <tr><td colspan="2" style="text-align:center;"><input type="hidden" name="it618_tid" value="{$_GET['it618_tid']}"><input type="button" value="{$it618_hongbao_lang['t3']}" class="btn" onclick="savahongbao('{$_GET['type']}')"/> <input type="button" value="{$it618_hongbao_lang['t4']}" class="btn btn1" <!--{if $wap!=1}-->onclick="hideWindow('it618_showhongbao')"<!--{else}-->onClick="IT618_HONGBAO('.hb_cd-popup').removeClass('is-visible')"<!--{/if}-->/></td></tr>
+    <tr><td colspan="2"><span id="msgtips" style="color:#F00"></span></td></tr>
+    <!--{/if}-->
+    </tbody>
+</table>
+<style>
+.win-form1 tr td{height:22px;line-height:23px; padding-bottom:6px; padding-top:6px; font-size:12px; border-bottom:#f3f3f3 1px solid; background-color:#fff}
+.win-form1 .txt,.win-form1 .txtarea {padding:3px;outline:none;font-size:12px;line-height:14px;color:#333;border:1px solid #ddd;border-radius:3px;}
+.win-form1 .txt {height:14px;}
+.win-form1 .txt:hover, .win-form1 .txt:focus{border-color:#7DBDE2;box-shadow:0 0 5px #7DBDE2;}
+.win-form1 .btn:hover{border-color:#F60;box-shadow:0 0 5px #F60;}
+.win-form1 .btn{cursor:pointer; border:#CCC 0px solid; width:68px; height:30px; padding-left:10px; padding-right:10px; font-size:13px; background-color:#F30; color:#FFF;}
+.win-form1 .btn1{background-color:#ccc;color:#333}
+.win-form1 select{border:#e8e8e8 1px solid; background-color:#f9f9f9; height:23px}
+</style>
+<script>
+function hongbaocheck(){
+	document.getElementById("label1").style.color='#333';
+	document.getElementById("label2").style.color='#333';
+	
+	if(document.getElementById("hongbaopost1").checked){
+		document.getElementById("hongbaotb").style.display='';
+		document.getElementById("label1").style.color='red';
+	}else{
+		document.getElementById("hongbaotb").style.display='none';
+		document.getElementById("label2").style.color='red';
+	}
+}
+hongbaocheck();
+</script>
+<!--{else}-->
+<!--{if $wap!=1}-->
+{template common/header}
+
+<div class="bm bw0">
+	<h3 class="flb" style="font-size:14px">
+    <span style="float:left; color:#333"><img src="source/plugin/it618_hongbao/images/logo.png" height="18" style="vertical-align:middle;margin-top:-3px;margin-right:3px">{$t}</span>
+    <!--{if $_G[inajax]}-->
+		<span style="float:right"><a href="javascript:;" class="flbc" onclick="hideWindow('it618_showhongbao')" ></a></span>
+	<!--{/if}-->
+	</h3>
+    
+	<div class="c" style="width:526px;height:276px">
+<!--{/if}-->
+<!--{if $wap==1}-->
+<img src="source/plugin/it618_hongbao/images/logo.png" height="18" style="vertical-align:middle;margin-top:-3px;margin-right:3px">{$t}it618_split
+<!--{/if}-->
+    <form id="it618_hongbao">
+	<table class="win-form1 link0" style="margin-top:3px">
+    	{$it618_hongbao_str}
+        <tr><td style="text-align:right; width:68px; vertical-align:top">{$it618_hongbao_lang['t15']}</td><td><input type="text" class="txt" id="it618_timecount" name="it618_timecount" style="width:80px;color:blue;font-weight:bold; height:14px" value="{$it618_timecount}" /> {$it618_hongbao_lang['t16']} <!--{if $it618_hongbao_main['it618_state']>0}--><font color=#999>{$it618_hongbao_lang['t18']}{$it618_time}</font> {$it618_hongbao_lang['t19']}<font color=red>{$timecount}</font>{$it618_hongbao_lang['t16']}<!--{/if}--></td></tr>
+        <tr><td style="text-align:right; width:68px; vertical-align:top">{$it618_hongbao_lang['t1']}</td><td><input type="text" class="txt" id="it618_code" name="it618_code" onkeyup="getstrlenspan(this.value)" style="height:14px; width:<!--{if $wap!=1}-->430px<!--{else}-->100%<!--{/if}-->" value="{$it618_hongbao_main['it618_code']}" /><br /><input type="checkbox" id="it618_isbm" name="it618_isbm" value="1" style="vertical-align:middle" {$it618_isbm_checked}> <label for="it618_isbm">{$it618_hongbao_lang['s55']}</label></td></tr>
+        <tr><td colspan="2" style="color:#999;">{$it618_hongbao_lang['t2']}</td></tr>
+        <tr><td colspan="2" style="text-align:center;"><input type="hidden" name="it618_tid" value="{$_GET['it618_tid']}"><input type="button" value="{$it618_hongbao_lang['t3']}" class="btn" onclick="savahongbao('{$_GET['type']}')"/> <input type="button" value="{$it618_hongbao_lang['t4']}" class="btn btn1" <!--{if $wap!=1}-->onclick="hideWindow('it618_showhongbao')"<!--{else}-->onClick="IT618_HONGBAO('.hb_cd-popup').removeClass('is-visible')"<!--{/if}-->/></td></tr>
+        <tr><td colspan="2"><span id="msgtips" style="color:#F00"></span></td></tr>
+    </table>
+    </form>
+<!--{if $wap!=1}-->
+	</div>
+
+</div>
+<!--{/if}-->
+<style>
+.win-form1 tr td{height:22px;line-height:23px; padding-bottom:4px; padding-top:4px; font-size:12px}
+.win-form1 .txt,.win-form1 .txtarea {padding:3px;outline:none;font-size:12px;line-height:14px;color:#333;border:1px solid #ddd;border-radius:3px;}
+.win-form1 .txt {height:14px;}
+.win-form1 .txt:hover, .win-form1 .txt:focus{border-color:#7DBDE2;box-shadow:0 0 5px #7DBDE2;}
+.win-form1 .btn:hover{border-color:#F60;box-shadow:0 0 5px #F60;}
+.win-form1 .btn{cursor:pointer; border:#CCC 0px solid; width:68px; height:30px; padding-left:10px; padding-right:10px; font-size:13px; background-color:#F30; color:#FFF;}
+.win-form1 .btn1{background-color:#ccc;color:#333}
+</style>
+<script>
+function sendmsg(msgid,msgvalue){
+	document.getElementById(msgid).innerHTML=msgvalue;
+}
+function savahongbao(type){
+	if(!(parseInt(document.getElementById("it618_money").value)==document.getElementById("it618_money").value&&document.getElementById("it618_money").value>0)){
+		sendmsg('msgtips',"{$it618_hongbao_lang['t5']}");
+		return false;
+	}
+	if(!(parseInt(document.getElementById("it618_count").value)==document.getElementById("it618_count").value&&document.getElementById("it618_count").value>0)){
+		sendmsg('msgtips',"{$it618_hongbao_lang['t6']}");
+		return false;
+	}
+	if(!(parseInt(document.getElementById("it618_timecount").value)==document.getElementById("it618_timecount").value&&document.getElementById("it618_timecount").value>12)){
+		sendmsg('msgtips',"{$it618_hongbao_lang['t14']}");
+		return false;
+	}
+	<!--{if $hongbao_isok==1}-->
+	if(document.getElementById("it618_jfid").value==''){
+		sendmsg('msgtips',"{$it618_hongbao_lang['t7']}");
+		return false;
+	}
+	<!--{/if}-->
+	var it618_code=document.getElementById("it618_code").value;
+	if(it618_code!=''){
+		if(getstrlen(it618_code)<2){
+			sendmsg('msgtips',"{$it618_hongbao_lang['t8']}");
+			return false;
+		}
+		if(getstrlen(it618_code)>68){
+			sendmsg('msgtips',"{$it618_hongbao_lang['t9']}");
+			return false;
+		}
+	}
+	
+	IT618_HONGBAO.post("{$_G['siteurl']}plugin.php?id=it618_hongbao:ajax&ac=hongbao&type="+type+"&it618_tid={$_GET['tid']}&fid={$_GET['fid']}&formhash={FORMHASH}",IT618_HONGBAO("#it618_hongbao").serialize(),function (data, textStatus){
+	if(data=="ok"){
+		if(type>0)alert('{$it618_hongbao_lang['t11']}'); else alert('{$it618_hongbao_lang['t10']}');
+		<!--{if $wap!=1}-->
+		hideWindow('it618_showhongbao');
+		<!--{else}-->
+		IT618_HONGBAO('.hb_cd-popup').removeClass('is-visible');
+		<!--{/if}-->
+		location.reload();
+	}else{
+		sendmsg('msgtips',data);
+	}
+	}, "html");
+	
+}
+
+function getsum(allhongbaocount,allhongbaomoney){
+	var it618_count=document.getElementById("it618_count").value;
+	var it618_money=document.getElementById("it618_money").value;
+	if(it618_count=='')it618_count=0;if(it618_money=='')it618_money=0;
+	document.getElementById('allhongbaocount').innerHTML=allhongbaocount+parseInt(it618_count);
+	document.getElementById('allhongbaomoney').innerHTML=allhongbaomoney+parseInt(it618_money);
+}
+
+function getstrlen(str) {
+    var realLength = 0, len = str.length, charCode = -1;
+    for (var i = 0; i < len; i++) {
+        charCode = str.charCodeAt(i);
+        if (charCode >= 0 && charCode <= 128) realLength += 1;
+        else realLength += 2;
+    }
+    return realLength;
+}
+
+function getstrlenspan(str){
+	var strlen=getstrlen(str);
+	if(strlen<2){document.getElementById('msgtips').innerHTML='<font color=red>{$it618_hongbao_lang['t8']}</font>';return;}
+	if(strlen>68){document.getElementById('msgtips').innerHTML='<font color=red>{$it618_hongbao_lang['t9']}</font>';return;}
+    document.getElementById('msgtips').innerHTML='<font color=green>{$it618_hongbao_lang['t12']}'+strlen+'{$it618_hongbao_lang['t13']}</font>';
+}
+</script>
+
+<!--{if $wap!=1}-->
+{template common/footer}
+<!--{/if}-->
+<!--{/if}-->

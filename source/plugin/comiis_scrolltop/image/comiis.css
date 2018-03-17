@@ -1,0 +1,26 @@
+#scrolltop{display:none;}
+#comiis_gotop{visibility:hidden;}
+.comiis_scrolltop {position:fixed;display:block;}
+.ie6 .comiis_scrolltop {position:absolute;bottom:auto;}
+.comiis_scrolltop {width:48px;}
+.comiis_scrolltop a{width:48px;height:48px;display:block;margin-bottom:10px;text-indent:-999px;overflow:hidden;background-image:url(comiis_ico.gif);background-repeat:no-repeat;border-radius:3px;}
+.comiis_scrolltop a:hover,.comiis_scrolltop .comiis_scrolltop_hover {text-decoration:none;}
+.comiis_scrolltop a em{display:none;width:30px;height:30px;line-height:15px;overflow:hidden;font-size:12px;text-align:center;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;margin:9px auto 0;}
+.comiis_scrolltop a em.s {width:40px;margin-top:17px;}
+.comiis_scrolltop a.comiis_t_l {background-position:19px -202px;}
+.comiis_scrolltop a.comiis_t_l:hover {background-position:19px -257px;}
+.comiis_scrolltop a.comiis_t_r {background-position:19px -93px;}
+.comiis_scrolltop a.comiis_t_r:hover {background-position:19px -148px;}
+.comiis_scrolltop a.comiis_t_mob {background-position:13px -316px;}
+.comiis_scrolltop a.comiis_t_mob:hover,.comiis_scrolltop a.comiis_scrolltop_hover {background-position:13px -378px;}
+.comiis_scrolltop a.comiis_t_hf {background-position:14px -437px;}
+.comiis_scrolltop a.comiis_t_hf:hover {background-position:14px -496px;}
+.comiis_scrolltop a.comiis_t_ft {background-position:16px -669px;}
+.comiis_scrolltop a.comiis_t_ft:hover {background-position:16px -722px;}
+.comiis_scrolltop a.comiis_t_lb {background-position:15px -556px;}
+.comiis_scrolltop a.comiis_t_lb:hover {background-position:15px -612px;}
+.comiis_scrolltop a.comiis_t_kf {background-position:16px -778px;}
+.comiis_scrolltop a.comiis_t_kf:hover {background-position:16px -831px;}
+#comiis_t_mob_menu{width:177px;height:197px;padding-right:10px;}
+.comiis_scrolltop_code{width:145px;height:169px;border:#DDDDDD 1px solid;padding:15px 15px 12px;background:#fff;}
+.comiis_scrolltop_code p{font-size:14px;padding-top:5px;text-align:center;}

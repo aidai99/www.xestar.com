@@ -1,0 +1,47 @@
+<table class="dtable_7ree">
+<tr>
+	<td>会员</td>
+	<td>兑换积分<br>商品名称</td>
+	<td>兑换时间</td>
+	<td>姓名/手机<br>
+	邮寄地址</td>
+	<td>状态</td>
+	<td>操作</td>
+</tr>
+<!--{if $list_7ree}-->
+	<!--{loop $list_7ree $list_value}-->
+<tr>
+	<td>{$list_value['user_7ree']}</td>
+	<td>{$list_value['cost_7ree']}{$exttitle_7ree}<br>{$list_value['name_7ree']}</td>
+	<td>{$list_value['time_7ree']}</td>
+	<td style="width:300px;">{$list_value['address_7ree']['realname']}/{$list_value['address_7ree']['mobile']}<br>
+	<span class="tdaddress_7ree" title="{$list_value['address_7ree']['address']}">{$list_value['address_7ree']['address']}</span></td>
+	<td>
+		<span style='color:gray'>
+		<!--{if $list_value['status_7ree']==1}-->已申请
+		<!--{elseif $list_value['status_7ree']==2}-->已退货
+		<!--{elseif $list_value['status_7ree']==3}-->已驳回
+		<!--{else}-->等待处理
+		<!--{/if}-->
+		</span>
+	</td>
+	<td>
+		<!--{if $list_value['status_7ree']==1}-->
+		[<a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=11&do_7ree=1&id_7ree={$list_value['id_7ree']}" onclick="if(confirm('通过退货申请吗？')==false)return false;" style="color:green;">通过</a>]
+		[<a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=11&do_7ree=2&id_7ree={$list_value['id_7ree']}" onclick="if(confirm('驳回退货申请吗？')==false)return false;" style="color:red;">驳回</a>]
+		<!--{else}-->-
+		<!--{/if}-->
+	</td>
+
+</tr>
+<!--{/loop}-->
+<!--{else}-->
+<tr>
+<td colspan="9"><div class="notice">目前暂无退货商品。</div></td>
+</tr>
+<!--{/if}-->
+</table>
+	
+<div>
+{$multipage}
+</div>

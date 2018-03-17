@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+	<item id="Time"><![CDATA[2016-07-15 11:00]]></item>
+	<item id="From"><![CDATA[海曼工作室 (http://www.hymanwu.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【海曼】帖子主题分类彩色美化]]></item>
+			<item id="identifier"><![CDATA[hwh_colortype]]></item>
+			<item id="description"><![CDATA[将帖子列表标题前的[主题分类]类别前缀变成彩色,更醒目,更容易识别度更高!]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[hwh_colortype/]]></item>
+			<item id="copyright"><![CDATA[H.W.H]]></item>
+			<item id="version"><![CDATA[1.2]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hwh_colortype]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="param"><![CDATA[a=setting]]></item>
+					<item id="menu"><![CDATA[版块配置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="param"><![CDATA[a=store]]></item>
+					<item id="menu"><![CDATA[<font color="#FF80FF">更</font><font color="#D556FF">多</font><font color="#AB2CFF">海</font><font color="#A002FF">曼</font><font color="#A000FF">应</font><font color="#A000FF">用</font>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2.5,X3,X3.1,X3.2,F1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[颜色提取]]></item>
+				<item id="description"><![CDATA[该设置只为了方便提取颜色,填不填写都没关系!]]></item>
+				<item id="variable"><![CDATA[pickcolor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[开启全局]]></item>
+				<item id="description"><![CDATA[开启则所有的版块的前缀颜色按全局配置的来生成,否则根据[版块配置]各版块配置来生成]]></item>
+				<item id="variable"><![CDATA[global]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[颜色配置]]></item>
+				<item id="description"><![CDATA[格式为:
+					#CC33FF,#F00,#FFCC33,#CC6666...
+					以此类推,按主题分类的顺序输出]]></item>
+				<item id="variable"><![CDATA[global_code]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[#FF0000,#FF6C00,#FFD800,#4EF40D,#31BCD5,#001AFF,#9900FF]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="license"><![CDATA[  [*][size=4][color=blue]本插件版权归属插件作者[color=red][b]H.W.H[/b][/color]所有。
+[*]未经插件作者书面许可的情况下,任何人不得以任何形式对本产品进行反编译、修改、转让、销售以及在任何地方发布/转发原版以及其衍生的修改版!
+[*][b]插件作者:[/b][url=http://wpa.qq.com/msgrd?v=3&uin=304916488&site=qq&menu=yes]H.W.H (点击此处可发送QQ消息)[/url]
+[*][b]版权信息:[/b][color=red][b]海曼工作室[/b][/color]
+[*][b]插件官网:[/b][url]http://www.hymanwu.com/[/url]
+[*][b]作品简介:[/b]将帖子列表标题前的[主题分类]类别前缀变成彩色,更醒目,更容易识别度更高!
+[*][b]发布地址:[/b][url]http://addon.discuz.com/?@19547.developer[/url]
+[*]感谢您使用我们的插件,希望您能够给我们提供更好的意见!]]>
+</item>
+<item id="installfile"><![CDATA[install.php]]></item>
+<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

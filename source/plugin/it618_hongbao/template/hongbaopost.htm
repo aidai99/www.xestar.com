@@ -1,0 +1,36 @@
+<!--{block it618_hongbao_block}-->
+<!--{if $wap!=1}--><script type="text/javascript" src="source/plugin/it618_hongbao/js/jquery.js"></script><!--{/if}-->
+
+<style>
+.win-form1 tr td{height:22px;line-height:23px; padding-bottom:4px; padding-top:4px; font-size:12px}
+.win-form1 .txt,.win-form1 .txtarea {padding:3px;outline:none;font-size:12px;line-height:14px;color:#333;border:1px solid #ddd;border-radius:3px;}
+.win-form1 .txt {height:14px;}
+.win-form1 .txt:hover, .win-form1 .txt:focus{border-color:#7DBDE2;box-shadow:0 0 5px #7DBDE2;}
+.win-form1 .btn:hover{border-color:#F60;box-shadow:0 0 5px #F60;}
+.win-form1 .btn{cursor:pointer; border:#CCC 0px solid; width:68px; height:30px; padding-left:10px; padding-right:10px; font-size:13px; background-color:#F30; color:#FFF;}
+.win-form1 .btn1{background-color:#ccc;color:#333}
+</style>
+<script>
+
+<!--{if $wap==1}-->
+var IT618_HONGBAO=jQuery;
+IT618_HONGBAO(document).ready(function() {
+	IT618_HONGBAO('.post_from ul.cl:first').append('<li id="it618_hongbao"></li>');
+	IT618_HONGBAO('.post_form_area').append('<p id="it618_hongbao"></p>');
+	IT618_HONGBAO('.post_form').append('<p id="it618_hongbao"></p>');
+	it618_hongbao_get();
+}); 
+<!--{else}-->
+IT618_HONGBAO(document).ready(function() {  
+	IT618_HONGBAO('#postbox .pbt.cl').append('<div id="it618_hongbao" class="z" style="width:100%"></div>');
+	it618_hongbao_get();
+}); 
+<!--{/if}-->
+
+function it618_hongbao_get(){
+	IT618_HONGBAO.get('{$_G['siteurl']}plugin.php?id=it618_hongbao:showhongbao&wap={$wap}&type=0', {ac:"it618"},function (data, textStatus){
+		IT618_HONGBAO('#it618_hongbao').html(data);
+	}, "html");
+}
+</script>
+<!--{/block}-->

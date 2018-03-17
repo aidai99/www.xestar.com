@@ -1,0 +1,60 @@
+{template common/header}
+<link rel="stylesheet" type="text/css" href="source/plugin/jingcai_7ree/template/image/css_7ree.css?{VERHASH}">
+<div class="fwinmask">
+	<h3 style="cursor: move;" class="flb">
+		<em>{$navtitle} - {$saicheng_7ree['scname_7ree']} <!--{if $optype_7ree==1}--><!--{elseif $optype_7ree==2}--><!--{/if}--></em>
+		<span style="float:right;margin-right:10px;">
+		<a href="javascript:void(0);" class="flbc" onclick="hideWindow('jccard_7ree_{$mid_7ree}')" title="Close">Close</a>
+		</span>
+		
+	</h3>
+		
+
+	<div class="jccard_7ree">
+	
+	<form name="zhichiform_7ree" method="post" action="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=4" onsubmit="return checkext_7ree();">
+	<input type="hidden" name="formhash" value="{FORMHASH}">
+	<input type="hidden" name="main_id_7ree" value="{$race_7ree['main_id_7ree']}">
+	<input type="hidden" name="win_7ree" value="{$win_7ree}">
+	<table>
+		<tr>
+			<td><h4>{$saicheng_7ree['scname_7ree']}</h4></td>
+		</tr>
+		<tr>
+			<td>{$teamname_7ree} @ {$teamodds_7ree}</td>
+		</tr>
+		<tr>
+			<td>{lang jingcai_7ree:htm_lang_jccardtip_7ree}</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="myodds_7ree" name="myodds_7ree" value="" placeholder="{lang jingcai_7ree:htm_lang_touzhue_7ree}{$race_7ree['reward_7ree']}{lang jingcai_7ree:htm_lang_zhi_7ree}{$jingcai_7ree_var['cost_7ree']}{$exttitle_7ree}"> </td>
+		</tr>
+		<tr>
+			<td>{lang jingcai_7ree:htm_lang_keyongyue_7ree}{$myext_7ree}{$exttitle_7ree} , {lang jingcai_7ree:htm_lang_keyingli_7ree}{$teamodds_7ree}{lang jingcai_7ree:htm_lang_bei_7ree}{$exttitle_7ree}</td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="submit_7ree" value="{lang jingcai_7ree:htm_lang_lukecanyujingcai_7ree}" class="submit_7ree"></td>
+		</tr>
+	</table>
+	
+	
+	
+		
+		
+	</div>
+
+
+
+</div>
+<script type="text/javascript">
+	function checkext_7ree(){
+			myodds_7ree = document.getElementById('myodds_7ree').value;
+			if(!myodds_7ree){
+				alert('请输入支持的积分数量');
+				return false;
+			}else{
+				return true;
+			}
+	}
+</script>
+{template common/footer}

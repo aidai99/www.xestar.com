@@ -1,0 +1,41 @@
+<script type="text/javascript">
+	//调用微信JS api 支付
+	function jsApiCall()
+	{
+		WeixinJSBridge.invoke(
+			'getBrandWCPayRequest',
+			{$jsApiParameters},
+			function(res){
+				WeixinJSBridge.log(res.err_msg);
+				//alert(res.err_code+res.err_desc+res.err_msg);
+				if(res.err_msg == "get_brand_wcpay_request:ok"){
+					window.location.href="$jsurl_7ree";
+					//window.location.href="http://wenledao.com/plugin.php?id=x7ree_recharge:x7ree_recharge&code_7ree=2&oid_7ree=$oid_7ree";
+				}else{
+					alert('支付失败');
+				}
+			}
+		);
+	}
+
+	function callpay()
+	{
+		if (typeof WeixinJSBridge == "undefined"){
+		    if( document.addEventListener ){
+		        document.addEventListener('WeixinJSBridgeReady', jsApiCall, false);
+		    }else if (document.attachEvent){
+		        document.attachEvent('WeixinJSBridgeReady', jsApiCall); 
+		        document.attachEvent('onWeixinJSBridgeReady', jsApiCall);
+		    }
+		}else{
+		    jsApiCall();
+		}
+	}
+</script>
+
+<h2 class="paynote1_7ree">充值积分{$ext_7ree}{$exttitle_7ree}</h2>
+<h2 class="paynote2_7ree">需支付{$cost_7ree}元</h2>
+
+	<div align="center">
+		<button class="paybtn_7ree" type="button" onclick="callpay()" >立即支付</button>
+	</div>

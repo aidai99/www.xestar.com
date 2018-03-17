@@ -1,0 +1,50 @@
+           <tr>
+				<td colspan="6">
+				{lang jingcai_7ree:htm_lang_gengxin_7ree}: <a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=15" class="pn pnc" style="display:inline-block; height:24px;width:80px;margin-bottom:5px;text-align:center;" >{lang jingcai_7ree:htm_lang_querengx_7ree}</a>{lang jingcai_7ree:htm_lang_gengxintip_7ree}
+				</td>
+		   </tr> 
+           <tr>
+				<td colspan="6">
+				        <form method="post" action="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=tj" name="jingcai_add_form_7ree" onsubmit="return submitcheck_7ree(this);">
+        <input type="hidden" name="formhash" value="{FORMHASH}">
+				{lang jingcai_7ree:htm_lang_kaishi_7ree}: <input type="text" class="px" name="btime_7ree"  onclick="showcalendar(event, this, true)" onfocus="showcalendar(event, this, true);if(this.value=='0000-00-00')this.value=''" value="{$_GET['btime_7ree']}" readonly style="width:200px;"/>
+				{lang jingcai_7ree:htm_lang_jieshu_7ree}: <input type="text" class="px" name="etime_7ree"  onclick="showcalendar(event, this, true)" onfocus="showcalendar(event, this, true);if(this.value=='0000-00-00')this.value=''" value="{$_GET['etime_7ree']}" readonly style="width:200px;"/>
+				<input type="submit" name="submit_7ree" class="pn pnc" style="height:24px;width:80px;margin-bottom:5px;" value="{lang jingcai_7ree:htm_lang_tongji_7ree}">
+				</form>
+				</td>
+		   </tr>
+           <tr>
+				<td colspan="6">
+				{lang jingcai_7ree:htm_lang_shijianqujian_7ree}: <strong>{$days_7ree}</strong>{lang jingcai_7ree:htm_lang_tian_7ree}
+				</td>
+		   </tr>
+           <tr>
+				<td colspan="6">
+				{lang jingcai_7ree:htm_lang_zongchangci_7ree}: <strong>{$changci_num_7ree}</strong>{lang jingcai_7ree:htm_lang_changci_7ree} 
+				</td>
+		   </tr>
+           <tr>
+				<td colspan="6">
+				{lang jingcai_7ree:htm_lang_zongrenci_7ree}: <strong>{$tongji_7ree['allnum_7ree']}</strong>{lang jingcai_7ree:htm_lang_renzhichi_7ree} 
+				</td>
+		   </tr>
+           <tr>
+				<td colspan="6">
+				{lang jingcai_7ree:htm_lang_zongjifen_7ree}: <strong>{$tongji_7ree['allodds_7ree']}</strong>{$exttitle_7ree} 
+				</td>
+		   </tr>
+           <tr>
+				<td colspan="6">
+				{lang jingcai_7ree:htm_lang_zongshouyi_7ree}: <strong>{$tongji_7ree['allreward_7ree']}</strong>{$exttitle_7ree} 
+				</td>
+		   </tr>
+           <tr>
+				<td colspan="6">
+				{lang jingcai_7ree:htm_lang_zongshouyilv_7ree}: <strong>{$shoulilv_7ree}</strong>%
+				</td>
+			</tr>
+			<tr>
+				<td colspan="6">
+				{lang jingcai_7ree:htm_lang_jingshouyilv_7ree}: <strong>{$jingshoulilv_7ree}</strong>%
+				</td>
+			</tr>

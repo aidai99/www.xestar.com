@@ -1,0 +1,38 @@
+<!--{template common/header}-->
+<style>
+.head { height:44px; }
+.head h3 { height:44px; background-color: #5C5C5C;  line-height: 44px; text-align: center;  width: 100%; top: 0px; z-index: 1; position:relative;}
+.head h3 span { display: block; padding-right: 30px; padding-left: 30px; color: #FFF; font-size: 16px; }
+.flexbox {display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex;}
+.flex { -webkit-box-flex: 1; -webkit-flex: 1; -ms-flex: 1; flex: 1; }
+.bbw1 { border-bottom: 1px solid #EBEBEB; }
+.bg-f { background-color: #FFF; }
+.p10 { padding: 10px; }
+.even li:nth-of-type(even) { background-color: #F4F4F4; }
+.user {color: #444 !important; font-size: 15px;}
+.avatar img{ width: 38px; height: 38px; vertical-align: middle; margin-right: 10px; }
+.desc, .time { color: #999; font-size: 13px; }
+.line { overflow: hidden; white-space: nowrap; text-overflow: ellipsis;  }
+.money { float: right; padding-left: 5px; color: #F00; }
+</style>
+<div class="head header_">
+  <h3 id="HeadTitle"><a class="z" onclick="history.go(-1);"><i data-id="&#x34;"></i></a><span class="line">{lang reward:RewardLog}</span></h3>
+</div>
+<div class="main">
+  <div style="height:15px;"></div>
+  <div class="creditlogbox btw1">
+    <ul class="even">
+      <!--{loop $list $value}-->
+      <li class="bg-f bbw1 p10 flexbox">
+        <dl><a class="avatar" href="home.php?mod=space&uid=$value[uid]&do=profile">{avatar($value[uid],small)}</a></dl>
+        <dl class="flex">
+          <p><a href="home.php?mod=space&uid=$value[uid]&do=profile" class="user">$value[username]</a><span class="y desc" style="font-size:13px;">{echo dgmdate($value['dateline'],'u');}</span> </p>
+          <p class="desc line"><em class="money">$extcredits[title] +$value['money']</em>$value['message']</p>
+        </dl>
+      </li>
+      <!--{/loop}-->
+    </ul>
+    <p class="tar p10">$multipage</p>
+  </div>
+</div>
+<!--{template common/footer}-->

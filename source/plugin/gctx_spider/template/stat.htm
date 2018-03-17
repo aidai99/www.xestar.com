@@ -1,0 +1,52 @@
+<form id="searchform" action="admin.php?{$actionurl}" autocomplete="off" method="post" name="searchform">
+    <input type="hidden" value="{FORMHASH}" name="formhash">
+    <table class="tb tb2 ">
+        <tr>
+            <th class="partition" colspan="15">{lang gctx_spider:operation}</th>
+        </tr>
+        <tr class="hover">
+            <td width="80">{lang gctx_spider:spidername}</td>
+            <td width="80">
+                <select name="spiderkey">
+                    <!--{loop $spidername_ary $v_key $v_value}-->
+                    <option value="{$v_key}" <!--{if $spiderkey == $v_key}-->selected<!--{/if}-->>{$v_value}</option>
+                    <!--{/loop}-->
+                </select>
+            </td>
+            <td>
+                <input type="submit" value="{lang gctx_spider:searchname}" class="btn">
+            </td>
+        </tr>
+    </table>
+</form>
+<form id="complistform" action="admin.php?{$nayuan_admin_url}{$pmod}" autocomplete="off" method="post" name="complistform">
+    <input type="hidden" value="{FORMHASH}" name="formhash">
+    <table class="tb tb2 nobdb">
+        <tr><th class="partition" colspan="15">{lang gctx_spider:spider_t_title}</th></tr>
+        <tr class="header">
+            <th>{lang gctx_spider:spidername}</th>
+            <th>{lang gctx_spider:spiderliketime}</th>
+            <th>{lang gctx_spider:spiderliketimenum}</th>
+        </tr>
+        <!--{if $pagelist}-->
+        <!--{loop $pagelist $key $v_item}-->
+        <tr class="hover">
+            <td>{$spidername_ary_t[$v_item[spidername]]}</td>
+            <td>{$v_item[liketime]}{lang gctx_spider:spiderliketimeunit}</td>
+            <td>{$v_item[_count]}</td>
+        </tr>
+        <!--{/loop}-->
+        <!--{else}-->
+        <tr class="hover">
+            <td colspan="15">{lang gctx_spider:empty}</td>
+        </tr>
+        <!--{/if}-->
+    </table>
+</form>
+<script type="text/javascript">
+    function truncate(){
+        if(!confirm("{lang gctx_spider:truncatemsg}")){
+            return false;
+        }
+    }
+</script>

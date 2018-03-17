@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3]]></item>
+	<item id="Time"><![CDATA[2018-01-07 22:53]]></item>
+	<item id="From"><![CDATA[1314學習網 (http://www.1314study.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[[1314]SEO門戶欄目偽靜態]]></item>
+			<item id="identifier"><![CDATA[addon_seo_portalrewrite]]></item>
+			<item id="description"><![CDATA[使用問題請到1314學習網反饋︰http://www.1314study.com]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[addon_seo_portalrewrite/]]></item>
+			<item id="copyright"><![CDATA[1314學習網（www.discuz.1314study.com）]]></item>
+			<item id="version"><![CDATA[1.0.4]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[config]]></item>
+					<item id="menu"><![CDATA[插件設置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[rewrite]]></item>
+					<item id="menu"><![CDATA[偽靜態規則]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[feedback]]></item>
+					<item id="menu"><![CDATA[<b>問題反饋</b>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[7]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[addon]]></item>
+					<item id="menu"><![CDATA[<b style=color:red>獲取更多插件</b>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[9]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5,X2,X2.5,X3,X3.1,X3.2,X3.3,X3.4,X3.5,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[Discuz版本]]></item>
+				<item id="description"><![CDATA[正常情況下不用設置，除非你改了系統版本]]></item>
+				<item id="variable"><![CDATA[dz_version]]></item>
+				<item id="type"><![CDATA[select_1314]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 自動判斷
+2 = X3.2及以下版本
+3 = X3.3、F1.0、L1.0等支持PHP7的版本]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[開啟偽靜態]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[study_radio]]></item>
+				<item id="type"><![CDATA[radio_1314]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[欄目文章列表頁【首頁】]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[portal_category]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[category-{catid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[欄目文章列表頁【第二頁開始】]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[portal_category2]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[category-{catid}-{page}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[設置了目錄名稱的欄目【第二頁開始】]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[portal_category_folder]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[{page}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="rewrite_message"><![CDATA[<br>
+<h1>Apache Web Server(獨立主機用戶)</h1>
+<pre class="colorbox">
+&lt;IfModule mod_rewrite.c&gt;
+	RewriteEngine On
+{apache1}&lt;/IfModule&gt;
+</pre>
+
+<h1>Apache Web Server(虛擬主機用戶)</h1>
+<pre class="colorbox">
+# 將 RewriteEngine 模式打開
+RewriteEngine On
+
+# RewriteBase 後邊為論壇目錄，插件自動識別，如果識別錯誤請自行修改為你論壇的目錄
+# 如 www.xxx.com/bbs，對應的目錄就是/bbs，如果程序放在根目錄中，使用 RewriteBase /
+RewriteBase {siteroot}
+
+# Rewrite 系統規則請勿修改
+{apache2}
+</pre>
+
+<h1>IIS Web Server(獨立主機用戶)</h1>
+<pre class="colorbox">
+[ISAPI_Rewrite]
+
+# 3600 = 1 hour
+CacheClockRate 3600
+
+RepeatLimit 32
+
+# Protect httpd.ini and httpd.parse.errors files
+# from accessing through HTTP
+{iis}
+</pre>
+
+<h1>IIS7 Web Server(獨立主機用戶)</h1>
+<pre class="colorbox">
+&lt;rewrite&gt;
+	&lt;rules&gt;
+{iis7}	&lt;/rules&gt;
+&lt;/rewrite&gt;
+</pre>
+
+<h1>Zeus Web Server</h1>
+<pre class="colorbox">
+{zeus}
+</pre>
+
+<h1>Nginx Web Server</h1>
+<pre class="colorbox">
+{nginx}
+</pre>]]></item>
+				<item id="slang_1"><![CDATA[2018011611SS3SnQsV1c]]></item>
+				<item id="slang_2"><![CDATA[73969]]></item>
+				<item id="slang_3"><![CDATA[1515362401]]></item>
+				<item id="slang_4"><![CDATA[http://xestar.com/]]></item>
+				<item id="slang_5"><![CDATA[https://www.xestar.com/]]></item>
+				<item id="slang_6"><![CDATA[5DCADF3C-1458-2C42-6DBC-5DED736231F5]]></item>
+				<item id="slang_7"><![CDATA[9dcd2477ede3f14420341d431df44ba4]]></item>
+				<item id="slang_8"><![CDATA[2018011611SS3SnQsV1c739691515362401http://xestar.com/https://www.xestar.com/5DCADF3C-1458-2C42-6DBC-5DED736231F5]]></item>
+				<item id="rewrite_tip"><![CDATA[
+<li><font color=red>先查看你的偽靜態文件是否存在下邊的<font color=blue>藍色規則</font>，存在則把紅色規則粘貼于<font color=blue>藍色規則</font>之上，不存在則把紅色規則粘貼到文件末尾</li></font>]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+		<item id="enablefile"><![CDATA[enable.php]]></item>
+		<item id="disablefile"><![CDATA[disable.php]]></item>
+	</item>
+</root>

@@ -1,0 +1,24 @@
+<ul class="tb cl">
+<li <!--{if $code_7ree==3}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=3">商品管理</a></li>
+<li <!--{if $code_7ree==4 && !$id_7ree}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=4">新增商品</a></li>
+<!--{if $id_7ree}-->
+<li <!--{if $code_7ree==4 && $id_7ree}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=4&id_7ree=$id_7ree">编辑商品</a></li>
+<!--{/if}-->
+<li <!--{if $code_7ree==7}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=7">领取日志</a></li>
+<li <!--{if $code_7ree==9}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=9">退货管理</a></li>
+<!--{if $_G['adminid']==1}-->
+<li><a href="admin.php?action=plugins" target="_blank">后台参数设置</a></li>
+<!--{/if}-->
+</ul>
+
+
+
+<!--{if $code_7ree==3}-->
+	{subtemplate x7ree_extmall:x7ree_mang}
+<!--{elseif $code_7ree==4}-->
+	{subtemplate x7ree_extmall:x7ree_new}
+<!--{elseif $code_7ree==7}-->
+	{subtemplate x7ree_extmall:x7ree_log}
+<!--{elseif $code_7ree==9}-->
+	{subtemplate x7ree_extmall:x7ree_tuihuo}
+<!--{/if}-->

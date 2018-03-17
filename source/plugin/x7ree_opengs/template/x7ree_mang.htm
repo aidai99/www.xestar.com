@@ -1,0 +1,22 @@
+<!--{if $list_7ree}-->
+<table class="listtable_7ree">
+		<tr>
+			<th>ID</th>
+			<th>{lang x7ree_opengs:htm_lang_shijian_7ree}</th>
+			<th>{lang x7ree_opengs:htm_lang_mingcheng_7ree}</th>
+			<th>{lang x7ree_opengs:htm_lang_bianji_7ree}</th>
+			<th>{lang x7ree_opengs:htm_lang_shanchu_7ree}</th>
+		</tr>
+	<!--{loop $list_7ree $list_value}-->
+		<tr>
+			<td>{$list_value['id_7ree']}</td>
+			<td>{$list_value['time_7ree']}</td>
+			<td><a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=1&id_7ree={$list_value['id_7ree']}" target="_blank">{$list_value['name_7ree']}</a></td>
+			<td>[<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=5&id_7ree={$list_value['id_7ree']}">{lang x7ree_opengs:htm_lang_bianji_7ree}</a>]</td>
+			<td>[<a href="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=10&id_7ree={$list_value['id_7ree']}&formhash={FORMHASH}" onclick="if(confirm('{lang x7ree_opengs:htm_lang_querenshanchu_7ree}')==false)return false;">{lang x7ree_opengs:htm_lang_shanchu_7ree}</a>]</td>
+		</tr>
+	<!--{/loop}-->
+</table>
+<!--{else}-->
+<div class="noticetip_7ree">{lang x7ree_opengs:htm_lang_zhanwujngcai_7ree}</div>
+<!--{/if}-->

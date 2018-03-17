@@ -1,0 +1,70 @@
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="dt mtm">
+	<tr class="colplural" >
+	    <th colspan="8">
+	    <div class="y">{lang jingcai_7ree:htm_lang_a_mingzhong_7ree}:{$thisrank_7ree['a_mingzhong_7ree']}% <span class="pipe">|</span> <span style="color:blue;">{lang jingcai_7ree:htm_lang_mingzhongpaihang_7ree}:{$thisrank_7ree['a_mzlrank_7ree']}</span></div>
+	    <h3>{$loglist_7ree[0]['username_7ree']}{lang jingcai_7ree:htm_lang_dejilu_7ree}</h3>	    
+	    </th>
+	</tr>
+	<tr>		    
+		<td align="center" style="width:40px;">{lang jingcai_7ree:htm_lang_huiyuan_7ree}</td>
+		<td align="center">{lang jingcai_7ree:htm_lang_bisaimingcheng_7ree}<br>{lang jingcai_7ree:htm_lang_jingcaishijian_7ree}</td>		
+		<td align="center">{lang jingcai_7ree:htm_lang_zhichi_7ree}<br>{$exttitle_7ree}</td>		
+		<td align="center" style="width:50px;">{lang jingcai_7ree:htm_lang_wanfa_7ree}<br>{lang jingcai_7ree:htm_lang_tuijianjibie_7ree}</td>
+		<td align="center">{lang jingcai_7ree:htm_lang_jingcaiduiwu_7ree}</td>		
+	</tr>
+<!--{loop $loglist_7ree $newjingcailist_value}-->	
+	<tr>
+		<td align="center"><a href="home.php?mod=space&uid={$newjingcailist_value['uid_7ree']}" target="_blank">{$newjingcailist_value['username_7ree']}</a></td>
+		<td align="center"><a href="{$xiangqing_url_7ree}{$newjingcailist_value['main_id_7ree']}" target="_blank">{$newjingcailist_value['racename_7ree']}</a><br>{$newjingcailist_value['log_time_7ree']}</td>
+		<td align="center">{$newjingcailist_value['myodds_7ree']}</td>		
+		<td align="center">
+		<!--{if $needpay_7ree && !$newjingcailist_value['win_7ree'] && !$newjingcailist_value['viewpay_7ree']}-->
+		
+		<a  onclick="goto_7ree('{lang jingcai_7ree:htm_lang_chakantip1_7ree}{$newjingcailist_value[username_7ree]}{lang jingcai_7ree:htm_lang_chakantip2_7ree}<!--{if $newjingcailist_value[point_7ree]}-->{$jingcai_7ree_var[viewcost2_7ree]}<!--{else}-->{$jingcai_7ree_var[viewcost_7ree]}<!--{/if}-->{$viewexttitle_7ree}\n{lang jingcai_7ree:htm_lang_tuijianjibie_7ree}:<!--{if $newjingcailist_value[point_7ree]}-->{lang jingcai_7ree:htm_lang_zhongdian_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_putong_7ree}<!--{/if}-->', 'plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=12&uid_7ree=$newjingcailist_value['uid_7ree']&lid_7ree=$newjingcailist_value['log_id_7ree']&formhash={FORMHASH}')" href="javascript:;" class="opbtn_7ree">{lang jingcai_7ree:htm_lang_chakan_7ree}</a>
+
+		<!--{else}-->
+				<!--{if $newjingcailist_value['type_7ree']}-->
+					<!--{if $newjingcailist_value['mywin_7ree']=="a"}-->{lang jingcai_7ree:htm_lang_da_7ree} $newjingcailist_value['daxiao_7ree']
+			        <!--{elseif $newjingcailist_value['mywin_7ree']=="b"}-->{lang jingcai_7ree:htm_lang_xiao_7ree} $newjingcailist_value['daxiao_7ree']       
+			        <!--{/if}-->
+		        <!--{else}-->
+					<!--{if $newjingcailist_value['mywin_7ree']=="a"}-->{$newjingcailist_value['aname_7ree']}
+			        <!--{elseif $newjingcailist_value['mywin_7ree']=="b"}-->{$newjingcailist_value['bname_7ree']}
+			        <!--{elseif $newjingcailist_value['mywin_7ree']=="c"}-->{lang jingcai_7ree:htm_lang_pingju_7ree}
+			        <!--{elseif $newjingcailist_value['mywin_7ree']=="d"}-->{lang jingcai_7ree:htm_lang_liupan_7ree}        
+			        <!--{/if}-->
+		        <!--{/if}-->
+		        <br>
+        <!--{/if}-->
+        <!--{if $newjingcailist_value['point_7ree']}--><font color='red'>{lang jingcai_7ree:htm_lang_zhongdian_7ree}</font><!--{else}-->{lang jingcai_7ree:htm_lang_putong_7ree}<!--{/if}--> 
+        </td>
+        <td align="center">
+            <!--{if $newjingcailist_value['type_7ree']}-->
+		            <!--{if $newjingcailist_value[daxiaowin_7ree]=="a"}-->{lang jingcai_7ree:htm_lang_da_7ree} {$newjingcailist_value['daxiao_7ree']}
+		        	<!--{elseif $newjingcailist_value[daxiaowin_7ree]=="b"}-->{lang jingcai_7ree:htm_lang_xiao_7ree} {$newjingcailist_value['daxiao_7ree']}
+		        	<!--{else}-->{lang jingcai_7ree:htm_lang_weijiexiao_7ree}
+		        	<!--{/if}-->
+        	<!--{else}-->
+		            <!--{if $newjingcailist_value[win_7ree]=="a"}-->{$newjingcailist_value['aname_7ree']}
+		        	<!--{elseif $newjingcailist_value[win_7ree]=="b"}-->{$newjingcailist_value['bname_7ree']}
+		        	<!--{elseif $newjingcailist_value[win_7ree]=="c"}-->{lang jingcai_7ree:htm_lang_pingju_7ree}
+		        	<!--{elseif $newjingcailist_value[win_7ree]=="d"}-->{lang jingcai_7ree:htm_lang_liupan_7ree}
+		        	<!--{else}-->{lang jingcai_7ree:htm_lang_weijiexiao_7ree}
+		        	<!--{/if}-->        	
+         	<!--{/if}-->  
+      	
+       	</td>
+      
+	</tr>
+<!--{/if}-->
+</table>
+{$multipage}
+
+<script type="text/javascript">
+function goto_7ree(msg_7ree,url_7ree){
+	if(confirm(msg_7ree)){
+		window.location = url_7ree; 
+ 		return true;
+	}else return false;
+}
+</script>

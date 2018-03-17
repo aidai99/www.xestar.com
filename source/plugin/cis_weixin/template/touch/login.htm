@@ -1,0 +1,24 @@
+<!--{template common/header}-->
+$headerhtml['cis_weixin']
+<div class="userphoto">
+  <div class="info cl">
+  <a href="member.php?mod=logging&action=login&other=yes"><span>&#x2b;</span>$cislang[147]</a><img src="{avatar($uid, middle, true)}">
+  </div>
+  <p>$username,$cislang[148]</p>
+</div>
+
+<div class="loginbox">
+  <form action="" method="post">
+  <input type="hidden" name="postsubmit" value="true" />
+  <input type="hidden" name="formhash" value="{FORMHASH}" />
+  <input type="hidden" name="referer" value="{echo dreferer()}" />
+  {if $settings['logintype']=='3' || $logintype=='3'}
+  <div class="login_from">
+    <p><input type="text" name="pass" placeholder="$cislang[149]" class="finp" ></p>
+  </div>
+  {/if}
+  <div class="btn_login"><button value="true" name="submit" type="submit"><span>$cislang[150]</span></button></div>
+  </form>
+</div>
+$footerhtml['cis_weixin']
+<!--{template common/footer}-->

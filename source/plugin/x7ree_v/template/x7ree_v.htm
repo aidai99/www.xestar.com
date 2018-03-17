@@ -1,0 +1,52 @@
+{template common/header}
+<!--
+	(C)2006-2017 www.7ree.com
+	This is NOT a freeware, use is subject to license terms
+	Update: 2017/10/3 1:24
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+
+<link rel='stylesheet' id='common_7ree' type='text/css' href='source/plugin/x7ree_v/template/image/common_css_7ree.css?{VERHASH}'/>
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_v/template/image/css_7ree.css?{VERHASH}'/>
+
+<div id="pt" class="bm cl">
+	<div class="z">
+	<a href="./" class="nvhm">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="forum.php">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="plugin.php?id=x7ree_v:x7ree_v">{$vars_7ree['navtitle_7ree']}</a> <em>&rsaquo;</em>
+	<!--{if $id_7ree}-->{$v_7ree['name_7ree']}<!--{/if}-->
+	<!--{if !$id_7ree}-->
+	<!--{if $postgid_7ree}--><a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=2"><span class="sharebtrn_7ree">{lang x7ree_v:htm_lang_fenxiang_7ree}</span></a><!--{/if}-->
+	<!--{if $_G['adminid']==1}--><a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=4"><em>&rsaquo;</em><span class="sharebtrn_7ree">{lang x7ree_v:htm_lang_guanli_7ree}</span></a><!--{/if}-->
+	<!--{/if}-->
+	</div>
+	<div class="searchbar_7ree">
+	<form name="form_7ree" action="plugin.php?id=x7ree_v:x7ree_v" method="post">
+	<input type='submit' class='searchbtn_7ree' value=''>
+	<input type='text' name="searchkey_7ree" class="searchtext_7ree" placeholder="{lang x7ree_v:htm_lang_sousuotips_7ree}" value="{$searchkey_7ree}">
+	</form>
+	</div>
+</div>
+
+
+<div class="box_7ree">
+
+	<!--{if !$code_7ree}-->
+		{template x7ree_v:x7ree_home}
+	<!--{elseif $code_7ree==1}-->
+		{template x7ree_v:x7ree_page}
+	<!--{elseif $code_7ree==2}-->
+		{template x7ree_v:x7ree_post}
+	<!--{elseif $code_7ree==3}-->
+		{template x7ree_v:x7ree_my}
+	<!--{elseif $code_7ree==4}-->
+		{template x7ree_v:x7ree_option}
+	<!--{/if}-->
+
+
+</div>
+
+
+
+</div>
+
+{template common/footer}

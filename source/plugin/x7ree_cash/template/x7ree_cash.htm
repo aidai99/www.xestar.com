@@ -1,0 +1,78 @@
+{template common/header}
+<!--
+	(C)2006-2017 www.7ree.com
+	This is NOT a freeware, use is subject to license terms
+	Update: 2017/11/28 14:39
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_cash/template/image/css_7ree.css?{VERHASH}'/>
+<style>
+.dtable_7ree{
+	width:100%;
+}
+.dtable_7ree td{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px dashed #CDCDCD;
+	text-align:center;
+}
+</style>
+
+
+<div id="pt" class="bm cl">
+	<div class="z">
+	<a href="./" class="nvhm">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="forum.php">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="plugin.php?id=x7ree_cash:x7ree_cash">{$navtitle}</a> <em>&rsaquo;</em>
+	</div>
+</div>
+
+
+<div id="ct" class="ct2_a wp cl">
+
+	<div class="mn">
+
+	<div class="bm bw0">
+	<!--正文-->
+	<div class="bm_c cl">
+
+	<!--{if !$code_7ree}-->
+		{subtemplate x7ree_cash:x7ree_apply}
+	<!--{elseif $code_7ree==2}-->
+		{subtemplate x7ree_cash:x7ree_my}
+	<!--{elseif $code_7ree==3}-->
+		{subtemplate x7ree_cash:x7ree_option}
+	<!--{/if}-->
+
+	<div>{$multipage}</div>
+
+	</div>
+
+
+	</div>
+
+</div>
+
+
+<!-- 左侧边栏 -->
+
+<div class="appl">
+
+	<div class="tbn">
+	<h2 class="mt bbda">{$navtitle}</h2>
+	<ul>
+	  <li <!--{if !$code_7ree}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_cash:x7ree_cash">提现申请</a></li>
+	  <li <!--{if $code_7ree==2}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_cash:x7ree_cash&code_7ree=2">进度查询</a></li>
+	  <!--{if $_G['adminid']==1 || in_array($_G['groupid'],$caiwugids_7ree)}-->
+	  <li <!--{if $code_7ree==3}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_cash:x7ree_cash&code_7ree=3">提现申请管理</a></li>
+	  <!--{/if}-->
+
+	 </ul>
+
+	 
+
+
+	</div>
+
+</div>
+
+{template common/footer}

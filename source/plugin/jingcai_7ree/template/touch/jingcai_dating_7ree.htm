@@ -1,0 +1,203 @@
+<script type="text/javascript">  
+  
+    var addTimer = function () {  
+        var list = [],  
+            interval;  
+  
+        return function (id, time) {  
+            if (!interval)  
+                interval = setInterval(go, 1000);  
+            list.push({ ele: document.getElementById(id), time: time });  
+        }  
+  
+        function go() {  
+            for (var i = 0; i < list.length; i++) {  
+                list[i].ele.innerHTML = getTimerString(list[i].time ? list[i].time -= 1 : 0);  
+                if (!list[i].time)  
+                    list.splice(i--, 1);  
+            }  
+        }  
+  
+        function getTimerString(time) {  
+            var not0 = !!time,  
+                d = Math.floor(time / 86400),  
+                h = Math.floor((time %= 86400) / 3600),  
+                m = Math.floor((time %= 3600) / 60),  
+                s = time % 60;  
+            //if(not0){
+            if(time>=0){
+                if(d>0){
+				return d + "天" + h + "小时" + m + "分" + s + "秒";
+                }else{
+				if(h>0){
+						return  h + "小时" + m + "分" + s + "秒";
+				}else{
+						return  m + "分" + s + "秒";
+				}
+                }
+            }else{
+            	return "已结束";
+            }
+        }  
+    } ();  
+
+	function jclistonoff_7ree(id_7ree){
+		jcliststyle_7ree = document.getElementById('rclist_'+id_7ree);
+		if(jcliststyle_7ree.style.display=='none'){
+			jcliststyle_7ree.style.display='';
+		}else{
+			jcliststyle_7ree.style.display='none';
+		}
+	}
+
+
+</script>
+
+
+        <tr ><th colspan="6">
+        <p class="y" style="padding-right:10px;">
+	        <!--{loop $fenlei_array2 $key_7ree $value_7ree}-->
+	        <span id="fenlei_7ree_{$key_7ree}" onmouseover="showMenu({'ctrlid':this.id})"><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&finish_7ree={$_GET['finish_7ree']}&fenlei1_7ree=<!--{eval echo urlencode($value_7ree[0]);}#{saishi_7ree}"  <!--{if $_GET['fenlei1_7ree']==$value_7ree[0]}-->style="font-weight:700;"<!--{/if}-->>{$value_7ree[0]}</a></span>
+	        <!--{if $key_7ree<COUNT($fenlei_array2)-1 }-->
+	        <span class="pipe">|</span>
+	        <!--{/if}-->
+	        <!--{/loop}--> 
+
+        </p> 
+        <span id="saishi_7ree" class="z" style="padding-left:10px;"><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&finish_7ree={$_GET['finish_7ree']}#{saishi_7ree}">{lang jingcai_7ree:htm_lang_quanbusaishi_7ree}</a></span>
+        
+ 	        <!--{loop $fenlei_array2 $key_7ree $value_7ree}-->
+	        <div id="fenlei_7ree_{$key_7ree}_menu" class="p_pop" style="display:none">
+	        <!--{loop $value_7ree $key_7ree2 $value_7ree2}-->
+	        <!--{if $key_7ree2 >0}--><a href="plugin.php?id=jingcai_7ree:jingcai_7ree&finish_7ree={$_GET['finish_7ree']}&fenlei1_7ree=<!--{eval echo urlencode($value_7ree[0]);}-->&fenlei2_7ree=<!--{eval echo urlencode($value_7ree2);}-->#{saishi_7ree}"<!--{if $_GET['fenlei1_7ree']==$value_7ree[0] && $_GET['fenlei2_7ree']==$value_7ree2}-->style="font-weight:700;"<!--{/if}-->>$value_7ree2</a><!--{/if}-->
+	        <!--{/loop}-->
+	        </div>
+	        <!--{/loop}--> 
+        </th></tr>
+        
+        
+        
+      <tr ><td colspan="6">
+      	<!--{loop $racelist_7ree $jingcailist_value}-->
+      	<table width="100%" class="njclist_7ree">
+	      	<tr onclick="jclistonoff_7ree($jingcailist_value['scid_7ree']);" >
+	      		<td colspan="2" class="tdleft_7ree"><!--<img src="./source/plugin/jingcai_7ree/teamlogo_7ree/dota.png">--> {$jingcailist_value['scname_7ree']}</td>
+	      		<td></td>
+	      		<td colspan="2" class="tdright_7ree">{$jingcailist_value['time_7ree']}</td>
+	      	</tr>
+	      	<tr onclick="jclistonoff_7ree($jingcailist_value['scid_7ree']);" >
+	      		<td ><img src="$jingcailist_value['alogo_7ree']" class="logo_7ree"></td>
+	      		<td class="title_7ree t1_7ree"><h4>{$jingcailist_value['arate_7ree']}</h4></td>
+				<td><!--{if $_GET['finish_7ree']}--><span style="color:gray;">已结束</span><!--{else}--><span style="color:green;">竞猜中</span><!--{/if}--></td>
+	      		<td class="title_7ree t2_7ree"><h4>{$jingcailist_value['brate_7ree']}</h4></td>
+	      		<td><img src="$jingcailist_value['blogo_7ree']" class="logo_7ree"></td>
+	      	</tr>
+	      	<tr>
+	      	<td colspan=6 id="rclist_$jingcailist_value['scid_7ree']" style="display:none;">
+	           	<table style="width100%; margin-bottom: 3px !important;">
+	      	<!--{loop $jingcailist_value['game_7ree'] $jcarray_value}-->
+	      	<tr class="sstable_7ree">
+	      		<td colspan="2" >
+	      		<a href="javascript:void(0);" onclick="showcard_7ree('{$jcarray_value[main_id_7ree]}','a','{$jcarray_value[aodds_7ree]}')" >{$jcarray_value['aname_7ree']}{$jcarray_value['aodds_7ree']}</a>
+	      		</td>
+	      		<td>{$jcarray_value['racename_7ree']}</td>
+	      		<td colspan="2">
+	      		<a href="javascript:void(0);" onclick="showcard_7ree('{$jcarray_value[main_id_7ree]}','b','{$jcarray_value[bodds_7ree]}')">{$jcarray_value['bname_7ree']}{$jcarray_value['bodds_7ree']}</a>
+	      		</td>
+
+	      	</tr>
+	      	<tr>
+	      		<td colspan="5"><span id="clock_7ree_{$jcarray_value['main_id_7ree']}">{$jcarray_value['time_7ree']}</span></td>
+	      	</tr>
+	      	
+	      	</div>
+	      	
+	      	<script type="text/javascript">
+	      	addTimer("clock_7ree_"+{$jcarray_value['main_id_7ree']}, $jcarray_value['clock_7ree']);
+	      	</script>
+	      	<!--{/loop}-->
+	      	</table>
+	      	</td>
+	      	</tr>
+	      	
+      	</table>
+      	<!--{/loop}-->
+      </td></tr>
+      
+<div id="jccardbox_7ree">
+ <!--{loop $racelist_7ree $jingcailist_value}-->
+ 	      	<!--{loop $jingcailist_value['game_7ree'] $jcarray_value}-->
+			<div id="jccard_7ree_{$jcarray_value[main_id_7ree]}" class="zhichicard_7ree" style="display:none;">
+					<h3 style="cursor: move; text-align:left;margin-left:10px;" class="flb">
+						<span style="float:right;margin-right:10px;">
+						{$jcarray_value[racename_7ree]}
+						</span>
+						<span style="float:left;margin-right:10px;">
+						<a href="javascript:void(0);" class="flbc" onclick="hideWindow_7ree()" title="Close">[X]</a>
+						</span>
+					</h3>
+					<form name="zhichiform_7ree" method="post" action="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=4" onsubmit="return checkext_7ree({$jcarray_value['main_id_7ree']});">
+					<input type="hidden" name="formhash" value="{FORMHASH}">
+					<input type="hidden" name="main_id_7ree" value="{$jcarray_value['main_id_7ree']}">
+					<input type="hidden" id="win_7ree_{$jcarray_value['main_id_7ree']}" name="win_7ree" value="">
+					<h3><span id="aname_7ree_{$jcarray_value['main_id_7ree']}" style="display:none;">{$jcarray_value['aname_7ree']}@{$jcarray_value['aodds_7ree']}</span><span id="bname_7ree_{$jcarray_value['main_id_7ree']}" style="display:none;">{$jcarray_value['bname_7ree']}@{$jcarray_value['bodds_7ree']} </span></h3>
+					<p>{lang jingcai_7ree:htm_lang_jccardtip_7ree}</p>
+					<p><input type="text" id="myodds_7ree_{$jcarray_value['main_id_7ree']}" name="myodds_7ree" value="" placeholder="{lang jingcai_7ree:htm_lang_touzhue_7ree}{$jcarray_value['reward_7ree']}{lang jingcai_7ree:htm_lang_zhi_7ree}{$jingcai_7ree_var['cost_7ree']}{$exttitle_7ree}" class="submit_touch_7ree"></p>
+					<p>{lang jingcai_7ree:htm_lang_keyongyue_7ree}{$myext_7ree}{$exttitle_7ree} , {lang jingcai_7ree:htm_lang_keyingli_7ree}<span id='teamodds_7ree_{$jcarray_value['main_id_7ree']}'></span>{lang jingcai_7ree:htm_lang_bei_7ree}{$exttitle_7ree}</p>
+					<p><input type="submit" name="submit_7ree" value="{lang jingcai_7ree:htm_lang_lukecanyujingcai_7ree}" class="submit_touch_7ree"></p>
+					</form>
+			</div>
+ 	      	<!--{/loop}-->
+<!--{/loop}-->
+</div>
+<script type="text/javascript">
+
+	function showcard_7ree(id_7ree,zhichi_7ree,teamodds_7ree){
+		if(zhichi_7ree=='a'){
+		document.getElementById('aname_7ree_'+id_7ree).style.display="";
+		document.getElementById('bname_7ree_'+id_7ree).style.display="none";
+		}else if(zhichi_7ree=='b'){
+		document.getElementById('aname_7ree_'+id_7ree).style.display="none";
+		document.getElementById('bname_7ree_'+id_7ree).style.display="";
+		}
+		document.getElementById('win_7ree_'+id_7ree).value=zhichi_7ree;
+		jccardbox_7ree=document.getElementById('jccardbox_7ree');
+		document.getElementById('teamodds_7ree_'+id_7ree).innerText=teamodds_7ree;
+		divset = jccardbox_7ree.getElementsByTagName('div');
+		 for (var i = 0; i<divset.length;i++) {
+			divset[i].style.display="none";
+		 };
+		document.getElementById('jccard_7ree_'+id_7ree).style.display="block";
+	}
+
+
+	function hideWindow_7ree(){
+		divset = jccardbox_7ree.getElementsByTagName('div');
+		 for (var i = 0; i<divset.length;i++) {
+			divset[i].style.display="none";
+		 };
+	}
+
+	function checkext_7ree(id_7ree){
+			myodds_7ree = document.getElementById('myodds_7ree_'+id_7ree).value;
+			if(!myodds_7ree){
+				alert('请输入支持的积分数量');
+				return false;
+			}else{
+				return true;
+			}
+	}
+</script> 
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--{if $multipage}-->
+        <tr>
+        <td colspan="6">$multipage</td>
+        </tr>
+        <!--{/if}-->

@@ -1,0 +1,111 @@
+<!--{if $multipage}-->
+<script language="javascript" id="script_autopege" reload="1">
+
+var loadstatus = true;
+
+function autopage(obj,type){
+
+  var autopbn = $('.body_main #autopbn');
+  var nextpageurl = autopbn.attr('rel');
+  var tab = autopbn.attr('tab');
+  var history = autopbn.attr('history');
+  var curpage = parseInt(autopbn.attr('curpage'));
+  var totalpage = parseInt(autopbn.attr('totalpage'));
+	var autopagenum = 100;
+	var maxpage = (curpage + autopagenum) > totalpage ? totalpage : (curpage + autopagenum);
+	
+	if(type=='click'){
+		getnextpagecontent();
+	}else{
+		if(autopagenum > 0) {
+			var curtop = $('#'+obj.id).scrollTop();
+			
+			if(curtop + $('#'+obj.id).height() + 300 >= $('#'+obj.id)[0].scrollHeight && loadstatus) {
+				loadstatus = false;
+				autopbn.text('$corelang[1]');
+				
+				getnextpagecontent();
+			}
+		}		
+	}
+	
+	function getnextpagecontent(){
+    
+		if(curpage + 1 > totalpage) {
+			$('#'+obj.id).unbind('scroll');
+			autopbn.css('display', 'none');
+			return;
+		}
+		curpage++;
+		var url = nextpageurl + '&t=' + parseInt((+new Date()/1000)/(Math.random()*1000));
+		$.ajax({
+			type : 'GET',
+			url : url,
+			dataType : 'html'
+		})
+		
+		.success(function(s) {
+			
+			s = s.replace(/\n|\r/g, '');
+			
+			var tableobj = $('.body_main #listtableid');
+			var nexts = s.match(/\<tbody id="autolist_(\d+)"\>(.+?)\<\/tbody>/g);
+			
+			for(i in nexts) {
+				
+				if(i == 'index' || i == 'lastIndex') {
+					continue;
+				}
+				var insertid = nexts[i].match(/<tbody id="autolist_(\d+)"\>/);
+				if(!$('#autolist_' + insertid[1]).length) {
+					tableobj.append(nexts[i]);
+				}
+	                }
+	                nextpageurl = nextpageurl.replace(/([?&]page=)\d+/, '$1' + (curpage + 1));
+			autopbn.attr('rel',nextpageurl);
+			autopbn.attr('curpage',curpage);
+			
+
+			if(curpage + 1 > totalpage) {
+				autopbn.css('display', 'none');
+			} else {
+				autopbn.text('$corelang[1]');
+				if($('#'+obj.id+' #autolist_ad').length){
+					getad();
+				}
+			}
+			loadstatus = true;
+			if(history=='1'){
+				var state = {
+					url: url,
+					tabid: tab,
+					html: s
+				};
+				history.replaceState(state,null,url);				
+			}
+
+		})
+		.error(function() {
+			window.location.href = url;
+		});
+	}
+}
+
+function getad(){
+	$.ajax({
+		type : 'GET',
+		url : 'plugin.php?id=cis_mobilead&mod={$_G[basescript]}_{CURMODULE}',
+		dataType : 'xml'
+	})
+	.success(function(s) {
+		 $('.body_main #listtableid').append(s.lastChild.firstChild.nodeValue);
+	})
+	.error(function() {
+		return false;
+	});
+}
+<!--{if !$_GET['getpage']}-->
+evalscripts.push('script_autopege');
+<!--{/if}-->
+</script>
+<!--{/if}-->

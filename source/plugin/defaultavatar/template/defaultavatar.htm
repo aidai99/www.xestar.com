@@ -1,0 +1,35 @@
+<!--{block return}-->
+<style>
+.defaultavatar img{border:1px solid #ccc;width:48px;}
+</style>
+<script>
+function avatarSelect(sId) {
+    var oImg = document.getElementsByTagName('img');
+    for(var i=0;i<oImg.length;i++){
+		if(oImg[i].id==sId){
+			oImg[i].previousSibling.previousSibling.checked = true;
+			oImg[i].style.border = '2px solid #FF0000';
+		}else{
+			if(oImg[i].id.substr(0,2)=='b_') oImg[i].style.border = '1px solid #ccc';
+		}
+    }
+}
+</script>
+<div class="rfm">
+<table>
+<tbody><tr>
+<th><span class="rq">*</span><label for="avatar">{lang defaultavatar:selecttip}</label><br><a href="#" onclick="ajaxget('plugin.php?id=defaultavatar:ajax','defaultavatar');return false">{lang defaultavatar:newselect}</a></th>
+<td>
+<div class="defaultavatar" id="defaultavatar">
+<!--{loop $avatars $k $avatar}-->
+	<!--{if $avatar['status']}-->
+	<input type="radio" value= "{$avatar['name']}" id= "a_{$k}" name="avatar" style="display:none"> <img id="b_{$k}" src="source/plugin/defaultavatar/avatar/{$avatar['name']}" onclick="avatarSelect(this.id)"> 
+	<!--{/if}-->
+<!--{/loop}-->
+</div>
+</td>
+<td class="tipcol"></td>
+</tr>
+</tbody></table>
+</div>
+<!--{/block}-->

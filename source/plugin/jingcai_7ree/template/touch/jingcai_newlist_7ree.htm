@@ -1,0 +1,38 @@
+
+<table width="100%" border="0" cellpadding="5" cellspacing="0" class="dt mtm">
+	<tr class="colplural" >
+	    <th colspan="6"><h3>{lang jingcai_7ree:htm_lang_zuixinjingcai_7ree}</h3></th>
+	</tr>
+	<tr>		    
+		<td align="center">{lang jingcai_7ree:htm_lang_huiyuan_7ree}</td>
+		<td align="center">{lang jingcai_7ree:htm_lang_jingcaiduiwu_7ree}</td>
+		<td style="text-align:center;width:60px;">{lang jingcai_7ree:htm_lang_zhichi_7ree}{$exttitle_7ree}<br>{lang jingcai_7ree:htm_lang_jiangli_7ree}{$exttitle_7ree}</td>
+		<td align="center">{lang jingcai_7ree:htm_lang_jingcaishijian_7ree}</td>
+	</tr>
+<!--{loop $newjingcailist_7ree $newjingcailist_value}-->	
+	<tr>
+		<td align="center"><a href="home.php?mod=space&uid={$newjingcailist_value['uid_7ree']}" target="_blank">{$newjingcailist_value['username_7ree']}</a></td>
+		<td align="center">
+		<!--{if $jingcai_7ree_var['pagedetail_7ree'] || $race_7ree['win_7ree']}-->
+				<!--{if $newjingcailist_value['type_7ree']}-->
+					<!--{if $newjingcailist_value['mywin_7ree']=="a"}-->{lang jingcai_7ree:htm_lang_da_7ree} $race_7ree['daxiao_7ree']
+			        <!--{elseif $newjingcailist_value['mywin_7ree']=="b"}-->{lang jingcai_7ree:htm_lang_xiao_7ree} $race_7ree['daxiao_7ree']       
+			        <!--{/if}-->
+		        <!--{else}-->
+					<!--{if $newjingcailist_value['mywin_7ree']=="a"}-->{$race_7ree['aname_7ree']}
+			        <!--{elseif $newjingcailist_value['mywin_7ree']=="b"}-->{$race_7ree['bname_7ree']}
+			        <!--{elseif $newjingcailist_value['mywin_7ree']=="c"}-->{lang jingcai_7ree:htm_lang_pingju_7ree}
+			        <!--{elseif $newjingcailist_value['mywin_7ree']=="d"}-->{lang jingcai_7ree:htm_lang_liupan_7ree}        
+			        <!--{/if}-->
+		        <!--{/if}-->
+        <!--{else}-->
+        <span title="{lang jingcai_7ree:htm_lang_yincangtip_7ree}" style="color:gray;">{lang jingcai_7ree:htm_lang_yincang_7ree}</span>
+        <!--{/if}-->
+		</td>
+		<td align="center">{$newjingcailist_value['myodds_7ree']}{$exttitle_7ree}<br>
+		<!--{if $newjingcailist_value['mywin_7ree']=="d"}-->{lang jingcai_7ree:htm_lang_yifanhuan_7ree}<!--{else}-->{$newjingcailist_value['log_reward_7ree']}{$exttitle_7ree}<!--{/if}--></td>
+		<td align="center">{$newjingcailist_value['log_time_7ree']}</td>
+	</tr>
+<!--{/if}-->
+</table>
+{$multipage}

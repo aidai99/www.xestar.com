@@ -1,0 +1,33 @@
+.footnav_7ree{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #CFCFCF;
+    background: #EDEDED;
+    text-align: center;
+}
+
+.footnav_7ree li{
+    display: inline-block;
+    padding: 3px;
+    height: 60px;
+    text-align: center;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.footnav_7ree img{
+	width:32px;
+	height:32px;
+}
+
+.footnav_7ree span{
+	width:32px;
+	height:32px;
+	display: inline-block;
+}
+
+.footer{
+	margin-bottom:80px;
+}

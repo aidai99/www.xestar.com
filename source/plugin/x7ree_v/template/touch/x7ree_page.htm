@@ -1,0 +1,57 @@
+<div class="playbox_m_7ree">
+<!--{if $v_7ree['cost_7ree']}-->
+	<!--{if $_G['uid']}-->
+		<!--{if $needpay_7ree}-->
+		<a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=8&id_7ree={$v_7ree['id_7ree']}">{lang x7ree_v:htm_lang_goumaitip1_7ree}{$v_7ree['cost_7ree']}{$exttitle_7ree}{lang x7ree_v:htm_lang_goumaitip2_7ree}</a>
+		<!--{if $vars_7ree['vipurl_7ree']}--><br><a href="{$vars_7ree['vipurl_7ree']}">{lang x7ree_v:htm_lang_goumaitip2vip_7ree}</a><!--{/if}-->
+		<!--{else}-->
+		{$showplay_7ree}
+		<!--{/if}-->
+	<!--{else}-->
+		<a href="member.php?mod=logging&action=login">{lang x7ree_v:htm_lang_goumaitip3_7ree}</a>
+	<!--{/if}-->
+<!--{else}-->
+{$showplay_7ree}
+<!--{/if}-->
+</div>
+
+<div class="topinfo_m_7ree">
+<h3>{$v_7ree['name_7ree']}</h3>
+<table style="width:100%">
+<tr>
+	<td><a href="home.php?mod=space&uid={$v_7ree['uid_7ree']}" target="_blank">{$v_7ree['chatavt_7ree']}{$v_7ree['user_7ree']}</a></td>
+	<td align='right'>
+	<span>{$v_7ree['time_7ree']}</span> <span class="pipe">|</span> <span>{lang x7ree_v:htm_lang_fenlei_7ree}{$v_7ree['fenlei_7ree']}</span>
+	<!--{if $v_7ree['cost_7ree']}--><br><span>{lang x7ree_v:htm_lang_goumaijifen_7ree}: {$v_7ree['cost_7ree']}{$exttitle_7ree}({lang x7ree_v:htm_lang_vipfree_7ree})</span> <span class="pipe">|</span><!--{/if}-->
+	<span>{lang x7ree_v:htm_lang_bofangcishu_7ree}{$v_7ree['view_7ree']}</span>
+	</td>
+</tr>
+</table>
+<p>{$v_7ree['detail_7ree']}</p>
+
+{template x7ree_v:x7ree_discuss}
+
+</div>
+
+
+<div class="morev_m_7ree">
+<h3>{lang x7ree_v:htm_lang_xiangguantuijian_7ree}</h3>
+	<!--{loop $list_7ree $list_value}-->
+	<div class="morevbox_m_7ree">
+	<a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=1&id_7ree={$list_value['id_7ree']}">
+	<img src="{$folder_7ree}/{$list_value['pic_7ree']}" class="sideimg_7ree">
+	</a>
+	<p>
+	<a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=1&id_7ree={$list_value['id_7ree']}">{$list_value['name_7ree']}</a>
+	</p>
+	</div>
+	<div class="clear_7ree"></div>
+	<!--{/loop}-->
+
+</div>
+
+
+<div class="clear_7ree"></div>
+
+
+{$vars_7ree['mobpagead_7ree']}

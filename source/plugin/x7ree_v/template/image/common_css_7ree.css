@@ -1,0 +1,79 @@
+/* 柒瑞PC前台管理通用CSS FILE */
+
+
+/* 表格 */
+.inputtable_7ree{
+	width:90%;
+	margin:10px auto;
+}
+
+.inputtable_7ree td{
+	height:40px;
+	line-height:40px;
+	border-bottom:1px dashed #CFCFCF;
+}
+
+.tdtitle_7ree{
+	width:100px;
+}
+
+.texttd_7ree{
+	height:auto;
+}
+
+.newpic_7ree{
+	max-width:400px;
+	max-height:300px;
+}
+
+/* 输入框 */
+
+.inputtd_7ree input, .inputtd_7ree select{
+	width:60%;
+	height:30px;
+	line-height:30px;
+	border:1px solid #CFCFCF;
+	background-color:#444444;
+}
+
+.texttd_7ree textarea{
+	width:60%;
+	height:80px;
+	line-height:20px;
+	border:1px solid #CFCFCF;
+	margin:5px 0 5px 0;
+	background-color:#666666;
+}
+
+/* 操作按钮 */
+
+.submitbtn_7ree{
+	width:61% !important;
+	color:#FFFFFF;
+	border: 1px solid #CFCFCF;
+	background-color:#333333;
+	border-radius:5px;
+	letter-spacing:10px;
+}
+
+/* 管理列表页*/
+
+.listtable_7ree{
+	width:96%;
+	margin:10px auto;
+}
+
+.listtable_7ree td{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px dashed #CFCFCF;
+	text-align:center;
+}
+
+.listtable_7ree th{
+	height:30px;
+	line-height:30px;
+	border-bottom:1px solid #CFCFCF;
+	text-align:center;
+	background-color:#333333;
+}

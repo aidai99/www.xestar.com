@@ -1,0 +1,29 @@
+<!--{block html}-->
+<style type="text/css">$css</style>
+<script type="text/javascript">
+var hwh_colortype_nav_a = document.getElementById('thread_types').getElementsByTagName('a'),
+    hwh_colortype_th = document.getElementsByName('moderate')[0].getElementsByTagName('table')[0].getElementsByTagName('th');
+
+if (hwh_colortype_nav_a) {
+  for (var i = 0; i < hwh_colortype_nav_a.length; i++) {
+    var hwh_colortype_id = hwh_colortype_nav_a[i].href.match(/(typeid=(\d+))/);
+    if (hwh_colortype_id) {
+      hwh_colortype_nav_a[i].className += ' hwh_nav_typeid_'+hwh_colortype_id[2];
+    }
+  }
+}
+
+if (hwh_colortype_th) {
+  for (var i = 0; i < hwh_colortype_th.length; i++) {
+    for (var j = 0; j < hwh_colortype_th[i].getElementsByTagName('a').length; j++) {
+      var hwh_colortype_a = hwh_colortype_th[i].getElementsByTagName('a')[j];
+      var hwh_colortype_id = hwh_colortype_a.href.match(/(typeid=(\d+))/);
+      if (hwh_colortype_id) {
+        hwh_colortype_th[i].getElementsByTagName('a')[j].className += ' hwh_typeid_'+hwh_colortype_id[2];
+        hwh_colortype_th[i].getElementsByTagName('a')[j].parentNode.className += ' hwh_typeid_'+hwh_colortype_id[2];
+      }
+    }
+  }
+}
+</script>
+ <!--{/block}-->

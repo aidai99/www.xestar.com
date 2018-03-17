@@ -1,0 +1,25 @@
+<form method="post" action="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=js" name="jiesuan_forum_7ree">
+        <input type="hidden" name="formhash" value="{FORMHASH}">
+        <tr ><td colspan="6"><h3>{lang jingcai_7ree:htm_lang_guanlisaishi_7ree}</h3></td></tr>
+        <tr class="colplural" >
+        <td></td><td>{lang jingcai_7ree:htm_lang_saichengmingcheng_7ree}</td><td>{lang jingcai_7ree:htm_lang_bisaishijian_7ree}</td><td>{lang jingcai_7ree:htm_lang_zhudui_7ree} VS {lang jingcai_7ree:htm_lang_kedui_7ree}</td><td>{lang jingcai_7ree:htm_lang_caozuo_7ree}</td>
+        </tr>
+        <!--{loop $racelist_7ree $racelist_value}-->
+        <tr>
+                <td title="<!--{if $racelist_value['jiesuan_7ree']}-->{lang jingcai_7ree:htm_lang_kejiesuan_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_wuxujiesuan_7ree}<!--{/if}-->">{$racelist_value['main_id_7ree']}<!--{if $racelist_value['jiesuan_7ree']}--><input type="checkbox" name="mod_7ree[]" id="mod_7ree[]" onclick="ChkSonClick('mod_7ree[]','checkall_7ree');" value="{$racelist_value['main_id_7ree']}"><!--{/if}--></td>
+                <td>{$racelist_value['scname_7ree']}</td>
+                <td>{$racelist_value['time_7ree']}</td>
+                <td>{$racelist_value['aname_7ree']} VS {$racelist_value['bname_7ree']}</td>
+
+                <td>[<a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=edit1&scid_7ree={$racelist_value['scid_7ree']}">{lang jingcai_7ree:htm_lang_bianji_7ree}</a>] [<a onclick="showDialog('{lang jingcai_7ree:htm_lang_shanchutip1_7ree}<b>{$racelist_value[racename_7ree]}</b>{lang jingcai_7ree:htm_lang_shanchutip2_7ree}', 'confirm', '{lang jingcai_7ree:htm_lang_shanchuqueren_7ree}', function () { window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=del1&scid_7ree=$racelist_value[scid_7ree]&formhash={FORMHASH}'; })" href="javascript:;">{lang jingcai_7ree:htm_lang_shanchu_7ree}</a>]</td>
+        </tr>
+        <!--{/loop}-->
+        <tr>
+        <td colspan="5">
+        {$mymultipage_7ree}
+        </td>
+        <td>
+
+        </td>
+        </tr>
+</form>

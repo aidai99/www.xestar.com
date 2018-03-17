@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3]]></item>
+	<item id="Time"><![CDATA[2018-01-18 23:45]]></item>
+	<item id="From"><![CDATA[1314学习网 (http://www.1314study.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[[1314]SEO超级伪静态]]></item>
+			<item id="identifier"><![CDATA[addon_seo_rewrite]]></item>
+			<item id="description"><![CDATA[使用问题请到1314学习网反馈：http://www.1314study.com]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[addon_seo_rewrite/]]></item>
+			<item id="copyright"><![CDATA[1314学习网（www.1314study.com）]]></item>
+			<item id="version"><![CDATA[3.5.9]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[config]]></item>
+					<item id="menu"><![CDATA[插件设置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[rewrite]]></item>
+					<item id="menu"><![CDATA[伪静态规则]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[feedback]]></item>
+					<item id="menu"><![CDATA[<b>问题反馈</b>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[7]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[addon]]></item>
+					<item id="menu"><![CDATA[<b style=color:red>获取更多插件</b>]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[9]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5,X2,X2.5,X3,X3.1,X3.2,X3.3,X3.4,X3.5,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[Discuz版本]]></item>
+				<item id="description"><![CDATA[正常情况下不用设置，除非你改了系统版本]]></item>
+				<item id="variable"><![CDATA[dz_version]]></item>
+				<item id="type"><![CDATA[select_1314]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1 = 自动判断
+2 = X3.2及以下版本
+3 = X3.3、X3.4、F1.0、L1.0等支持PHP7的版本]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[开启超级伪静态]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[study_radio]]></item>
+				<item id="type"><![CDATA[radio_1314]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[论坛主题列表页【首页】]]></item>
+				<item id="description"><![CDATA[标记：{fid}, {page}]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[f-{fid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[主题列表页【第二页开始】]]></item>
+				<item id="description"><![CDATA[标记：{fid}, {page}
+【为空则不使用本功能】]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay2]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[f-{fid}-{page}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[分区伪静态]]></item>
+				<item id="description"><![CDATA[标记：{gid}
+【为空则不使用本功能】]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay_gid]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[g-{gid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[统一主题内容页链接]]></item>
+				<item id="description"><![CDATA[开启后，主题分类列表、分类信息列表等地方带参数的帖子链接统一忽略多余的参数，伪静态成统一的链接；
+关闭的话，带参数链接不处理，如：forum.php?mod=viewthread&tid=1&extra=page%3D1%26filter%3Dtypeid%26typeid%3D13]]></item>
+				<item id="variable"><![CDATA[forum_viewthread_unify]]></item>
+				<item id="type"><![CDATA[radio_1314]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[论坛主题内容页【首页】]]></item>
+				<item id="description"><![CDATA[标记：{tid}, {page}, {prevpage}, {fid}
+{fid}不建议使用，虽然进行了大量优化，但使用{fid}还是不可避免的会在某些情况下增加数据库查询]]></item>
+				<item id="variable"><![CDATA[forum_viewthread]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[t-{tid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[主题内容页【第二页开始】]]></item>
+				<item id="description"><![CDATA[标记：{tid}, {page}, {prevpage}, {fid}
+{fid}不建议使用，虽然进行了大量优化，但使用{fid}还是不可避免的会在某些情况下增加数据库查询
+【为空则不使用本功能】]]></item>
+				<item id="variable"><![CDATA[forum_viewthread2]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[t-{tid}-{page}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[开启标签伪静态]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[forum_tag_radio]]></item>
+				<item id="type"><![CDATA[radio_1314]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[标签首页]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[forum_tag_index]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[tag.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[标签内容页]]></item>
+				<item id="description"><![CDATA[标记：{id}]]></item>
+				<item id="variable"><![CDATA[forum_tag_view]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[tag-{id}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[标签相关帖子、日志列表页]]></item>
+				<item id="description"><![CDATA[标记：{type}, {id}, {page}]]></item>
+				<item id="variable"><![CDATA[forum_tag_list]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[tag-{type}-{id}-{page}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[开启主题分类列表页伪静态]]></item>
+				<item id="description"><![CDATA[开启后处理的动态链接格式为：forum.php?mod=forumdisplay&fid=2&filter=typeid&typeid=1]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay_type_radio]]></item>
+				<item id="type"><![CDATA[radio_1314]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[主题分类列表页【首页】]]></item>
+				<item id="description"><![CDATA[标记：{fid}, {page}, {typeid}]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay_type]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[f-{fid}-t{typeid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[主题分类列表页【第二页开 ...]]></item>
+				<item id="description"><![CDATA[标记：{fid}, {page}, {typeid}]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay_type2]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[f-{fid}-t{typeid}-{page}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[开启分类信息列表伪静态]]></item>
+				<item id="description"><![CDATA[开启后处理的动态链接格式为：forum.php?mod=forumdisplay&fid=2&filter=sortid&sortid=3]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay_sort_radio]]></item>
+				<item id="type"><![CDATA[radio_1314]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[分类信息列表页【首页】]]></item>
+				<item id="description"><![CDATA[标记：{fid}, {page}, {sortid}]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay_sort]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[f-{fid}-s{sortid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[分类信息列表页【第二页开 ...]]></item>
+				<item id="description"><![CDATA[标记：{fid}, {page}, {sortid}]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay_sort2]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[f-{fid}-s{sortid}-{page}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[开启主题分类+分类信息列表 ...]]></item>
+				<item id="description"><![CDATA[开启后处理的动态链接格式为：forum.php?mod=forumdisplay&fid=2&filter=sortid&sortid=3&typeid=1]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay_type_sort_radio]]></item>
+				<item id="type"><![CDATA[radio_1314]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[主题分类+分类信息列表页【 ...]]></item>
+				<item id="description"><![CDATA[标记：{fid}, {page}, {typeid}, {sortid}]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay_type_sort]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[f-{fid}-t{typeid}-s{sortid}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[主题分类+分类信息列表页【 ...]]></item>
+				<item id="description"><![CDATA[标记：{fid}, {page}, {typeid}, {sortid}]]></item>
+				<item id="variable"><![CDATA[forum_forumdisplay_type_sort2]]></item>
+				<item id="type"><![CDATA[text_1314]]></item>
+				<item id="value"><![CDATA[f-{fid}-t{typeid}-s{sortid}-{page}.html]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="slang_001"><![CDATA[请填写名称]]></item>
+				<item id="slang_002"><![CDATA[请选择分类]]></item>
+				<item id="slang_003"><![CDATA[请填写描述]]></item>
+				<item id="slang_004"><![CDATA[请选择分类]]></item>
+				<item id="slang_005"><![CDATA[你上传的文件过大，系统限制]]></item>
+				<item id="slang_006"><![CDATA[请上传文件]]></item>
+				<item id="slang_007"><![CDATA[请填写网盘下载地址]]></item>
+				<item id="slang_008"><![CDATA[文件格式错误，只允许上传jpg、gif、png、bmp格式图片]]></item>
+				<item id="slang_009"><![CDATA[请上传图标]]></item>
+				<item id="slang_010"><![CDATA[提交成功]]></item>
+				<item id="slang_011"><![CDATA[发布]]></item>
+				<item id="rewrite_message"><![CDATA[<br>
+<h1>Apache Web Server(独立主机用户)</h1>
+<pre class="colorbox">
+&lt;IfModule mod_rewrite.c&gt;
+	RewriteEngine On
+{apache1}&lt;/IfModule&gt;
+</pre>
+
+<h1>Apache Web Server(虚拟主机用户)</h1>
+<pre class="colorbox">
+# 将 RewriteEngine 模式打开
+RewriteEngine On
+
+# RewriteBase 后边为论坛目录，插件自动识别，如果识别错误请自行修改为你论坛的目录
+# 如 www.xxx.com/bbs，对应的目录就是/bbs，如果程序放在根目录中，使用 RewriteBase /
+RewriteBase {siteroot}
+
+# Rewrite 系统规则请勿修改
+{apache2}
+</pre>
+
+<h1>IIS Web Server(独立主机用户)</h1>
+<pre class="colorbox">
+[ISAPI_Rewrite]
+
+# 3600 = 1 hour
+CacheClockRate 3600
+
+RepeatLimit 32
+
+# Protect httpd.ini and httpd.parse.errors files
+# from accessing through HTTP
+{iis}
+</pre>
+
+<h1>IIS7 Web Server(独立主机用户)</h1>
+<pre class="colorbox">
+&lt;rewrite&gt;
+	&lt;rules&gt;
+{iis7}	&lt;/rules&gt;
+&lt;/rewrite&gt;
+</pre>
+
+<h1>Zeus Web Server</h1>
+<pre class="colorbox">
+{zeus}
+</pre>
+
+<h1>Nginx Web Server</h1>
+<pre class="colorbox">
+{nginx}
+</pre>]]></item>
+				<item id="slang_1"><![CDATA[2018011611M4m6A46zYx]]></item>
+				<item id="slang_2"><![CDATA[62812]]></item>
+				<item id="slang_3"><![CDATA[1516352401]]></item>
+				<item id="slang_4"><![CDATA[http://xestar.com/]]></item>
+				<item id="slang_5"><![CDATA[https://www.xestar.com/]]></item>
+				<item id="slang_6"><![CDATA[5DCADF3C-1458-2C42-6DBC-5DED736231F5]]></item>
+				<item id="slang_7"><![CDATA[c13df92e254f273b99fd979f99202b4c]]></item>
+				<item id="slang_8"><![CDATA[2018011611M4m6A46zYx628121516352401http://xestar.com/https://www.xestar.com/5DCADF3C-1458-2C42-6DBC-5DED736231F5]]></item>
+				<item id="rewrite_tip"><![CDATA[
+<li><font color=red>先查看你的伪静态文件是否存在下边的<font color=blue>蓝色规则</font>，存在则把红色规则粘贴于<font color=blue>蓝色规则</font>之上，不存在则把红色规则粘贴到文件末尾</li></font>]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="tlang_001"><![CDATA[所有分类]]></item>
+				<item id="tlang_002"><![CDATA[搜索]]></item>
+				<item id="tlang_003"><![CDATA[发布]]></item>
+				<item id="tlang_004"><![CDATA[名称]]></item>
+				<item id="tlang_005"><![CDATA[编辑]]></item>
+				<item id="tlang_006"><![CDATA[分类]]></item>
+			</item>
+			<item id="installlang">
+				<item id="ilang_001"><![CDATA[标题+时间]]></item>
+				<item id="ilang_002"><![CDATA[标题（第一条带摘要）]]></item>
+				<item id="ilang_003"><![CDATA[图片幻灯片]]></item>
+				<item id="ilang_004"><![CDATA[资源图标列表]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="checkfile"><![CDATA[check.php]]></item>
+		<item id="enablefile"><![CDATA[enable.php]]></item>
+		<item id="disablefile"><![CDATA[disable.php]]></item>
+	</item>
+</root>

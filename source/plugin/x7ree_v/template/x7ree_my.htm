@@ -1,0 +1,19 @@
+{template x7ree_v:x7ree_mynav}
+<!--{if $list_7ree}-->
+<table class="listtable_7ree">
+	<tr>
+	<th>{lang x7ree_v:htm_lang_fenxiangshijan_7ree}</th>
+	<th>{lang x7ree_v:htm_lang_shipinmingcheng_7ree}</th>
+	<th>{lang x7ree_v:htm_lang_caozuo_7ree}</th>
+	</tr>
+	<!--{loop $list_7ree $list_value}-->
+	<tr>
+	<td><a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=1&id_7ree={$list_value['id_7ree']}" target="_blank">{$list_value['time_7ree']}</a></td>
+	<td><a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=1&id_7ree={$list_value['id_7ree']}" target="_blank">{$list_value['name_7ree']}</a></td>
+	<td><a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=2&id_7ree={$list_value['id_7ree']}">{lang x7ree_v:htm_lang_bianji_7ree}</a></td>
+	</tr>
+	<!--{/loop}-->
+</table>
+<!--{else}-->
+	<div class="notice_7ree"><a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=2">{lang x7ree_v:htm_lang_zhanweifenxiang_7ree}</a></div>
+<!--{/if}-->

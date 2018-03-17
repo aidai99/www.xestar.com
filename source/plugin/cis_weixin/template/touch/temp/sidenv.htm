@@ -1,0 +1,36 @@
+<div class="imui_side b_f" onclick="openside();">
+  <div class="side_user size_14 cf cl">
+    <a href="home.php?mod=space&uid=$_G[uid]&do=profile&mycenter=1" class="gettab" tab='space_profile'><img src="<!--{avatar($_G[uid], middle, true)}-->"></a>
+    <!--{if $_G['uid']}-->
+    <h3 class="size_16">$_G['member']['username']</h3>
+    <p><a href="javascript:loginout('{FORMHASH}')">$corelang[13]</a></p>
+    <!--{elseif !$_G[connectguest]}-->
+    <h3 class="size_16">$corelang[14]</h3>
+    <p><a href="member.php?mod=logging&action=login" class="showpage" id='member' type="getpage">$corelang[15]</a></p>  
+    <!--{else}-->
+    <h3 class="size_16">$_G['member']['username']</h3>
+    <p>$_G['member']['username']<a href="member.php?mod=connect" class="gettab" tab='member'>[{$corelang[16]}]</a><a href="javascript:loginout('{FORMHASH}')">$corelang[13]</a></p>
+    <!--{/if}-->
+  </div>
+  <div class="side_nv size_16">
+    <ul id="sidearea">
+      <!--{eval $sidenv=dunserialize($_G['setting']['cis_app_nv_side']);}-->
+      <!--{if $sidenv}-->
+      <!--{loop $sidenv $value}-->
+      <!--{if $value['url']}-->
+      <li><a href="$value['url']" {if $value['tabid']}{if $value['type']=='2'}class="showpage bo_bl" id="$value['tabid']" type="getpage"{else}class="gettab bo_bl" tab="$value['tabid']"{/if}{else}class="bo_bl" {/if}><h4><span>&#x{$value['ico']};</span>$value['name']</h4><p class="size_12 cg">$value['en']</p></a></li>
+      <!--{/if}-->
+      <!--{/loop}-->
+      <!--{else}-->
+      <li><a href="forum.php?mod=guide&view=hot" class="gettab bo_bl" tab='guide'><h4><em class="side_icon_best"></em>$corelang[9]</h4><p class="size_12 cg">Best</p></a></li>
+      <li><a href="forum.php?forumlist=1" class="gettab bo_bl" tab='discuz'><h4><em class="side_icon_bbs"></em>$corelang[10]</h4><p class="size_12 cg">BBS</p></a></li>
+      <li><a href="group.php?mod=index" class="gettab bo_bl" tab='group_index'><h4><em class="side_icon_group"></em>$corelang[11]</h4><p class="size_12 cg">Group</p></a></li>
+      <li><a href="im.php?mod=friend" class="gettab bo_bl" tab='in_friend'><h4><em class="side_icon_space"></em>$corelang[12]</h4><p class="size_12 cg">Space</p></a></li>
+      <li><a href="portal.php?mod=news" class="gettab bo_bl" tab='portal'><h4><em class="side_icon_news"></em>$corelang[19]</h4><p class="size_12 cg">News</p></a></li>
+      <li><a href="javascript:window.location.reload()" class="bo_bl"><h4><em class="side_icon_ref"></em>$corelang[23]</h4><p class="size_12 cg">Refresh</p></a></li>
+      <li><a href="im.php?mod=find" class="showpage bo_bl" id='im_find' type="getpage"><h4><em class="side_icon_find"></em>$corelang[18]</h4><p class="size_12 cg">Find</p></a></li>
+      <!--{/if}-->
+    </ul>
+  </div>
+</div>
+<div class="imui_sidebg" onclick="openside();"></div>

@@ -1,0 +1,147 @@
+<script type="text/javascript" language="javascript">
+	var i=$option_count_7ree;
+	function addfile() {
+		var oTR  = document.createElement("tr");
+		var oTH = document.createElement("th");
+		var oTD = document.createElement("td");
+		var oD=document.getElementById('option_7ree');
+		tr = oD.appendChild(oTR);
+		th = tr.appendChild(oTH);
+		td = tr.appendChild(oTD);
+		tr.setAttribute("id","tr_" + i);
+		td.setAttribute("class","inputtd_7ree");
+		td.innerHTML ='{lang x7ree_opengs:htm_lang_jieguo_7ree}'+i+': <input type="text" name="option_7ree[]" id="option_7ree[]" value="" /> {lang x7ree_opengs:htm_lang_peilv_7ree}: <input type="text" name="odds_7ree[]" id="odds_7ree[]" style="width:100px;" value="0" /><input type="hidden" name="oid_7ree[]" id="oid_7ree[]" style="width:100px;" value=""> [<a href="javascript:delefile('+i+');">{lang x7ree_opengs:htm_lang_shanchu_7ree}</a>]';
+
+		i++;
+	}
+
+
+	function delefile(id){
+		document.getElementById('tr_'+id).innerHTML = "";
+	}
+</script>
+<!--{if $id_7ree}-->
+<form enctype="multipart/form-data" method="post" action="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=9" name="postform_7ree">
+<input type="hidden" name="id_7ree" value="{$id_7ree}">
+<!--{else}-->
+<form enctype="multipart/form-data" method="post" action="plugin.php?id=x7ree_opengs:x7ree_opengs&code_7ree=8" name="postform_7ree">
+<!--{/if}-->
+<input type="hidden" name="formhash" value="{FORMHASH}">
+<table class="inputtable_7ree">
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_opengs:htm_lang_guanlianjingcai_7ree}</td>
+	<td class="inputtd_7ree">
+		<!--{if $jingcaidb_7ree}-->
+			<!--{if $jingcailist_7ree}-->
+			<select name="mid_7ree">
+				<option value="">{lang x7ree_opengs:htm_lang_xuanzeguanlian_7ree}</option>
+				<!--{loop $jingcailist_7ree $jingcailist_value}-->
+				<option value="{$jingcailist_value['main_id_7ree']}" <!--{if $this_7ree['mid_7ree']==$jingcailist_value['main_id_7ree']}-->SELECTED<!--{/if}-->>[{$jingcailist_value['time_7ree']}]{$jingcailist_value['racename_7ree']}:{$jingcailist_value['aname_7ree']}VS{$jingcailist_value['bname_7ree']}</option>
+				<!--{/loop}-->
+			</select>
+			<!--{else}-->
+			{lang x7ree_opengs:htm_lang_zhanwusaishi_7ree}<a href="plugin.php?id=jingcai_7ree:jingcai_7ree&ac_7ree=2&sp_7ree=add" target="_blank">{lang x7ree_opengs:htm_lang_diancitianjia_7ree}</a>
+			<!--{/if}-->
+		<!--{else}-->
+			{lang x7ree_opengs:htm_lang_zhanweianzhuang_7ree}<a href="http://addon.discuz.com/?@jingcai_7ree.plugin" target="_blank">{lang x7ree_opengs:htm_lang_diancianzhuang_7ree}</a>
+		<!--{/if}-->
+	</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_opengs:htm_lang_jingcaimingcheng_7ree}</td>
+	<td class="inputtd_7ree"><input type="text" name="name_7ree" value="{$this_7ree['name_7ree']}"></td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_opengs:htm_lang_fenlei_7ree}</td>
+	<td class="inputtd_7ree">
+	<select name="fenlei_7ree" >
+		<!--{loop $fenlei_7ree $fenlei_value}-->
+		<option value="{$fenlei_value}" <!--{if $fenlei_value==$this_7ree['fenlei_7ree']}-->SELECTED<!--{/loop}-->>{$fenlei_value}</option>
+		<!--{/loop}-->
+	</select>
+	</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_opengs:htm_lang_jiezhishjian_7ree}</td>
+	<td class="inputtd_7ree">
+	<!--{if $this_7ree['time_7ree']}-->{$this_7ree['time_7ree']}<br><!--{/if}-->
+	<input type="datetime-local" name="time_7ree" value="{$this_7ree['time_7ree']}">
+	</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_opengs:htm_lang_fengmiantupian_7ree}</td>
+	<td class="inputtd_7ree" style="height:auto;">
+	<input type="file" name="pic_7ree">
+	<!--{if $this_7ree['pic_7ree']}-->
+	<br>
+	<img src="{$folder_7ree}/{$this_7ree['pic_7ree']}" class="newpic_7ree">
+	<!--{/if}-->
+	</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_opengs:htm_lang_jieguoxuanxiang_7ree}</td>
+	<td class="texttd_7ree" style="height:auto;">
+		 <div id="first">
+			 <table class="optiontable_7ree">
+			 <tbody id="option_7ree" name="filess">
+			 	<!--{loop $list_7ree $key $list_value}-->
+			 	<tr id="tr_<!--{eval echo($key+1);}-->">
+				 	<th></th>
+				 	<td class="inputtd_7ree">
+				 	{lang x7ree_opengs:htm_lang_jieguo_7ree}<!--{eval echo($key+1);}-->: <input type="text" name="option_7ree[]" id="option_7ree[]" value="{$list_value['option_7ree']}"> 
+				 	{lang x7ree_opengs:htm_lang_peilv_7ree}:<input type="text" name="odds_7ree[]" id="odds_7ree[]" style="width:100px;" value="{$list_value['odds_7ree']}">
+				 	<input type="hidden" name="oid_7ree[]" id="oid_7ree[]" style="width:100px;" value="{$list_value['id_7ree']}">
+				 	<!--赛果揭晓-->
+				 	</td>
+			 	</tr>
+			 	<!--{/loop}-->
+			</tbody>
+			</table>
+		</div>
+		<input type="button" id="add" value="{lang x7ree_opengs:htm_lang_tianjiaxuanxiang_7ree}" onclick="addfile();">
+	</td>
+</tr>
+<tr>
+	<td class="tdtitle_7ree">{lang x7ree_opengs:htm_lang_jianjie_7ree}</td>
+	<td class="texttd_7ree"><textarea name="detail_7ree">{$this_7ree['detail_7ree']}</textarea></td>
+</tr>
+<!--{if $id_7ree}-->
+<!--赛果揭晓-->
+
+<tr>
+	<td>{lang x7ree_opengs:htm_lang_benchangsaiguo_7ree}</td>
+	<td style="height:auto;">
+		 <div id="first">
+			 <table class="optiontable_7ree">
+			 <tbody id="resultlist_7ree" name="resultlist_7ree">
+				 <tr id="tr_0">
+					 	<th></th>
+					 	<td>
+					 	<input type="radio" name='result_7ree' value="0" id="result_7ree_0" <!--{if !$this_7ree['oid_7ree']}-->CHECKED<!--{/if}-->>
+					 	{lang x7ree_opengs:htm_lang_weijiexiao_7ree}
+					 	</td>
+				 	</tr>
+				 </tr>
+			 	<!--{loop $list_7ree $key $list_value}-->
+			 	<tr id="tr_<!--{eval echo($key+1);}-->">
+				 	<th></th>
+				 	<td>
+			 		<label for="result_7ree_{$list_value['id_7ree']}">
+				 	<input type="radio" name='result_7ree' value="{$list_value['id_7ree']}" id="result_7ree_{$list_value['id_7ree']}" <!--{if $list_value['id_7ree']==$this_7ree['oid_7ree']}-->CHECKED<!--{/if}-->>
+				 	{lang x7ree_opengs:htm_lang_jieguo_7ree}<!--{eval echo($key+1);}-->: <span>[{lang x7ree_opengs:htm_lang_peilv_7ree}:{$list_value['odds_7ree']}]</span> {$list_value['option_7ree']}
+					</label>
+				 	</td>
+			 	</tr>
+			 	<!--{/loop}-->
+			</tbody>
+			</table>
+		</div>
+	</td>
+</tr>
+<!--{/if}-->
+<tr>
+	<td></td>
+	<td class="inputtd_7ree"><input type="submit" name="submit_7ree" value="{lang x7ree_opengs:htm_lang_tijiao_7ree}" class="submitbtn_7ree"></td>
+</tr>
+</table>
+</form>

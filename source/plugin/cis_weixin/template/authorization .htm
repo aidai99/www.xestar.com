@@ -1,0 +1,55 @@
+<div class="pt">
+  <ul>
+    <li {if !$_GET['action']}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin">$cislang[28]</a></li>
+    <li class="pipe">|</li>
+    <li {if $_GET['action']=='add'}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin&action=add">$cislang[29]</a></li>
+  </ul>
+  $cislang[28]<span>APP</span>
+</div>
+<div class="main">
+<!--{if in_array($_GET['action'],array('add','edit'))}-->
+<form action="" method="post" class="formstyle">
+  <input type="hidden" name="postsubmit" value="true" />
+  <input type="hidden" name="formhash" value="{FORMHASH}" />
+  <h4 class="title">SiteId<em>*</em></h4>
+  <p class="p"><input type="text" name="siteid" value="$app['siteid']" class="input"></p>
+  <h4 class="title">$cislang[30]<em>*</em><span>$cislang[32]</span></h4>
+  <p class="p"><input type="text" name="app" value="$app['app']" class="input"></p>
+  <h4 class="title">$cislang[31]<em>*</em><span>$cislang[33]</span></h4>
+  <p class="p"><input type="text" name="appkey" value="$app['appkey']" class="input"></p>
+  <p class="btn"><button type="submit" class="button">Submit</button></p>
+</form>
+<!--{else}-->
+<ul class="nvs cl">
+  <li {if !$_GET['show']}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin">$cislang[34]</a></li>
+  <li {if $_GET['show']=='abnormal'}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin&show=abnormal">$cislang[35]</a></li>
+  <li {if $_GET['show']=='ban'}class="a"{/if}><a href="plugin.php?id=cis_weixin&mod=admin&show=ban">$cislang[36]</a></li>
+</ul>
+
+<table cellpadding="0" cellspacing="0" class="tablelist">
+  <thead>
+    <tr>
+      <td class="id">$cislang[37]</td>
+      <td class="appkey">AppKey</td>
+      <td class="app">$cislang[38]</td>
+      <td class="state">$cislang[39]</td>
+      <td class="manage">$cislang[40]</td>
+    </tr>
+  </thead>
+  {loop $list $app}
+  <tbody>
+    <tr>
+      <td class="id">$app['siteid']</td>
+      <td class="appkey"><!--{eval echo(substr($app['appkey'],0,10).'******');}--></td>
+      <td class="app">$app['app']</td>
+      <td class="state state_{$app['state']}"><em>{if $app['state']=='1'}&#x75;{elseif $app['state']=='2'}&#x4d;{else}&#x4e;{/if}</em></td>
+      <td class="manage"><a href="plugin.php?id=cis_weixin&mod=admin&action=edit&siteid=$app['siteid']">$cislang[41]</a><a href="plugin.php?id=cis_weixin&mod=admin&action=delete&siteid=$app['siteid']">$cislang[42]</a></td>
+    </tr>
+  </tbody>
+  {/loop}
+</table>
+<div class="page cl">
+$multipage
+</div>
+<!--{/if}-->
+</div>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2017-10-04 12:39]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[[柒瑞]小视频]]></item>
+			<item id="identifier"><![CDATA[x7ree_v]]></item>
+			<item id="description"><![CDATA[为discuz扩展一个会员分享小视频的平台系统。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[x7ree_v/]]></item>
+			<item id="copyright"><![CDATA[柒瑞www.7ree.com]]></item>
+			<item id="version"><![CDATA[v4.52]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[more_7ree]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[[柒瑞更多产品与服务]]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[x7ree_v]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[小视频]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[5]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[是否同意柒瑞用户协议]]></item>
+				<item id="description"><![CDATA[同意协议内容方可正常使用该插件
+协议地址：http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html]]></item>
+				<item id="variable"><![CDATA[agreement_7ree]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[小视频插件标题]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[navtitle_7ree]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[小视频]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[视频分类]]></item>
+				<item id="description"><![CDATA[多个分类之间请用半角逗号分割]]></item>
+				<item id="variable"><![CDATA[fenlei_7ree]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[搞笑,音乐,动漫,社会,萌物,汽车,娱乐,科技,体育,游戏,其他]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[绑定积分字段]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ext_7ree]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[审核奖励]]></item>
+				<item id="description"><![CDATA[会员发布的视频通过审核，奖励的积分数量。]]></item>
+				<item id="variable"><![CDATA[reward_7ree]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[可以发布视频的用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[gid_7ree]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[11]]></item>
+					<item id="1"><![CDATA[12]]></item>
+					<item id="2"><![CDATA[13]]></item>
+					<item id="3"><![CDATA[14]]></item>
+					<item id="4"><![CDATA[15]]></item>
+					<item id="5"><![CDATA[1]]></item>
+					<item id="6"><![CDATA[2]]></item>
+					<item id="7"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[导航栏层高]]></item>
+				<item id="description"><![CDATA[手机触屏版顶部和底部导航栏CSS层高z-index
+如出现小视频导航栏被覆盖的情况可适当填写一个较大的数值。]]></item>
+				<item id="variable"><![CDATA[zindex_7ree]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[50]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[小视频排序规则]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[orderby_7ree]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=发布逆序
+2=随机排序]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[PC版播放页底部广告代码]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[pcpagead_7ree]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<div style="width:100%;height:60px;line-height:60px;text-align:center;border:1px dashed #CFCFCF;">PC版播放页底部广告，请从后台设置</div>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[触屏版播放页底部广告代码]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mobpagead_7ree]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<div style="width:100%;height:40px;line-height:40px;text-align:center;border:1px dashed #CFCFCF;">触屏版播放页底部广告，请从后台设置</div>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[CSS兼容代码]]></item>
+				<item id="description"><![CDATA[用于修正手机模版中，一般常见的论坛导航栏与小视频导航栏重叠等问题。
+如无问题则不必填写。]]></item>
+				<item id="variable"><![CDATA[cssfix_7ree]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[视频来源参数]]></item>
+				<item id="description"><![CDATA[每行一组，格式为”网站域名:来源参数“
+比如 youku.com:client_id=888888]]></item>
+				<item id="variable"><![CDATA[from_7ree]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[youku.com:&client_id=888888]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[mp4文件播放器]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mp4player_7ree]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[1=H5播放器
+2=CK播放器]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[VIP用户组]]></item>
+				<item id="description"><![CDATA[可免费观看收费视频的VIP用户组]]></item>
+				<item id="variable"><![CDATA[vipgids_7ree]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[14]]></item>
+					<item id="1"><![CDATA[15]]></item>
+					<item id="2"><![CDATA[21]]></item>
+				</item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[VIP用户组购买地址]]></item>
+				<item id="description"><![CDATA[收费视频提示语中，购买vip用户组链接URL地址，点击可以直接跳转到vip用户组购买页面]]></item>
+				<item id="variable"><![CDATA[vipurl_7ree]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[http://www.7ree.com]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[IFRAME播放域名列表]]></item>
+				<item id="description"><![CDATA[用来支持M3U8的视频源或者自带播放器的视频源
+可以设置使用IFRAME直接播放的域名列表
+每行一个域名]]></item>
+				<item id="variable"><![CDATA[iframe_7ree]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="php_lang_agree_7ree"><![CDATA[管理员必须同意柒瑞软件产品用户协议方可使用该插件，请在Discuz后台插件管理处设置同意。]]></item>
+				<item id="php_lang_err_missv_7ree"><![CDATA[抱歉，查询的小视频不存在。]]></item>
+				<item id="php_lang_err_badurl_7ree"><![CDATA[抱歉，视频地址参数有误，无法播放。]]></item>
+				<item id="php_lang_err_denied_7ree"><![CDATA[抱歉，您所在的用户组，无法分享小视频，请返回。]]></item>
+				<item id="php_lang_err_missname_7ree"><![CDATA[错误，名称必须填写，请返回修改。]]></item>
+				<item id="php_lang_err_missurl_7ree"><![CDATA[错误，地址必须填写，请返回修改。]]></item>
+				<item id="php_lang_ok_submit_7ree"><![CDATA[恭喜，成功提交小视频。]]></item>
+				<item id="php_lang_ok_check_7ree"><![CDATA[恭喜，批量审核成功，现在返回。]]></item>
+				<item id="php_lang_err_select_7ree"><![CDATA[错误，请先选择需要审核的项目再提交，现在返回。]]></item>
+				<item id="php_lang_ok_ckok_7ree"><![CDATA[恭喜，成功审核小视频。]]></item>
+				<item id="php_lang_ok_del_7ree"><![CDATA[恭喜，成功删除小视频。]]></item>
+				<item id="php_lang_ok_discuz_7ree"><![CDATA[恭喜，评论成功，现在返回。]]></item>
+				<item id="php_lang_ok_pay_7ree"><![CDATA[恭喜，积分购买视频成功，请返回敬请欣赏。]]></item>
+				<item id="php_lang_err_mgs_7ree"><![CDATA[错误，请先输入评论的内容提交，现在返回。]]></item>
+				<item id="php_lang__7ree"><![CDATA[]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="htm_lang_xiaoshipin_7ree"><![CDATA[小视频]]></item>
+				<item id="htm_lang_fenxiang_7ree"><![CDATA[分享小视频]]></item>
+				<item id="htm_lang_guanli_7ree"><![CDATA[管理小视频]]></item>
+				<item id="htm_lang_fenxiangshijan_7ree"><![CDATA[分享时间]]></item>
+				<item id="htm_lang_shipinmingcheng_7ree"><![CDATA[视频名称]]></item>
+				<item id="htm_lang_caozuo_7ree"><![CDATA[操作]]></item>
+				<item id="htm_lang_bianji_7ree"><![CDATA[编辑]]></item>
+				<item id="htm_lang_zhanweifenxiang_7ree"><![CDATA[您暂未分享小视频，点这里分享第一个。]]></item>
+				<item id="htm_lang_zhanwuxiaoshipin_7ree"><![CDATA[暂无小视频。]]></item>
+				<item id="htm_lang_wodexiaoshipin_7ree"><![CDATA[我的小视频]]></item>
+				<item id="htm_lang_fenxianghuiyuan_7ree"><![CDATA[分享会员]]></item>
+				<item id="htm_lang_shenhezhuangtai_7ree"><![CDATA[审核状态]]></item>
+				<item id="htm_lang_guanlicaozuo_7ree"><![CDATA[管理操作]]></item>
+				<item id="htm_lang_yishenhe_7ree"><![CDATA[已审核]]></item>
+				<item id="htm_lang_weishenhe_7ree"><![CDATA[未审核]]></item>
+				<item id="htm_lang_querenshanchu_7ree"><![CDATA[您确认删除?]]></item>
+				<item id="htm_lang_shanchu_7ree"><![CDATA[删除]]></item>
+				<item id="htm_lang_piliangshehe_7ree"><![CDATA[批量审核小视频]]></item>
+				<item id="htm_lang_xiangguantuijian_7ree"><![CDATA[相关推荐]]></item>
+				<item id="htm_lang_fenlei_7ree"><![CDATA[分类：]]></item>
+				<item id="htm_lang_shouye_7ree"><![CDATA[首页]]></item>
+				<item id="htm_lang_shipinfenlei_7ree"><![CDATA[视频分类]]></item>
+				<item id="htm_lang_shipindizhi_7ree"><![CDATA[视频地址]]></item>
+				<item id="htm_lang_dizhitips_7ree"><![CDATA[优酷、腾讯请填写视频页URL网址，爱奇艺、搜狐、56视频请填写分享中通用地址的src参数即可，外链MP4请直接填写MP4文件的URL即可。]]></item>
+				<item id="htm_lang_fengmiantupian_7ree"><![CDATA[封面图片]]></item>
+				<item id="htm_lang_shipinjieshao_7ree"><![CDATA[视频介绍]]></item>
+				<item id="htm_lang_tijiao_7ree"><![CDATA[提交]]></item>
+				<item id="htm_lang_quanxuan_7ree"><![CDATA[全选]]></item>
+				<item id="htm_lang_bofangcishu_7ree"><![CDATA[播放次数：]]></item>
+				<item id="htm_lang_fabu_7ree"><![CDATA[发布]]></item>
+				<item id="htm_lang_wode_7ree"><![CDATA[我的]]></item>
+				<item id="htm_lang_luntan_7ree"><![CDATA[论坛]]></item>
+				<item id="htm_lang_pinglunqu_7ree"><![CDATA[评论区]]></item>
+				<item id="htm_lang_fabiaopinglun_7ree"><![CDATA[发表评论]]></item>
+				<item id="htm_lang_fabiaopinglun2_7ree"><![CDATA[发表]]></item>
+				<item id="htm_lang_quanbupinglun_7ree"><![CDATA[全部评论]]></item>
+				<item id="htm_lang_zanwupinglun_7ree"><![CDATA[暂无新评论～]]></item>
+				<item id="htm_lang_pingluntips_7ree"><![CDATA[看点槽点，不吐不快，马上大声说出来吧！]]></item>
+				<item id="htm_lang_gong_7ree"><![CDATA[共]]></item>
+				<item id="htm_lang_tiaopinglun_7ree"><![CDATA[条评论]]></item>
+				<item id="htm_lang_goumaitip1_7ree"><![CDATA[您必须支付]]></item>
+				<item id="htm_lang_goumaitip2_7ree"><![CDATA[购买此视频才可观看，请点击此处购买。]]></item>
+				<item id="htm_lang_goumaitip2vip_7ree"><![CDATA[或点此加入VIP用户组免费观看收费视频。]]></item>
+				<item id="htm_lang_goumaitip3_7ree"><![CDATA[您必须登录后购买此视频才可观看，请点击此处登录。]]></item>
+				<item id="htm_lang_goumaijifen_7ree"><![CDATA[购买积分]]></item>
+				<item id="htm_lang_goumaijifentip_7ree"><![CDATA[填写0则表示，观看此视频无需积分。]]></item>
+				<item id="htm_lang_sousuotips_7ree"><![CDATA[请输入搜索关键词]]></item>
+				<item id="htm_lang_vipfree_7ree"><![CDATA[VIP免费观看]]></item>
+				<item id="htm_lang__7ree"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

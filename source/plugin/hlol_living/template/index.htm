@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$navname}{$navtitle}</title>
+<meta name="keywords" content="{$navname},{$metakeywords}" />
+<meta name="description" content="{$metadescription}" />
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<!--{if $isGbk}-->
+<meta http-equiv="Content-Type" content="text/html; charset=GBK">
+<!--{else}-->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--{/if}-->
+<link rel="stylesheet" href="source/plugin/hlol_living/static/css/swiper.min.css">
+<link rel="stylesheet" href="source/plugin/hlol_living/static/css/living.css">
+</head>
+<body>
+<!--{if $adfocus}-->
+<div class="adfocus">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+			<!--{loop $adfocus $key $adfocus}-->
+			<div class="swiper-slide">
+			<a href="{$adfocus['link']}" title="{$adfocus[title]}">
+			<!--{if !preg_match('/^http/', $adfocus['pic'])}-->
+			<img src="data/attachment/hlolliving/{$adfocus['pic']}" alt="{$adfocus[title]}" />
+			<!--{else}-->
+			<img src="{$adfocus['pic']}" alt="{$adfocus[title]}" />
+			<!--{/if}-->
+			</a>
+			</div>
+			<!--{/loop}-->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="source/plugin/hlol_living/static/js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false,
+		loop: true
+    });
+    </script>	
+</div>
+<!--{else}-->
+<!--{/if}-->
+<div id="living_nav">
+	<a href="plugin.php?id=hlol_living&mod=index"><div class="living_nav_li"><img src="source/plugin/hlol_living/static/images/navall.png" alt="{lang hlol_living:navall}"><h3>{lang hlol_living:navall}</h3></div></a>
+	<a href="plugin.php?id=hlol_living&mod=zhibo"><div class="living_nav_li"><img src="source/plugin/hlol_living/static/images/navzhibo.png" alt="{lang hlol_living:navzhibo}"><h3>{lang hlol_living:navzhibo}</h3></div></a>
+	<a href="plugin.php?id=hlol_living&mod=huifang"><div class="living_nav_li"><img src="source/plugin/hlol_living/static/images/navhuifang.png" alt="{lang hlol_living:navhuifang}"><h3>{lang hlol_living:navhuifang}</h3></div></a>
+	<a href="plugin.php?id=hlol_living&mod=yugao"><div class="living_nav_li"><img src="source/plugin/hlol_living/static/images/navyugao.png" alt="{lang hlol_living:navyugao}"><h3>{lang hlol_living:navyugao}</h3></div></a>
+</div>
+
+<div class="living_clr"></div>
+
+<div class="living_list">
+	<!--{loop $livingList $key $living}-->
+	<!--{if $living['catname'] == 1}-->
+	<!--{eval $type='zhibo'; $typename=lang('plugin/hlol_living', 'zhibo')}-->
+	<!--{elseif $living['catname'] == 2}-->
+	<!--{eval $type='huifang'; $typename=lang('plugin/hlol_living', 'huifang')}-->
+	<!--{else}-->
+	<!--{eval $type='yugao'; $typename=lang('plugin/hlol_living', 'yugao')}-->
+	<!--{/if}-->
+	<div class="living_li {$type}">
+		<a href="{$living['link']}" >
+			<em>{$typename}</em>
+			<p><span>{$living['title']}</span><i>{$living['intro']}</i></p>
+			<!--{if !preg_match('/^http/', $living['pic'])}-->
+			<b><img src="data/attachment/hlolliving/{$living['pic']}" /></b>
+			<!--{else}-->
+			<b><img src="{$living['pic']}" /></b>
+			<!--{/if}-->
+		</a>
+	</div>
+	<!--{/loop}-->
+</div>
+
+<!--{if $go_pic}-->
+<div id="toGo">
+	<a href="{$go_link}" title="{$go_title}"><img src="{$go_pic}" alt="{$go_title}" /></a>
+</div>
+<!--{else}-->
+<!--{/if}-->
+
+</body>
+</html>

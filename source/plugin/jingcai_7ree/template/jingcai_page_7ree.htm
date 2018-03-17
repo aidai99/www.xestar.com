@@ -1,0 +1,172 @@
+<script language="JavaScript">
+<!--{if $jingcai_7ree_var['pagerefresh_7ree']}-->
+	function refreshpage(){
+	window.location.reload();
+}
+	setTimeout('refreshpage()',63000); //每63秒刷新一次
+<!--{/if}-->
+
+<!--{if $race_7ree['time2_7ree']}-->
+    function getRTime(){
+
+        var NowTime = new Date();
+        var t = $race_7ree['time2_7ree'] - NowTime.getTime();
+        
+        <!--{if $next_mid_7ree && $jingcai_7ree_var['pageredirect_7ree']}-->
+        if(t<=0){
+        	window.location.href='plugin.php?id=jingcai_7ree:jingcai_7ree&sp_7ree=more&main_id_7ree={$next_mid_7ree}';
+        }
+        <!--{/if}-->
+        
+        var d=Math.floor(t/1000/60/60/24);
+        var h=Math.floor(t/1000/60/60%24);
+        var m=Math.floor(t/1000/60%60);
+        var s=Math.floor(t/1000%60);
+        if(d>0 || h>0 || m>0 || s>0 || t<=0){
+        	document.getElementById("t_title").innerHTML = "{lang jingcai_7ree:htm_lang_julijieshu_7ree}";
+        }else{
+        	document.getElementById("t_title").innerHTML = "";
+        }
+		if(d>0){
+		        document.getElementById("t_d").innerHTML = d + "{lang jingcai_7ree:htm_lang_tian_7ree}";
+		}else{
+		        document.getElementById("t_d").innerHTML = '';
+		}
+		if(h>0){
+        document.getElementById("t_h").innerHTML = h + "{lang jingcai_7ree:htm_lang_shi_7ree}";
+		}else{
+		        document.getElementById("t_h").innerHTML = '';
+		}
+		if(m>0){
+        document.getElementById("t_m").innerHTML = m + "{lang jingcai_7ree:htm_lang_fen_7ree}";
+		}else{
+		        document.getElementById("t_m").innerHTML = '';
+		}
+		if(s>0){
+        document.getElementById("t_s").innerHTML = s + "{lang jingcai_7ree:htm_lang_miao_7ree}";
+		}else{
+		        document.getElementById("t_s").innerHTML = '';
+		}
+
+        
+    }
+    setInterval(getRTime,1000);
+<!--{/if}-->
+</script>
+
+        <tr><td colspan="5" align="middle" class="colplural">
+        <h2 class="pageh2_7ree">
+        <!--{if $race_7ree['tid_7ree']}-->
+        <a href="forum.php?mod=viewthread&tid={$race_7ree['tid_7ree']}" target="_blank">$race_7ree['racename_7ree']</a>
+        <!--{else}-->
+        $race_7ree['racename_7ree']
+        <!--{/if}-->
+        </h2>
+        <h3 class="pageh3_7ree">
+        		<!--{if $race_7ree['win_7ree']}-->
+        				<!--{if $race_7ree['win_7ree'] == "a"}-->
+        				{$race_7ree['aname_7ree']}{lang jingcai_7ree:htm_lang_huosheng_7ree}!
+        				<!--{elseif $race_7ree['win_7ree'] == "b"}-->
+        				{$race_7ree['bname_7ree']}{lang jingcai_7ree:htm_lang_huosheng_7ree}!
+        				<!--{elseif $race_7ree['win_7ree'] == "c"}-->
+        				{lang jingcai_7ree:htm_lang_bisaijieguo_7ree}:<!--{if $jingcai_7ree_var['pingju_7ree'] && $race_7ree['rangqiufang_7ree']>0}-->$jingcai_7ree_var['pingju_7ree']<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}-->!
+        				<!--{elseif $race_7ree['win_7ree'] == "d"}-->
+        				{lang jingcai_7ree:htm_lang_bisaijieguo_7ree}:{lang jingcai_7ree:htm_lang_liupan_7ree}!
+        				<!--{/if}-->
+        		<!--{else}-->
+        		{lang jingcai_7ree:htm_lang_bisaijieguo_7ree}{lang jingcai_7ree:htm_lang_weijiexiao_7ree}
+        		<!--{/if}--></h3>
+        <!--{if $race_7ree['ashot_7ree'] || $race_7ree['bshot_7ree']}-->
+        <h3 class="pageh3_7ree red_7ree">{$race_7ree['ashot_7ree']}:{$race_7ree['bshot_7ree']}</h3>
+		<!--{/if}-->
+		<!--{if $race_7ree['time2_7ree']}-->
+		<h3 class="pageh3_7ree">
+			<span id="t_title"></span>
+			<span id="t_d"></span>
+			<span id="t_h"></span>
+			<span id="t_m"></span>
+			<span id="t_s"></span>
+		</h3>
+		<!--{/if}-->
+        </td></tr>
+
+        <tr><td colspan="5" align="middle">
+        <p style="padding:10px;">
+         {$race_7ree['aname_7ree']}{lang jingcai_7ree:htm_lang_huosheng_7ree}<!--{if $race_7ree['odd_dynamic_7ree']}-->{lang jingcai_7ree:htm_lang_dongtai_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_jingtai_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_peilv_7ree}: <strong class="remarkspan_7ree">{$race_7ree['aodds_7ree']}{lang jingcai_7ree:htm_lang_bei_7ree}</strong><span class="pipe">|</span>
+         <!--{if $race_7ree['codds_7ree']}-->
+         <!--{if $jingcai_7ree_var['pingju_7ree'] && $race_7ree['rangqiufang_7ree']>0}-->$jingcai_7ree_var['pingju_7ree']<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}--><!--{if $race_7ree['odd_dynamic_7ree']}-->{lang jingcai_7ree:htm_lang_dongtai_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_jingtai_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_peilv_7ree}: <strong class="remarkspan_7ree">{$race_7ree['codds_7ree']}{lang jingcai_7ree:htm_lang_bei_7ree}</strong><span class="pipe">|</span>
+         <!--{/if}-->
+         {$race_7ree['bname_7ree']}{lang jingcai_7ree:htm_lang_huosheng_7ree}<!--{if $race_7ree['odd_dynamic_7ree']}-->{lang jingcai_7ree:htm_lang_dongtai_7ree}<!--{else}-->{lang jingcai_7ree:htm_lang_jingtai_7ree}<!--{/if}-->{lang jingcai_7ree:htm_lang_peilv_7ree}: <strong class="remarkspan_7ree">{$race_7ree['bodds_7ree']}{lang jingcai_7ree:htm_lang_bei_7ree}</strong>
+        </p>
+        <!--{if $race_7ree['rangqiufang_7ree']}-->
+        <p>
+        <!--{if $race_7ree['fenlei2_7ree']==$zuqiu_7ree}-->
+        	{lang jingcai_7ree:htm_lang_rangqiutip_7ree}
+        <!--{else}-->        
+        	{lang jingcai_7ree:htm_lang_rangqiutip2_7ree}
+        <!--{/if}-->
+        	:<strong class="rangqiuspan_7ree">
+        	<!--{if $race_7ree['rangqiufang_7ree']==1}-->{$race_7ree['aname_7ree']}
+        	<!--{elseif $race_7ree['rangqiufang_7ree']==2}-->{$race_7ree['bname_7ree']}
+        	<!--{/if}-->
+        {lang jingcai_7ree:htm_lang_rang_7ree}{$race_7ree['rangqiuway_7ree']}</strong>
+        </p>
+        <!--{/if}-->
+        </td></tr>
+        
+
+        <!--{if $mywin_7ree}-->
+        <tr><td colspan="5" align="middle">
+        <p style="padding:5px;">
+        <!--{if $mywin_7ree['mywin_7ree'] == "a"}-->{lang jingcai_7ree:htm_lang_woyijingcai_7ree}<strong class="rangqiuspan_7ree">{$race_7ree['aname_7ree']}{lang jingcai_7ree:htm_lang_huosheng_7ree}</strong>
+        <!--{elseif $mywin_7ree['mywin_7ree'] == "b"}-->{lang jingcai_7ree:htm_lang_woyijingcai_7ree}<strong class="rangqiuspan_7ree">{$race_7ree['bname_7ree']}{lang jingcai_7ree:htm_lang_huosheng_7ree}</strong>
+        <!--{elseif $mywin_7ree['mywin_7ree'] == "c"}-->{lang jingcai_7ree:htm_lang_woyijingcai_7ree}<strong class="rangqiuspan_7ree"><!--{if $jingcai_7ree_var['pingju_7ree'] && $race_7ree['rangqiufang_7ree']>0}-->$jingcai_7ree_var['pingju_7ree']<!--{else}-->{lang jingcai_7ree:htm_lang_pingju_7ree}<!--{/if}--></strong>
+        <!--{elseif $mywin_7ree['mywin_7ree'] == "d"}-->{lang jingcai_7ree:htm_lang_yifanhuan_7ree}{$mywin_7ree['myodds_7ree']}{$exttitle_7ree}
+        <!--{/if}--></strong>
+        <!--{if $mywin_7ree['mywin_7ree'] <> "d"}--><span class="pipe">|</span>{lang jingcai_7ree:htm_lang_bingzhichi_7ree}<strong class="rangqiuspan_7ree">{$mywin_7ree['myodds_7ree']}{$exttitle_7ree}</strong><!--{/if}-->
+        </p></td></tr>
+        <!--{/if}-->
+       
+        {template jingcai_7ree:jingcai_pagebody_7ree}
+
+        <!--{if $notice_7ree}-->
+        <td colspan="6">
+		<p>{$notice_7ree}</p>
+		</td>
+		</tr>
+		<!--{/if}-->
+		<!--{if $race_7ree['racemessage_7ree']}-->
+			<tr>
+				<td colspan="6">
+				<p style="padding:10px;">{$race_7ree['racemessage_7ree']}</p>
+				</td>
+			</tr>
+		<!--{/if}-->
+		<!--{if $opengslist_7ree}-->
+ 			<tr>
+				<td colspan="6">
+					{template jingcai_7ree:jingcai_opengs_7ree}
+				</td>
+			</tr>
+		<!--{/if}-->
+		<!--{if $newjingcailist_7ree}-->
+ 			<tr>
+				<td colspan="6">
+					{template jingcai_7ree:jingcai_newlist_7ree}
+				</td>
+			</tr>
+		<!--{/if}-->
+		<!--{if $jingcai_7ree_var['history_7ree']}-->
+ 			<tr>
+				<td colspan="6">
+					{template jingcai_7ree:jingcai_history_7ree}
+				</td>
+			</tr>
+		<!--{/if}-->
+		<!--{if $race_7ree['tid_7ree']}-->
+ 			<tr>
+				<td colspan="6">
+					{template jingcai_7ree:jingcai_chat_7ree}
+				</td>
+			</tr>
+		<!--{/if}-->  

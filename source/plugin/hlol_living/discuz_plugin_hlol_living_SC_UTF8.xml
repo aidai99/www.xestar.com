@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+	<item id="Time"><![CDATA[2018-01-30 14:05]]></item>
+	<item id="From"><![CDATA[翰林在线 (http://www.hallym.cn/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[HLOL视频直播列表]]></item>
+			<item id="identifier"><![CDATA[hlol_living]]></item>
+			<item id="description"><![CDATA[HLOL视频直播列表，后台管理第三方视频直播链接，移动端以图文列表方式聚合展示。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[hlol_living/]]></item>
+			<item id="copyright"><![CDATA[翰林在线（hallym.cn）]]></item>
+			<item id="version"><![CDATA[1.1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="param"><![CDATA[mod=index]]></item>
+					<item id="menu"><![CDATA[视频直播]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="param"><![CDATA[mod=help]]></item>
+					<item id="menu"><![CDATA[使用帮助]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3,X3.1,X3.2,X3.3,X3.4,F1.0,L1.0]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[是否开启]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[offset]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[页面标题]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[navtitle]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[HLOL视频直播在线]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[页面关键字]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[keywords]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[视频直播,直播在线]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[页面描述]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[description]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[HLOL视频直播列表（简单、方便、实用）]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[右下快捷标题]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[go_title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[返回首页]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[右下快捷图标]]></item>
+				<item id="description"><![CDATA[标准尺寸（200px*200px）PNG格式；图片地址为空，前端不显示。]]></item>
+				<item id="variable"><![CDATA[go_pic]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[source/plugin/hlol_living/static/images/home.png]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[右下快捷链接]]></item>
+				<item id="description"><![CDATA[填写跳转的链接]]></item>
+				<item id="variable"><![CDATA[go_link]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[#]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="name"><![CDATA[HLOL视频直播列表]]></item>
+				<item id="help"><![CDATA[感谢您使用翰林在线（hallym.cn）应用，我们竭诚为您服务！<br/>客服Q&nbsp;&nbsp;Q：3587783487<br/>访问地址：[网站域名] + '/plugin.php?id=hlol_living']]></item>
+				<item id="qqurl"><![CDATA[http://wpa.qq.com/msgrd?v=3&uin=3587783487&site=www.hallym.cn&menu=yes]]></item>
+				<item id="dev"><![CDATA[产品功能需求定制]]></item>
+				<item id="closemessage"><![CDATA[HLOL视频直播列表插件处于关闭状态，请进入后台开启！]]></item>
+				<item id="navall"><![CDATA[全部直播]]></item>
+				<item id="navzhibo"><![CDATA[正在直播]]></item>
+				<item id="navhuifang"><![CDATA[精彩回顾]]></item>
+				<item id="navyugao"><![CDATA[热点预告]]></item>
+				<item id="adfocus"><![CDATA[幻灯图片]]></item>
+				<item id="zhibo"><![CDATA[直播]]></item>
+				<item id="huifang"><![CDATA[回放]]></item>
+				<item id="yugao"><![CDATA[预告]]></item>
+				<item id="visitintro"><![CDATA[HLOL视频直播列表管理发布（简单、方便、实用）]]></item>
+				<item id="visiturl"><![CDATA[访问地址：[网站域名] + '/plugin.php?id=hlol_living']]></item>
+				<item id="list"><![CDATA[直播列表]]></item>
+				<item id="add"><![CDATA[添加视频]]></item>
+				<item id="id"><![CDATA[ID]]></item>
+				<item id="catname"><![CDATA[分类]]></item>
+				<item id="title"><![CDATA[标题]]></item>
+				<item id="intro"><![CDATA[介绍]]></item>
+				<item id="pic"><![CDATA[图片]]></item>
+				<item id="picmsg"><![CDATA[标准尺寸（900px*500px）]]></item>
+				<item id="link"><![CDATA[链接]]></item>
+				<item id="linkmsg"><![CDATA[推荐您使用目睹直播视频链接地址]]></item>
+				<item id="fsort"><![CDATA[排序]]></item>
+				<item id="status"><![CDATA[是否审核]]></item>
+				<item id="yes"><![CDATA[是]]></item>
+				<item id="no"><![CDATA[否]]></item>
+				<item id="operation"><![CDATA[操作]]></item>
+				<item id="edit"><![CDATA[编辑]]></item>
+				<item id="delete"><![CDATA[删除]]></item>
+				<item id="makesure_del_msg"><![CDATA[亲，确定删除吗？]]></item>
+				<item id="act_success"><![CDATA[操作成功！]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="name"><![CDATA[HLOL视频直播列表]]></item>
+				<item id="navall"><![CDATA[全部直播]]></item>
+				<item id="navzhibo"><![CDATA[正在直播]]></item>
+				<item id="navhuifang"><![CDATA[精彩回顾]]></item>
+				<item id="navyugao"><![CDATA[热点预告]]></item>
+				<item id="zhibo"><![CDATA[直播]]></item>
+				<item id="huifang"><![CDATA[回放]]></item>
+				<item id="yugao"><![CDATA[预告]]></item>
+			</item>
+			<item id="systemlang">
+				<item id="hlol">
+				</item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>

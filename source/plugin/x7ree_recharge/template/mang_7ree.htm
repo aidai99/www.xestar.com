@@ -1,0 +1,21 @@
+<table class="rechargebox_7ree" style="width:100%;">
+
+<!--{loop $list_7ree $list_value}-->
+<tr class='mt bbda' >
+<td >
+{$list_value['time_7ree']} 充值{$list_value['ext_7ree']}{$exttitle_7ree}，通过<!--{if $list_value['type_7ree']==1}-->微信<!--{elseif $list_value['type_7ree']==2}-->支付宝<!--{elseif $list_value['type_7ree']==3}-->{$list_value['bank_7ree']} ({$list_value['account_7ree']} {$list_value['cardnum_7ree']}，验证码：{$list_value['paycode_7ree']})<!--{/if}-->消费{$list_value['cost_7ree']}元。
+</td>
+<td style="width:120px;height:30px;overflow:hidden; color:<!--{if $list_value['status_7ree']==1}-->green<!--{else}-->red<!--{/if}-->;">
+<!--{if $list_value['status_7ree']==1}-->充值成功<!--{else}-->未完成或未审核<!--{/if}-->
+</td>
+<td style="width:100px;height:30px;overflow:hidden; ">
+<!--{if $list_value['status_7ree']==1}-->-<!--{else}-->[<a href='plugin.php?id=x7ree_recharge:x7ree_recharge&code_7ree=5&id_7ree={$list_value['id_7ree']}&formhash={FORMHASH}'  onclick="if(confirm('确认审核该用户到账吗？')==false)return false;">审核</a>]<!--{/if}-->
+</td>
+</tr>
+<!--{/loop}-->
+
+</table>
+	
+<div>
+{$multipage}
+</div>

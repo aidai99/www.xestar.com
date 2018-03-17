@@ -1,0 +1,23 @@
+{subtemplate x7ree_v:x7ree_topnav}
+
+<!--{if $list_7ree}-->
+
+	<!--{loop $list_7ree $list_value}-->
+	<div class='vbox_7ree'>
+	<a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=1&id_7ree={$list_value['id_7ree']}">
+	<div class="cover_7ree"></div>
+	<img src="{$folder_7ree}/{$list_value['pic_7ree']}" class="">
+	</a>
+	<span class='viewspan_7ree'>{$list_value['view_7ree']}</span>
+	<span class='discussspan_7ree'>{$list_value['discuss_7ree']}</span>
+	<span class='fenleispan_7ree'>{$list_value['fenlei_7ree']}</span>
+	<p><a href="plugin.php?id=x7ree_v:x7ree_v&code_7ree=1&id_7ree={$list_value['id_7ree']}">{$list_value['name_7ree']}</a></p>
+	</div>
+	<!--{/loop}-->
+	<div style="clear:both;"></div>
+	<div>$multipage</div>
+	<div style="clear:both;"></div>
+
+<!--{else}-->
+	<div class="notice_7ree">{lang x7ree_v:htm_lang_zhanwuxiaoshipin_7ree}</div>
+<!--{/if}-->

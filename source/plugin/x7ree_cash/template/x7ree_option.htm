@@ -1,0 +1,30 @@
+<table class="dtable_7ree">
+<tr>
+<td>时间</td>
+<td>会员</td>
+<td>电话</td>
+<td>积分</td>
+<td>金额</td>
+<td>账户</td>
+<td>提现状态 & 管理操作</td>
+
+</tr>
+	<!--{loop $list_7ree $list_value}-->
+<tr style="color:<!--{if $list_value['status_7ree']==1}-->green<!--{elseif $list_value['status_7ree']==2}-->red<!--{/if}-->;">
+<td>{$list_value['time_7ree']}</td>
+<td><a href="home.php?mod=space&uid={$list_value['uid_7ree']}" target="_blank">{$list_value['user_7ree']}</a></td>
+<td>{$list_value['tel_7ree']}</td>
+<td>{$list_value['ext_7ree']}{$exttitle_7ree}</td>
+<td>{$list_value['cash_7ree']}元</td>
+<td><!--{if $list_value['type_7ree']==1}-->微信<!--{elseif $list_value['type_7ree']==2}-->支付宝<!--{/if}-->:{$list_value['account_7ree']}</td>
+<td>
+<!--{if !$list_value['status_7ree']}-->【<a href="plugin.php?id=x7ree_cash:x7ree_cash&code_7ree=4&id_7ree={$list_value['id_7ree']}&formhash={FORMHASH}" onclick="if(confirm('您确认此条提现申请已完成打款?')==false)return false;">确认打款</a>】【<a href="plugin.php?id=x7ree_cash:x7ree_cash&code_7ree=5&id_7ree={$list_value['id_7ree']}&formhash={FORMHASH}" onclick="if(confirm('您确认驳回此条提现申请?')==false)return false;">驳回</a>】<!--{elseif $list_value['status_7ree']==1}-->提现成功<!--{elseif $list_value['status_7ree']==2}-->被驳回<!--{/if}-->
+</td>
+
+</tr>
+<!--{/loop}-->
+</table>
+	
+<div>
+{$multipage}
+</div>

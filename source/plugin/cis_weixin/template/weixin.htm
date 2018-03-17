@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={CHARSET}" />
+<title>$cislang[135]</title>
+<link rel="stylesheet" type="text/css" href="source/plugin/cis_weixin/template/style/immwa.css" />
+<!--{eval $imgurl='source/plugin/cis_weixin/template/style';}-->
+<script src="$imgurl/jq.js" language="javascript"></script>
+
+</head>
+
+<body>
+<div class="toptb">
+  <div class="wp">
+    <h2>$_G['setting']['sitename']</h2>
+    <!--{eval $mnid = getcurrentnav();}-->
+    <ul>
+    <!--{loop $_G['setting']['navs'] $nav}-->
+    
+      <!--{if $nav['available'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1))}-->
+      <li {if $mnid == $nav[navid]}class="a" {/if}><a href="$nav[filename]">$nav[navname]</a></li>
+      <!--{/if}-->
+    <!--{/loop}-->
+    </ul>  
+  </div>
+
+</div>
+
+<div class="topbanner">
+  <div class="wp">
+    <div class="topinfo">
+      <div class="qcode"></div>
+      <h2>I<span>mmwa.com</span></h2>
+      <p>$cislang[136]</p>
+      <p>$cislang[137]</p>
+    </div>
+  </div>
+</div>
+<div class="wp">
+  <div class="info">
+  $cislang[138]
+  </div>
+  <table cellpadding="0" cellspacing="0" class="show">
+    <tbody>
+      <tr>
+        <td class="l">
+          <dl class="item">
+            <dt class="ico">&#xe06d;</dt>
+            <dt class="title">$cislang[139]</dt>
+            <dd>$cislang[140]</dd>
+          </dl>
+          <dl class="item">
+            <dt class="ico">&#xe089;</dt>
+            <dt class="title">$cislang[141]</dt>
+            <dd>$cislang[142]</dd>
+          </dl>
+        </td>
+        <td class="m">
+        <div id="slider1">
+          <img src="$imgurl/p1.jpg" style="display:block;">
+          <img src="$imgurl/p2.jpg" >
+          <img src="$imgurl/p3.jpg" >
+          <img src="$imgurl/p4.jpg" >
+          <img src="$imgurl/p5.jpg" >
+          <img src="$imgurl/p6.jpg" >
+          <img src="$imgurl/p7.jpg" >
+          <img src="$imgurl/p8.jpg" >
+          <img src="$imgurl/p9.jpg" >
+          <img src="$imgurl/p10.jpg" >
+
+        </div>
+        
+				<script language="javascript">
+        var now=0;
+        setInterval(function (){
+        //   alert(now);
+          pre=now===0?8:now-1;
+          nxt=now===9?0:now+1;
+          var div=$("#slider1").children();
+          div.eq(now).fadeOut(0,function(){   
+              div.css('z-index',1);       
+              div.eq(nxt).css("z-index",12).fadeIn(1000);
+              div.eq(pre).css("z-index",10);
+              div.eq(now).css("z-index",11);
+              now=nxt;
+          });
+        },4000);
+        </script>
+        </td>
+        <td class="r">
+          <dl class="item">
+            <dt class="ico">&#xe038;</dt>
+            <dt class="title">$cislang[143]</dt>
+            <dd>$cislang[144]</dd>
+          </dl>
+          <dl class="item">
+            <dt class="ico">&#xe0dd;</dt>
+            <dt class="title">$cislang[145]</dt>
+            <dd>$cislang[146]</dd>
+          </dl>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+</body>
+</html>

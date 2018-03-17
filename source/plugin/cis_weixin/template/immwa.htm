@@ -1,0 +1,25 @@
+<!--{if $hack}-->
+<!--{if $hack['type']=='template'}-->
+<!--{eval include template($hack['dir'].'_manage','0','template/'.$hack['dir'].'/app');}-->
+<!--{else}-->
+<!--{eval include template($hack['dir'].':manage');}-->
+<!--{/if}-->
+<!--{else}-->
+<div class="pt">
+  $cislang[172]<span>hack</span>
+</div>
+<div class="main">
+<ul class="hacks cl">
+{loop $hacks $hack}
+<li><a href="plugin.php?id=cis_weixin&mod=admin&item=immwa&hackid=$hack['id']"><img src="http://addon.discuz.com/?_{$hack['id']}">$hack['name']</a></li>
+{/loop}
+{loop $newapp $app}
+<li class="new"><a href="http://addon.discuz.com/?@{$app['id']}.{$app['type']}" target="_blank"><img src="http://addon.discuz.com/?_{$app['id']}">$app['name']</a></li>
+{/loop}
+{loop $skins $skin}
+<li class="new"><a href="plugin.php?id=cis_weixin&mod=admin&item=immwa&hackid=$skin['id']"><img src="http://addon.discuz.com/?_{$skin['id']}">$skin['name']</a></li>
+{/loop}
+</ul>
+
+</div>
+<!--{/if}-->

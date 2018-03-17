@@ -1,0 +1,72 @@
+{template common/header}
+<!--
+	(C)2006-2016 www.7ree.com
+	This is NOT a freeware, use is subject to license terms
+	Update: 2017/6/11 2:34
+	Agreement: http://addon.discuz.com/?@7.developer.doc/agreement_7ree_html
+	More Plugins: http://addon.discuz.com/?@7ree
+-->
+
+
+<link rel='stylesheet' id='css_7ree' type='text/css' href='source/plugin/x7ree_extmall/template/image/css_7ree.css?{VERHASH}'/>
+
+<div id="pt" class="bm cl">
+	<div class="z">
+	<a href="./" class="nvhm">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="forum.php">$_G[setting][bbname]</a> <em>&rsaquo;</em> <a href="plugin.php?id=x7ree_extmall:x7ree_extmall">{$navtitle}</a> <em>&rsaquo;</em>
+	<!--{if $id_7ree}-->{$thisgoods_7ree['name_7ree']}<!--{/if}-->
+	</div>
+</div>
+
+
+<div id="ct" class="ct2_a wp cl">
+
+	<div class="mn">
+
+	<div class="bm bw0">
+	<!--正文-->
+	<div class="bm_c cl">
+
+	<!--{if !$code_7ree}-->
+		{template x7ree_extmall:x7ree_home}
+	<!--{elseif $code_7ree==1}-->
+		{template x7ree_extmall:x7ree_page}
+	<!--{elseif $code_7ree==2}-->
+		{template x7ree_extmall:x7ree_my}
+	<!--{elseif  in_array($code_7ree,array('3','4','7','9'))}-->
+		{template x7ree_extmall:x7ree_option}
+	<!--{/if}-->
+
+
+
+	</div>
+
+
+	</div>
+
+</div>
+
+
+<!-- 左侧边栏 -->
+
+<div class="appl">
+
+	<div class="tbn">
+	<h2 class="mt bbda">{$navtitle}</h2>
+	<ul>
+	  <li <!--{if !$code_7ree}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_extmall:x7ree_extmall">兑换商城</a></li>
+	  <!--{if $code_7ree==1}--><li class="a"><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=1&id_7ree={$id_7ree}">商品详情</a></li><!--{/if}-->
+	  <li <!--{if $code_7ree==2}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=2">我的商品</a></li>
+	  <!--{if $_G['adminid']==1}-->
+	  <li <!--{if in_array($code_7ree,array('3','4','7','9'))}-->class="a"<!--{/if}-->><a href="plugin.php?id=x7ree_extmall:x7ree_extmall&code_7ree=3">前台管理</a></li>
+	  <!--{/if}-->
+
+	 </ul>
+
+	 
+
+
+	</div>
+
+</div>
+
+{template common/footer}

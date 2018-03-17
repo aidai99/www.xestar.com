@@ -1,0 +1,276 @@
+.topmnav_7ree{
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.msearchbar_7ree{
+	position: fixed;
+	top: 0;
+	left: 0;
+	display:block;
+	height: 38px;
+	line-height: 38px;
+	width:100%;
+	border-bottom:1px solid #CFCFCF;
+	background-color:#FFFFFF;
+	z-index:99;
+}
+
+.msearchbar_7ree .msearchbtn_7ree{
+	border:none;
+}
+
+
+.msearchtext_7ree{
+	display:block;
+	width:80%;
+	margin-top:5px;
+	margin-left:10px;
+	height: 28px;
+	line-height: 28px;
+	border:none;
+	background-color:#EFEFEF;
+	text-align:center;
+	border-radius:10px;
+}
+
+.msearchbtn_7ree{
+	position: fixed;
+	top: 5px;
+	right: 0;
+	z-index:99;
+	width:40px;
+	height: 30px;
+	line-height: 30px;
+	background-color:#FFFFFF;
+	background-image: url(search_7ree.png);
+	background-size:70%;
+	background-repeat:no-repeat;
+	background-position:left 5px center;
+	box-shadow: -1px 0 0 #CFCFCF;
+
+}
+
+.swiper-container{
+	display: -webkit-box;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling:touch;
+	background-color:#FFFFFF;
+	border-bottom:1px solid #ccc;
+}
+
+.swiper-slide{
+	height: 40px;
+	line-height: 40px;
+	text-align:center;
+}
+.posdiv_7ree{
+	width:100%;
+	height:35px;
+}
+
+.box_m_7ree{
+	width:98%;
+	border:1px solid #FFFFFF;
+	background-color:#FFFFFF;
+	margin:0 auto;
+	overflow-x: hidden;
+}
+
+.box_m_7ree ul{
+	list-style: none;
+	width: 99%;
+	height: 40px;
+}
+
+.box_m_7ree li {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border-bottom: 1px solid #CFCFCF;
+}
+
+
+.box_m_7ree a{
+	display:inline-block;
+	width:100%;
+}
+
+.box_m_7ree .inputtd_7ree input, .box_m_7ree .inputtd_7ree select, .box_m_7ree .texttd_7ree textarea{
+	width:96%;
+}
+
+.swiper-slide .nownav_7ree{
+	height:38px;
+	color:#2366B2 !important;
+	font-weight:700;
+	display: block;
+	text-decoration: none;
+	color: #2366B2;
+	border-top: 0px;
+	border-bottom: 2px solid #2366B2;
+}
+
+.vbox_m_7ree{
+    width: 100%;
+    height: 280px;
+    background: #FFFFFF;
+    border-bottom: 1px solid #eee;
+    margin: 10px auto;
+    overflow:hidden;
+    float:left;
+    position:relative;
+}
+
+
+.vbox_m_7ree img{
+	height: 240px;
+	width:100%;
+}
+
+.vbox_m_7ree span{
+	position:absolute;
+	bottom:45px;
+	right:20px;
+	color:#FFFFFF;
+}
+
+.vbox_m_7ree p{
+	height: 40px;
+	line-height: 40px;
+	width:96%;
+	margin:0 auto;
+	text-align:center;
+	font-size:16px;
+}
+
+
+.footnav_7ree{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height:40px;
+    background: #EDEDED;
+    text-align: center;
+    border-top: 1px solid #BEACAC;
+    z-index:999;
+}
+
+.footnav_7ree li{
+    display: inline-block;
+    padding: 3px;
+    height: 40px;
+    line-height:16px;
+    width:22%;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.footnav_7ree span{
+	width:18px;
+	height:18px;
+	display: inline-block;
+}
+
+.footer{
+	margin-bottom:80px;
+}
+
+.playbox_m_7ree{
+	width:100%;
+	height:200px;
+	/*
+	line-height:300px;
+	*/
+	background-color:#000000;
+	text-align:center;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.playbox_m_7ree a{
+	color:#FFFFFF;
+	margin-top:40px;
+}
+
+.morev_m_7ree{
+	width:96%;
+	margin:10px auto;
+}
+.morevbox_m_7ree a{
+	display:block;
+}
+
+.morev_m_7ree h3{
+	font-size:18px;
+	font-weight:normal;
+}
+
+.morev_m_7ree img{
+	display:block;
+	float:left;
+	width:32%;
+	height:80px;
+	margin-bottom:20px;
+}
+
+.morev_m_7ree p{
+	display:block;
+	float:left;
+	width:60%;
+	height:80px;
+	overflow:hidden;
+	padding-left:10px;
+	font-size:16px;
+}
+
+.morev_m_7ree span{
+	color:gray;
+	font-size:12px;
+}
+
+.topinfo_m_7ree {
+	width:96%;
+	margin:10px auto;
+	margin-top:200px;
+}
+
+
+.topinfo_m_7ree h3{
+	font-size:18px;
+	font-weight:normal;
+}
+
+.topinfo_m_7ree .discuzpost_7ree textarea{
+	display:inline-block;
+	width:80%;
+	height:30px;
+	line-height:30px;
+	border:1px solid #CFCFCF;
+	border-radius:3px;
+	padding-left:5px;
+}
+
+.topinfo_m_7ree .discuzpost_7ree textarea:hover{
+	border:1px solid #067296;
+}
+
+.topinfo_m_7ree .discussubmit_7ree{
+	display:inline-block;
+	width:50px;
+	height:32px;
+	color:#FFFFFF;
+	background:#067296;
+	border:1px solid #067296;
+	float:right;
+	border-radius:3px;
+	curosr: pointer;
+	margin:0;
+}
+

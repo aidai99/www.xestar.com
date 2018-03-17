@@ -1,0 +1,367 @@
+<html>
+<head>
+    <title>$navtitle</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="description" content="{$navtitle}">
+<link rel="stylesheet" href="static/image/mobile/style.css" type="text/css" media="all">
+
+</head>
+<body>
+
+<style>
+body{
+	background: linear-gradient(to right, {$cacksign['uibjsz']} , {$cacksign['uibjsy']});
+}
+
+
+.cack_app_sign .cackline em{
+    padding: 5px;
+    border-radius: 4px;
+	border: 1px solid rgba(166, 231, 255, 0.3);
+	display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+	text-align: center;
+}
+.cack_app_sign .cackline input:checked + em{
+	background: #15bfff;
+    
+	background: rgba(255, 255, 255, 0.7);
+
+}
+.cack_app_sign .cackline label input{
+    display: none;
+}
+
+.cack_app_sign .cackline .syjh{
+    padding: 0 20px;
+}
+.cack_app_sign .cackline .syjh textarea{
+	width: 100%;
+    background: rgba(255, 255, 255, 0.6);
+    border: 0px;
+	border-radius: 4px;
+	max-width: 100%;
+	resize: none;
+	padding: 2%;
+	height: 75px;
+	outline:none
+}
+.cack_app_sign .cackline .syjh textarea:focus{
+	border: 0px solid green;
+	outline:none
+}
+.cack_app_sign .cackline .qdxq{
+	padding: 0 7%;
+    display: inline-flex;
+    width: 86%;
+	padding-bottom: 35px;
+
+}
+.cack_app_sign .cackline .qdxq label{
+    width: 100%;
+    display: inline-block;
+	text-align: center;
+}
+
+
+.cack_app_sign .cakctbsdksd{
+	height: 200px;
+    position: relative;
+	text-align: center;
+}
+.cack_app_sign .cakctbsdksd .avatar{
+    border-radius: 100px;
+	border: 5px solid rgba(255, 255, 255, 0.2);
+    display: inline-block;
+	margin-top: 15px;
+}
+.cack_app_sign .cakctbsdksd .yhdj{
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    text-align: center;
+}
+.cack_app_sign .cackline .qdtjan{
+    position: relative;
+}
+
+.cack_app_sign .cackline .qdtjan input{
+    border: 0px;
+    background: rgba(255, 255, 255, 0.2)!important;
+    border-radius: 100px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    width: 55px;
+    height: 35px;
+    color: white;
+    font-size: 16px;
+	position: absolute;
+    right: 20px;
+	-webkit-appearance: none;
+}
+
+
+.cack_app_sign .cakctbsdksd .yhdj span{
+    background: rgba(231, 127, 90, 0.8);
+    color: white;
+    display: inline-block;
+	padding: 0 20px;
+    font-size: 14px;
+    border-radius: 15px;
+    box-shadow: 0 3px 3px 0 rgba(231, 127, 90, 0.3)!important;
+}
+
+.cack_app_sign .cakctbsdksd .avatar img{
+    border-radius: 100px;
+	border: 3px solid rgba(0, 0, 0, 0);
+	width: 115px;
+    height: 115px;
+}
+.cack_app_sign .cakctbsdksd .ppy{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    width: 55px;
+    height: 55px;
+    color: white;
+    line-height: 55px;
+    position: absolute;
+    left: 16%;
+    top: 0px;
+	font-size: 13px;
+}
+.cack_app_sign .cakctbsdksd .ppm{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    color: white;
+    line-height: 50px;
+    position: absolute;
+    left: 10%;
+    top: 105px;
+	font-size: 15px;
+}
+.cack_app_sign .cakctbsdksd .ppd{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 100px;
+    width: 60px;
+    height: 60px;
+    color: white;
+    line-height: 60px;
+    position: absolute;
+    right: 12%;
+    top: 105px;
+	font-size: 17px;
+}
+
+
+.cack_app_sign .header{
+	height: 44px;
+    background: rgba(255, 255, 255, 0);
+    line-height: 44px;
+    font-size: 20px;
+    color: white;
+	text-align: center;
+	position: relative;
+}
+.cack_app_sign .header .titlebar_back{
+    background: url(source/plugin/cack_app_sign/images/hd/titlebar_back.png) no-repeat scroll 0 0;
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    left: 0px;
+    margin-top: 5px;
+    margin-left: 10px;
+	display: inline-block;
+	position: absolute;
+}
+.cack_app_sign .qdjl{
+    height: 50%;
+    margin: 0 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.6);
+}
+.cack_app_sign .qdjl{
+	overflow-y: scroll;
+}
+.cack_app_sign .qdjl{}
+.cack_app_sign .qdjl{}
+.cack_app_sign .qdjl .gdjl{
+	padding: 15px 10px;
+}
+.cack_app_sign .qdjl .gdjl{
+
+}
+.cack_app_sign .qdjl .gdjl ul{}
+.cack_app_sign .qdjl .gdjl li{
+	position: relative;
+
+}
+.cack_app_sign .qdjl .gdjl li img.tx{
+	border-radius: 100px;
+    width: 40px;
+    height: 40px;
+	position: absolute;
+	top: 0px;
+	left: 5px;
+	
+}
+.cack_app_sign .qdjl .gdjl li{}
+.cack_app_sign .qdjl .gdjl li{}
+.cack_app_sign .qdjl .gdjl{}
+
+.cack_app_sign .qdjl .gdjl li .lz img{
+    height: 60px;
+    padding: 6px 0;
+}
+.cack_app_sign .qdjl .gdjl li .lz p{
+	font-size: 14px;
+}
+.cack_app_sign .qdjl .gdjl li .lz h1{
+
+}
+.cack_app_sign .qdjl .gdjl li .lz h1 span{
+    color: #b3b3b3;
+    font-weight: 400;
+}
+
+
+
+.cack_app_sign .qdjl .gdjl li .lz{
+    margin-left: 55px;
+    padding-left: 10px;
+	border-left: 2px solid rgba(206, 206, 206, 0.50);
+	position: relative;
+	padding-bottom: 10px;
+}
+.cack_app_sign .qdjl .gdjl li .lz .bb1{
+    border-bottom: 1px solid rgba(206, 206, 206, 0.50);
+	padding-top: 10px;
+}
+.cack_app_sign .qdjl .gdjl li .lz .pm{
+	display: inline-block;
+    width: 8px;
+    height: 8px;
+    line-height: 8px;
+    border-radius: 100px;
+    background: rgba(206, 206, 206, 1);
+    text-align: center;
+    color: white;
+    position: absolute;
+    left: -5px;
+    z-index: 100;
+    top: 17px;
+	font-size: 12px;
+}
+.cack_app_sign .qdjl .gdjl li .nopm{
+	position: absolute;
+    top: 32px;
+    font-size: 12px;
+    text-align: center;
+    width: 39px;
+    border-radius: 100px;
+    color: white;
+    height: 14px;
+    line-height: 14px;
+	left: 6px;
+	font-size: 10px;
+}
+.cack_app_sign .qdjl li.no1 img.tx {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #f60;
+}
+.cack_app_sign .qdjl li.no1 .nopm{
+	background: #f60;
+}
+.cack_app_sign .qdjl li.no2 img.tx {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #a8edcf;
+}
+.cack_app_sign .qdjl li.no2 .nopm{
+	background: #a8edcf;
+}
+.cack_app_sign .qdjl li.no3 img.tx {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #f3e591;
+}
+.cack_app_sign .qdjl li.no3 .nopm{
+	background: #f3e591;
+}
+
+</style>
+
+<div class="cack_app_sign">
+
+<div class="header">
+<a href="./" class="titlebar_back"> </a>
+{$navtitle}
+</div>
+<!--{if $yhyjqd}-->
+	<div class="cakctbsdksd">
+		<div class="avatar"><img src="<!--{avatar($_G[uid], big, true)}-->" /></div>
+		<div class="yhdj"><span>Lv.{$_G[group][stars]}&nbsp;&nbsp;{$_G[group][grouptitle]}</span></div>
+		<div class="ppy" style="line-height: 17px;"><span style="display: inline-block;height: 34px;padding-top: 10px;">{$_G['setting']['extcredits'][$cacksign['jfsz']]['title']}<br>
+		<!--{echo getuserprofile('extcredits'.$cacksign['jfsz']);}--></span>
+		</div>
+		<div class="ppm" style="font-size: 14px;">No.{$yhyjqdsx}</div>
+		<div class="ppd" style="color: #5ec2dc;background: rgba(255, 255, 255, 0.9);">{$signlang[8]}</div>
+	</div>
+	<div class="qdjl" id="" >
+		<div class="gdjl">
+			<ul>
+				<!--{loop $jrqdlogsc $key $value}-->
+				{if $key < '20'}
+					<li class="no<!--{eval echo $key+1;}-->">
+						<div class="lz">
+							<h1>{$value[username]}&nbsp;<span><!--{eval echo date('H:i:s',$value[signtime]);}--></span></h1>
+							<img src="source/plugin/cack_app_sign/images/{$xinqing[$value[xid]][pic]}" style="height: 60px;">
+							{if $value[content]}<p>{$value[content]}</p>{/if}
+							<div class="pm"></div>
+							<div class="bb1"></div>
+						</div>
+						<img class="tx" src="<!--{avatar($value[uid], big, true)}-->" />
+						{if $key < '3'}<div class="nopm">No.<!--{eval echo $key+1;}--></div>{/if}
+					</li>
+				{/if}
+				<!--{/loop}-->
+
+			</ul>
+		
+		</div>
+	
+	
+	</div>
+<!--{else}-->
+	<div class="cakctbsdksd">
+		<div class="avatar"><img src="<!--{avatar($_G[uid], big, true)}-->" /></div>
+		<div class="yhdj"><span>Lv.{$_G[group][stars]}&nbsp;&nbsp;{$_G[group][grouptitle]}</span></div>
+		<div class="ppy"><!--{eval echo date('Y',time());}-->{$signlang[5]}</div>
+		<div class="ppm"><!--{eval echo date('m',time());}-->{$signlang[6]}</div>
+		<div class="ppd"><!--{eval echo date('d',time());}-->{$signlang[7]}</div>
+	</div>
+
+	<div class="cackline">
+		<form method="post" autocomplete="off" id="postform" action="plugin.php?id=cack_app_sign:sign" accept-charset="UTF-8" onsubmit="document.charset='UTF-8'"">
+		<input type="hidden" name="formhash" value="{FORMHASH}">
+
+		<div class="qdxq">
+		<!--{loop $xinqingquerysc $key $value}-->
+		<label><input type="radio"{if $cacksign[mxxqxid] == $value[xid]} checked=""{/if} name="signxid" class="pr" tabindex="1" value="{$value[xid]}"><em><img src="source/plugin/cack_app_sign/images/$value[pic]" style="height: 30px;"><p>{$value[name]}</p></em></label>
+		<!--{/loop}-->
+		</div>
+		<div class="syjh">
+		<textarea class="pt" id="needmessage" tabindex="3" autocomplete="off" name="content" cols="80" rows="2" placeholder="{$signlang[3]}" fwin="reply"></textarea>
+		</div>
+		<br>
+		<div class="qdtjan">
+		<input type="submit" class="btn" id="submit_settingsubmit" name="settingsubmit" title="" value="{$signlang[4]}">
+		</div>
+		</form>
+	</div>
+<!--{/if}-->
+</body>
+</html>

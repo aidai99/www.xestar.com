@@ -1,0 +1,46 @@
+
+<!-- header start -->
+<header class="header">
+
+	<div class="topnav_7ree">
+		<span class="name">
+		<!--{if !$_GET['ac_7ree'] }-->
+				<!--{if $_GET['sp_7ree']=='more'}-->
+				{$race_7ree['racename_7ree']}
+				<!--{else}-->
+					<!--{if $_GET['finish_7ree']}-->
+						{lang jingcai_7ree:htm_lang_wangqijingcai_7ree}
+					<!--{else}-->
+						{lang jingcai_7ree:htm_lang_jingcaidating_7ree}
+					<!--{/if}-->
+				<!--{/if}-->
+		<!--{elseif $_GET['ac_7ree']==1}-->
+				{lang jingcai_7ree:htm_lang_wodejingcai_7ree}
+		<!--{elseif $_GET['ac_7ree']==2}-->
+					<!--{if $_GET['sp_7ree']=='op'}-->
+					{lang jingcai_7ree:htm_lang_guanlisaishi_7ree}
+					<!--{elseif $_GET['sp_7ree']=='log'}-->
+					{lang jingcai_7ree:htm_lang_jingcairizhi_7ree}
+					<!--{/if}-->
+		<!--{elseif $_GET['ac_7ree']==6}-->
+					<!--{if $_GET['how_7ree']==1}-->
+					{lang jingcai_7ree:htm_lang_rank1_7ree}
+					<!--{elseif $_GET['how_7ree']==2}-->
+					{lang jingcai_7ree:htm_lang_rank2_7ree}
+					<!--{elseif $_GET['how_7ree']==3}-->
+					{lang jingcai_7ree:htm_lang_rank3_7ree}
+					<!--{elseif $_GET['how_7ree']==4}-->
+					{lang jingcai_7ree:htm_lang_rank4_7ree}
+					<!--{else}-->
+					<!--{/if}-->
+		<!--{/if}-->
+		</span>
+	</div>
+	<div class="topposi_7ree"></div>
+	<!--{if $jingcai_7ree_var['mob_topad_7ree']}-->
+		<div>
+		{$jingcai_7ree_var['mob_topad_7ree']}
+		</div>
+	<!--{/if}-->
+</header>
+<!-- header end -->
